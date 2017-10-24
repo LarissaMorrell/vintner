@@ -2,11 +2,12 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {Route, withRouter} from 'react-router-dom';
 
-import HeaderBar from './header-bar';
+// import HeaderBar from './header-bar';
 import Navbar from './navbar';
 import LandingPage from './landing-page';
 import Dashboard from './dashboard';
 import RegistrationPage from './registration-page';
+import Footer from './footer';
 import {refreshAuthToken} from '../actions/auth';
 
 export class App extends React.Component {
@@ -51,10 +52,10 @@ export class App extends React.Component {
         return (
             <div className="app">
                 <Navbar />
-                <HeaderBar />
                 <Route exact path="/" component={LandingPage} />
                 <Route exact path="/dashboard" component={Dashboard} />
                 <Route exact path="/register" component={RegistrationPage} />
+                <Footer />
             </div>
         );
     }
