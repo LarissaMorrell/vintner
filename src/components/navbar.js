@@ -1,5 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
+import {Link} from 'react-router-dom';
 import {setCurrentUser, setAuthToken} from '../actions/auth';
 import {clearAuthToken} from '../local-storage';
 
@@ -15,18 +16,16 @@ export class Navbar extends React.Component {
         let logOutButton;
         if (this.props.loggedIn) {
             logOutButton = (
-                <button onClick={() => this.logOut()}>Log out</button>
+              <button onClick={() => this.logOut()}>Log out</button>
             );
-        } else {
-          //TODO toggle the button to registration page
-          // logOutButton = (
-              // <button onClick={() => this.logOut()}>Sign Up</button>
-          // );
         }
+
+
         return (
-            <div className="header-bar">
+            <div className="navbar">
               <ul>
-                <li>Vintner</li>
+                <li><div className="navbar-title">Vintner</div></li>
+                <li><Link to="/dashboard">Profile</Link></li>
                 <li>{logOutButton}</li>
               </ul>
             </div>

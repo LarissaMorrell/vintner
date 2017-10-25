@@ -1,0 +1,15 @@
+$wine-color: #6f0341;
+
+body {
+  font-family: 'Raleway', sans-serif;
+}
+
+footer {
+	background: $wine-color;
+  color: white;
+	width:100%;
+	min-height:75px;
+	position:absolute;
+	bottom:0;
+	left:0;
+}

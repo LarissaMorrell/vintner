@@ -1,0 +1,21 @@
+$wine-color: #6f0341;
+
+.navbar {
+  background-color: $wine-color;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 15px 30px;
+}
+
+li {
+  display: inline;
+  color: white;
+}
+
+div.navbar-title {
+  display: inline;
+  margin-right: 75%;
+}
