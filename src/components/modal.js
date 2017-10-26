@@ -3,24 +3,15 @@ import LoginForm from './login-form';
 
 
 export default class Modal extends React.Component {
-    constructor(props){
-      super(props);
-      this.state = {
-        display:true
-      }
-    }
-    viewModal(){
-      this.setState({display: !this.state.display});
-      console.log(this.state.display);
-    }
 
     render() {
-      if(this.state.display){
+      if(this.props.display){
         return (
           <div className="black-screen">
             <div className="modal box">
-              <p onClick={e => this.viewModal()}>X</p>
-              Here is the Modal
+              <div className="close-win" >
+                X
+              </div>
               <LoginForm />
             </div>
           </div>
@@ -29,3 +20,5 @@ export default class Modal extends React.Component {
       return null;
     }
 }
+
+// <i className="fa fa-window-close-o" aria-hidden="true"></i>

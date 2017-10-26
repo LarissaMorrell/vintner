@@ -17,14 +17,15 @@ export function LandingPage(props) {
           </div>
           <div className="landing-content">
             <h2>Helping you find the perfect drink</h2>
-            <Modal />
+            <Modal display={props.display} />
           </div>
         </div>
     );
 }
 
 const mapStateToProps = state => ({
-    loggedIn: state.auth.currentUser !== null
+    loggedIn: state.auth.currentUser !== null,
+    display: state.modal.display
 });
 
 export default connect(mapStateToProps)(LandingPage);
