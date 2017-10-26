@@ -1,15 +1,17 @@
 import React from 'react';
+import {connect} from 'react-redux';
 import LoginForm from './login-form';
+import {closeModal} from '../actions/modal';
 
-
-export default class Modal extends React.Component {
+export class Modal extends React.Component {
 
     render() {
       if(this.props.display){
         return (
           <div className="black-screen">
             <div className="modal box">
-              <div className="close-win" >
+              <div className="close-win"
+                onClick={e => this.props.dispatch(closeModal())}>
                 X
               </div>
               <LoginForm />
@@ -21,4 +23,7 @@ export default class Modal extends React.Component {
     }
 }
 
+
+
 // <i className="fa fa-window-close-o" aria-hidden="true"></i>
+export default connect()(Modal);

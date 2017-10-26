@@ -2,6 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {Link} from 'react-router-dom';
 import {setCurrentUser, setAuthToken} from '../actions/auth';
+import {openModal} from '../actions/modal';
 import {clearAuthToken} from '../local-storage';
 
 export class Navbar extends React.Component {
@@ -32,7 +33,7 @@ export class Navbar extends React.Component {
         else {
           listItems = [
             <li key="1">
-              <button >Login</button>
+              <button onClick={e => this.props.dispatch(openModal())}>Login</button>
             </li>,
             <li key="2">
               <Link to="/register">Sign Up</Link>
