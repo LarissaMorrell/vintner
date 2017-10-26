@@ -1,8 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import {Link, Redirect} from 'react-router-dom';
-
-import LoginForm from './login-form';
+import Modal from './modal';
 
 export function LandingPage(props) {
     // If we are logged in redirect straight to the user's dashboard
@@ -12,9 +11,13 @@ export function LandingPage(props) {
 
     return (
         <div className="home">
+          <div className="fullscreen-video-wrap">
+            <video src="/media/wine-pour.mp4" autoPlay="true" loop="true"></video>
+
             <h2>Helping you find the perfect drink</h2>
-            <LoginForm />
+            <Modal />
             <Link to="/register">Register</Link>
+          </div>
         </div>
     );
 }

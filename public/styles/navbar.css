@@ -1,17 +1,16 @@
 .navbar {
   background-color: #6f0341; }
-
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 15px 30px; }
-
-li {
-  display: inline;
-  color: white; }
-
-div.navbar-title {
-  display: inline;
-  margin-right: 75%; }
+  .navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 15px 30px; }
+    .navbar ul li {
+      display: inline;
+      color: white; }
+      .navbar ul li a {
+        color: white; }
+  .navbar div.navbar-title {
+    display: inline;
+    margin-right: 75%; }
 
 /*# sourceMappingURL=navbar.css.map */

@@ -19,7 +19,8 @@ export class Dashboard extends React.Component {
 
         return (
             <div className="dashboard">
-                <div className="dashboard-username">
+                <img src="/media/avatar.png" />
+                <div className="dashboard-username box">
                     Username: {this.props.username}
                 </div>
                 <div className="dashboard-name">Name: {this.props.name}</div>

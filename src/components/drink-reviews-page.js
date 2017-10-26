@@ -6,7 +6,11 @@ export default class DrinkReviewsPage extends React.Component {
 
     render() {
           return (
-            <div>Drink Reviews Page</div>
+            <div>Drink Reviews Page
+              <div className="box">
+                Here is a result
+              </div>
+            </div>
           );
     }
 }

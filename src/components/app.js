@@ -8,6 +8,7 @@ import Dashboard from './dashboard';
 import RegistrationPage from './registration-page';
 import BrowseLocationsPage from './browse-locations-page';
 import WineryPage from './winery-page';
+import DrinkReviewsPage from './drink-reviews-page';
 import Footer from './footer';
 import {refreshAuthToken} from '../actions/auth';
 
@@ -58,6 +59,7 @@ export class App extends React.Component {
                 <Route exact path="/register" component={RegistrationPage} />
                 <Route exact path="/location" component={BrowseLocationsPage} />
                 <Route exact path="/location/:locId" component={WineryPage} />
+                <Route exact path="/drink/:drinkId" component={DrinkReviewsPage} />
                 <Footer />
             </div>
         );
