@@ -7,6 +7,7 @@
   },
   "dependencies": {
     "jwt-decode": "^2.2.0",
+    "node-sass-chokidar": "0.0.3",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "react-redux": "^5.0.4",
@@ -17,6 +18,8 @@
     "validator": "^7.0.0"
   },
   "scripts": {
+    "build-css": "node-sass-chokidar public/ -o public/",
+    "watch-css": "npm run build-css && node-sass-chokidar public/ -o public/ --watch --recursive",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",

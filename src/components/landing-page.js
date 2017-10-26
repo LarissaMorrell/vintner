@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {Link, Redirect} from 'react-router-dom';
+import {Redirect} from 'react-router-dom';
 import Modal from './modal';
 
 export function LandingPage(props) {
@@ -13,10 +13,11 @@ export function LandingPage(props) {
         <div className="home">
           <div className="fullscreen-video-wrap">
             <video src="/media/wine-pour.mp4" autoPlay="true" loop="true"></video>
-
+            <div className="overlay"></div>
+          </div>
+          <div className="landing-content">
             <h2>Helping you find the perfect drink</h2>
             <Modal />
-            <Link to="/register">Register</Link>
           </div>
         </div>
     );

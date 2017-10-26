@@ -1,22 +1,25 @@
+* {
+  box-sizing: border-box; }
+
 body {
   font-family: 'Raleway', sans-serif;
   background-color: #f9f9f9; }
 
 .fullscreen-video-wrap {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   overflow: hidden; }
   .fullscreen-video-wrap video {
     width: 100%; }
 
-footer {
-  background: #6f0341;
-  color: white;
-  width: 100%;
-  min-height: 75px;
-  position: absolute;
-  bottom: 0;
-  left: 0; }
+.overlay {
+  position: fixed;
+  top: 40px;
+  left: 0px;
+  width: 100vw;
+  height: 55vh;
+  background-color: #6f0341;
+  opacity: 0.5; }
 
 img {
   height: 125px;
@@ -37,4 +40,11 @@ img {
   background-color: white;
   padding: 50px; }
 
-/*# sourceMappingURL=main.css.map */
+footer {
+  background: #6f0341;
+  color: white;
+  width: 100%;
+  min-height: 75px;
+  position: absolute;
+  bottom: 0;
+  left: 0; }
