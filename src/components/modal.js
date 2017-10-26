@@ -6,7 +6,7 @@ export default class Modal extends React.Component {
     constructor(props){
       super(props);
       this.state = {
-        display:false
+        display:true
       }
     }
     viewModal(){
@@ -17,10 +17,12 @@ export default class Modal extends React.Component {
     render() {
       if(this.state.display){
         return (
-          <div className="modal box">
-            <p onClick={e => this.viewModal()}>X</p>
-            Here is the Modal
-            <LoginForm />
+          <div className="black-screen">
+            <div className="modal box">
+              <p onClick={e => this.viewModal()}>X</p>
+              Here is the Modal
+              <LoginForm />
+            </div>
           </div>
         );
       }

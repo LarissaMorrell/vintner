@@ -12,12 +12,32 @@ export class Navbar extends React.Component {
     }
 
     render() {
-        // Only render the log out button if we are logged in
-        let logOutButton;
-        if (this.props.loggedIn) {
-            logOutButton = (
-              <button onClick={() => this.logOut()}>Log out</button>
-            );
+        //why was this working prior to being passed in through props????
+        // if (this.props.loggedIn) {
+        //     logOutButton = (
+        //       <button onClick={() => this.logOut()}>Log out</button>
+        //     );
+        // }
+
+        let listItems;
+        //
+        if(this.props.loggedIn){
+          //if loggedIn render the profile link, logout button
+          listItems = [
+            <li key="1"><Link to="/dashboard">Profile</Link></li>,
+            //TODO turn on button functionality for modal
+            <li key="2"><button onClick={() => this.logOut()}>Log out</button></li>
+          ];
+        }
+        else {
+          listItems = [
+            <li key="1">
+              <button >Login</button>
+            </li>,
+            <li key="2">
+              <Link to="/register">Sign Up</Link>
+            </li>
+          ]
         }
 
 
@@ -25,8 +45,7 @@ export class Navbar extends React.Component {
             <div className="navbar">
               <ul>
                 <li><div className="navbar-title">Vintner</div></li>
-                <li><Link to="/dashboard">Profile</Link></li>
-                <li>{logOutButton}</li>
+                {listItems}
               </ul>
             </div>
         );

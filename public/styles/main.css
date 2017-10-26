@@ -21,6 +21,14 @@ body {
   background-color: #6f0341;
   opacity: 0.5; }
 
+.black-screen {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background-color: rgba(0, 0, 0, 0.7); }
+
 img {
   height: 125px;
   float: right; }
@@ -47,4 +55,5 @@ footer {
   min-height: 75px;
   position: absolute;
   bottom: 0;
-  left: 0; }
+  left: 0;
+  z-index: -1; }
