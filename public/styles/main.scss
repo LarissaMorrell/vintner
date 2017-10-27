@@ -12,26 +12,29 @@ body {
   background-color: $lt-tan;
 }
 
-.fullscreen-video-wrap{
-  width:100%;
-  height:100%;
+.video-container{
+  position: fixed;
+  width: 100%;
+  height: 100%;
   overflow: hidden;
+  max-width: 100%;
 
-  video{
-    width:100%;
+  //TODO fix positioning
+  .overlay {
+    position: absolute;
+    width: 100%;
+    height:100%;
+    background:rgba(123, 39, 57, .5);
+    z-index:999;
+  }
+  video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    // height: 100%;
   }
 }
-//TODO fix positioning
-.overlay {
-  position:fixed;
-  top:100px;
-  left:0px;
-  width:100vw;
-  height:55vh;
-  background-color: $burgundy;
-  opacity: 0.5;
-}
-
 
 
 // TODO get rid of this

@@ -3,19 +3,24 @@ $burgundy: #7b2739;
 .navbar {
   background-color: $burgundy;
 
+  #navbar-logo {
+    display: inline-block;
+    font-size: 25px;
+    color:white;
+  }
   ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 15px 30px;
+    list-style-type: none;
+    margin: 0;
+    padding: 15px 30px;
 
-      li {
-        display: inline;
+
+    li {
+      display: inline;
+      color: white;
+      a {
         color: white;
-
-        a {
-          color: white;
-        }
       }
+    }
   }
 
   div.navbar-title {

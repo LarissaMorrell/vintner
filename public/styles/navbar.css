@@ -1,5 +1,9 @@
 .navbar {
   background-color: #7b2739; }
+  .navbar #navbar-logo {
+    display: inline-block;
+    font-size: 25px;
+    color: white; }
   .navbar ul {
     list-style-type: none;
     margin: 0;
