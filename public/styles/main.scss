@@ -63,7 +63,7 @@ img {
   // position:fixed;
   // top:10%;
   margin:0 auto;
-  padding:50 auto;
+  padding:30 auto;
   width:55%;
   max-width: 700px;
   background-color:#F9F9F1;//off-white
@@ -75,6 +75,26 @@ img {
     float: right;
     z-index: 1;
     color: $burgundy;
+  }
+  div.boxclose{
+    float:right;
+    margin-top:-60px;
+    margin-right:-60px;
+    cursor:pointer;
+    color: #fff;
+    border: 2px solid #a46975;
+    border-radius: 30px;
+    background: $burgundy;
+    font-size: 31px;
+    font-weight: bold;
+    display: inline-block;
+    line-height: 0px;
+    padding: 13px 7px 18px 7px;
+  }
+
+  .boxclose:before {
+      content: "×";
+
   }
 }
 
