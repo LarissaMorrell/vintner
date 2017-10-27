@@ -12,7 +12,7 @@ export class Modal extends React.Component {
             <div className="modal box">
               <div className="close-win"
                 onClick={e => this.props.dispatch(closeModal())}>
-                X
+                <i className="fa fa-window-close-o" aria-hidden="true"></i>
               </div>
               <LoginForm />
             </div>

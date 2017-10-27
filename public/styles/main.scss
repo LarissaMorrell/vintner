@@ -1,4 +1,7 @@
-$wine-color: #6f0341;
+$burgundy: #7b2739;
+$lt-tan: #f2f1de;
+$tan: #d8a35d;
+$sage: #98a995;
 
 * {
   box-sizing: border-box;
@@ -6,7 +9,7 @@ $wine-color: #6f0341;
 
 body {
   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-  background-color: #f9f9f9;
+  background-color: $lt-tan;
 }
 
 .fullscreen-video-wrap{
@@ -24,7 +27,7 @@ body {
   left:0px;
   width:100vw;
   height:55vh;
-  background-color: $wine-color;
+  background-color: $burgundy;
   opacity: 0.5;
 }
 
@@ -37,10 +40,12 @@ img {
 }
 
 .box {
-  width: 250px;
+  width:55%;
+  max-width: 700px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   text-align: center;
-  background-color: white;
+  background-color: $lt-tan;
+  color:$burgundy;
   border-radius: 15px;
 }
 
@@ -57,12 +62,14 @@ img {
   // top:10%;
   margin:0 auto;
   width:55%;
-  height:40%;
-  background-color:white;
+  max-width: 700px;
+  background-color:$lt-tan;
+  color:$burgundy;
   padding:50px;
 
   .fa-window-close-o {
     position:relative;
+    float: right;
     z-index: 1;
     color: black;
     width:40px;
@@ -73,7 +80,7 @@ img {
 
 
 footer {
-	background: $wine-color;
+	background: $burgundy;
   color: white;
 	width:100%;
 	min-height:75px;
