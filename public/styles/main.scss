@@ -1,5 +1,5 @@
 $burgundy: #7b2739;
-$lt-tan: #f2f1de;
+$lt-tan: #f3f2e1;
 $tan: #d8a35d;
 $sage: #98a995;
 
@@ -21,9 +21,10 @@ body {
     width:100%;
   }
 }
+//TODO fix positioning
 .overlay {
   position:fixed;
-  top:40px;
+  top:100px;
   left:0px;
   width:100vw;
   height:55vh;
@@ -40,11 +41,12 @@ img {
 }
 
 .box {
+  padding: 50px 20px;
   width:55%;
   max-width: 700px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   text-align: center;
-  background-color: $lt-tan;
+  background-color: #F9F9F1;//off-white
   color:$burgundy;
   border-radius: 15px;
 }
@@ -61,9 +63,10 @@ img {
   // position:fixed;
   // top:10%;
   margin:0 auto;
+  padding:50 auto;
   width:55%;
   max-width: 700px;
-  background-color:$lt-tan;
+  background-color:#F9F9F1;//off-white
   color:$burgundy;
   padding:50px;
 
@@ -71,8 +74,7 @@ img {
     position:relative;
     float: right;
     z-index: 1;
-    color: black;
-    width:40px;
+    color: $burgundy;
   }
 }
 

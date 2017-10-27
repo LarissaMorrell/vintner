@@ -7,10 +7,19 @@ label {
   display: block;
   margin-top: 30px; }
 
+a {
+  color: #a3334c; }
+
+a:visited {
+  color: #8e6022; }
+
+a:hover {
+  color: #d8a35d; }
+
 .form-style-3 label > span {
   float: left;
   width: 100px;
-  color: #F072A9;
+  color: #a3334c;
   font-weight: bold;
   font-size: 13px;
   text-shadow: 1px 1px 1px #fff; }
@@ -61,17 +70,23 @@ input[type=password],
   border-radius: 3px;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
-  border: 1px solid #e5d5d9;
+  border: 1px solid #b17f89;
   outline: none;
-  color: #F072A9;
+  color: #7b2739;
   padding: 5px 8px 5px 8px;
-  box-shadow: inset 1px 1px 4px #FFD5E7;
-  -moz-box-shadow: inset 1px 1px 4px #FFD5E7;
-  -webkit-box-shadow: inset 1px 1px 4px #FFD5E7;
-  background: #e5d5d9;
+  box-shadow: inset 1px 1px 4px #be959d;
+  -moz-box-shadow: inset 1px 1px 4px #be959d;
+  -webkit-box-shadow: inset 1px 1px 4px #be959d;
+  background: #f2eaec;
   width: 75%;
   height: 45px;
   font-size: 16px; }
+
+input[type=button]
+input[type=submit],
+button {
+  margin-right: 40px;
+  margin-top: 20px; }
 
 .required {
   color: red;

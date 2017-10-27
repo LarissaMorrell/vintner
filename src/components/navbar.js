@@ -44,10 +44,12 @@ export class Navbar extends React.Component {
 
         return (
             <div className="navbar">
-              <ul>
-                <li><div className="navbar-title">Vintner</div></li>
-                {listItems}
-              </ul>
+              <div className="navbar-title">Vintner</div>
+              <nav>
+                <ul>
+                  {listItems}
+                </ul>
+              </nav>
             </div>
         );
     }

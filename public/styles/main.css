@@ -3,7 +3,7 @@
 
 body {
   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-  background-color: #f2f1de; }
+  background-color: #f3f2e1; }
 
 .fullscreen-video-wrap {
   width: 100%;
@@ -14,7 +14,7 @@ body {
 
 .overlay {
   position: fixed;
-  top: 40px;
+  top: 100px;
   left: 0px;
   width: 100vw;
   height: 55vh;
@@ -26,11 +26,12 @@ img {
   float: right; }
 
 .box {
+  padding: 50px 20px;
   width: 55%;
   max-width: 700px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   text-align: center;
-  background-color: #f2f1de;
+  background-color: #F9F9F1;
   color: #7b2739;
   border-radius: 15px; }
 
@@ -44,17 +45,17 @@ img {
 
 .modal {
   margin: 0 auto;
+  padding: 50 auto;
   width: 55%;
   max-width: 700px;
-  background-color: #f2f1de;
+  background-color: #F9F9F1;
   color: #7b2739;
   padding: 50px; }
   .modal .fa-window-close-o {
     position: relative;
     float: right;
     z-index: 1;
-    color: black;
-    width: 40px; }
+    color: #7b2739; }
 
 footer {
   background: #7b2739;
