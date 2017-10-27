@@ -24,17 +24,18 @@ body {
     left: 0;
     width: 100%; }
 
+span.checked {
+  color: #FFD700; }
+
 img {
-  height: 125px;
-  float: right; }
+  height: 125px; }
 
 .box {
-  padding: 50px 20px;
-  width: 55%;
+  margin: 50px auto;
   max-width: 700px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   text-align: center;
-  background-color: #F9F9F1;
+  background-color: #FFFFFF;
   color: #7b2739;
   border-radius: 15px; }
 
@@ -54,11 +55,6 @@ img {
   background-color: #F9F9F1;
   color: #7b2739;
   padding: 50px; }
-  .modal .fa-window-close-o {
-    position: relative;
-    float: right;
-    z-index: 1;
-    color: #7b2739; }
   .modal div.boxclose {
     float: right;
     margin-top: -60px;
@@ -75,6 +71,9 @@ img {
     padding: 13px 7px 18px 7px; }
   .modal .boxclose:before {
     content: "×"; }
+
+.result-container {
+  padding: 20px 30px; }
 
 footer {
   background: #7b2739;

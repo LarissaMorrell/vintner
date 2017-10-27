@@ -1,12 +1,8 @@
 import React from 'react';
-import {connect} from 'react-redux';
-import {Redirect} from 'react-router-dom';
 
-export default class Rating extends React.Component {
-
-    render() {
-          return (
-            <div>Rating</div>
-          );
-    }
+export default function Rating(props) {
+  console.log("in rating component");
+    return (
+      <div>Rating: <span className="fa fa-star checked"></span></div>
+    );
 }

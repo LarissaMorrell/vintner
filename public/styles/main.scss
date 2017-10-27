@@ -35,21 +35,24 @@ body {
     // height: 100%;
   }
 }
-
+//gold star rating
+span.checked {
+  color: #FFD700; //gold
+}
 
 // TODO get rid of this
 img {
   height:125px;
-  float: right;
+
 }
 
 .box {
-  padding: 50px 20px;
-  width:55%;
+  margin: 50px auto;
+  // padding: 50px 20px;
   max-width: 700px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   text-align: center;
-  background-color: #F9F9F1;//off-white
+  background-color: #FFFFFF;//off-white
   color:$burgundy;
   border-radius: 15px;
 }
@@ -73,12 +76,6 @@ img {
   color:$burgundy;
   padding:50px;
 
-  .fa-window-close-o {
-    position:relative;
-    float: right;
-    z-index: 1;
-    color: $burgundy;
-  }
   div.boxclose{
     float:right;
     margin-top:-60px;
@@ -101,7 +98,9 @@ img {
   }
 }
 
-
+.result-container {
+  padding: 20px 30px;
+}
 
 
 footer {

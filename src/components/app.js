@@ -51,17 +51,18 @@ export class App extends React.Component {
     }
 
     render() {
-
         return (
             <div className="app">
+              <header>
                 <Navbar loggedIn={this.props.loggedIn} />
-                <Route exact path="/" component={LandingPage} />
-                <Route exact path="/dashboard" component={Dashboard} />
-                <Route exact path="/register" component={RegistrationPage} />
-                <Route exact path="/location" component={BrowseLocationsPage} />
-                <Route exact path="/location/:locId" component={WineryPage} />
-                <Route exact path="/drink/:drinkId" component={DrinkReviewsPage} />
-                <Footer />
+              </header>
+              <Route exact path="/" component={LandingPage} />
+              <Route exact path="/dashboard" component={Dashboard} />
+              <Route exact path="/register" component={RegistrationPage} />
+              <Route exact path="/location" component={BrowseLocationsPage} />
+              <Route exact path="/location/:locId" component={WineryPage} />
+              <Route exact path="/drink/:drinkId" component={DrinkReviewsPage} />
+              <Footer />
             </div>
         );
     }
