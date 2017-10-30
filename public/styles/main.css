@@ -27,6 +27,9 @@ body {
 span.checked {
   color: #FFD700; }
 
+span.unchecked {
+  color: #a9a9a9; }
+
 img {
   height: 125px; }
 

@@ -5,7 +5,7 @@ export function LocationResult(props) {
     const winery = props.winery;
     return (
       <div className="result-container box pure-g">
-        <img classname="pure-u-1-4" src="/media/avatar.png" />
+        <img className="pure-u-1-4" src="/media/avatar.png" />
         <div className="pure-u-1-2">
           <h3>{winery.name}</h3>
           <p>{winery.streetAddress}</p>

@@ -1,18 +1,21 @@
 .navbar {
-  background-color: #7b2739; }
+  background-color: #7b2739;
+  padding: 10px 10%; }
   .navbar #navbar-logo {
-    display: inline-block;
     font-size: 25px;
     color: white; }
-  .navbar ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 15px 30px; }
-    .navbar ul li {
-      display: inline;
-      color: white; }
-      .navbar ul li a {
-        color: white; }
-  .navbar div.navbar-title {
-    display: inline;
-    margin-right: 75%; }
+  .navbar div.nav-item a {
+    padding: 15px 30px;
+    color: white;
+    padding-top: 35px;
+    font-size: 16px;
+    text-decoration: none; }
+  .navbar a:visited {
+    color: white;
+    text-decoration: none; }
+  .navbar div.nav-item a:hover {
+    color: yellow; }
+  .navbar button {
+    font-size: 16px;
+    padding: 5px 15px;
+    margin: inherit; }

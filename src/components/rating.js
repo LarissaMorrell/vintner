@@ -1,8 +1,20 @@
 import React from 'react';
 
 export default function Rating(props) {
-  console.log("in rating component");
+
+    function genStarRating(rating){
+      let starRating = [];
+      rating.map((star, index) => {
+        if(star){
+          starRating.push(<span className="fa fa-star checked" key={index}></span>);
+        } else {
+          starRating.push(<span className="fa fa-star unchecked" key={index}></span>);
+        }
+      });
+      return starRating;
+    }
+
     return (
-      <div>Rating: <span className="fa fa-star checked"></span></div>
+      <div>Rating: {genStarRating(props.rating)}</div>
     );
 }

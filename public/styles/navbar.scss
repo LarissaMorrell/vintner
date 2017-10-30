@@ -2,28 +2,31 @@ $burgundy: #7b2739;
 
 .navbar {
   background-color: $burgundy;
+  padding:10px 10%;
 
   #navbar-logo {
-    display: inline-block;
     font-size: 25px;
     color:white;
   }
-  ul {
-    list-style-type: none;
-    margin: 0;
+  div.nav-item a {
     padding: 15px 30px;
-
-    li {
-      display: inline;
-      color: white;
-      a {
-        color: white;
-      }
-    }
+    color: white;
+    padding-top: 35px;
+    font-size: 16px;
+    text-decoration: none;
   }
-
-  div.navbar-title {
-    display: inline;
-    margin-right: 75%;
+  a:visited {
+    color:white;
+    //TODO why is it underlined?
+    text-decoration: none;
+  }
+  div.nav-item a:hover {
+    //TODO change color
+    color: yellow;
+  }
+  button {
+    font-size: 16px;
+    padding: 5px 15px;
+    margin:inherit;
   }
 }

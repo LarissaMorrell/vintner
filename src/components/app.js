@@ -56,12 +56,14 @@ export class App extends React.Component {
               <header>
                 <Navbar loggedIn={this.props.loggedIn} />
               </header>
-              <Route exact path="/" component={LandingPage} />
-              <Route exact path="/dashboard" component={Dashboard} />
-              <Route exact path="/register" component={RegistrationPage} />
-              <Route exact path="/location" component={BrowseLocationsPage} />
-              <Route exact path="/location/:locId" component={WineryPage} />
-              <Route exact path="/drink/:drinkId" component={DrinkReviewsPage} />
+              <div className="content-container">
+                <Route exact path="/" component={LandingPage} />
+                <Route exact path="/dashboard" component={Dashboard} />
+                <Route exact path="/register" component={RegistrationPage} />
+                <Route exact path="/location" component={BrowseLocationsPage} />
+                <Route exact path="/location/:locId" component={WineryPage} />
+                <Route exact path="/drink/:drinkId" component={DrinkReviewsPage} />
+              </div>
               <Footer />
             </div>
         );
