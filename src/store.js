@@ -5,6 +5,7 @@ import {loadAuthToken} from './local-storage';
 import authReducer from './reducers/auth';
 import modalReducer from './reducers/modal';
 import protectedDataReducer from './reducers/protected-data';
+import locationsReducer from './reducers/locations';
 import {setAuthToken} from './actions/auth';
 
 const store = createStore(
@@ -12,7 +13,8 @@ const store = createStore(
         form: formReducer,
         auth: authReducer,
         modal: modalReducer,
-        protectedData: protectedDataReducer
+        protectedData: protectedDataReducer,
+        dbData: locationsReducer
     }),
     applyMiddleware(thunk)
 );

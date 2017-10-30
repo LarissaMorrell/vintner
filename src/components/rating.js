@@ -4,13 +4,13 @@ export default function Rating(props) {
 
     function genStarRating(rating){
       let starRating = [];
-      rating.map((star, index) => {
-        if(star){
-          starRating.push(<span className="fa fa-star checked" key={index}></span>);
+      for(let i = 0; i < 5; i++){
+        if(i < rating){
+          starRating.push(<span className="fa fa-star checked" key={i}></span>);
         } else {
-          starRating.push(<span className="fa fa-star unchecked" key={index}></span>);
+          starRating.push(<span className="fa fa-star unchecked" key={i}></span>);
         }
-      });
+      };
       return starRating;
     }
 

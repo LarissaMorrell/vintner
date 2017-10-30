@@ -5,21 +5,17 @@ import {LocationResult} from './location-result';
 export class BrowseLocationsPage extends React.Component {
 
     render() {
-      const winery = {
-        name: "Nashoba",
-        streetAddress: "4 slug way",
-        city: "Elixatown",
-        state: "MA",
-        rating: [true, true, true, false, false]
-      }
-
+      console.log(this.props.locations);
       return (
         <div>Browse Locations Page
-          <LocationResult winery={winery} />
+          <LocationResult winery={this.props.locations[0]} />
         </div>
       );
     }
 }
+const mapStateToProps = state => ({
+  locations: state.dbData.locations
+});
 
 //why do I need to connect here?
-export default connect()(BrowseLocationsPage);
+export default connect(mapStateToProps)(BrowseLocationsPage);

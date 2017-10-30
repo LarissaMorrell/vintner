@@ -3,6 +3,7 @@ import Rating from './rating';
 
 export function LocationResult(props) {
     const winery = props.winery;
+    console.log("winery", winery);
     return (
       <div className="result-container box pure-g">
         <img className="pure-u-1-4" src="/media/avatar.png" />
