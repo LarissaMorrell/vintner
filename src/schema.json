@@ -1,0 +1,43 @@
+{
+  "locations": [
+    {
+      "name": "Moonlight Winery",
+      "streetAddress": "13 west way",
+      "city": "Elmwood",
+      "state": "MA",
+      "hours": [
+        "10-4",
+        "11-6",
+        "11-6",
+        "11-6",
+        "11-6",
+        "11-8",
+        "10-8"
+      ],
+      "drinks": [
+        {
+          "name": "Pinto Noir",
+          "rating": [true, true, true, true, false],
+          "reviews": [
+            {
+      	       "rating": [true, true, true, false, false],
+               "review": "Lorem ipsum dolor sit amet, ut salutatus constituam ius, vix an meis assentior philosophia.",
+               "type": "wine",
+               "price": "$$$",
+               "purchased": "Yes",
+               "flavors": ["sweet", "fruity"]
+            },
+            {
+      	       "rating": [true, true, false, false, false],
+               "review": "Lorem ipsum dolor sit amet, ut salutatus constituam ius, vix an meis assentior philosophia.",
+               "type": "beer",
+               "price": "$$",
+               "purchased": "No",
+               "flavors": ["hoppy"]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
