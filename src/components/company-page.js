@@ -1,16 +1,16 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import PlaceInfo from './place-info';
+import CompanyInfo from './company-info';
 import DrinkResult from './drink-result';
 
-export class WineryPage extends React.Component {
+export class CompanyPage extends React.Component {
 
   render() {
-    let winery = this.props.location;
+    let company = this.props.location;
     return (
       <div>
-        <PlaceInfo place={this.props.location} />
-        {genDrinkList(winery.drinks)};
+        <CompanyInfo company={this.props.location} />
+        {genDrinkList(company.drinks)};
       </div>
     );
     //TODO add the drink types
@@ -34,4 +34,4 @@ function genDrinkList(drinks){
   return drinkElem;
 }
 
-export default connect(mapStateToProps)(WineryPage);
+export default connect(mapStateToProps)(CompanyPage);

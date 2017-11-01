@@ -1,9 +1,9 @@
 import React from 'react';
 import Rating from './rating';
+import DrinkTypes from './drink-types';
 
 export function LocationResult(props) {
     const winery = props.winery;
-    console.log("winery", winery);
     return (
       <div className="result-container box pure-g">
         <img className="pure-u-1-4" src={`/media/${props.winery.image}`} />
@@ -14,6 +14,7 @@ export function LocationResult(props) {
         </div>
         <div className="pure-u-1-4">
           <Rating rating={winery.rating} />
+          <DrinkTypes types={winery.types} />
         </div>
       </div>
     );
