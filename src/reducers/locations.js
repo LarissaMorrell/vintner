@@ -6,6 +6,7 @@ const initialState = {
       "city": "Elmwood",
       "state": "MA",
       "rating": 1,
+      "totalReviewCount": 14,
       "hours": [
         "10-4",
         "11-6",
@@ -19,7 +20,29 @@ const initialState = {
       "types": ["beer", "wine", "cider","mead", "spirits"],
       "drinks": [
         {
-          "name": "Pinto Noir",
+          "name": "Porter",
+          "rating": 4,
+          "type": "beer",
+          "reviews": [
+            {
+               "rating": 3,
+               "review": "Lorem ipsum dolor sit amet, ut salutatus constituam ius, vix an meis assentior philosophia.",
+               "price": "$$$",
+               "purchased": "Yes",
+               "flavors": ["sweet", "fruity"],
+               "userID": "000000"
+            },
+            {
+               "rating": 2,
+               "review": "Lorem ipsum dolor sit amet, ut salutatus constituam ius, vix an meis assentior philosophia.",
+               "price": "$$",
+               "purchased": "No",
+               "flavors": ["hoppy"]
+            }
+          ]
+        },
+        {
+          "name": "Pinot Noir",
           "rating": 4,
           "type": "wine",
           "reviews": [
