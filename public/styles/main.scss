@@ -41,12 +41,6 @@ span.unchecked {
   color: #a9a9a9; //dark gray
 }
 
-// TODO get rid of this
-img {
-  height:125px;
-
-}
-
 .box {
   margin: 50px auto;
   // padding: 50px 20px;
@@ -56,6 +50,17 @@ img {
   background-color: #FFFFFF;//off-white
   color:$burgundy;
   border-radius: 15px;
+}
+
+img.drink-type {
+  height:60px;
+}
+
+img.company-result {
+  max-height: 150px;
+}
+img.company {
+  max-width: 300px;
 }
 
 .black-screen {

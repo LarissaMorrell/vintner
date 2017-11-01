@@ -29,9 +29,6 @@ span.checked {
 span.unchecked {
   color: #a9a9a9; }
 
-img {
-  height: 125px; }
-
 .box {
   margin: 50px auto;
   max-width: 700px;
@@ -40,6 +37,15 @@ img {
   background-color: #FFFFFF;
   color: #7b2739;
   border-radius: 15px; }
+
+img.drink-type {
+  height: 60px; }
+
+img.company-result {
+  max-height: 150px; }
+
+img.company {
+  max-width: 300px; }
 
 .black-screen {
   position: fixed;

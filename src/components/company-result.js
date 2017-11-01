@@ -7,7 +7,9 @@ export function CompanyResult(props) {
     console.log(<DrinkTypes types={company.types} />);
     return (
       <div className="result-container box pure-g">
-        <img className="pure-u-1-4" src={`/media/${props.company.image}`} />
+        <div className="pure-u-1-4">
+          <img className="company-result" src={`/media/${props.company.image}`} />
+        </div>
         <div className="pure-u-1-2">
           <h3>{company.name}</h3>
           <p>{company.streetAddress}</p>
