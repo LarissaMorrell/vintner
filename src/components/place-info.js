@@ -15,7 +15,7 @@ export default class LocationInfo extends React.Component {
         </p>
         <div>
           <Rating rating={place.rating} />
-          <p>{place.reviewCount} reviews</p>
+          <p>{place.totalReviewCount} reviews</p>
         </div>
         <img src={`/media/${place.image}`}/>
         <p>Hours: </p>
@@ -32,10 +32,9 @@ function hours(hoursArr){
   for(let i = 0; i < hoursArr.length; i++){
     hoursOfOperation.push(<li key={i}>{hoursArr[i]}</li>)
   }
-  //why??????????
-  // hoursArr.map(hour => {
-  //   hour = <li>{hour}</li>;
-  // });
-
   return hoursOfOperation;
 }
+//why??????????
+// hoursArr.map(hour => {
+//   hour = <li>{hour}</li>;
+// });
