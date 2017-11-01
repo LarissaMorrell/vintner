@@ -15,15 +15,17 @@ const initialState = {
         "11-8",
         "10-8"
       ],
+      "image": "nashoba.jpg",
+      "types": ["beer", "wine", "cider","mead", "spirits"],
       "drinks": [
         {
           "name": "Pinto Noir",
           "rating": 4,
+          "type": "wine",
           "reviews": [
             {
                "rating": 3,
                "review": "Lorem ipsum dolor sit amet, ut salutatus constituam ius, vix an meis assentior philosophia.",
-               "type": "wine",
                "price": "$$$",
                "purchased": "Yes",
                "flavors": ["sweet", "fruity"],
@@ -32,7 +34,6 @@ const initialState = {
             {
                "rating": 2,
                "review": "Lorem ipsum dolor sit amet, ut salutatus constituam ius, vix an meis assentior philosophia.",
-               "type": "beer",
                "price": "$$",
                "purchased": "No",
                "flavors": ["hoppy"]

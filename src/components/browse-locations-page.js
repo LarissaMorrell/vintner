@@ -17,5 +17,4 @@ const mapStateToProps = state => ({
   locations: state.dbData.locations
 });
 
-//why do I need to connect here?
 export default connect(mapStateToProps)(BrowseLocationsPage);

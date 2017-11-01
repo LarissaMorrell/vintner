@@ -1,102 +1,34 @@
 import React from 'react';
+import {connect} from 'react-redux';
 import Rating from './rating';
+import DrinkResult from './drink-result';
 // import {connect} from 'react-redux';
 // import {Redirect} from 'react-router-dom';
 
-export default class WineryPage extends React.Component {
-
-    // function displayDrinks(){
-    //   let drinks = [
-    //     {
-    //       name: "Pinto Noir",
-    //       rating: [true, true, true, true, false],
-    //
-    //     }
-    //   ];
-    //
-    //   drinks.map(drink => {
-    //     <div className="box pure-g">
-    //         <div className="pure-u-2-24">
-    //           <img src="/media/avatar.png" />
-    //       </div>
-    //       <div className="pure-u-8-24">
-    //         <h3>{drink.name}</h3>
-    //       </div>
-    //       <div className="pure-u-8-24">
-    //         <Rating rating={drink.rating} />
-    //         <p>
-    //           {drink.rating.length} reviews
-    //         </p>
-    //       </div>
-    //       <div className="pure-u-6">
-    //         <button>Write a Review</button>
-    //         <button>Read Reviews</button>
-    //       </div>
-    //     </div>
-    //   });
-    //   return drinks;
-    // }
+export class WineryPage extends React.Component {
 
     render() {
-        // let winery = this.props.winery;
+        let winery = this.props.location;
+
         return (
-          <div className="box pure-g">
-              <div className="pure-u-2-24">
-                <img src="/media/avatar.png" />
+          <div className="pure-g">
+            <div className="pure-3-5">
+              <h1>{this.props.name}</h1>
+              
             </div>
-            <div className="pure-u-8-24">
-              <h3>Pinot</h3>
-            </div>
-            <div className="pure-u-8-24">
-              <Rating rating={[true,true,false,false,false]} />
-              <p>
-                14 reviews
-              </p>
-            </div>
-            <div className="pure-u-6">
-              <button>Write a Review</button>
-              <button>Read Reviews</button>
-            </div>
+            <DrinkResult drink={winery.drinks[0]} />
           </div>
         );
         //TODO add the overall winery rating under h1
         //TODO add the drink types
     }
 }
-// <div>
-//   <div className="result-container pure-g">
-//     <div className="pure-u-16-24">
-//       <h1>Nashoba Valley</h1>
-//       <p>16 Mothra Lane</p>
-//       <p>Jamestown, MA</p>
-//     </div>
-//     <div className="pure-u-8-24">
-//       <img src="/media/avatar.png" />
-//     </div>
-//   </div>
-//   <div className="drink-list">
-//
-//   </div>
-// </div>
-// <h1>winery.name</h1>
-// <p>{winery.streetAddress}</p>
-// <p>{winery.city}, {winery.state}</p>
 
-// <div className="box pure-g">
-//     <div className="pure-u-2-24">
-//       <img src="/media/avatar.png" />
-//   </div>
-//   <div className="pure-u-8-24">
-//     <h3>{drink.name}</h3>
-//   </div>
-//   <div className="pure-u-8-24">
-//     <Rating rating={drink.rating} />
-//     <p>
-//       {drink.rating.length} reviews
-//     </p>
-//   </div>
-//   <div className="pure-u-6">
-//     <button>Write a Review</button>
-//     <button>Read Reviews</button>
-//   </div>
-// </div>
+
+const mapStateToProps = state => ({
+  // location: state.dbData.locations.//take var endpoint and
+                                   //find id: ??? in locations array
+  location: state.dbData.locations[0]
+});
+
+export default connect(mapStateToProps)(WineryPage);

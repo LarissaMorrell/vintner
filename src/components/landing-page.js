@@ -12,8 +12,8 @@ export function LandingPage(props) {
     return (
         <div className="home">
           <div className="video-container">
-            <div className="overlay"></div>
             <video src="/media/wine-pour.mp4" autoPlay="true" loop="true"></video>
+              <div className="overlay"></div>
           </div>
           <div className="landing-content">
             <h2>Helping you find the perfect drink</h2>
