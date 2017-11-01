@@ -9,7 +9,7 @@ export default class DrinkResult extends React.Component {
       return (
         <div className="box pure-g">
             <div className="pure-u-2-24">
-              <img src={`/media/${drink.type}.png`} />
+              <img src={`/media/${drink.type}.png`} alt="drink type" />
           </div>
           <div className="pure-u-8-24">
             <h3>{drink.name}</h3>

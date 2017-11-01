@@ -9,7 +9,7 @@ import RegistrationPage from './registration-page';
 import BrowseLocationsPage from './browse-locations-page';
 import CompanyPage from './company-page';
 import DrinkReviewsPage from './drink-reviews-page';
-import CreateReviewPage from './create-review-page';
+// import CreateReviewPage from './create-review-page';
 import Footer from './footer';
 import Modal from './modal';
 import {refreshAuthToken} from '../actions/auth';

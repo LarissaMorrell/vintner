@@ -4,11 +4,11 @@ import DrinkTypes from './drink-types';
 
 export function CompanyResult(props) {
     const company = props.company;
-    console.log(<DrinkTypes types={company.types} />);
+    
     return (
       <div className="result-container box pure-g">
         <div className="pure-u-1-4">
-          <img className="company-result" src={`/media/${props.company.image}`} />
+          <img className="company-result" src={`/media/${props.company.image}`} alt="company" />
         </div>
         <div className="pure-u-1-2">
           <h3>{company.name}</h3>

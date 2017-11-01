@@ -21,7 +21,7 @@ export default class CompanyInfo extends React.Component {
           <DrinkTypes types={company.types} />
 
         </div>
-        <img className="company" src={`/media/${company.image}`}/>
+        <img className="company" src={`/media/${company.image}`} alt="company"/>
         <p>Hours: </p>
           <ul>
             {hours(company.hours)}
