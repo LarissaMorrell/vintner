@@ -9,6 +9,7 @@ import RegistrationPage from './registration-page';
 import BrowseLocationsPage from './browse-locations-page';
 import CompanyPage from './company-page';
 import DrinkReviewsPage from './drink-reviews-page';
+import CreateReviewPage from './create-review-page';
 import Footer from './footer';
 import {refreshAuthToken} from '../actions/auth';
 
@@ -69,6 +70,7 @@ export class App extends React.Component {
         );
     }
 }
+//<Route exact path="/create" component={CreateReviewPage} />
 
 const mapStateToProps = state => ({
     hasAuthToken: state.auth.authToken !== null,

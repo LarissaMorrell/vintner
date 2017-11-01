@@ -4,6 +4,7 @@ import {CompanyResult} from './company-result';
 
 export class BrowseLocationsPage extends React.Component {
 
+//TODO code it for ALL locations in db
     render() {
       return (
         <div>Browse Locations Page
