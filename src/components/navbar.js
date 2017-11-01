@@ -18,17 +18,27 @@ export class Navbar extends React.Component {
         if(this.props.loggedIn){
           //if loggedIn render the profile link, logout button
           listItems = [
-            <div className="pure-u-1-5 nav-item" key="1"><Link to="/dashboard">Profile</Link></div>,
+            <div className="pure-u-1-5" key="1">
+              <Link to="/location">See Reviews</Link>
+            </div>,
+            <div className="pure-u-1-5 nav-item" key="2">
+              <Link to="/dashboard">Profile</Link>
+            </div>,
             //TODO turn on button functionality for modal
-            <div className="pure-u-1-5" key="2"><button onClick={() => this.logOut()}>Log out</button></div>
+            <div className="pure-u-1-5" key="3">
+              <button onClick={() => this.logOut()}>Log out</button>
+            </div>
           ];
         }
         else {
           listItems = [
+            <div className="pure-u-1-5" key="1">
+              <Link to="/location">See Reviews</Link>
+            </div>,
             <div className="pure-u-1-5" key="2">
               <Link to="/register">Sign Up</Link>
             </div>,
-            <div className="pure-u-1-5" key="1">
+            <div className="pure-u-1-5" key="3">
               <button onClick={e => this.props.dispatch(openModal())}>Login</button>
             </div>
           ]
@@ -36,7 +46,7 @@ export class Navbar extends React.Component {
 
         return (
           <div className="navbar pure-g">
-            <div className="pure-u-3-5" id="navbar-logo">Vintner</div>
+            <div className="pure-u-2-5" id="navbar-logo">Vintner</div>
             {listItems}
           </div>
         );
