@@ -1,14 +1,13 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {LocationResult} from './location-result';
+import {CompanyResult} from './company-result';
 
 export class BrowseLocationsPage extends React.Component {
 
     render() {
-      console.log(this.props.locations);
       return (
         <div>Browse Locations Page
-          <LocationResult winery={this.props.locations[0]} />
+          <CompanyResult company={this.props.locations[0]} />
         </div>
       );
     }

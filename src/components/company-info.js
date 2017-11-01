@@ -6,6 +6,7 @@ export default class CompanyInfo extends React.Component {
 
   render(){
     let company = this.props.company;
+
     return (
       <div>
         <h1>{company.name}</h1>
@@ -17,7 +18,8 @@ export default class CompanyInfo extends React.Component {
           <p>{company.totalReviewCount} reviews</p>
         </div>
         <div>
-          {genDrinkTypes(company.types)}
+          <DrinkTypes types={company.types} />
+
         </div>
         <img src={`/media/${company.image}`}/>
         <p>Hours: </p>
@@ -28,15 +30,8 @@ export default class CompanyInfo extends React.Component {
     );
   }
 }
-// <DrinkTypes types={company.types} />
-function genDrinkTypes(types){
-  let typeElems = [];
-  for(let i = 0; i < types.length; i++){
-    typeElems.push(<img src={`/media/${types[i]}.png`}/>)
-  }
-  return typeElems;
-}
-//{genDrinkTypes(company.types)}
+
+
 function hours(hoursArr){
   let hoursOfOperation = [];
   for(let i = 0; i < hoursArr.length; i++){
