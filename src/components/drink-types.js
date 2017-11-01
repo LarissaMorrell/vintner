@@ -5,7 +5,7 @@ export default function DrinkTypes(props) {
   let typeImgs = [];
   for(let i = 0; i < types.length; i++){
     typeImgs.push(
-      <img className="drink-type" src={`/media/${types[i]}.png`}/>
+      <img key={i} className="drink-type" alt="drink type" src={`/media/${types[i]}.png`}/>
     );
   }
 

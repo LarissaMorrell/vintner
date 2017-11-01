@@ -5,6 +5,7 @@ const initialState = {
 };
 
 export default function reducer(state = initialState, action) {
+
     if (action.type === OPEN_MODAL) {
         return Object.assign({}, state, {
             display: true

@@ -6,9 +6,12 @@ export class BrowseLocationsPage extends React.Component {
 
 //TODO code it for ALL locations in db
     render() {
+      var locations = this.props.locations.map(company =>
+          <CompanyResult company={company} />
+      );
       return (
         <div>Browse Locations Page
-          <CompanyResult company={this.props.locations[0]} />
+          {locations}
         </div>
       );
     }

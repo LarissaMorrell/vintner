@@ -1,7 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import {Redirect} from 'react-router-dom';
-import Modal from './modal';
 
 export function LandingPage(props) {
     // If we are logged in redirect straight to the user's dashboard
@@ -17,15 +16,13 @@ export function LandingPage(props) {
           </div>
           <div className="landing-content">
             <h2>Helping you find the perfect drink</h2>
-            <Modal display={props.display} />
           </div>
         </div>
     );
 }
 
 const mapStateToProps = state => ({
-    loggedIn: state.auth.currentUser !== null,
-    display: state.modal.display
+    loggedIn: state.auth.currentUser !== null
 });
 
 export default connect(mapStateToProps)(LandingPage);

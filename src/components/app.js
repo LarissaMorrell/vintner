@@ -11,6 +11,7 @@ import CompanyPage from './company-page';
 import DrinkReviewsPage from './drink-reviews-page';
 import CreateReviewPage from './create-review-page';
 import Footer from './footer';
+import Modal from './modal';
 import {refreshAuthToken} from '../actions/auth';
 
 export class App extends React.Component {
@@ -66,6 +67,7 @@ export class App extends React.Component {
                 <Route exact path="/drink/:drinkId" component={DrinkReviewsPage} />
               </div>
               <Footer />
+              <Modal display={this.props.display} />
             </div>
         );
     }
@@ -74,7 +76,8 @@ export class App extends React.Component {
 
 const mapStateToProps = state => ({
     hasAuthToken: state.auth.authToken !== null,
-    loggedIn: state.auth.currentUser !== null
+    loggedIn: state.auth.currentUser !== null,
+    display: state.modal.display
 });
 
 // Deal with update blocking - https://reacttraining.com/react-router/web/guides/dealing-with-update-blocking
