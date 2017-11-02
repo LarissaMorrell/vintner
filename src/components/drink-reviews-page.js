@@ -1,16 +1,28 @@
 import React from 'react';
-// import {connect} from 'react-redux';
+import {connect} from 'react-redux';
 // import {Redirect} from 'react-router-dom';
+import DrinkInfo from './drink-info';
+import DrinkReview from './drink-review';
 
-export default class DrinkReviewsPage extends React.Component {
+export class DrinkReviewsPage extends React.Component {
 
     render() {
-          return (
-            <div>Drink Reviews Page
-              <div className="box">
-                Here is a result
-              </div>
-            </div>
-          );
+      let company = this.props.company;
+
+      return (
+        <div>Drink Reviews Page
+          <DrinkInfo companyName={company.name}
+              drink={company.drinks[0]} />
+
+          <DrinkReview review={company.drinks[0].reviews[0]} />
+        </div>
+      );
     }
 }
+
+//TODO get the winery and drink from the endpoints
+const mapStateToProps = state => ({
+  company: state.dbData.locations[0]
+});
+
+export default connect(mapStateToProps)(DrinkReviewsPage);

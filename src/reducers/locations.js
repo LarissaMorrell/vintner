@@ -26,7 +26,8 @@ const initialState = {
           "reviews": [
             {
                "rating": 3,
-               "review": "Lorem ipsum dolor sit amet, ut salutatus constituam ius, vix an meis assentior philosophia.",
+               "title": "Similar to Bud Light, so not great",
+               "comments": "Lorem ipsum dolor sit amet, ut salutatus constituam ius, vix an meis assentior philosophia.",
                "price": "$$$",
                "purchased": "Yes",
                "flavors": ["sweet", "fruity"],
@@ -34,7 +35,8 @@ const initialState = {
             },
             {
                "rating": 2,
-               "review": "Lorem ipsum dolor sit amet, ut salutatus constituam ius, vix an meis assentior philosophia.",
+               "title": "Even cat wine is better than this",
+               "comments": "Lorem ipsum dolor sit amet, ut salutatus constituam ius, vix an meis assentior philosophia.",
                "price": "$$",
                "purchased": "No",
                "flavors": ["hoppy"]
@@ -47,16 +49,18 @@ const initialState = {
           "type": "wine",
           "reviews": [
             {
-               "rating": 3,
-               "review": "Lorem ipsum dolor sit amet, ut salutatus constituam ius, vix an meis assentior philosophia.",
+               "rating": 4,
+               "title": "You gotta try this",
+               "comments": "Lorem ipsum dolor sit amet, ut salutatus constituam ius, vix an meis assentior philosophia.",
                "price": "$$$",
                "purchased": "Yes",
                "flavors": ["sweet", "fruity"],
                "userID": "000000"
             },
             {
-               "rating": 2,
-               "review": "Lorem ipsum dolor sit amet, ut salutatus constituam ius, vix an meis assentior philosophia.",
+               "rating": 5,
+               "title": "It's great. I bought a whole case!",
+               "comments": "Lorem ipsum dolor sit amet, ut salutatus constituam ius, vix an meis assentior philosophia.",
                "price": "$$",
                "purchased": "No",
                "flavors": ["hoppy"]
@@ -91,7 +95,8 @@ const initialState = {
           "reviews": [
             {
                "rating": 3,
-               "review": "Lorem ipsum dolor sit amet, ut salutatus constituam ius, vix an meis assentior philosophia.",
+               "title": "It's ok if you're already drunk",
+               "comments": "Lorem ipsum dolor sit amet, ut salutatus constituam ius, vix an meis assentior philosophia.",
                "price": "$$$",
                "purchased": "Yes",
                "flavors": ["sweet", "fruity"],
@@ -99,7 +104,8 @@ const initialState = {
             },
             {
                "rating": 2,
-               "review": "Lorem ipsum dolor sit amet, ut salutatus constituam ius, vix an meis assentior philosophia.",
+               "title": "Don't bother",
+               "comments": "Lorem ipsum dolor sit amet, ut salutatus constituam ius, vix an meis assentior philosophia.",
                "price": "$$",
                "purchased": "No",
                "flavors": ["hoppy"]
@@ -113,7 +119,8 @@ const initialState = {
           "reviews": [
             {
                "rating": 3,
-               "review": "Lorem ipsum dolor sit amet, ut salutatus constituam ius, vix an meis assentior philosophia.",
+               "title": "It's worth a taste",
+               "comments": "Lorem ipsum dolor sit amet, ut salutatus constituam ius, vix an meis assentior philosophia.",
                "price": "$$$",
                "purchased": "Yes",
                "flavors": ["sweet", "fruity"],
@@ -121,7 +128,8 @@ const initialState = {
             },
             {
                "rating": 2,
-               "review": "Lorem ipsum dolor sit amet, ut salutatus constituam ius, vix an meis assentior philosophia.",
+               "title": "It's great if you need to clean your toilet",
+               "comments": "Lorem ipsum dolor sit amet, ut salutatus constituam ius, vix an meis assentior philosophia.",
                "price": "$$",
                "purchased": "No",
                "flavors": ["hoppy"]
