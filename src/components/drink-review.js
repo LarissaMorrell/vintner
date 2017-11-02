@@ -5,7 +5,7 @@ export default function DrinkReview(props) {
   let review = props.review;
 
   return (
-    <div className="box">
+    <div className="box result-container">
       <Rating rating={review.rating} />
       <h3>{review.title}</h3>
 

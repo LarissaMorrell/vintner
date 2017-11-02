@@ -12,6 +12,21 @@ body {
   background-color: $lt-tan;
 }
 
+h1 {
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+h2 {
+  font-size: 18pt;
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+h3 {
+  font-size: 16pt;
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+
 .video-container{
   position: relative;
   width: 100%;
