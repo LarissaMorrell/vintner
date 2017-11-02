@@ -6,28 +6,34 @@ import DrinkReview from './drink-review';
 
 export class DrinkReviewsPage extends React.Component {
 
+//this page displays one drink and it's description/satats,
+//then all of the reviews for THAT drink
     render() {
-      let company = this.props.company;
+      let drink = this.props.drink;
 
-      // var reviews = company.map((review, i) =>
-      //     <DrinkReview key={i} company={company} />
-      // );
+      var reviews = drink.reviews.map((review, i) =>
+          <DrinkReview key={i} review={review} type={drink.type} />
+      );
 
       return (
         <div>Drink Reviews Page
-          <DrinkInfo companyName={company.name}
-              drink={company.drinks[0]} />
-
-          <DrinkReview review={company.drinks[0].reviews[0]}
-                type={company.drinks[0].type}/>
+          <DrinkInfo companyName={this.props.companyName}
+              drink={drink} />
+          {reviews}
         </div>
       );
     }
 }
 
+
+
+
+
+
 //TODO get the winery and drink from the endpoints
 const mapStateToProps = state => ({
-  company: state.dbData.locations[0]
+  companyName:state.dbData.locations[0].name,
+  drink: state.dbData.locations[0].drinks[0]
 });
 
 export default connect(mapStateToProps)(DrinkReviewsPage);

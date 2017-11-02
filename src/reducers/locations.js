@@ -1,7 +1,7 @@
 const initialState = {
   locations: [
     {
-      "name": "Moonlight Winery",
+      "name": "Moonlight Winery & Brewery",
       "streetAddress": "13 west way",
       "city": "Elmwood",
       "state": "MA",
@@ -35,7 +35,7 @@ const initialState = {
             },
             {
                "rating": 2,
-               "title": "Even cat wine is better than this",
+               "title": "Similar to Blue Moon, if you left it out overnight",
                "comments": "Lorem ipsum dolor sit amet, ut salutatus constituam ius, vix an meis assentior philosophia.",
                "price": "$$",
                "purchased": "No",

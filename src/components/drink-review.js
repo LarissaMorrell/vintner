@@ -2,9 +2,8 @@ import React from 'react';
 import Rating from './rating';
 
 export default function DrinkReview(props) {
-
   let review = props.review;
-  console.log(props);
+
   return (
     <div className="box">
       <Rating rating={review.rating} />
