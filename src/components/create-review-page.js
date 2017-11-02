@@ -1,64 +1,26 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
-import {Field, reduxForm, focus} from 'redux-form';
-import {registerUser} from '../actions/users';
-import {login} from '../actions/auth';
-import Input from './input';
-import {required, nonEmpty, matches, length, isTrimmed} from '../validators';
+import {connect} from 'react-redux';
+import {Redirect} from 'react-router-dom';
+import {CreateReviewForm} from './create-review-form';
 
-export default class CreateReviewForm extends React.Component {
-    onSubmit(values) {
-        const {username, password, firstName, lastName} = values;
-        const user = {username, password, firstName, lastName};
-        return this.props
-            .dispatch(registerUser(user))
-            .then(() => this.props.dispatch(login(username, password)));
-    }
+  // If we are not logged in (which happens automatically when registration
+  // is successful) redirect to the user's dashboard
+  // if (!props.loggedIn) {
+  //     return <Redirect to="/" />;
+  // }
+export function CreateReviewPage(props) {
 
-    render() {
-        return (
-            <form
-                className="login-form box"
-                onSubmit={this.props.handleSubmit(values =>
-                    this.onSubmit(values)
-                )}>
-                <Field
-                  component={Input}
-                  type="text"
-                  name="firstName"
-                  placeholder="First Name" />
-                <Field
-                  component={Input}
-                  type="text"
-                  name="lastName"
-                  placeholder="Last Name" />
-                <Field
-                    component={Input}
-                    type="textarea"
-                    name="username"
-                    placeholder="Username"
-                    validate={[required, nonEmpty, isTrimmed]}
-                />
-                <Field
-                    component={Input}
-                    type="password"
-                    name="password"
-                    placeholder="Password"
-                    validate={[required, length({min: 10, max: 72}), isTrimmed]}
-                />
-                <button
-                    type="submit"
-                    disabled={this.props.pristine || this.props.submitting}>
-                    Add your Review
-                </button>
-                <Link to="/">Login</Link>
-            </form>
-        );
-    }
+    return (
+      <div>
+        <p>hi</p>
+        <CreateReviewForm />
+      </div>
+    );
+
 }
 
-// export default reduxForm({
-//     form: 'registration',
-//     onSubmitFail: (errors, dispatch) =>
-//         dispatch(focus('registration', Object.keys(errors)[0]))
-// })(RegistrationForm);
+const mapStateToProps = state => ({
+    loggedIn: state.auth.currentUser !== null
+});
+
+export default connect(mapStateToProps)(CreateReviewPage);

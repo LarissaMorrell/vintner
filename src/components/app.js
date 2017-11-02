@@ -9,7 +9,7 @@ import RegistrationPage from './registration-page';
 import BrowseLocationsPage from './browse-locations-page';
 import CompanyPage from './company-page';
 import DrinkReviewsPage from './drink-reviews-page';
-// import CreateReviewPage from './create-review-page';
+import CreateReviewPage from './create-review-page';
 import Footer from './footer';
 import Modal from './modal';
 import {refreshAuthToken} from '../actions/auth';
@@ -65,6 +65,7 @@ export class App extends React.Component {
                 <Route exact path="/location" component={BrowseLocationsPage} />
                 <Route exact path="/location/:locId" component={CompanyPage} />
                 <Route exact path="/drink/:drinkId" component={DrinkReviewsPage} />
+                <Route exact path="/create/:drinkId" component={CreateReviewPage} />
               </div>
               <Footer />
               <Modal display={this.props.display} />
@@ -72,7 +73,6 @@ export class App extends React.Component {
         );
     }
 }
-//<Route exact path="/create" component={CreateReviewPage} />
 
 const mapStateToProps = state => ({
     hasAuthToken: state.auth.authToken !== null,

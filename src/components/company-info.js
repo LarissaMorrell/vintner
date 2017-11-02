@@ -11,12 +11,16 @@ export default class CompanyInfo extends React.Component {
       <div className="box pure-g">
         <div className="pure-u-7-12">
           <h1>{company.name}</h1>
-          <DrinkTypes types={company.types} />
-          <Rating rating={company.rating} />
-          <p>{company.totalReviewCount} reviews</p>
           <p>{company.streetAddress}<br/>
               {company.city}, {company.state}
           </p>
+          <DrinkTypes types={company.types} />
+          <div>
+            <Rating rating={company.rating} />
+            {company.totalReviewCount} reviews
+          </div>
+
+
           <p>Hours: </p>
           <ul>
             {hours(company.hours)}
