@@ -5,34 +5,30 @@ import Input from './input';
 import {required, nonEmpty, length, isTrimmed} from '../validators'; //matches
 
 export class CreateReviewForm extends React.Component {
-    // onSubmit(values) {
-    //     const {username, password, firstName, lastName} = values;
-    //     const user = {username, password, firstName, lastName};
-    //     return this.props
-    //         .dispatch(registerUser(user))
-    //         .then(() => this.props.dispatch(login(username, password)));
-    // }
-    // onSubmit={this.props.handleSubmit(values =>
-    //     this.onSubmit(values)
-    // )}
+    onSubmit(values) {
+      //...
+    }
+
+
+    //TODO pass in type of alcohol using props
     render() {
         return (
             <form
                 className="review-form box"
-                >
+                onSubmit={this.props.handleSubmit(values =>
+                  this.onSubmit(values))}>
                 <Field
                   component={Input}
                   type="text"
-                  name="firstName"
-                  placeholder="First Name" />
+                  name="title"
+                  placeholder="Title" />
                 <Field
-                  component={Input}
-                  type="text"
-                  name="lastName"
-                  placeholder="Last Name" />
+                  component="textarea"
+                  name="comments"
+                  placeholder="How did you like this drink?"
+                  validate={[required, length({min: 0, max: 300}), isTrimmed]} />
                 <Field
-                    component={Input}
-                    type="textarea"
+                    component="textarea"
                     name="username"
                     placeholder="Username"
                     validate={[required, nonEmpty, isTrimmed]}

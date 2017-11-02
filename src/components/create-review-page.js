@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 // import {Redirect} from 'react-router-dom';
-import {CreateReviewForm} from './create-review-form';
+import CreateReviewForm from './create-review-form';
 
   // If we are not logged in (which happens automatically when registration
   // is successful) redirect to the user's dashboard
