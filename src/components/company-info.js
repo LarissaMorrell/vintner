@@ -9,46 +9,29 @@ export default class CompanyInfo extends React.Component {
 
     return (
       <div className="box pure-g">
-        <div className="pure-u-3-5">
-
-          <div className="pure-g">
-            <h1 className="pure-u-5-5">{company.name}</h1>
-            <div className="pure-u-5-5">
-              <DrinkTypes types={company.types} />
-            </div>
-            <div className="pure-u-3-5">
-              <Rating rating={company.rating} />
-            </div>
-            <div className="pure-u-2-5">
-              <p>{company.totalReviewCount} reviews</p>
-            </div>
-          </div>
-        </div>
-
-        <div className="pure-u-2-5">
-          <img className="company" src={`/media/${company.image}`} alt="company"/>
+        <div className="pure-u-7-12">
+          <h1>{company.name}</h1>
+          <DrinkTypes types={company.types} />
+          <Rating rating={company.rating} />
+          <p>{company.totalReviewCount} reviews</p>
           <p>{company.streetAddress}<br/>
               {company.city}, {company.state}
           </p>
-      </div>
-        <p>Hours: </p>
+          <p>Hours: </p>
           <ul>
             {hours(company.hours)}
           </ul>
+        </div>
+        <div className="pure-u-5-12">
+          <img className="company" src={`/media/${company.image}`} alt="company"/>
+        </div>
       </div>
     );
   }
 }
 
-
-function hours(hoursArr){
-  let hoursOfOperation = [];
-  for(let i = 0; i < hoursArr.length; i++){
-    hoursOfOperation.push(<li key={i}>{hoursArr[i]}</li>)
-  }
-  return hoursOfOperation;
+function hours(hours){
+  return hours.map((hour, i) =>
+      <li key={i}>{hour}</li>
+  );
 }
-//why??????????
-// hoursArr.map(hour => {
-//   hour = <li>{hour}</li>;
-// });
