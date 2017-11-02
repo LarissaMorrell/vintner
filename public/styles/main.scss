@@ -33,6 +33,7 @@ body {
     width: 100%;
   }
 }
+
 //gold star rating
 span.checked {
   color: #FFD700; //gold
@@ -43,7 +44,7 @@ span.unchecked {
 
 .box {
   margin: 50px auto;
-  // padding: 50px 20px;
+  // padding: 30px 15px;
   max-width: 900px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   text-align: center;

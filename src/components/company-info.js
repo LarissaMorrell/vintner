@@ -10,20 +10,26 @@ export default class CompanyInfo extends React.Component {
     return (
       <div className="box pure-g">
         <div className="pure-u-3-5">
-          <h1>{company.name}</h1>
+
+          <div className="pure-g">
+            <h1 className="pure-u-5-5">{company.name}</h1>
+            <div className="pure-u-5-5">
+              <DrinkTypes types={company.types} />
+            </div>
+            <div className="pure-u-3-5">
+              <Rating rating={company.rating} />
+            </div>
+            <div className="pure-u-2-5">
+              <p>{company.totalReviewCount} reviews</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="pure-u-2-5">
+          <img className="company" src={`/media/${company.image}`} alt="company"/>
           <p>{company.streetAddress}<br/>
               {company.city}, {company.state}
           </p>
-          <div>
-            <Rating rating={company.rating} />
-            <p>{company.totalReviewCount} reviews</p>
-          </div>
-        </div>
-        <div className="pure-u-2-5">
-        <img className="company" src={`/media/${company.image}`} alt="company"/>
-          <div>
-            <DrinkTypes types={company.types} />
-          </div>
       </div>
         <p>Hours: </p>
           <ul>
