@@ -6,7 +6,7 @@ export default function DrinkInfo(props) {
   let drink = props.drink;
 
   return (
-    <div className="box">
+    <div className="box info-container">
       <div className="pure-g">
 
         <div className="pure-u-3-5">

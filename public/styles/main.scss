@@ -44,12 +44,18 @@ span.unchecked {
 
 .box {
   margin: 50px auto;
-  // padding: 30px 15px;
   max-width: 900px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   background-color: #FFFFFF;//off-white
   color:$burgundy;
   border-radius: 15px;
+}
+
+.info-container {
+  padding: 30px;
+}
+.result-container {
+  padding: 15px 25px;
 }
 
 img.avatar-icon {
@@ -65,6 +71,8 @@ img.company-result {
 }
 img.company {
   max-width: 350px;
+  border-radius: 5px;
+  float:right;
 }
 
 .black-screen {
@@ -103,10 +111,6 @@ img.company {
   .boxclose:before {
       content: "×";
   }
-}
-
-.result-container {
-  padding: 20px 30px;
 }
 
 

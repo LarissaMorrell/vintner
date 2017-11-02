@@ -37,6 +37,12 @@ span.unchecked {
   color: #7b2739;
   border-radius: 15px; }
 
+.info-container {
+  padding: 30px; }
+
+.result-container {
+  padding: 15px 25px; }
+
 img.avatar-icon {
   max-height: 80px; }
 
@@ -47,7 +53,9 @@ img.company-result {
   max-height: 150px; }
 
 img.company {
-  max-width: 350px; }
+  max-width: 350px;
+  border-radius: 5px;
+  float: right; }
 
 .black-screen {
   position: fixed;
@@ -81,9 +89,6 @@ img.company {
     padding: 13px 7px 18px 7px; }
   .modal .boxclose:before {
     content: "×"; }
-
-.result-container {
-  padding: 20px 30px; }
 
 footer {
   background: #7b2739;
