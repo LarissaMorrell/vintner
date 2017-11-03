@@ -37,6 +37,10 @@ h3 {
     left: 0;
     width: 100%; }
 
+div.rating {
+  min-width: 50px;
+  margin: 15px 15px; }
+
 span.checked {
   color: #FFD700; }
 

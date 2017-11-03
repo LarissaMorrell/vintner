@@ -49,6 +49,11 @@ h3 {
   }
 }
 
+div.rating {
+  min-width: 50px;
+  margin:15px 15px;
+}
+
 //gold star rating
 span.checked {
   color: #FFD700; //gold

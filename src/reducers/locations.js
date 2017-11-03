@@ -54,7 +54,7 @@ const initialState = {
                "comments": "Lorem ipsum dolor sit amet, ut salutatus constituam ius, vix an meis assentior philosophia.",
                "price": 4,
                "purchased": "Yes",
-               "flavors": ["sweet", "fruity"],
+               "flavors": ["pepper", "dry"],
                "userID": "000000"
             },
             {
@@ -63,7 +63,7 @@ const initialState = {
                "comments": "Lorem ipsum dolor sit amet, ut salutatus constituam ius, vix an meis assentior philosophia.",
                "price": 2,
                "purchased": "No",
-               "flavors": ["hoppy"]
+               "flavors": ["spice", "dry", "pepper"]
             }
           ]
         }

@@ -15,6 +15,6 @@ export default function Rating(props) {
     }
 
     return (
-      <div>Rating: {genStarRating(props.rating)}</div>
+      <div className="rating">{genStarRating(props.rating)}</div>
     );
 }
