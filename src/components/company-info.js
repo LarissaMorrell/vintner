@@ -8,7 +8,7 @@ export default class CompanyInfo extends React.Component {
     let company = this.props.company;
 
     return (
-      <div className="box info-container">
+      <div className="info-container">
         <div className="pure-g">
             <div className="pure-u-7-12">
               <h1>{company.name}</h1>

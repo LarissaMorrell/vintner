@@ -3,7 +3,7 @@ import Rating from './rating';
 
 export default function DrinkReview(props) {
   let review = props.review;
-  
+
   function reviewPriceString(price){
     let priceStr = "";
 
