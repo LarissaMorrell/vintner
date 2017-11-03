@@ -28,7 +28,7 @@ const initialState = {
                "rating": 3,
                "title": "Similar to Bud Light, so not great",
                "comments": "Lorem ipsum dolor sit amet, ut salutatus constituam ius, vix an meis assentior philosophia.",
-               "price": "$$$",
+               "price": 3,
                "purchased": "Yes",
                "flavors": ["sweet", "fruity"],
                "userID": "000000"
@@ -37,7 +37,7 @@ const initialState = {
                "rating": 2,
                "title": "Similar to Blue Moon, if you left it out overnight",
                "comments": "Lorem ipsum dolor sit amet, ut salutatus constituam ius, vix an meis assentior philosophia.",
-               "price": "$$",
+               "price": 2,
                "purchased": "No",
                "flavors": ["hoppy"]
             }
@@ -52,7 +52,7 @@ const initialState = {
                "rating": 4,
                "title": "You gotta try this",
                "comments": "Lorem ipsum dolor sit amet, ut salutatus constituam ius, vix an meis assentior philosophia.",
-               "price": "$$$",
+               "price": 4,
                "purchased": "Yes",
                "flavors": ["sweet", "fruity"],
                "userID": "000000"
@@ -61,7 +61,7 @@ const initialState = {
                "rating": 5,
                "title": "It's great. I bought a whole case!",
                "comments": "Lorem ipsum dolor sit amet, ut salutatus constituam ius, vix an meis assentior philosophia.",
-               "price": "$$",
+               "price": 2,
                "purchased": "No",
                "flavors": ["hoppy"]
             }
@@ -97,7 +97,7 @@ const initialState = {
                "rating": 3,
                "title": "It's ok if you're already drunk",
                "comments": "Lorem ipsum dolor sit amet, ut salutatus constituam ius, vix an meis assentior philosophia.",
-               "price": "$$$",
+               "price": 3,
                "purchased": "Yes",
                "flavors": ["sweet", "fruity"],
                "userID": "000000"
@@ -106,7 +106,7 @@ const initialState = {
                "rating": 2,
                "title": "Don't bother",
                "comments": "Lorem ipsum dolor sit amet, ut salutatus constituam ius, vix an meis assentior philosophia.",
-               "price": "$$",
+               "price": 5,
                "purchased": "No",
                "flavors": ["hoppy"]
             }
@@ -121,7 +121,7 @@ const initialState = {
                "rating": 3,
                "title": "It's worth a taste",
                "comments": "Lorem ipsum dolor sit amet, ut salutatus constituam ius, vix an meis assentior philosophia.",
-               "price": "$$$",
+               "price": 3,
                "purchased": "Yes",
                "flavors": ["sweet", "fruity"],
                "userID": "000000"
@@ -130,7 +130,7 @@ const initialState = {
                "rating": 2,
                "title": "It's great if you need to clean your toilet",
                "comments": "Lorem ipsum dolor sit amet, ut salutatus constituam ius, vix an meis assentior philosophia.",
-               "price": "$$",
+               "price": 2,
                "purchased": "No",
                "flavors": ["hoppy"]
             }

@@ -3,6 +3,15 @@ import Rating from './rating';
 
 export default function DrinkReview(props) {
   let review = props.review;
+  
+  function reviewPriceString(price){
+    let priceStr = "";
+
+    for(let i=0; i < price; i++){
+      priceStr = priceStr.concat("$");
+    }
+    return priceStr;
+  }
 
   return (
     <div className="box result-container">
@@ -14,7 +23,7 @@ export default function DrinkReview(props) {
           <p>{review.comments}</p>
           <p>Flavors: {review.flavors.join(', ')}</p>
           <p>{`Did you purchase this ${props.type}? ${review.purchased}`}</p>
-          <p>{`Price: ${review.price}`}</p>
+          <p>{`Price: ${reviewPriceString(review.price)}`}</p>
         </div>
 
         <div className="pure-u-1-5">
