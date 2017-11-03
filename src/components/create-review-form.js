@@ -1,9 +1,8 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
 import {Field, reduxForm} from 'redux-form'; //focus
-import InputDropdown from './input-dropdown';
+import DropDownSelect from './drop-down-select';
 import Input from './input';
-import {required, nonEmpty, length, isTrimmed} from '../validators'; //matches
+import {required, length, isTrimmed} from '../validators'; //matches
 
 export class CreateReviewForm extends React.Component {
     onSubmit(values) {
@@ -18,36 +17,42 @@ export class CreateReviewForm extends React.Component {
                 className="review-form box"
                 onSubmit={this.props.handleSubmit(values =>
                   this.onSubmit(values))}>
+                <label htmlFor="title">What would you like to call your review?</label>
                 <Field
                   component={Input}
                   type="text"
                   name="title"
-                  placeholder="Title" />
+                  placeholder={`This ${this.props.type} tickles my fancy...`}
+                  validate={[required, length({min: 0, max: 150}), isTrimmed]}/>
                 <Field
                   component="textarea"
                   name="comments"
-                  placeholder="How did you like this drink?"
-                  validate={[required, length({min: 0, max: 300}), isTrimmed]} />
+                  placeholder="Your review helps others make happy hour even better."
+                  validate={[required, length({min: 0, max: 800}), isTrimmed]} />
+                <label htmlFor="priceDropDown">{`Rate the price of this ${this.props.type}.`}</label>
                 <Field
-                    component={Input}
-                    type="slider"
-                    name="password"
-                    placeholder="Password"
-                    validate={[required, length({min: 10, max: 72}), isTrimmed]}
-                />
-                <label htmlFor="priceRating">Rate the price:</label>
-                <Field
-                    name="priceRating"
-                    component="select"
-                    placeholder="Price"
+                  name="priceDropDown"
+                  label="priceDropDown"
+                  component={DropDownSelect}
+                  options={["$", "$$", "$$$", "$$$$"]}
+                  className="form-control"
                 >
-                  
+                  {DropDownSelect}
+                </Field>
+                <label htmlFor="purchaseDropDown">{`Did you purchase this ${this.props.type}?`}</label>
+                <Field
+                  name="purchaseDropDown"
+                  label="purchaseDropDown"
+                  component={DropDownSelect}
+                  options={["Yes", "No"]}
+                  className="form-control"
+                >
+                  {DropDownSelect}
                 </Field>
                 <button
                     type="submit">
                     Add your Review
                 </button>
-                <Link to="/">Login</Link>
             </form>
         );
     }

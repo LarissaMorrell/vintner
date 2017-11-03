@@ -16,7 +16,7 @@ a:visited {
 a:hover {
   color: #d8a35d; }
 
-.form-style-3 label > span {
+label > span {
   float: left;
   width: 100px;
   color: #a3334c;
@@ -24,7 +24,7 @@ a:hover {
   font-size: 13px;
   text-shadow: 1px 1px 1px #fff; }
 
-.form-style-3 fieldset {
+fieldset {
   border-radius: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
@@ -36,7 +36,7 @@ a:hover {
   -moz-box-shadow: inset 0px 0px 15px #FFE5E5;
   -webkit-box-shadow: inset 0px 0px 15px #FFE5E5; }
 
-.form-style-3 fieldset legend {
+fieldset legend {
   color: #FFA0C9;
   border-top: 1px solid #FFD2D2;
   border-left: 1px solid #FFD2D2;
@@ -52,21 +52,17 @@ a:hover {
   font-weight: normal;
   font-size: 12px; }
 
-.form-style-3 textarea {
-  width: 250px;
-  height: 100px; }
-
 input[type=text],
 input[type=password],
-.form-style-3 input[type=date],
-.form-style-3 input[type=datetime],
-.form-style-3 input[type=number],
-.form-style-3 input[type=search],
-.form-style-3 input[type=time],
-.form-style-3 input[type=url],
-.form-style-3 input[type=email],
-.form-style-3 select,
-.form-style-3 textarea {
+input[type=date],
+input[type=datetime],
+input[type=number],
+input[type=search],
+input[type=time],
+input[type=url],
+input[type=email],
+select,
+textarea {
   border-radius: 3px;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -81,6 +77,12 @@ input[type=password],
   width: 75%;
   height: 45px;
   font-size: 16px; }
+
+textarea {
+  height: 300px; }
+
+select {
+  width: 50%; }
 
 input[type=button]
 input[type=submit],
