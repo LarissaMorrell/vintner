@@ -8,7 +8,18 @@ export class CreateReviewForm extends React.Component {
     onSubmit(values) {
       //...
     }
-
+    // function checkboxes(drinkType){
+    //   if(drinkType === "wine"){
+    //     let flavors = ["Dry", "Semi-Dry", "Sweet", "Dessert Wine",
+    //           "Fruity", "Buttery", "Full-Bodied", "Floral"];
+    //     return (
+    //       flavors.map(flavor =>
+    //         <Field name={flavor} id={flavor} component="input" type="checkbox" />
+    //       )
+    //     );
+    //   }
+    //   return;
+    // }
 
     //TODO pass in type of alcohol using props
     render() {
@@ -24,6 +35,7 @@ export class CreateReviewForm extends React.Component {
                   name="title"
                   placeholder={`This ${this.props.type} tickles my fancy...`}
                   validate={[required, length({min: 0, max: 150}), isTrimmed]}/>
+                <label htmlFor="comments">{`What did you think of this ${this.props.type}?`}</label>
                 <Field
                   component="textarea"
                   name="comments"
