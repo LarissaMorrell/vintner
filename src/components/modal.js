@@ -7,6 +7,7 @@ import {closeModal} from '../actions/modal';
 export class Modal extends React.Component {
 
     render() {
+      console.log("props", this.props);
       if(this.props.display){
         return (
           <div className="black-screen">
@@ -30,4 +31,5 @@ export class Modal extends React.Component {
 // </div>
 
 // <i className="fa fa-window-close-o" aria-hidden="true"></i>
+
 export default connect()(Modal);

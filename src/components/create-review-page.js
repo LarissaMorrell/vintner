@@ -12,8 +12,8 @@ export function CreateReviewPage(props) {
 
     return (
       <div>
-        <h2 className="page-title">Write a Review</h2>
-        <CreateReviewForm type={props.type}/>
+        <h2 className="page-title">Write a Review</h2>=
+        <CreateReviewForm type={props.drink.type}/>
       </div>
     );
 
@@ -22,7 +22,7 @@ export function CreateReviewPage(props) {
 //TODO add the current drink for the current location
 const mapStateToProps = state => ({
     loggedIn: state.auth.currentUser !== null,
-    type: state.dbData.locations[0].drinks[0].type
+    drink: state.dbData.locations[0].drinks[0]
 });
 
 export default connect(mapStateToProps)(CreateReviewPage);

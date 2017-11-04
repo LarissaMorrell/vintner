@@ -4,6 +4,7 @@ import {Link} from 'react-router-dom';
 import {setCurrentUser, setAuthToken} from '../actions/auth';
 import {openModal} from '../actions/modal';
 import {clearAuthToken} from '../local-storage';
+import LoginForm from './login-form';
 
 export class Navbar extends React.Component {
     logOut() {
@@ -39,7 +40,7 @@ export class Navbar extends React.Component {
               <Link to="/register">Sign Up</Link>
             </div>,
             <div className="pure-u-1-5" key="3">
-              <button onClick={e => this.props.dispatch(openModal())}>Login</button>
+              <button onClick={e => this.props.dispatch(openModal(<LoginForm />))}>Login</button>
             </div>
           ]
         }

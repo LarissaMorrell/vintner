@@ -4,6 +4,7 @@ export const closeModal = () => ({
 });
 
 export const OPEN_MODAL = 'OPEN_MODAL';
-export const openModal = () => ({
-    type: OPEN_MODAL
+export const openModal = formComponent => ({
+    type: OPEN_MODAL,
+    formComponent
 });
