@@ -5,7 +5,7 @@ form {
 
 label {
   display: block;
-  margin-top: 30px; }
+  margin-bottom: 10px; }
 
 a {
   color: #a3334c; }
@@ -76,10 +76,11 @@ textarea {
   background: #f2eaec;
   width: 75%;
   height: 45px;
-  font-size: 16px; }
+  font-size: 16px;
+  margin-bottom: 30px; }
 
 textarea {
-  height: 300px; }
+  height: 150px; }
 
 select {
   width: 50%; }

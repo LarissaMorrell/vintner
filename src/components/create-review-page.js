@@ -12,7 +12,7 @@ export function CreateReviewPage(props) {
 
     return (
       <div>
-        <p>hi</p>
+        <h2 className="page-title">Write a Review</h2>
         <CreateReviewForm type={props.type}/>
       </div>
     );

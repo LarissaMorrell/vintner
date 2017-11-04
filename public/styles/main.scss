@@ -51,7 +51,10 @@ h3 {
 
 div.rating {
   min-width: 50px;
-  margin:15px 15px;
+  margin:15px 15px 15px 0px;
+}
+div.review-count {
+  display: inline-block;
 }
 
 //gold star rating
@@ -63,12 +66,17 @@ span.unchecked {
 }
 
 .box {
-  margin: 50px 30px;
+  margin: 30px auto;
   max-width: 900px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   background-color: rgba(#FFFFFF, 0.7);//off-white
   color:$burgundy;
   border-radius: 15px;
+  // margin:auto;
+}
+
+.box-form {
+  padding: 50px 50px;
 }
 
 .info-container {
@@ -83,7 +91,8 @@ img.avatar-icon {
 }
 
 img.drink-type {
-  height:60px;
+  height:40px;
+  margin: 5px;
 }
 
 img.company-result {

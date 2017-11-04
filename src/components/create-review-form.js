@@ -25,7 +25,7 @@ export class CreateReviewForm extends React.Component {
     render() {
         return (
             <form
-                className="review-form box"
+                className="review-form box box-form"
                 onSubmit={this.props.handleSubmit(values =>
                   this.onSubmit(values))}>
                 <label htmlFor="title">What would you like to call your review?</label>

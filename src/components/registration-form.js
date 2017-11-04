@@ -18,7 +18,7 @@ export class RegistrationForm extends React.Component {
     render() {
         return (
             <form
-                className="login-form box"
+                className="login-form box box-form"
                 onSubmit={this.props.handleSubmit(values =>
                     this.onSubmit(values)
                 )}>
@@ -50,7 +50,7 @@ export class RegistrationForm extends React.Component {
                     component={Input}
                     type="password"
                     name="passwordConfirm"
-                    placeholder="Comfirm Password"
+                    placeholder="Confirm Password"
                     validate={[required, nonEmpty, matches('password')]}
                 />
                 <button
