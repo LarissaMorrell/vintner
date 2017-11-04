@@ -7,6 +7,17 @@ label {
   display: block;
   margin-bottom: 10px;}
 
+.button-container {
+  /*TODO fix auto to center form buttons*/
+  margin: 0px auto;
+
+  button,
+  a {
+    display:inline-block;}
+  a {
+    margin-left: 20px;}
+}
+
 a {
   color:#a3334c;
 }
@@ -89,9 +100,7 @@ select {
 input[type=button]
 input[type=submit],
 button {
-
-  margin: 15px;
-}
+  margin: 15px;}
 
 .required {
   color: red;

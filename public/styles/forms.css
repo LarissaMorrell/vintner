@@ -7,6 +7,15 @@ label {
   display: block;
   margin-bottom: 10px; }
 
+.button-container {
+  /*TODO fix auto to center form buttons*/
+  margin: 0px auto; }
+  .button-container button,
+  .button-container a {
+    display: inline-block; }
+  .button-container a {
+    margin-left: 20px; }
+
 a {
   color: #a3334c; }
 

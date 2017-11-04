@@ -26,6 +26,10 @@ h3 {
   font-weight: 400;
   margin-bottom: 15px;
 }
+.content-container {
+  margin: 30px auto;
+  width:900px;
+}
 
 .video-container{
   position: relative;
@@ -71,7 +75,7 @@ span.unchecked {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   background-color: rgba(#FFFFFF, 0.7);//off-white
   color:$burgundy;
-  border-radius: 15px;
+  border-radius: 10px;
   // margin:auto;
 }
 
