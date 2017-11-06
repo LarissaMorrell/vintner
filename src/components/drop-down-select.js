@@ -19,9 +19,4 @@ class DropDownSelect extends React.Component { // eslint-disable-line react/pref
   }
 }
 
-DropDownSelect.propTypes = {
-  options: React.PropTypes.array,
-  input: React.PropTypes.object
-};
-
 export default DropDownSelect;

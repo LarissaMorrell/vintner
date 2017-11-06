@@ -15,7 +15,7 @@ export class CompanyPage extends React.Component {
     return (
       <div>
         <CompanyInfo company={this.props.location} />
-        {drinkList};
+        {drinkList}
       </div>
     );
     //TODO add the drink types

@@ -9,7 +9,6 @@ import RegistrationPage from './registration-page';
 import BrowseLocationsPage from './browse-locations-page';
 import CompanyPage from './company-page';
 import DrinkReviewsPage from './drink-reviews-page';
-import CreateReviewPage from './create-review-page';
 import Footer from './footer';
 import Modal from './modal';
 import {refreshAuthToken} from '../actions/auth';
@@ -62,10 +61,9 @@ export class App extends React.Component {
               <div className="content-container">
                 <Route exact path="/dashboard" component={Dashboard} />
                 <Route exact path="/register" component={RegistrationPage} />
-                <Route exact path="/location" component={BrowseLocationsPage} />
-                <Route exact path="/location/:locId" component={CompanyPage} />
+                <Route exact path="/company" component={BrowseLocationsPage} />
+                <Route exact path="/company/:companyId" component={CompanyPage} />
                 <Route exact path="/drink/:drinkId" component={DrinkReviewsPage} />
-                <Route exact path="/create/:drinkId" component={CreateReviewPage} />
               </div>
               <Footer />
               <Modal display={this.props.display} formComponent={this.props.formComponent} />

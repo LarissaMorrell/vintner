@@ -1,7 +1,10 @@
 import React from 'react';
+import {connect} from 'react-redux';
 import Rating from './rating';
+import CreateReviewForm from './create-review-form';
+import {openModal} from '../actions/modal';
 
-export default class DrinkResult extends React.Component {
+export class DrinkResult extends React.Component {
 
   render() {
       let drink = this.props.drink;
@@ -26,7 +29,7 @@ export default class DrinkResult extends React.Component {
               </p>
             </div>
             <div className="pure-u-1-5">
-              <button>Write Review</button>
+              <button onClick={() => this.props.dispatch(openModal(<CreateReviewForm />))}>Write Review</button>
               <button>Read Reviews</button>
             </div>
           </div>
@@ -36,6 +39,8 @@ export default class DrinkResult extends React.Component {
       //TODO add the drink types
     }
 }
+export default connect()(DrinkResult);
+
 //{popularFlavors(drink.reviews)}
 // function popularFlavors(reviews){
   //extract all the flavor arrays from each review

@@ -1,13 +1,10 @@
 import React from 'react';
 import {connect} from 'react-redux';
-// import {Link} from 'react-router-dom';
-import LoginForm from './login-form';
 import {closeModal} from '../actions/modal';
 
 export class Modal extends React.Component {
 
     render() {
-      console.log("props", this.props);
       if(this.props.display){
         return (
           <div className="black-screen">
