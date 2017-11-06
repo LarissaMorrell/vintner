@@ -16,7 +16,7 @@ export class Modal extends React.Component {
                 id="boxclose"
                 onClick={e => this.props.dispatch(closeModal())}>
               </div>
-              <LoginForm />
+              {this.props.formComponent}
             </div>
           </div>
         );

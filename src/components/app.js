@@ -68,7 +68,7 @@ export class App extends React.Component {
                 <Route exact path="/create/:drinkId" component={CreateReviewPage} />
               </div>
               <Footer />
-              <Modal display={this.props.display} />
+              <Modal display={this.props.display} formComponent={this.props.formComponent} />
             </div>
         );
     }

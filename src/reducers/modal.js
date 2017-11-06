@@ -1,7 +1,8 @@
 import {OPEN_MODAL, CLOSE_MODAL} from '../actions/modal';
 
 const initialState = {
-    display: false
+    display: false,
+    formComponent: null
 };
 
 export default function reducer(state = initialState, action) {
