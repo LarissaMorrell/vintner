@@ -18,7 +18,7 @@ export default function DrinkReview(props) {
       <div className="pure-g">
         <div className="pure-u-1-5">
           <Rating rating={review.rating} />
-          <img className="avatar-icon" src="/media/avatar.png" alt="avatar" />
+          <img className="avatar-icon review-avatar" src="/media/avatars/boy1.png" alt="avatar" />
         </div>
         <div className="pure-u-4-5">
           <h3>{review.title}</h3>
