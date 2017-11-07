@@ -9,7 +9,7 @@ export class DrinkResult extends React.Component {
   render() {
       let drink = this.props.drink;
       // let x = [...new Set(drink.reviews.map(review => review.flavors))];
-      // console.log(x);
+      // console.log(props);
       return (
         <div className="box result-container">
           <div className="pure-g">
@@ -30,7 +30,7 @@ export class DrinkResult extends React.Component {
             </div>
             <div className="pure-u-1-5">
               <button onClick={() => this.props.dispatch(openModal(<CreateReviewForm />))}>Write Review</button>
-              <button>Read Reviews</button>
+              <button onClick={() => this.props.history.push(`/drink/11`)}>Read Reviews</button>
             </div>
           </div>
         </div>

@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {Route, withRouter} from 'react-router-dom';
+import {Route, withRouter, BrowserRouter as Router} from 'react-router-dom';
 
 import Navbar from './navbar';
 import LandingPage from './landing-page';
@@ -53,6 +53,7 @@ export class App extends React.Component {
 
     render() {
         return (
+          <Router>
             <div className="app">
               <header>
                 <Navbar loggedIn={this.props.loggedIn} />
@@ -68,6 +69,7 @@ export class App extends React.Component {
               <Footer />
               <Modal display={this.props.display} formComponent={this.props.formComponent} />
             </div>
+          </Router>
         );
     }
 }
