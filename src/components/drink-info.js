@@ -1,25 +1,34 @@
 import React from 'react';
+import {connect} from 'react-redux';
 import Rating from './rating';
+import CreateReviewForm from './create-review-form';
+import {openModal} from '../actions/modal';
 
-export default function DrinkInfo(props) {
+export class DrinkInfo extends React.Component {
 
-  let drink = props.drink;
+  render() {
+    let drink = this.props.drink;
 
-  return (
-    <div className="info-container">
-      <div className="pure-g">
+    return (
+      <div className="info-container drink-info-container">
+        <div className="pure-g">
+          <div className="pure-u-1-5">
+            <img src={`/media/${drink.type}.png`} id="drink-info-img" alt={`${drink.type} glass`}/>
+          </div>
 
-        <div className="pure-u-4-5">
-          <h1 id="drink-info-title">{drink.name}</h1>
-            <Rating rating={drink.rating}/> {drink.reviews.length} reviews
-          <h3>{props.companyName}</h3>
-        </div>
-
-        <div className="pure-u-1-5">
-          <img src={`/media/${drink.type}.png`} id="drink-info" alt={`${drink.type} glass`}/>
+          <div className="pure-u-3-5">
+            <h1 id="drink-info-title">{drink.name}</h1>
+              <Rating rating={drink.rating}/> {drink.reviews.length} reviews
+            <h3>{this.props.companyName}</h3>
+          </div>
+          <div className="pure-u-1-5">
+            <button onClick={() => this.props.dispatch(openModal(<CreateReviewForm />))}>Write Review</button>
+          </div>
         </div>
       </div>
-    </div>
-  );
+    );
+  }
 
 }
+
+export default connect()(DrinkInfo);

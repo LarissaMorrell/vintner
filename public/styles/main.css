@@ -73,6 +73,9 @@ span.unchecked {
 .info-container {
   padding: 30px; }
 
+.drink-info-container {
+  padding-bottom: 0px; }
+
 .result-container {
   padding: 15px 25px; }
 
@@ -83,8 +86,9 @@ img.drink-type {
   height: 40px;
   margin: 5px; }
 
-#drink-info {
-  float: right; }
+#drink-info-img {
+  float: right;
+  margin-right: 40px; }
 
 img.company-result {
   max-height: 150px; }
