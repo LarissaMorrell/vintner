@@ -11,7 +11,7 @@ export class DrinkReviewsPage extends React.Component {
     render() {
       let drink = this.props.drink;
 
-      var reviews = drink.reviews.map((review, i) =>
+      var drinkReviews = drink.reviews.map((review, i) =>
           <DrinkReview key={i} review={review} type={drink.type} />
       );
 
@@ -19,7 +19,7 @@ export class DrinkReviewsPage extends React.Component {
         <div>Drink Reviews Page
           <DrinkInfo companyName={this.props.companyName}
               drink={drink} />
-          {reviews}
+          {drinkReviews}
         </div>
       );
     }

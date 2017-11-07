@@ -20,6 +20,10 @@ h3 {
   font-weight: 400;
   margin-bottom: 15px; }
 
+#drink-info-title {
+  display: inline;
+  margin-right: 30px; }
+
 .content-container {
   margin: 30px auto;
   width: 900px; }
@@ -78,6 +82,9 @@ img.avatar-icon {
 img.drink-type {
   height: 40px;
   margin: 5px; }
+
+#drink-info {
+  float: right; }
 
 img.company-result {
   max-height: 150px; }

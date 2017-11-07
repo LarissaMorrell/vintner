@@ -9,15 +9,14 @@ export default function DrinkInfo(props) {
     <div className="info-container">
       <div className="pure-g">
 
-        <div className="pure-u-3-5">
-          <h2>{props.companyName}</h2>
-          <h3>{drink.name}</h3>
-          <Rating rating={drink.rating}/>
-          <p>{drink.reviews.length} reviews</p>
+        <div className="pure-u-4-5">
+          <h1 id="drink-info-title">{drink.name}</h1>
+            <Rating rating={drink.rating}/> {drink.reviews.length} reviews
+          <h3>{props.companyName}</h3>
         </div>
 
-        <div className="pure-u-2-5">
-          <img src={`/media/${drink.type}.png`} alt={`${drink.type} glass`}/>
+        <div className="pure-u-1-5">
+          <img src={`/media/${drink.type}.png`} id="drink-info" alt={`${drink.type} glass`}/>
         </div>
       </div>
     </div>
