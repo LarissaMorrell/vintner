@@ -20,7 +20,7 @@ export class Navbar extends React.Component {
           //if loggedIn render the profile link, logout button
           listItems = [
             <div className="pure-u-1-5" key="1">
-              <Link to="/location">See Reviews</Link>
+              <Link to="/company">Find Booze!</Link>
             </div>,
             <div className="pure-u-1-5 nav-item" key="2">
               <Link to="/dashboard">Profile</Link>

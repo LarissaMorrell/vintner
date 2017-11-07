@@ -119,6 +119,26 @@ img.company {
   .modal .boxclose:before {
     content: "×"; }
 
+.table-simple {
+  width: auto;
+  display: table;
+  border-collapse: collapse;
+  border-spacing: 0;
+  padding: 0 1em 0 0;
+  border: none; }
+
+tr {
+  display: table-row; }
+
+.side-bar .biz-hours .hours-table {
+  margin-bottom: 10px; }
+
+.side-bar {
+  min-width: 36px;
+  padding-right: 18px;
+  text-align: left;
+  font-weight: bold; }
+
 footer {
   background: #7b2739;
   color: white;
