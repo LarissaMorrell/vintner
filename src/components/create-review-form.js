@@ -26,15 +26,15 @@ export class CreateReviewForm extends React.Component {
                   component={Input}
                   type="text"
                   name="title"
-                  placeholder={`This ${this.props.type} tickles my fancy...`}
+                  placeholder={`This ${this.props.drink.type} tickles my fancy...`}
                   validate={[required, length({min: 0, max: 150}), isTrimmed]}/>
-                <label htmlFor="comments">{`What did you think of this ${this.props.type}?`}</label>
+                <label htmlFor="comments">{`What did you think of this ${this.props.drink.type}?`}</label>
                 <Field
                   component="textarea"
                   name="comments"
                   placeholder="Your review helps others make happy hour even better."
                   validate={[required, length({min: 0, max: 800}), isTrimmed]} />
-                <label htmlFor="priceDropDown">{`Rate the price of this ${this.props.type}.`}</label>
+                <label htmlFor="priceDropDown">{`Rate the price of this ${this.props.drink.type}.`}</label>
                 <Field
                   name="priceDropDown"
                   label="priceDropDown"
@@ -44,7 +44,7 @@ export class CreateReviewForm extends React.Component {
                   className="form-control"
                 >
                 </Field>
-                <label htmlFor="purchaseDropDown">{`Did you purchase this ${this.props.type}?`}</label>
+                <label htmlFor="purchaseDropDown">{`Did you purchase this ${this.props.drink.type}?`}</label>
                 <Field
                   name="purchaseDropDown"
                   label="purchaseDropDown"
