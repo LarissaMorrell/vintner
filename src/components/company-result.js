@@ -7,7 +7,7 @@ export function CompanyResult(props) {
 
     return (
       <div className="result-container box pure-g">
-        <div className="pure-u-1-4">
+        <div className="pure-u-1-4 biz-img-container">
           <img className="company-result" src={`/media/${props.company.image}`} alt="company" />
         </div>
         <div className="pure-u-1-2">

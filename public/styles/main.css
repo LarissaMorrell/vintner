@@ -28,6 +28,10 @@ h3 {
   margin: 30px auto;
   max-width: 900px; }
 
+.biz-img-container {
+  min-width: 175px;
+  margin-right: 20px; }
+
 .video-container {
   position: relative;
   width: 100%;
@@ -94,7 +98,7 @@ img.drink-type {
   margin-right: 40px; }
 
 img.company-result {
-  max-height: 150px; }
+  max-width: 100%; }
 
 img.company {
   max-width: 350px;
