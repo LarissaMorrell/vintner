@@ -2,16 +2,19 @@ import React from 'react';
 import {Field, reduxForm} from 'redux-form'; //focus
 import DropDownSelect from './drop-down-select';
 import Input from './input';
+import CheckboxGroup from './checkbox-group';
 import {required, length, isTrimmed} from '../validators'; //matches
 
 export class CreateReviewForm extends React.Component {
     onSubmit(values) {
-      //...
+      console.log(values);
     }
 
 
     //TODO pass in type of alcohol using props
     render() {
+      let optionsList = [{id: 1, name: 'Optoin1'}, {id: 2, name: 'Option 2'}, {id: 3, name: 'Option 3'}]
+
 
         return (
             <form
@@ -51,7 +54,7 @@ export class CreateReviewForm extends React.Component {
                 >
                   {DropDownSelect}
                 </Field>
-                {checkboxes(this.props.type)}
+                <Field name="roles" component={CheckboxGroup} options={optionsList} />
                 <button
                     type="submit">
                     Add your Review
@@ -61,25 +64,25 @@ export class CreateReviewForm extends React.Component {
     }
 }
 
-function checkboxes(drinkType){
-  console.log(drinkType);
-
-  if(drinkType === "wine"){
-    let flavors = ["Dry", "Semi-Dry", "Sweet", "Dessert Wine",
-          "Fruity", "Buttery", "Full-Bodied", "Floral"];
-    return (
-      flavors.map(flavor => {
-        return (
-          <div>
-            <label htmlFor={flavor}>{flavor}</label>
-            <Field name={flavor} id={flavor} component="input" type="checkbox" />
-          </div>
-        )
-      })
-    );
-  }
-  return "Nope";
-}
+// function checkboxes(drinkType){
+//   console.log(drinkType);
+//
+//   if(drinkType === "wine"){
+//     let flavors = ["Dry", "Semi-Dry", "Sweet", "Dessert Wine",
+//           "Fruity", "Buttery", "Full-Bodied", "Floral"];
+//     return (
+//       flavors.map(flavor => {
+//         return (
+//           <div>
+//             <label htmlFor={flavor}>{flavor}</label>
+//             <Field name={flavor} id={flavor} component="input" type="checkbox" />
+//           </div>
+//         )
+//       })
+//     );
+//   }
+//   return <Field  component="input" type="checkbox" />;
+// }
 
 export default reduxForm({
     form: 'review',
