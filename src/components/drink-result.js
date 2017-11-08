@@ -26,7 +26,7 @@ export class DrinkResult extends React.Component {
               </p>
             </div>
             <div className="pure-u-1-5">
-              <button onClick={() => this.props.dispatch(openModal(<CreateReviewForm />))}>Write Review</button>
+              <button onClick={() => this.props.dispatch(openModal(<CreateReviewForm drink={drink}/>))}>Write Review</button>
               <button onClick={() => this.props.history.push(`/drink/11`)}>Read Reviews</button>
             </div>
           </div>

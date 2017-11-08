@@ -3,7 +3,7 @@ import React from 'react';
 class CheckboxGroup extends React.Component {
 
     checkboxGroup() {
-        let {label, required, options, input, meta} = this.props;
+        let {label, options, input} = this.props;
 
         return options.map((option, index) => {
             return (
