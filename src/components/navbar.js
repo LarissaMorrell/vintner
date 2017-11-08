@@ -46,9 +46,11 @@ export class Navbar extends React.Component {
         }
 
         return (
-          <div className="navbar pure-g">
-            <div className="pure-u-2-5" id="navbar-logo">Vintner</div>
-            {listItems}
+          <div className="navbar">
+            <div className="nav-content pure-g">
+              <div className="pure-u-2-5" id="navbar-logo">Vintner</div>
+              {listItems}
+            </div>
           </div>
         );
     }
