@@ -40,9 +40,9 @@ export class CreateReviewForm extends React.Component {
                   label="priceDropDown"
                   component={DropDownSelect}
                   options={["$", "$$", "$$$", "$$$$"]}
+                  values={[1,2,3,4]}
                   className="form-control"
                 >
-                  {DropDownSelect}
                 </Field>
                 <label htmlFor="purchaseDropDown">{`Did you purchase this ${this.props.type}?`}</label>
                 <Field
@@ -50,9 +50,9 @@ export class CreateReviewForm extends React.Component {
                   label="purchaseDropDown"
                   component={DropDownSelect}
                   options={["Yes", "No"]}
+                  values={[true, false]}
                   className="form-control"
                 >
-                  {DropDownSelect}
                 </Field>
                 <Field name="roles" component={CheckboxGroup} options={optionsList} />
                 <button
