@@ -18,9 +18,6 @@ export class DrinkResult extends React.Component {
             </div>
             <div className="pure-u-2-5">
               <h3>{drink.name}</h3>
-              <p>{`People thought this ${drink.type} tasted:`}<br/>
-
-              </p>
             </div>
             <div className="pure-u-1-5">
               <Rating rating={drink.rating} />
@@ -40,6 +37,10 @@ export class DrinkResult extends React.Component {
     }
 }
 export default connect()(DrinkResult);
+
+// <p>
+//   {`People thought this ${drink.type} tasted: ${drink.flavors.join(', ')}`}
+// </p>
 
 //{popularFlavors(drink.reviews)}
 // function popularFlavors(reviews){

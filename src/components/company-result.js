@@ -4,7 +4,7 @@ import DrinkTypes from './drink-types';
 
 export function CompanyResult(props) {
     const company = props.company;
-    
+
     return (
       <div className="result-container box pure-g">
         <div className="pure-u-1-4">
@@ -17,6 +17,7 @@ export function CompanyResult(props) {
         </div>
         <div className="pure-u-1-4">
           <Rating rating={company.rating} />
+          {`${company.totalReviewCount} reviews`}
           <DrinkTypes types={company.types} />
         </div>
       </div>

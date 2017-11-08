@@ -68,7 +68,7 @@ span.unchecked {
   border-radius: 10px; }
 
 .box-form {
-  padding: 50px 50px; }
+  width: 100%; }
 
 .info-container {
   padding: 30px; }

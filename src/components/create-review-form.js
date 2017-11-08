@@ -8,21 +8,11 @@ export class CreateReviewForm extends React.Component {
     onSubmit(values) {
       //...
     }
-    // function checkboxes(drinkType){
-    //   if(drinkType === "wine"){
-    //     let flavors = ["Dry", "Semi-Dry", "Sweet", "Dessert Wine",
-    //           "Fruity", "Buttery", "Full-Bodied", "Floral"];
-    //     return (
-    //       flavors.map(flavor =>
-    //         <Field name={flavor} id={flavor} component="input" type="checkbox" />
-    //       )
-    //     );
-    //   }
-    //   return;
-    // }
+
 
     //TODO pass in type of alcohol using props
     render() {
+
         return (
             <form
                 className="review-form box-form"
@@ -61,6 +51,7 @@ export class CreateReviewForm extends React.Component {
                 >
                   {DropDownSelect}
                 </Field>
+                {checkboxes(this.props.type)}
                 <button
                     type="submit">
                     Add your Review
@@ -68,6 +59,26 @@ export class CreateReviewForm extends React.Component {
             </form>
         );
     }
+}
+
+function checkboxes(drinkType){
+  console.log(drinkType);
+
+  if(drinkType === "wine"){
+    let flavors = ["Dry", "Semi-Dry", "Sweet", "Dessert Wine",
+          "Fruity", "Buttery", "Full-Bodied", "Floral"];
+    return (
+      flavors.map(flavor => {
+        return (
+          <div>
+            <label htmlFor={flavor}>{flavor}</label>
+            <Field name={flavor} id={flavor} component="input" type="checkbox" />
+          </div>
+        )
+      })
+    );
+  }
+  return "Nope";
 }
 
 export default reduxForm({
