@@ -4,7 +4,10 @@ import {Field, reduxForm, focus} from 'redux-form';
 import {registerUser} from '../actions/users';
 import {login} from '../actions/auth';
 import Input from './input';
+import RadioGroup from './radio-group';
 import {required, nonEmpty, matches, length, isTrimmed} from '../validators';
+import LoginForm from './login-form';
+import {openModal} from '../actions/modal';
 
 export class RegistrationForm extends React.Component {
     onSubmit(values) {
@@ -53,18 +56,27 @@ export class RegistrationForm extends React.Component {
                     placeholder="Confirm Password"
                     validate={[required, nonEmpty, matches('password')]}
                 />
+
                 <div className="button-container">
                   <button
                       type="submit"
                       disabled={this.props.pristine || this.props.submitting}>
                       Register
                   </button>
-                  <Link to="/">Login</Link>
+                  <Link to="/" onClick={e => this.props.dispatch(openModal(<LoginForm />))}>
+                      Login
+                  </Link>
                 </div>
             </form>
         );
     }
 }
+
+// <Field name="avatar"
+//     component={RadioGroup}
+//     type="radio"
+//     validate={[required]}
+//   />
 
 export default reduxForm({
     form: 'registration',

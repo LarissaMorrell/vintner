@@ -1,15 +1,15 @@
 import React from 'react';
 
-class CheckboxGroup extends React.Component {
+class RadioGroup extends React.Component {
 
-    checkboxGroup() {
+    radioGroup() {
         let {label, options, input} = this.props;
-        console.log(this.props);
+
         return options.map((option, index) => {
             return (
-            <div className="checkbox" key={index}>
+            <div className="radio-avatar" key={index}>
                 <label>
-                    <input type="checkbox"
+                    <input type="radio"
                            name={`${input.name}[${index}]`}
                            value={option.name}
                            checked={input.value.indexOf(option.name) !== -1}
@@ -23,7 +23,7 @@ class CheckboxGroup extends React.Component {
 
                                return input.onChange(newValue);
                            }}/>
-                    {option.name}
+                    <img src="/media/avatars/boy1.png" alt="avatar" />
                 </label>
             </div>)
         });
@@ -32,11 +32,11 @@ class CheckboxGroup extends React.Component {
     render() {
         return (
             <div>
-                {this.checkboxGroup()}
+                {this.radioGroup()}
             </div>
         )
     }
 }
 
 
-export default CheckboxGroup;
+export default RadioGroup;
