@@ -3,27 +3,17 @@ import React from 'react';
 class RadioGroup extends React.Component {
 
     radioGroup() {
-        let {label, options, input} = this.props;
+        let imgFileNames = this.props.imgFileNames;
 
-        return options.map((option, index) => {
+        return imgFileNames.map((file, index) => {
             return (
-            <div className="radio-avatar" key={index}>
+            <div className="radio-avatar pure-u-1-4" key={index}>
                 <label>
                     <input type="radio"
-                           name={`${input.name}[${index}]`}
-                           value={option.name}
-                           checked={input.value.indexOf(option.name) !== -1}
-                           onChange={(event) => {
-                               const newValue = [...input.value];
-                               if (event.target.checked) {
-                                   newValue.push(option.name);
-                               } else {
-                                   newValue.splice(newValue.indexOf(option.name), 1);
-                               }
-
-                               return input.onChange(newValue);
-                           }}/>
-                    <img src="/media/avatars/boy1.png" alt="avatar" />
+                         name="avatar"
+                         value={file}
+                     />
+                    <img src={`/media/avatars/${file}.png`} alt="avatar" />
                 </label>
             </div>)
         });
@@ -31,12 +21,24 @@ class RadioGroup extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="avatar-form pure-g">
                 {this.radioGroup()}
             </div>
         )
     }
 }
-
+// checked={input.value.indexOf(option.name) !== -1}
+// key={index}
 
 export default RadioGroup;
+
+// onChange={(event) => {
+//     const newValue = [...input.value];
+//     if (event.target.checked) {
+//         newValue.push(option.name);
+//     } else {
+//         newValue.splice(newValue.indexOf(option.name), 1);
+//     }
+//
+//     return input.onChange(newValue);
+// }}

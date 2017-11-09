@@ -4,10 +4,10 @@ class CheckboxGroup extends React.Component {
 
     checkboxGroup() {
         let {label, options, input} = this.props;
-        console.log(this.props);
+
         return options.map((option, index) => {
             return (
-            <div className="checkbox" key={index}>
+            <div className="checkbox pure-u-1-4" key={index}>
                 <label>
                     <input type="checkbox"
                            name={`${input.name}[${index}]`}
@@ -31,7 +31,7 @@ class CheckboxGroup extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="checkbox-group pure-g">
                 {this.checkboxGroup()}
             </div>
         )

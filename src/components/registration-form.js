@@ -6,11 +6,14 @@ import {login} from '../actions/auth';
 import Input from './input';
 import RadioGroup from './radio-group';
 import {required, nonEmpty, matches, length, isTrimmed} from '../validators';
+
+//for the link to the login page. Open login modal on redirect to dashboard
 import LoginForm from './login-form';
 import {openModal} from '../actions/modal';
 
 export class RegistrationForm extends React.Component {
     onSubmit(values) {
+        console.log(values)
         const {username, password, firstName, lastName} = values;
         const user = {username, password, firstName, lastName};
         return this.props
@@ -56,7 +59,12 @@ export class RegistrationForm extends React.Component {
                     placeholder="Confirm Password"
                     validate={[required, nonEmpty, matches('password')]}
                 />
-
+                <Field
+                    component={RadioGroup}
+                    type="radio"
+                    name="avatar"
+                    imgFileNames={["boy1", "boy2", "boy3", "boy4", "girl1", "girl2", "girl3", "girl4"]}
+                />
                 <div className="button-container">
                   <button
                       type="submit"
