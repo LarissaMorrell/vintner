@@ -13,8 +13,15 @@ export class CreateReviewForm extends React.Component {
 
     //TODO pass in type of alcohol using props
     render() {
-      let optionsList = [{id: 1, name: 'Optoin1'}, {id: 2, name: 'Option 2'}, {id: 3, name: 'Option 3'}]
-
+      let wineFlavorList = [
+        {id: 1, name: 'Dry'},
+        {id: 2, name: 'Semi-Dry'},
+        {id: 3, name: 'Sweet'},
+        {id: 4, name: 'Dessert Wine'},
+        {id: 5, name: 'Fruity'},
+        {id: 6, name: 'Buttery'},
+        {id: 7, name: 'Full-Bodied'},
+        {id: 8, name: 'Floral'}];
 
         return (
             <form
@@ -54,7 +61,7 @@ export class CreateReviewForm extends React.Component {
                   className="form-control"
                 >
                 </Field>
-                <Field name="roles" component={CheckboxGroup} options={optionsList} />
+                <Field name="flavors" component={CheckboxGroup} options={wineFlavorList} />
                 <button
                     type="submit">
                     Add your Review
