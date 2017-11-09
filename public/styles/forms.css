@@ -1,3 +1,4 @@
+@charset "UTF-8";
 form {
   max-width: 450px;
   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
@@ -102,3 +103,66 @@ button {
 .required {
   color: red;
   font-weight: normal; }
+
+input[type=checkbox]:not(old),
+input[type=radio]:not(old) {
+  width: 2em;
+  margin: 0;
+  padding: 0;
+  font-size: 1em;
+  opacity: 0; }
+
+input[type=checkbox]:not(old) + label,
+input[type=radio]:not(old) + label {
+  display: inline-block;
+  margin-left: -2em;
+  line-height: 1.5em; }
+
+input[type=checkbox]:not(old) + label > span,
+input[type=radio]:not(old) + label > span {
+  display: inline-block;
+  width: 0.875em;
+  height: 0.875em;
+  margin: 0.25em 0.5em 0.25em 0.25em;
+  border: 0.0625em solid silver;
+  border-radius: 0.25em;
+  background: #e0e0e0;
+  background-image: -moz-linear-gradient(#f0f0f0, #e0e0e0);
+  background-image: -ms-linear-gradient(#f0f0f0, #e0e0e0);
+  background-image: -o-linear-gradient(#f0f0f0, #e0e0e0);
+  background-image: -webkit-linear-gradient(#f0f0f0, #e0e0e0);
+  background-image: linear-gradient(#f0f0f0, #e0e0e0);
+  vertical-align: bottom; }
+
+input[type=checkbox]:not(old):checked + label > span,
+input[type=radio]:not(old):checked + label > span {
+  background-image: -moz-linear-gradient(#e0e0e0, #f0f0f0);
+  background-image: -ms-linear-gradient(#e0e0e0, #f0f0f0);
+  background-image: -o-linear-gradient(#e0e0e0, #f0f0f0);
+  background-image: -webkit-linear-gradient(#e0e0e0, #f0f0f0);
+  background-image: linear-gradient(#e0e0e0, #f0f0f0); }
+
+input[type=checkbox]:not(old):checked + label > span:before {
+  content: '✓';
+  display: block;
+  width: 1em;
+  color: #99cc66;
+  font-size: 0.875em;
+  line-height: 1em;
+  text-align: center;
+  text-shadow: 0 0 0.0714em #73994d;
+  font-weight: bold; }
+
+input[type=radio]:not(old):checked + label > span > span {
+  display: block;
+  width: 0.5em;
+  height: 0.5em;
+  margin: 0.125em;
+  border: 0.0625em solid #73994d;
+  border-radius: 0.125em;
+  background: #99cc66;
+  background-image: -moz-linear-gradient(#b3d98c, #99cc66);
+  background-image: -ms-linear-gradient(#b3d98c, #99cc66);
+  background-image: -o-linear-gradient(#b3d98c, #99cc66);
+  background-image: -webkit-linear-gradient(#b3d98c, #99cc66);
+  background-image: linear-gradient(#b3d98c, #99cc66); }

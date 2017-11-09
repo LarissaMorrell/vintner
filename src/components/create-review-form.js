@@ -14,7 +14,7 @@ export class CreateReviewForm extends React.Component {
     //TODO pass in type of alcohol using props
     render() {
       let drinkType = this.props.drink.type;
-      console.log(this.props);
+      
         return (
             <form
                 className="review-form box-form"

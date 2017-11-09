@@ -8,28 +8,30 @@ class CheckboxGroup extends React.Component {
         return options.map((option, index) => {
             return (
             <div className="checkbox pure-u-1-4" key={index}>
-                <label>
-                    <input type="checkbox"
-                           name={`${input.name}[${index}]`}
-                           value={option.name}
-                           checked={input.value.indexOf(option.name) !== -1}
-                           onChange={(event) => {
-                               const newValue = [...input.value];
-                               if (event.target.checked) {
-                                   newValue.push(option.name);
-                               } else {
-                                   newValue.splice(newValue.indexOf(option.name), 1);
-                               }
 
-                               return input.onChange(newValue);
-                           }}/>
-                    {option.name}
+                    <input type="checkbox"
+                         name={option[index]}
+                         value={option.name}
+                         checked={input.value.indexOf(option.name) !== -1}
+                         onChange={(event) => {
+                             const newValue = [...input.value];
+                             if (event.target.checked) {
+                                 newValue.push(option.name);
+                             } else {
+                                 newValue.splice(newValue.indexOf(option.name), 1);
+                         }
+                         return input.onChange(newValue);
+                     }}/>
+                 <label htmlFor={option[index]}>
+                     <span></span>
+                {option.name}
                 </label>
             </div>)
         });
     }
 
     render() {
+      console.log(this.props);
         return (
             <div className="checkbox-group pure-g">
                 {this.checkboxGroup()}

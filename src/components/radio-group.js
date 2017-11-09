@@ -8,11 +8,15 @@ class RadioGroup extends React.Component {
         return imgFileNames.map((file, index) => {
             return (
             <div className="radio-avatar pure-u-1-4" key={index}>
-                <label>
-                    <input type="radio"
-                         name="avatar"
-                         value={file}
-                     />
+
+                <input type="radio"
+                     name={file}
+                     value={file}
+                     checked={file}
+                 />
+
+                <label htmlFor={file}>
+                    <span><span></span></span>
                     <img src={`/media/avatars/${file}.png`} alt="avatar" />
                 </label>
             </div>)
