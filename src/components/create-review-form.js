@@ -13,15 +13,7 @@ export class CreateReviewForm extends React.Component {
 
     //TODO pass in type of alcohol using props
     render() {
-      let wineFlavorList = [
-        {id: 1, name: 'Dry'},
-        {id: 2, name: 'Semi-Dry'},
-        {id: 3, name: 'Sweet'},
-        {id: 4, name: 'Dessert Wine'},
-        {id: 5, name: 'Fruity'},
-        {id: 6, name: 'Buttery'},
-        {id: 7, name: 'Full-Bodied'},
-        {id: 8, name: 'Floral'}];
+      let drinkType = this.props.drink.type;
 
         return (
             <form
@@ -35,13 +27,13 @@ export class CreateReviewForm extends React.Component {
                   name="title"
                   placeholder={`This ${this.props.drink.type} tickles my fancy...`}
                   validate={[required, length({min: 0, max: 150}), isTrimmed]}/>
-                <label htmlFor="comments">{`What did you think of this ${this.props.drink.type}?`}</label>
+                <label htmlFor="comments">{`What did you think of this ${drinkType}?`}</label>
                 <Field
                   component="textarea"
                   name="comments"
                   placeholder="Your review helps others make happy hour even better."
                   validate={[required, length({min: 0, max: 800}), isTrimmed]} />
-                <label htmlFor="priceDropDown">{`Rate the price of this ${this.props.drink.type}.`}</label>
+                <label htmlFor="priceDropDown">{`Rate the price of this ${drinkType}.`}</label>
                 <Field
                   name="priceDropDown"
                   label="priceDropDown"
@@ -51,7 +43,7 @@ export class CreateReviewForm extends React.Component {
                   className="form-control"
                 >
                 </Field>
-                <label htmlFor="purchaseDropDown">{`Did you purchase this ${this.props.drink.type}?`}</label>
+                <label htmlFor="purchaseDropDown">{`Did you purchase this ${drinkType}?`}</label>
                 <Field
                   name="purchaseDropDown"
                   label="purchaseDropDown"
@@ -61,7 +53,7 @@ export class CreateReviewForm extends React.Component {
                   className="form-control"
                 >
                 </Field>
-                <Field name="flavors" component={CheckboxGroup} options={wineFlavorList} />
+                <Field name="flavors" component={CheckboxGroup} options={flavorList(drinkType)} />
                 <button
                     type="submit">
                     Add your Review
@@ -71,25 +63,48 @@ export class CreateReviewForm extends React.Component {
     }
 }
 
-// function checkboxes(drinkType){
-//   console.log(drinkType);
-//
-//   if(drinkType === "wine"){
-//     let flavors = ["Dry", "Semi-Dry", "Sweet", "Dessert Wine",
-//           "Fruity", "Buttery", "Full-Bodied", "Floral"];
-//     return (
-//       flavors.map(flavor => {
-//         return (
-//           <div>
-//             <label htmlFor={flavor}>{flavor}</label>
-//             <Field name={flavor} id={flavor} component="input" type="checkbox" />
-//           </div>
-//         )
-//       })
-//     );
-//   }
-//   return <Field  component="input" type="checkbox" />;
-// }
+function flavorList(drinkType){
+  let wineFlavorList = [
+    {id: 1, name: 'Dry'},
+    {id: 2, name: 'Semi-Dry'},
+    {id: 3, name: 'Sweet'},
+    {id: 4, name: 'Dessert Wine'},
+    {id: 5, name: 'Fruity'},
+    {id: 6, name: 'Buttery'},
+    {id: 7, name: 'Full-Bodied'},
+    {id: 8, name: 'Floral'}
+  ];
+  let beerFlavorList = [
+    {id: 1, name: 'Hoppy'},
+    {id: 2, name: 'Malty'},
+    {id: 3, name: 'Smokey'},
+    {id: 4, name: 'Citrus'},
+    {id: 5, name: 'Sour'},
+    {id: 6, name: 'Fruity'},
+    {id: 7, name: 'Sweet'},
+    {id: 8, name: 'Earthy'}
+  ];
+  let spiritFlavorList = [
+    {id: 1, name: 'Bold'},
+    {id: 2, name: 'Fun-to-Drink'},
+    {id: 3, name: 'Refreshing'},
+    {id: 4, name: 'Robust'},
+    {id: 5, name: 'Balanced'},
+    {id: 6, name: 'Aromatic'},
+    {id: 7, name: 'Strong'},
+    {id: 8, name: 'Sweet'}
+  ];
+  if(drinkType === 'wine' || drinkType === 'mead'){
+    return wineFlavorList;
+  }
+  else if(drinkType === 'beer'){
+    return beerFlavorList;
+  }
+  else if(drinkType === 'spirit'){
+    return spiritFlavorList;
+  }
+}
+
 
 export default reduxForm({
     form: 'review',
