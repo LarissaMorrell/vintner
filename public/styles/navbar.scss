@@ -1,36 +1,38 @@
-$burgundy: #7b2739;
+$dk-burgundy: #491722;
 
 .navbar {
-  background-color: $burgundy;
+  background-color: $dk-burgundy;
   padding:10px 10%;
 
-  #nav-content {
-    width: 900px;
-  }
-
-  #navbar-logo {
+  #nav-brand {
     font-size: 25px;
     color:white;
   }
-  div.nav-item a {
+  .nav-item a {
     padding: 15px 30px;
     color: white;
-    padding-top: 35px;
-    font-size: 16px;
+    font-size: 20px;
     text-decoration: none;
   }
-  a:visited {
-    color:white;
-    //TODO why is it underlined?
-    text-decoration: none;
-  }
-  div.nav-item a:hover {
-    //TODO change color
-    color: yellow;
-  }
+  // a:visited {
+  //   color:white;
+  //   background: blue;
+  //   //TODO why is it underlined?
+  //   text-decoration: none;
+  // }
+  // li.nav-item:hover {
+  //   //TODO change color
+  //   color: yellow;
+  // }
   button {
-    font-size: 16px;
-    padding: 5px 15px;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px 18px;
     margin:inherit;
+    color: white;
   }
+}
+
+.nav-link:hover {
+  background-color: #d7bec3;
 }
