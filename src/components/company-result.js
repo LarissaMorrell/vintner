@@ -14,11 +14,15 @@ export function CompanyResult(props) {
           <h3>{company.name}</h3>
           <p>{company.streetAddress}</p>
           <p>{company.city}, {company.state}</p>
+          <div className="type-icons">
+            <DrinkTypes types={company.types} />
+          </div>
         </div>
         <div className="pure-u-1-4">
           <Rating rating={company.rating} />
-          {`${company.totalReviewCount} reviews`}
-          <DrinkTypes types={company.types} />
+          <div className="review-count">
+            {`${company.totalReviewCount} reviews`}
+          </div>
         </div>
       </div>
     );

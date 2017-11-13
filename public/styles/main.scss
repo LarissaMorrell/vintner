@@ -45,12 +45,12 @@ a:hover {
 
 .content-container {
   margin: 30px auto;
-  max-width:900px;
+  max-width:950px;
 }
 
 .biz-img-container {
   min-width: 175px;
-  margin-right: 20px;
+  padding-right: 20px;
 }
 
 .video-container{
@@ -94,7 +94,7 @@ span.unchecked {
 
 .box {
   margin: 30px auto;
-  max-width: 900px;
+  max-width: 950px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   background-color: rgba(#FFFFFF, 0.7);//off-white
   color:$burgundy;
@@ -107,7 +107,8 @@ span.unchecked {
 }
 
 .info-container {
-  padding: 30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 .drink-info-container {
   padding-bottom: 0px;
@@ -139,6 +140,9 @@ img.company {
   max-width: 350px;
   border-radius: 5px;
   float:right;
+}
+.type-icons {
+  margin-top: 40px;
 }
 
 .black-screen {
@@ -214,3 +218,33 @@ footer {
 	left:0;
   z-index:-1;
 }
+
+// @media only screen and (max-width: 400px) {
+//   .video-container {
+//     display: none;
+//   }
+// }
+//
+// @media only screen and (max-width: 568px) {
+//   .video-container {
+//     height: 200px;
+//   }
+// }
+//
+// @media only screen and (max-width: 768px) {
+//   .video-container {
+//     height: 200px;
+//   }
+// }
+//
+// @media only screen and (max-width: 1024px) {
+//   .video-container {
+//     height: 200px;
+//   }
+// }
+//
+// @media only screen and (max-width: 1280px) {
+//   .video-container {
+//     height: 800px;
+//   }
+// }

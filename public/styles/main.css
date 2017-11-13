@@ -35,11 +35,11 @@ a:hover {
 
 .content-container {
   margin: 30px auto;
-  max-width: 900px; }
+  max-width: 950px; }
 
 .biz-img-container {
   min-width: 175px;
-  margin-right: 20px; }
+  padding-right: 20px; }
 
 .video-container {
   position: relative;
@@ -74,7 +74,7 @@ span.unchecked {
 
 .box {
   margin: 30px auto;
-  max-width: 900px;
+  max-width: 950px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   background-color: rgba(255, 255, 255, 0.7);
   color: #7b2739;
@@ -84,7 +84,8 @@ span.unchecked {
   width: 100%; }
 
 .info-container {
-  padding: 30px; }
+  padding-top: 30px;
+  padding-bottom: 30px; }
 
 .drink-info-container {
   padding-bottom: 0px; }
@@ -113,6 +114,9 @@ img.company {
   max-width: 350px;
   border-radius: 5px;
   float: right; }
+
+.type-icons {
+  margin-top: 40px; }
 
 .black-screen {
   position: fixed;
