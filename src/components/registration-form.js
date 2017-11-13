@@ -23,6 +23,10 @@ export class RegistrationForm extends React.Component {
 
     render() {
         return (
+          <div>
+            <h2 className="form-title">
+              Create your account
+            </h2>
             <form
                 id="registration-form"
                 className="box-form"
@@ -77,6 +81,7 @@ export class RegistrationForm extends React.Component {
                   </Link>
                 </div>
             </form>
+          </div>
         );
     }
 }

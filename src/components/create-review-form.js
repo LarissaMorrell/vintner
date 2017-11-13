@@ -16,6 +16,10 @@ export class CreateReviewForm extends React.Component {
       let drinkType = this.props.drink.type;
 
         return (
+            <div>
+              <h2 className="form-title">
+                {`Write a review for this ${drinkType}`}
+              </h2>
             <form
                 className="review-form box-form"
                 onSubmit={this.props.handleSubmit(values =>
@@ -25,7 +29,7 @@ export class CreateReviewForm extends React.Component {
                   component={Input}
                   type="text"
                   name="title"
-                  placeholder={`This ${this.props.drink.type} tickles my fancy...`}
+                  placeholder={`This ${drinkType} tickles my fancy...`}
                   validate={[required, length({min: 0, max: 150}), isTrimmed]}/>
                 <label htmlFor="comments">{`What did you think of this ${drinkType}?`}</label>
                 <Field
@@ -61,6 +65,7 @@ export class CreateReviewForm extends React.Component {
                   </button>
                 </div>
             </form>
+          </div>
         );
     }
 }

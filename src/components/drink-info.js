@@ -22,7 +22,9 @@ export class DrinkInfo extends React.Component {
             <h3>{this.props.companyName}</h3>
           </div>
           <div className="pure-u-1-5">
-            <button onClick={() => this.props.dispatch(openModal(<CreateReviewForm drink={this.props.drink} />))}>Write Review</button>
+            <button onClick={() => this.props.dispatch(openModal(<CreateReviewForm drink={this.props.drink} />))}>
+              Write Review
+            </button>
           </div>
         </div>
       </div>

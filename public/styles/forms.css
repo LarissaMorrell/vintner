@@ -3,9 +3,14 @@ form {
   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
   margin: 0 auto; }
 
-#registration-form {
+#registration-box {
   max-width: 900px;
   padding: 50px 75px; }
+
+.form-title {
+  font-weight: 400;
+  text-align: center;
+  padding-bottom: 20px; }
 
 .form-error {
   color: red; }

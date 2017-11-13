@@ -22,6 +22,10 @@ export class LoginForm extends React.Component {
             );
         }
         return (
+          <div>
+            <h2 className="form-title">
+              Sign in to your account
+            </h2>
             <form
                 className="login-form"
                 onSubmit={this.props.handleSubmit(values =>
@@ -51,6 +55,7 @@ export class LoginForm extends React.Component {
                   <Link to="/register">Register</Link>
                 </div>
             </form>
+          </div>
         );
     }
 }
