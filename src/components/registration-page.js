@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import {Redirect} from 'react-router-dom';
-
+import NavPages from './nav-pages';
 import RegistrationForm from './registration-form';
 
 export function RegistrationPage(props) {
@@ -12,6 +12,7 @@ export function RegistrationPage(props) {
     }
     return (
         <div>
+            <NavPages title="Signup for an account with Vintner" route="/"/>
             <h2>Register for Foo App</h2>
             <RegistrationForm />
         </div>

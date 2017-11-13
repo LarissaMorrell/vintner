@@ -71,8 +71,8 @@ const initialState = {
     },
     {
       "name": "Boston Brewer",
-      "streetAddress": "13 way",
-      "city": "Elmwood",
+      "streetAddress": "1 Oak Ave",
+      "city": "Brighton",
       "state": "MA",
       "rating": 3,
       "totalReviewCount": 4,

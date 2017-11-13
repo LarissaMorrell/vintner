@@ -2,6 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import CompanyInfo from './company-info';
 import DrinkResult from './drink-result';
+import NavPages from './nav-pages';
 
 export class CompanyPage extends React.Component {
 
@@ -12,8 +13,10 @@ export class CompanyPage extends React.Component {
         <DrinkResult key={i} drink={drink} />
     );
 
+    //TODO put in dynamic varID for NavPages
     return (
       <div>
+        <NavPages title="Find a place" route="/company"/>
         <CompanyInfo company={this.props.location} />
         {drinkList}
       </div>

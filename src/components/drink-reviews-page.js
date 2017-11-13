@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 // import {Redirect} from 'react-router-dom';
 import DrinkInfo from './drink-info';
 import DrinkReview from './drink-review';
+import NavPages from './nav-pages';
 
 export class DrinkReviewsPage extends React.Component {
 
@@ -15,8 +16,11 @@ export class DrinkReviewsPage extends React.Component {
           <DrinkReview key={i} review={review} type={drink.type} />
       );
 
+      //TODO make Route varID dynamic for NavPages
+      //TODO fix link route so /drink is not in endpoint
       return (
-        <div>Drink Reviews Page
+        <div>
+          <NavPages title={`Read reviews of this ${this.props.drink.type}`} route="company/11"/>
           <DrinkInfo companyName={this.props.companyName}
               drink={drink} />
           {drinkReviews}

@@ -14,7 +14,11 @@
     font-weight: 500;
     padding: 10px 18px;
     margin: inherit;
+    margin-left: 25px;
     color: white; }
+
+.pure-menu-list {
+  float: right; }
 
 .nav-link:hover {
   background-color: #d7bec3; }

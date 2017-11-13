@@ -28,9 +28,14 @@ $dk-burgundy: #491722;
     font-size: 20px;
     font-weight: 500;
     padding: 10px 18px;
-    margin:inherit;
+    margin: inherit;
+    margin-left: 25px;
     color: white;
   }
+}
+
+.pure-menu-list {
+  float: right;
 }
 
 .nav-link:hover {

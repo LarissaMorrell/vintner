@@ -53,6 +53,19 @@ a:hover {
   padding-right: 20px;
 }
 
+h2.page-title {
+  display: inline-block;
+  position: relative;
+  top: 5px;
+  left: 30px;
+  font-weight: 300;
+}
+a.page-title {
+  color: black;
+  background: #d7bec3;
+  border-radius: 3px;
+}
+
 .video-container{
   position: relative;
   width: 100%;
@@ -99,7 +112,6 @@ span.unchecked {
   background-color: rgba(#FFFFFF, 0.7);//off-white
   color:$burgundy;
   border-radius: 10px;
-  // margin:auto;
 }
 
 .box-form {
@@ -109,6 +121,18 @@ span.unchecked {
 .info-container {
   padding-top: 30px;
   padding-bottom: 30px;
+}
+
+.user-info-container {
+
+  * {
+    display: block;
+    margin: 10px auto;
+    text-align: center;
+  }
+  img {
+    width: 150px;
+  }
 }
 .drink-info-container {
   padding-bottom: 0px;

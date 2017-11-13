@@ -1,6 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import {CompanyResult} from './company-result';
+import NavPages from './nav-pages';
 
 export class BrowseLocationsPage extends React.Component {
 
@@ -10,7 +11,8 @@ export class BrowseLocationsPage extends React.Component {
           <CompanyResult key={i} company={company} />
       );
       return (
-        <div>Browse Locations Page
+        <div>
+          <NavPages title="Find a location" route="/"/>
           {locations}
         </div>
       );
