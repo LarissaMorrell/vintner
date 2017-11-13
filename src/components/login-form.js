@@ -44,10 +44,12 @@ export class LoginForm extends React.Component {
                     placeholder="Password"
                     validate={[required, nonEmpty]}
                 />
-                <button disabled={this.props.pristine || this.props.submitting}>
-                    Log in
-                </button>
-                <Link to="/register">Register</Link>
+                <div className="button-container">
+                  <button disabled={this.props.pristine || this.props.submitting}>
+                      Log in
+                  </button>
+                  <Link to="/register">Register</Link>
+                </div>
             </form>
         );
     }

@@ -1,7 +1,15 @@
 form {
-  max-width: 450px;
   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
   margin: 0 auto; }
+
+#registration-form {
+  max-width: 900px;
+  padding: 50px 75px;
+}
+
+.form-error {
+  color: red;
+}
 
 label {
   display: block;
@@ -10,12 +18,12 @@ label {
 .button-container {
   /*TODO fix auto to center form buttons*/
   margin: 0px auto;
-
+  width: 300px;
   button,
   a {
-    display:inline-block;}
-  a {
-    margin-left: 20px;}
+    display:inline-block;
+    margin-left: 20px;
+  }
 }
 
 label > span {

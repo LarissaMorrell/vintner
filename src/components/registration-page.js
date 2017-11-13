@@ -13,8 +13,9 @@ export function RegistrationPage(props) {
     return (
         <div>
             <NavPages title="Signup for an account with Vintner" route="/"/>
-            <h2>Register for Foo App</h2>
-            <RegistrationForm />
+            <div className="box">
+                <RegistrationForm />
+            </div>
         </div>
     );
 }

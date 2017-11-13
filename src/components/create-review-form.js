@@ -14,7 +14,7 @@ export class CreateReviewForm extends React.Component {
     //TODO pass in type of alcohol using props
     render() {
       let drinkType = this.props.drink.type;
-      
+
         return (
             <form
                 className="review-form box-form"
@@ -54,10 +54,12 @@ export class CreateReviewForm extends React.Component {
                 >
                 </Field>
                 <Field name="flavors" component={CheckboxGroup} options={flavorList(drinkType)} />
-                <button
-                    type="submit">
-                    Add your Review
-                </button>
+                <div className="button-container">
+                  <button
+                      type="submit">
+                      Add your Review
+                  </button>
+                </div>
             </form>
         );
     }

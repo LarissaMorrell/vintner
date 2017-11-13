@@ -22,3 +22,6 @@
 
 .nav-link:hover {
   background-color: #d7bec3; }
+
+.nav-link:active {
+  background-color: #d7bec3; }
