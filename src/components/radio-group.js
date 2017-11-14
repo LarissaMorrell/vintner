@@ -4,7 +4,7 @@ class RadioGroup extends React.Component {
 
     radioGroup() {
         let imgFileNames = this.props.imgFileNames;
-        let {label, options, input} = this.props;
+        let {label, input} = this.props;
 
         return imgFileNames.map((file, index) => {
             return (

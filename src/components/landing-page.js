@@ -15,7 +15,75 @@ export function LandingPage(props) {
               <div className="overlay"></div>
           </div>
           <div className="landing-content">
-            <h2>Helping you find the perfect drink</h2>
+            <section>
+              <h2>Reviews for</h2>
+              <ul>
+                <li>
+                  <i className="fa fa-check" aria-hidden="true"></i>
+                  Wine
+                </li>
+                <li>
+                  <i className="fa fa-check" aria-hidden="true"></i>
+                  Beer
+                </li>
+                <li>
+                  <i className="fa fa-check" aria-hidden="true"></i>
+                  Mead
+                </li>
+                <li>
+                  <i className="fa fa-check" aria-hidden="true"></i>
+                  Cider
+                </li>
+                <li>
+                  <i className="fa fa-check" aria-hidden="true"></i>
+                  Spirits
+                </li>
+              </ul>
+            </section>
+            <section>
+              <h2>
+                Never waste time and money on trying that drink you forgot you hated
+              </h2>
+              <h2>
+                Remember the drinks worth buying again
+              </h2>
+            </section>
+            <section>
+              Before visiting the tasting room, find out
+              <ul>
+                <li>
+                  <i className="fa fa-check" aria-hidden="true"></i>
+                  Which drinks are available?
+                </li>
+                <li>
+                  <i className="fa fa-check" aria-hidden="true"></i>
+                  Did people love it... or hate it?
+                </li>
+                <li>
+                  <i className="fa fa-check" aria-hidden="true"></i>
+                  Is the drink worth buying?
+                </li>
+              </ul>
+            </section>
+            <section>
+              <h2>
+                Do even more with a Vintner account
+              </h2>
+              <ul>
+              <li>
+                <i className="fa fa-check" aria-hidden="true"></i>
+                Keep track of your travels
+              </li>
+              <li>
+                <i className="fa fa-check" aria-hidden="true"></i>
+                Which have you already tried? Bought?
+              </li>
+              <li>
+                <i className="fa fa-check" aria-hidden="true"></i>
+                Leave reviews for yourself and others
+              </li>
+              </ul>
+            </section>
           </div>
         </div>
     );
