@@ -66,7 +66,6 @@ export class RegistrationForm extends React.Component {
                 />
                 <Field
                     component={RadioGroup}
-                    type="radio"
                     name="avatar"
                     imgFileNames={["boy1", "boy2", "boy3", "boy4", "girl1", "girl2", "girl3", "girl4"]}
                 />

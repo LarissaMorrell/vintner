@@ -4,26 +4,32 @@ class RadioGroup extends React.Component {
 
     radioGroup() {
         let imgFileNames = this.props.imgFileNames;
+        let {label, options, input} = this.props;
 
         return imgFileNames.map((file, index) => {
             return (
             <div className="radio-avatar pure-u-1-4" key={index}>
+              <input type="checkbox"
+                 name={file}
+                 value={file}
+                 checked={true}
+                 onChange={(event) => {
+                   console.log("hello");
+                   return file;
+                   }
+                 }
+              />
 
-                <input type="radio"
-                     name={file}
-                     value={file}
-                     checked={file}
-                 />
-
-                <label htmlFor={file}>
-                    <span><span></span></span>
-                    <img src={`/media/avatars/${file}.png`} alt="avatar" />
-                </label>
+              <label htmlFor={file}>
+                <span><span></span></span>
+                <img src={`/media/avatars/${file}.png`} alt="avatar" />
+              </label>
             </div>)
         });
     }
 
     render() {
+        console.log(this.props.input);
         return (
             <div className="avatar-form pure-g">
                 {this.radioGroup()}

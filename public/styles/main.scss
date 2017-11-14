@@ -18,9 +18,8 @@ h1 {
   margin-bottom: 10px;
 }
 h2 {
-  font-size: 18pt;
+  font-size: 15pt;
   font-weight: 600;
-  margin-bottom: 18px;
 }
 h3 {
   font-size: 16pt;
@@ -44,7 +43,7 @@ a:hover {
 }
 
 .content-container {
-  margin: 30px auto;
+  margin: 10px auto;
   max-width:950px;
 }
 
@@ -145,7 +144,7 @@ img.review-avatar {
 }
 
 img.drink-type {
-  height:40px;
+  height:30px;
   margin: 5px;
 }
 #drink-info-img {
@@ -162,7 +161,7 @@ img.company {
   float:right;
 }
 .type-icons {
-  margin-top: 40px;
+  margin-top: 28px;
 }
 
 .black-screen {
@@ -239,32 +238,32 @@ footer {
   z-index:-1;
 }
 
-// @media only screen and (max-width: 400px) {
-//   .video-container {
-//     display: none;
-//   }
-// }
-//
-// @media only screen and (max-width: 568px) {
-//   .video-container {
-//     height: 200px;
-//   }
-// }
-//
-// @media only screen and (max-width: 768px) {
-//   .video-container {
-//     height: 200px;
-//   }
-// }
-//
-// @media only screen and (max-width: 1024px) {
-//   .video-container {
-//     height: 200px;
-//   }
-// }
-//
-// @media only screen and (max-width: 1280px) {
-//   .video-container {
-//     height: 800px;
-//   }
-// }
+@media only screen and (max-width: 400px) {
+  .video-container {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 568px) {
+  .video-container {
+    height: 200px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .video-container {
+    height: 200px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .video-container {
+    height: 200px;
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  .video-container {
+    height: 800px;
+  }
+}

@@ -57,7 +57,11 @@ export class CreateReviewForm extends React.Component {
                   className="form-control"
                 >
                 </Field>
-                <Field name="flavors" component={CheckboxGroup} options={flavorList(drinkType)} />
+                <Field
+                  name="flavors"
+                  component={CheckboxGroup}
+                  options={flavorList(drinkType)}
+                />
                 <div className="button-container">
                   <button
                       type="submit">

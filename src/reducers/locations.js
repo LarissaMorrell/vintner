@@ -17,12 +17,12 @@ const initialState = {
         "10-8"
       ],
       "image": "nashoba.jpg",
-      "types": ["beer", "wine", "cider","mead", "spirits"],
+      "types": ["beer", "wine", "cider","mead", "spirit"],
       "drinks": [
         {
           "name": "Porter",
           "rating": 4,
-          "type": "beer",
+          "type": "spirit",
           "reviews": [
             {
                "rating": 3,
