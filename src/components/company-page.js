@@ -7,7 +7,7 @@ import NavPages from './nav-pages';
 export class CompanyPage extends React.Component {
 
   render() {
-    let company = this.props.location;
+    let company = this.props.company;
 
     let drinkList = company.drinks.map((drink, i) =>
         <DrinkResult key={i} drink={drink} />
@@ -17,7 +17,7 @@ export class CompanyPage extends React.Component {
     return (
       <div>
         <NavPages title="Find a place" route="/company"/>
-        <CompanyInfo company={this.props.location} />
+        <CompanyInfo company={this.props.company} />
         {drinkList}
       </div>
     );
@@ -27,9 +27,8 @@ export class CompanyPage extends React.Component {
 
 
 const mapStateToProps = state => ({
-  // location: state.dbData.locations.
-  //take var endpoint and find id: ??? in locations array
-  location: state.dbData.locations[0]
+  //take var endpoint and find id: ??? in companies array
+  company: state.dbData.companies[0]
 });
 
 export default connect(mapStateToProps)(CompanyPage);

@@ -6,7 +6,7 @@ import Navbar from './navbar';
 import LandingPage from './landing-page';
 import Dashboard from './dashboard';
 import RegistrationPage from './registration-page';
-import BrowseLocationsPage from './browse-locations-page';
+import BrowseLocationsPage from './browse-companies-page';
 import CompanyPage from './company-page';
 import DrinkReviewsPage from './drink-reviews-page';
 import Footer from './footer';

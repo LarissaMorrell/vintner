@@ -57,8 +57,8 @@ const mapStateToProps = state => {
             : '',
         protectedData: state.protectedData.data,
 
-        companyName:state.dbData.locations[0].name,
-        drink: state.dbData.locations[0].drinks[0]
+        companyName:state.dbData.companies[0].name,
+        drink: state.dbData.companies[0].drinks[0]
     };
 };
 

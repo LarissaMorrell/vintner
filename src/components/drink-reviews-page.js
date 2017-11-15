@@ -36,8 +36,8 @@ export class DrinkReviewsPage extends React.Component {
 
 //TODO get the winery and drink from the endpoints
 const mapStateToProps = state => ({
-  companyName:state.dbData.locations[0].name,
-  drink: state.dbData.locations[0].drinks[0]
+  companyName:state.dbData.companies[0].name,
+  drink: state.dbData.companies[0].drinks[0]
 });
 
 export default connect(mapStateToProps)(DrinkReviewsPage);

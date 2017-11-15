@@ -1,5 +1,5 @@
 const initialState = {
-  locations: [
+  companies: [
     {
       "name": "Moonlight Winery & Brewery",
       "streetAddress": "13 west way",

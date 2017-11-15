@@ -3,23 +3,23 @@ import {connect} from 'react-redux';
 import {CompanyResult} from './company-result';
 import NavPages from './nav-pages';
 
-export class BrowseLocationsPage extends React.Component {
+export class BrowseCompaniesPage extends React.Component {
 
-//TODO code it for ALL locations in db
+//TODO code it for ALL companies in db
     render() {
-      var locations = this.props.locations.map((company, i) =>
+      var companies = this.props.companies.map((company, i) =>
           <CompanyResult key={i} company={company} />
       );
       return (
         <div>
           <NavPages title="Find a location" route="/"/>
-          {locations}
+          {companies}
         </div>
       );
     }
 }
 const mapStateToProps = state => ({
-  locations: state.dbData.locations
+  companies: state.dbData.companies
 });
 
-export default connect(mapStateToProps)(BrowseLocationsPage);
+export default connect(mapStateToProps)(BrowseCompaniesPage);
