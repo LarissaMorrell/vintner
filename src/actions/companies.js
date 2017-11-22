@@ -1,5 +1,4 @@
 import {API_BASE_URL} from '../config';
-import {normalizeResponseErrors} from './utils';
 
 export const getCompanies = () => dispatch => {
     return fetch(`${API_BASE_URL}/companies`, {
@@ -11,7 +10,6 @@ export const getCompanies = () => dispatch => {
       .then(res => res.json())
       .then(companies => dispatch(saveCompanies(companies)))
       .catch(err => {
-          const {reason, message, location} = err;
 
       });
 };
@@ -32,7 +30,6 @@ export const getCompany = (companyId) => dispatch => {
       .then(res => res.json())
       .then(company => dispatch(saveCompany(company)))
       .catch(err => {
-          const {reason, message, location} = err;
 
       });
 };

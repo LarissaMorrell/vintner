@@ -1,25 +1,25 @@
 import {SAVE_COMPANIES, SAVE_COMPANY} from '../actions/companies';
 // const initialState = {
 //   companies: [
-//     {
-//       "id": 11,
-//       "name": "Moonlight Winery & Brewery",
-//       "streetAddress": "13 west way",
-//       "city": "Elmwood",
-//       "state": "MA",
-//       "rating": 1,
-//       "totalReviewCount": 14,
-//       "hours": [
-//         "10-4",
-//         "11-6",
-//         "11-6",
-//         "11-6",
-//         "11-6",
-//         "11-8",
-//         "10-8"
-//       ],
-//       "image": "nashoba.jpg",
-//       "types": ["beer", "wine", "cider","mead", "spirit"],
+    // {
+    //   "id": 11,
+    //   "name": "Moonlight Winery & Brewery",
+    //   "streetAddress": "13 west way",
+    //   "city": "Elmwood",
+    //   "state": "MA",
+    //   "rating": 1,
+    //   "totalReviewCount": 14,
+    //   "hours": [
+    //     "10-4",
+    //     "11-6",
+    //     "11-6",
+    //     "11-6",
+    //     "11-6",
+    //     "11-8",
+    //     "10-8"
+    //   ],
+    //   "image": "nashoba.jpg",
+    //   "types": ["beer", "wine", "cider","mead", "spirit"],
 //       "drinks": [
 //         {
 //           "name": "Porter",
