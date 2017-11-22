@@ -1,6 +1,7 @@
 const initialState = {
   companies: [
     {
+      "id": 11,
       "name": "Moonlight Winery & Brewery",
       "streetAddress": "13 west way",
       "city": "Elmwood",
@@ -70,6 +71,7 @@ const initialState = {
       ]
     },
     {
+      "id": 12,
       "name": "Boston Brewer",
       "streetAddress": "1 Oak Ave",
       "city": "Brighton",
@@ -146,10 +148,8 @@ export default function reducer(state = initialState, action) {
     //     return Object.assign({}, state, {
     //         display: true
     //     });
-    // } else if (action.type === CLOSE_MODAL) {
-    //     return Object.assign({}, state, {
-    //         display: false
-    //     });
+    // if(action.type === VIEW_COMPANY){
+    //   return
     // }
     return state;
 }

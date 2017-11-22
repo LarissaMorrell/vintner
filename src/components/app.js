@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import {Route, withRouter, BrowserRouter as Router} from 'react-router-dom';
 
 import Navbar from './navbar';
-import LandingPage from './landing-page';
+import Homepage from './homepage';
 import Dashboard from './dashboard';
 import RegistrationPage from './registration-page';
 import BrowseLocationsPage from './browse-companies-page';
@@ -58,7 +58,7 @@ export class App extends React.Component {
               <header>
                 <Navbar loggedIn={this.props.loggedIn} />
               </header>
-              <Route exact path="/" component={LandingPage} />
+              <Route exact path="/" component={Homepage} />
               <div className="content-container">
                 <Route exact path="/dashboard" component={Dashboard} />
                 <Route exact path="/register" component={RegistrationPage} />

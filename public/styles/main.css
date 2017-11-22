@@ -7,6 +7,7 @@ html {
 
 body {
   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  font-size: 14px;
   background-color: #f3f2e1;
   position: relative; }
 
@@ -37,7 +38,7 @@ a:hover {
   margin-right: 30px; }
 
 .content-container {
-  margin: 10px auto;
+  margin: 10px auto 100px auto;
   max-width: 950px; }
 
 .biz-img-container {
@@ -114,8 +115,12 @@ span.unchecked {
 .result-container {
   padding: 15px 25px; }
 
+.col-user-rating {
+  min-width: 110px;
+  max-width: 115px; }
+
 img.avatar-icon {
-  max-height: 80px; }
+  max-height: 70px; }
 
 img.review-avatar {
   margin-left: 15px; }
@@ -198,7 +203,6 @@ footer {
   color: white;
   width: 100%;
   min-height: 75px;
-  position: absolute;
   right: 0;
   bottom: 0;
   left: 0;

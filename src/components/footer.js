@@ -6,7 +6,10 @@ export default class Footer extends React.Component {
 
     render() {
           return (
-            <footer>Footer</footer>
+            <footer>Copyright © Mrkt Tracker 2017.
+              All right reserved.
+              Contact larissa.perkins(at)gmail(dot)com
+            </footer>
           );
     }
 }

@@ -16,7 +16,7 @@ export default function DrinkReview(props) {
   return (
     <div className="box result-container">
       <div className="pure-g">
-        <div className="pure-u-1-5">
+        <div className="pure-u-1-5 col-user-rating">
           <Rating rating={review.rating} />
           <img className="avatar-icon review-avatar" src="/media/avatars/boy1.png" alt="avatar" />
         </div>

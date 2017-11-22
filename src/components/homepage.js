@@ -2,7 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {Redirect} from 'react-router-dom';
 
-export function LandingPage(props) {
+export function Homepage(props) {
     // If we are logged in redirect straight to the user's dashboard
     if (props.loggedIn) {
         return <Redirect to="/dashboard" />;
@@ -14,7 +14,7 @@ export function LandingPage(props) {
             <video src="/media/wine-pour.mp4" autoPlay="true" loop="true"></video>
               <div className="overlay"></div>
           </div>
-          <div className="landing-content">
+          <div className="content-container">
             <section>
               <h2>Reviews for</h2>
               <ul>
@@ -93,4 +93,4 @@ const mapStateToProps = state => ({
     loggedIn: state.auth.currentUser !== null
 });
 
-export default connect(mapStateToProps)(LandingPage);
+export default connect(mapStateToProps)(Homepage);

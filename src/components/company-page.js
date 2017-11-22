@@ -17,8 +17,10 @@ export class CompanyPage extends React.Component {
     return (
       <div>
         <NavPages title="Find a place" route="/company"/>
+        <div className="content-container">
         <CompanyInfo company={this.props.company} />
         {drinkList}
+        </div>
       </div>
     );
     //TODO add the drink types
