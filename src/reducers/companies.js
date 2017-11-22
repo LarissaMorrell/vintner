@@ -1,4 +1,4 @@
-import {SAVE_COMPANIES} from '../actions/companies';
+import {SAVE_COMPANIES, SAVE_COMPANY} from '../actions/companies';
 // const initialState = {
 //   companies: [
 //     {
@@ -144,7 +144,14 @@ import {SAVE_COMPANIES} from '../actions/companies';
 //   ]
 // };
 
-const initialState = [];
+const initialState = {
+  companies: [],
+  company: {
+    drinks: [],
+    hours: [],
+    types: []
+  }
+};
 
 export default function reducer(state = initialState, action) {
     // if (action.type === OPEN_MODAL) {
@@ -152,7 +159,10 @@ export default function reducer(state = initialState, action) {
     //         display: true
     //     });
     if(action.type === SAVE_COMPANIES){
-      return action.companies;
+      return Object.assign({}, state, {companies: action.companies});
+    }
+    if(action.type === SAVE_COMPANY){
+      return Object.assign({}, state, {company: action.company});
     }
     return state;
 }

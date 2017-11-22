@@ -14,7 +14,7 @@ const store = createStore(
         auth: authReducer,
         modal: modalReducer,
         protectedData: protectedDataReducer,
-        companies: companiesReducer
+        APICompanies: companiesReducer
     }),
     applyMiddleware(thunk)
 );

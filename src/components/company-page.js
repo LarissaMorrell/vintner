@@ -3,10 +3,16 @@ import {connect} from 'react-redux';
 import CompanyInfo from './company-info';
 import DrinkResult from './drink-result';
 import NavPages from './nav-pages';
+import {getCompany} from '../actions/companies';
 
 export class CompanyPage extends React.Component {
 
+  componentDidMount(){
+    this.props.dispatch(getCompany(this.props.match.params.companyId))
+  }
+
   render() {
+    console.log(this.props.company);
     let company = this.props.company;
 
     let drinkList = company.drinks.map((drink, i) =>
@@ -30,7 +36,7 @@ export class CompanyPage extends React.Component {
 
 const mapStateToProps = state => ({
   //take var endpoint and find id: ??? in companies array
-  company: state.dbData.companies[0]
+  company: state.APICompanies.company
 });
 
 export default connect(mapStateToProps)(CompanyPage);
