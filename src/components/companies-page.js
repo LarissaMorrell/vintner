@@ -2,8 +2,13 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {CompanyResult} from './company-result';
 import NavPages from './nav-pages';
+import {getCompanies} from '../actions/companies';
 
-export class BrowseCompaniesPage extends React.Component {
+export class CompaniesPage extends React.Component {
+
+  componentDidMount(){
+    this.props.dispatch(getCompanies())
+  }
 
 //TODO code it for ALL companies in db
     render() {
@@ -19,7 +24,7 @@ export class BrowseCompaniesPage extends React.Component {
     }
 }
 const mapStateToProps = state => ({
-  companies: state.dbData.companies
+  companies: state.companies
 });
 
-export default connect(mapStateToProps)(BrowseCompaniesPage);
+export default connect(mapStateToProps)(CompaniesPage);

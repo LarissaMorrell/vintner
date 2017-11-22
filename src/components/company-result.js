@@ -10,12 +10,12 @@ export function CompanyResult(props) {
     return (
       <div className="result-container box pure-g">
         <div className="pure-u-1-4 biz-img-container">
-          <Link to={`/drink/${company.id}`}>
+          <Link to={`/company/${company.id}`}>
             <img className="company-result" src={`/media/${props.company.image}`} alt="company" />
           </Link>
         </div>
         <div className="pure-u-1-2">
-          <Link to={`/drink/${company.id}`}>{company.name}</Link>
+          <Link to={`/company/${company.id}`}>{company.name}</Link>
           <p>{company.streetAddress}</p>
           <p>{company.city}, {company.state}</p>
           <div className="type-icons">

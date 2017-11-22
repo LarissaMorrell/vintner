@@ -6,7 +6,7 @@ import Navbar from './navbar';
 import Homepage from './homepage';
 import Dashboard from './dashboard';
 import RegistrationPage from './registration-page';
-import BrowseLocationsPage from './browse-companies-page';
+import CompaniesPage from './companies-page';
 import CompanyPage from './company-page';
 import DrinkReviewsPage from './drink-reviews-page';
 import Footer from './footer';
@@ -62,7 +62,7 @@ export class App extends React.Component {
               <div className="content-container">
                 <Route exact path="/dashboard" component={Dashboard} />
                 <Route exact path="/register" component={RegistrationPage} />
-                <Route exact path="/company" component={BrowseLocationsPage} />
+                <Route exact path="/companies" component={CompaniesPage} />
                 <Route exact path="/company/:companyId" component={CompanyPage} />
                 <Route exact path="/drink/:drinkId" component={DrinkReviewsPage} />
               </div>
