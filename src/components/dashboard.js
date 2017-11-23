@@ -16,10 +16,10 @@ export class Dashboard extends React.Component {
     render() {
       //TODO make this so it is ONLY the reviews for that user
       //generate the drinks the user has written
-      let drink = this.props.drink;
-      var drinkReviews = drink.reviews.map((review, i) =>
-          <DrinkReview key={i} review={review} type={drink.type} />
-      );
+      // let drink = this.props.company.drink;
+      // var drinkReviews = drink.reviews.map((review, i) =>
+      //     <DrinkReview key={i} review={review} type={drink.type} />
+      // );
 
 
         // Only visible to logged in users
@@ -39,11 +39,12 @@ export class Dashboard extends React.Component {
                     {this.props.username}
                 </div>
               </div>
-              <div className="reviews-container">
-                  {drinkReviews}
-              </div>
+
             </div>
         );
+        // <div className="reviews-container">
+        //     {drinkReviews}
+        // </div>
     }
 }
 
@@ -57,8 +58,7 @@ const mapStateToProps = state => {
             : '',
         protectedData: state.protectedData.data,
 
-        companyName:state.dbData.companies[0].name,
-        drink: state.dbData.companies[0].drinks[0]
+        company: state.APICompanies.company
     };
 };
 
