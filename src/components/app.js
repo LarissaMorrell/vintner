@@ -55,9 +55,7 @@ export class App extends React.Component {
         return (
           <Router>
             <div className="app">
-              <header>
-                <Navbar loggedIn={this.props.loggedIn} />
-              </header>
+              <Navbar loggedIn={this.props.loggedIn} />
               <Route exact path="/" component={Homepage} />
               <div className="content-container">
                 <Route exact path="/dashboard" component={Dashboard} />
