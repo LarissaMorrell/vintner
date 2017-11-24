@@ -8,6 +8,12 @@ html {
   height: 100%;
 }
 
+body {
+   height: 100%;
+}
+
+
+
 * {
   box-sizing: border-box;
 }
@@ -52,7 +58,9 @@ a:hover {
 .content-container {
   margin: 10px auto 100px auto;
   max-width:950px;
+  min-height: 100%;
 }
+
 
 .biz-img-container {
   width: 175px;
@@ -241,17 +249,23 @@ tr {
   font-weight: bold;
 }
 
+
+// TODO fix
+.asd{
+  color:blue;
+}
+
+
+
 footer {
 	background: $dk-burgundy;
   color: white;
 	width:100%;
-	min-height:75px;
-
-	// position:absolute;
+  position:fixed;
   right: 0;
   bottom: 0;
 	left:0;
-  z-index:-1;
+  bottom:0px;
   padding: 1rem;
 }
 
@@ -261,22 +275,9 @@ footer {
 //   width:100vw;
 //   height: 1000px;
 // }
-
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 1280px) {
   .video-container {
-    display: none;
-  }
-}
-
-@media only screen and (max-width: 568px) {
-  .video-container {
-    height: 200px;
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  .video-container {
-    height: 300px;
+    height: 580px;
   }
 }
 
@@ -286,8 +287,20 @@ footer {
   }
 }
 
-@media only screen and (max-width: 1280px) {
+@media only screen and (max-width: 768px) {
   .video-container {
-    height: 580px;
+    height: 300px;
+  }
+}
+
+@media only screen and (max-width: 568px) {
+  .video-container {
+    height: 200px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .video-container {
+    display: none;
   }
 }

@@ -1,5 +1,19 @@
 import {API_BASE_URL} from '../config';
 
+
+export const SAVE_COMPANIES = 'SAVE_COMPANIES';
+export const saveCompanies = companies => ({
+    type: SAVE_COMPANIES,
+    companies
+});
+
+export const SAVE_COMPANY = 'SAVE_COMPANY';
+export const saveCompany = company => ({
+    type: SAVE_COMPANY,
+    company
+});
+
+
 export const getCompanies = () => dispatch => {
     return fetch(`${API_BASE_URL}/companies`, {
         method: 'GET',
@@ -14,11 +28,7 @@ export const getCompanies = () => dispatch => {
       });
 };
 
-export const SAVE_COMPANIES = 'SAVE_COMPANIES';
-export const saveCompanies = companies => ({
-    type: SAVE_COMPANIES,
-    companies
-});
+
 
 export const getCompany = (companyId) => dispatch => {
     return fetch(`${API_BASE_URL}/companies/${companyId}`, {
@@ -33,9 +43,3 @@ export const getCompany = (companyId) => dispatch => {
 
       });
 };
-
-export const SAVE_COMPANY = 'SAVE_COMPANY';
-export const saveCompany = company => ({
-    type: SAVE_COMPANY,
-    company
-});

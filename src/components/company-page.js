@@ -5,6 +5,7 @@ import DrinkResult from './drink-result';
 import NavPages from './nav-pages';
 import {getCompany} from '../actions/companies';
 
+
 export class CompanyPage extends React.Component {
 
   componentDidMount(){
@@ -12,14 +13,12 @@ export class CompanyPage extends React.Component {
   }
 
   render() {
-    console.log(this.props.company);
-    let company = this.props.company;
 
-    let drinkList = company.drinks.map((drink, i) =>
-        <DrinkResult key={i} drink={drink} />
-    );
+    let drinkList = ""
+    //this.props.company.drinks.map((drink, i) =>
+    //    <DrinkResult key={i} drink={drink} />
+    //);
 
-    //TODO put in dynamic varID for NavPages
     return (
       <div>
         <NavPages title="Find a place" route="/company"/>
@@ -36,7 +35,7 @@ export class CompanyPage extends React.Component {
 
 const mapStateToProps = state => ({
   //take var endpoint and find id: ??? in companies array
-  company: state.APICompanies.company
+  company: state.APICompanies.company,
 });
 
 export default connect(mapStateToProps)(CompanyPage);

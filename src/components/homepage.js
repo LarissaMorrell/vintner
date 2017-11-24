@@ -13,6 +13,7 @@ export function Homepage(props) {
           <div className="video-container">
             <video src="/media/wine-pour.mp4" autoPlay="true" loop="true"></video>
               <div className="overlay"></div>
+              <p>asd</p>
           </div>
           <div className="content-container">
             <section>
