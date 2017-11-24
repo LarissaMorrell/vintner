@@ -54,7 +54,7 @@ export class App extends React.Component {
     render() {
         return (
           <Router>
-            <div className="app">
+            <div id="asd" className="app">
               <header>
                 <Navbar loggedIn={this.props.loggedIn} />
               </header>

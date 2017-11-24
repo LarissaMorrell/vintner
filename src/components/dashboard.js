@@ -2,7 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {Redirect} from 'react-router-dom';
 import {fetchProtectedData} from '../actions/protected-data';
-import DrinkReview from './drink-review';
+//import DrinkReview from './drink-review';
 import NavPages from './nav-pages';
 
 export class Dashboard extends React.Component {
