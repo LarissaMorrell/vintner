@@ -17,6 +17,10 @@ $lt-tan: #f3f2e1;
   color:$lt-tan;
 }
 
+.header label {
+  margin-bottom: 0;
+}
+
 .header ul {
   margin: 0;
   padding: 0;
@@ -63,10 +67,11 @@ $lt-tan: #f3f2e1;
   padding: 28px 20px;
   position: relative;
   user-select: none;
+  margin-bottom: 0
 }
 
 .header .menu-icon .navicon {
-  background: #333;
+  background: $lt-tan;
   display: block;
   height: 2px;
   position: relative;
@@ -76,7 +81,7 @@ $lt-tan: #f3f2e1;
 
 .header .menu-icon .navicon:before,
 .header .menu-icon .navicon:after {
-  background: #333;
+  background: $lt-tan;
   content: '';
   display: block;
   height: 100%;

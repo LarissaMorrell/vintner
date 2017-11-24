@@ -9,6 +9,9 @@
 .header a:visited {
   color: #f3f2e1; }
 
+.header label {
+  margin-bottom: 0; }
+
 .header ul {
   margin: 0;
   padding: 0;
@@ -47,10 +50,11 @@
   float: right;
   padding: 28px 20px;
   position: relative;
-  user-select: none; }
+  user-select: none;
+  margin-bottom: 0; }
 
 .header .menu-icon .navicon {
-  background: #333;
+  background: #f3f2e1;
   display: block;
   height: 2px;
   position: relative;
@@ -59,7 +63,7 @@
 
 .header .menu-icon .navicon:before,
 .header .menu-icon .navicon:after {
-  background: #333;
+  background: #f3f2e1;
   content: '';
   display: block;
   height: 100%;
