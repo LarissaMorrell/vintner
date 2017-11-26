@@ -28,14 +28,14 @@ export class Dashboard extends React.Component {
         }
 
         return (
-            <div className="dashboard">
+            <div>
               <NavPages title="Read your reviews" route="/"/>
               <div className="user-info-container">
-                <img className="profile-avatar" src="/media/avatars/boy1.png" alt="avatar" />
+                <img src="/media/avatars/boy1.png" alt="avatar" />
                 <h2>
                     {this.props.name}
                 </h2>
-                <div className="dashboard-username">
+                <div>
                     {this.props.username}
                 </div>
               </div>
