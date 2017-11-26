@@ -22,11 +22,16 @@ h2 {
   font-size: 15pt;
   font-weight: 600; }
 
-h3,
-a.biz-result-title {
-  font-size: 13pt;
-  font-weight: 6  00;
+.company-result-title {
   margin-bottom: 15px; }
+
+.company-result-title > a {
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500; }
+
+p.company-address {
+  line-height: 1.5; }
 
 a {
   color: #a3334c; }

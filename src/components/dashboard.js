@@ -29,7 +29,7 @@ export class Dashboard extends React.Component {
 
         return (
             <div>
-              <NavPages title="Read your reviews" route="/"/>
+              <NavPages title="" route="/"/>
               <div className="user-info-container">
                 <img src="/media/avatars/boy1.png" alt="avatar" />
                 <h2>

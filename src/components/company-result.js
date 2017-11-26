@@ -7,24 +7,29 @@ export function CompanyResult(props) {
     const company = props.company;
     return (
       <div className="result-container box pure-g">
-        <div className="pure-u-1-4 biz-img-container">
-          <Link className="biz-result-title" to={`/company/${company.id}`}>
+        <div className="pure-u-6-24 biz-img-container">
+          <Link to={`/company/${company.id}`}>
             <img className="company-result pure-img" src={`/media/${props.company.imageUrl}`} alt="company" />
           </Link>
         </div>
-        <div className="pure-u-1-2 pure-u-sm-3-4">
+        <div className="pure-u-lg-14-24 pure-u-sm-3-4">
           {/* TODO fix this */}
-          <Link className="asd" to={`/company/${company.id}`}>{company.name}</Link>
-          <p>{company.streetAddress}</p>
-          <p>{company.city}, {company.state}</p>
-          <div className="type-icons">
-            <DrinkTypes types={company.types} />
+          <div className="company-result-title">
+            <Link to={`/company/${company.id}`}>{company.name}</Link>
           </div>
+          <p className="company-address">
+            {company.streetAddress}<br/>
+            {company.city}, {company.state}
+          </p>
+
         </div>
-        <div className="pure-u-1-4 pure-u-sm-1-1">
+        <div className="pure-u-lg-5-24 pure-u-sm-1-1">
           <Rating rating={company.rating} />
           <div className="review-count">
-            {`${company.totalReviewCount} reviews`}
+            {`${company.totalReviewCount ? company.totalReviewCount : '0'} reviews`}
+          </div>
+          <div className="type-icons">
+            <DrinkTypes types={company.types} />
           </div>
         </div>
       </div>
