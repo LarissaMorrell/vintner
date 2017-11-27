@@ -8,20 +8,21 @@ html {
   height: 100%;
 }
 
-body {
-   height: 100%;
-   min-width: 320px;
-}
-
 * {
   box-sizing: border-box;
 }
 
 body {
-  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  // font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
   font-size: 14px;
   background-color: $lt-tan;
   position: relative;
+  height: 100%;
+  min-width: 320px;
+
+  #root, div, span, p {
+    font-family: 'Montserrat';
+  }
 }
 
 h1 {
@@ -29,18 +30,36 @@ h1 {
   margin-bottom: 10px;
 }
 h2 {
-  font-size: 15pt;
+  font-size: 20px;
   font-weight: 600;
 }
 
 .pure-g {
-  letter-spacing: normal;
+  letter-spacing: normal; //override bug in pure
 }
 // h3 {
 //   font-size: 13pt;
 //   font-weight: 600;
 //   margin-bottom: 15px;
 // }
+#homepage-descriptions-container {
+  text-align:center;
+
+  h1 {
+    font-size: 33pt;
+  }
+  li {
+    font-size: 20px;
+  }
+  ul {
+
+  }
+}
+#homepage-descriptions-container > section:first-child{
+  padding-top: 75px;
+  padding-bottom: 75px;
+}
+
 .company-result-title {
   margin-bottom: 15px;
   padding-right: 15px;

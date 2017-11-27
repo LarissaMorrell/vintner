@@ -2,29 +2,39 @@
 html {
   height: 100%; }
 
-body {
-  height: 100%;
-  min-width: 320px; }
-
 * {
   box-sizing: border-box; }
 
 body {
-  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
   font-size: 14px;
   background-color: #f3f2e1;
-  position: relative; }
+  position: relative;
+  height: 100%;
+  min-width: 320px; }
+  body #root, body div, body span, body p {
+    font-family: 'Montserrat'; }
 
 h1 {
   margin-top: 0px;
   margin-bottom: 10px; }
 
 h2 {
-  font-size: 15pt;
+  font-size: 20px;
   font-weight: 600; }
 
 .pure-g {
   letter-spacing: normal; }
+
+#homepage-descriptions-container {
+  text-align: center; }
+  #homepage-descriptions-container h1 {
+    font-size: 33pt; }
+  #homepage-descriptions-container li {
+    font-size: 20px; }
+
+#homepage-descriptions-container > section:first-child {
+  padding-top: 75px;
+  padding-bottom: 75px; }
 
 .company-result-title {
   margin-bottom: 15px;

@@ -15,9 +15,9 @@ export function Homepage(props) {
               <div className="overlay"></div>
               <p>asd</p>
           </div>
-          <div className="content-container">
+          <div id="homepage-descriptions-container">
             <section>
-              <h2>Reviews for</h2>
+              <h1>Reviews for</h1>
               <ul>
                 <li>
                   <i className="fa fa-check" aria-hidden="true"></i>
@@ -42,12 +42,12 @@ export function Homepage(props) {
               </ul>
             </section>
             <section>
-              <h2>
+              <h1>
                 Never waste time and money on trying that drink you forgot you hated
-              </h2>
-              <h2>
+              </h1>
+              <h1>
                 Remember the drinks worth buying again
-              </h2>
+              </h1>
             </section>
             <section>
               Before visiting the tasting room, find out
@@ -67,9 +67,9 @@ export function Homepage(props) {
               </ul>
             </section>
             <section>
-              <h2>
+              <h1>
                 Do even more with a Vintner account
-              </h2>
+              </h1>
               <ul>
               <li>
                 <i className="fa fa-check" aria-hidden="true"></i>
