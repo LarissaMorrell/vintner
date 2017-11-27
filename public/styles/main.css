@@ -28,10 +28,12 @@ h2 {
 .company-result-title > a {
   text-decoration: none;
   font-size: 18px;
-  font-weight: 500; }
+  font-weight: 500;
+  word-wrap: break-word; }
 
 p.company-address {
-  line-height: 1.5; }
+  line-height: 1.5;
+  word-wrap: break-word; }
 
 a {
   color: #a3334c; }
@@ -150,8 +152,13 @@ img.company {
   border-radius: 5px;
   float: right; }
 
-.type-icons {
-  margin-top: 28px; }
+span > img.drink-type {
+  position: relative;
+  top: 15px;
+  left: 0; }
+
+span.drink-type-imgs-container {
+  display: block; }
 
 .black-screen {
   position: fixed;
@@ -207,9 +214,6 @@ tr {
   text-align: left;
   font-weight: bold; }
 
-.asd {
-  color: blue; }
-
 footer {
   background: #491722;
   color: white;
@@ -231,7 +235,12 @@ footer {
 
 @media only screen and (max-width: 768px) {
   .video-container {
-    height: 300px; } }
+    height: 300px; }
+  span.drink-type-imgs-container {
+    display: inline-block;
+    padding-left: 20px; }
+  span.drink-type-imgs-container:first-child {
+    padding-left: 20px; } }
 
 @media only screen and (max-width: 568px) {
   .video-container {

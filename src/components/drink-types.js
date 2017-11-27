@@ -8,8 +8,8 @@ export default function DrinkTypes(props) {
   );
 
   return (
-    <div>
+    <span className="drink-type-imgs-container">
       {typeImgs}
-    </div>
+    </span>
   );
 }

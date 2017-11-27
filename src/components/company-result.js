@@ -12,7 +12,7 @@ export function CompanyResult(props) {
             <img className="company-result pure-img" src={`/media/${props.company.imageUrl}`} alt="company" />
           </Link>
         </div>
-        <div className="pure-u-lg-14-24 pure-u-sm-3-4">
+        <div className="pure-u-lg-14-24 pure-u-md-12-24 pure-u-sm-15-24">
           {/* TODO fix this */}
           <div className="company-result-title">
             <Link to={`/company/${company.id}`}>{company.name}</Link>
@@ -23,14 +23,12 @@ export function CompanyResult(props) {
           </p>
 
         </div>
-        <div className="pure-u-lg-5-24 pure-u-sm-1-1">
+        <div className="pure-u-lg-5-24 pure-u-md-6-24 pure-u-sm-1-1 rating-type-container">
           <Rating rating={company.rating} />
-          <div className="review-count">
+          <span className="review-count">
             {`${company.totalReviewCount ? company.totalReviewCount : '0'} reviews`}
-          </div>
-          <div className="type-icons">
-            <DrinkTypes types={company.types} />
-          </div>
+          </span>
+          <DrinkTypes types={company.types} />
         </div>
       </div>
     );

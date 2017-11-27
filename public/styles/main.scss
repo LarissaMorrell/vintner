@@ -45,9 +45,11 @@ h2 {
   text-decoration: none;
   font-size: 18px;
   font-weight: 500;
+  word-wrap: break-word;
 }
 p.company-address {
   line-height: 1.5;
+  word-wrap: break-word;
 }
 
 a {
@@ -191,8 +193,14 @@ img.company {
   border-radius: 5px;
   float:right;
 }
-.type-icons {
-  margin-top: 28px;
+
+span > img.drink-type {
+  position: relative;
+  top: 15px;
+  left: 0;
+}
+span.drink-type-imgs-container {
+  display:block;
 }
 
 .black-screen {
@@ -258,14 +266,6 @@ tr {
   font-weight: bold;
 }
 
-
-// TODO fix
-.asd{
-  color:blue;
-}
-
-
-
 footer {
 	background: $dk-burgundy;
   color: white;
@@ -300,16 +300,25 @@ footer {
   .video-container {
     height: 300px;
   }
+  span.drink-type-imgs-container {
+    display:inline-block;
+    padding-left: 20px;
+  }
+  span.drink-type-imgs-container:first-child {
+    padding-left: 20px;
+  }
 }
 
 @media only screen and (max-width: 568px) {
   .video-container {
     height: 200px;
   }
+
 }
 
 @media only screen and (max-width: 400px) {
   .video-container {
     display: none;
   }
+
 }
