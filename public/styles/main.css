@@ -26,7 +26,8 @@ h2 {
   letter-spacing: normal; }
 
 .company-result-title {
-  margin-bottom: 15px; }
+  margin-bottom: 15px;
+  padding-right: 15px; }
 
 .company-result-title > a {
   text-decoration: none;
@@ -148,7 +149,8 @@ img.drink-type {
   margin-right: 40px; }
 
 img.company-result {
-  max-width: 100%; }
+  max-width: 100%;
+  border-radius: 5px; }
 
 img.company {
   max-width: 350px;
@@ -169,7 +171,8 @@ span.drink-type-imgs-container {
   right: 0px;
   bottom: 0px;
   left: 0px;
-  background-color: rgba(0, 0, 0, 0.7); }
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 10; }
 
 .modal {
   margin: 150px auto;

@@ -22,7 +22,7 @@ label {
 .button-container {
   /*TODO fix auto to center form buttons*/
   margin: 0px auto;
-  width: 300px; }
+  width: 205px; }
   .button-container button,
   .button-container a {
     display: inline-block;
