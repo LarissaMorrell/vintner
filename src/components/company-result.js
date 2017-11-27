@@ -12,7 +12,7 @@ export function CompanyResult(props) {
             <img className="company-result pure-img" src={`/media/${props.company.imageUrl}`} alt="company" />
           </Link>
         </div>
-        <div className="pure-u-lg-14-24 pure-u-md-12-24 pure-u-sm-15-24">
+        <div className="pure-u-lg-14-24 pure-u-md-12-24 pure-u-sm-16-24">
           {/* TODO fix this */}
           <div className="company-result-title">
             <Link to={`/company/${company.id}`}>{company.name}</Link>

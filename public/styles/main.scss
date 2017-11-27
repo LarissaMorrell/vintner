@@ -12,8 +12,6 @@ body {
    height: 100%;
 }
 
-
-
 * {
   box-sizing: border-box;
 }
@@ -32,6 +30,10 @@ h1 {
 h2 {
   font-size: 15pt;
   font-weight: 600;
+}
+
+.pure-g {
+  letter-spacing: normal;
 }
 // h3 {
 //   font-size: 13pt;
