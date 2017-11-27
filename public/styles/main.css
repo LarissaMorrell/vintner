@@ -29,8 +29,19 @@ h2 {
   text-align: center; }
   #homepage-descriptions-container h1 {
     font-size: 33pt; }
+  #homepage-descriptions-container ul {
+    list-style-type: none;
+    overflow: hidden; }
   #homepage-descriptions-container li {
-    font-size: 20px; }
+    font-size: 20px;
+    float: left;
+    display: block;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none; }
+    #homepage-descriptions-container li i {
+      display: inline-block;
+      margin-right: 10px; }
 
 #homepage-descriptions-container > section:first-child {
   padding-top: 75px;
