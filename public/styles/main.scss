@@ -101,6 +101,7 @@ a.page-title {
   height: 700px;
   overflow: hidden;
   max-width: 100%;
+  margin-top:50px;
 
   //TODO fix positioning
   .overlay {
@@ -323,7 +324,7 @@ footer {
 
 @media only screen and (max-width: 400px) {
   .video-container {
-    display: none;
+    display: 150px;
   }
 
 }
