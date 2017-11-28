@@ -1,6 +1,5 @@
 import React from 'react';
 import {connect} from 'react-redux';
-// import {Redirect} from 'react-router-dom';
 import DrinkInfo from './drink-info';
 import DrinkReview from './drink-review';
 import NavPages from './nav-pages';
@@ -28,11 +27,6 @@ export class DrinkReviewsPage extends React.Component {
       );
     }
 }
-
-
-
-
-
 
 //TODO get the winery and drink from the endpoints
 const mapStateToProps = state => ({
