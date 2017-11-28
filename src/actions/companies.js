@@ -24,7 +24,6 @@ export const getCompanies = () => dispatch => {
       .then(res => res.json())
       .then(companies => dispatch(saveCompanies(companies)))
       .catch(err => {
-
       });
 };
 

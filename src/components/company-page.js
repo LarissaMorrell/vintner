@@ -13,12 +13,19 @@ export class CompanyPage extends React.Component {
   }
 
   render() {
-
-    let drinkList = ""
-    //this.props.company.drinks.map((drink, i) =>
+    // console.log(this.props.company.drinks);
+    // let drinkList = this.props.company.drinks.map((drink, i) =>
     //    <DrinkResult key={i} drink={drink} />
-    //);
+    // );
+    // let drinkList = <DrinkResult drink={this.props.company.drinks[0]} />;
+    // console.log(drinkList);
+    let drinkList = [];
+    let drinks = this.props.company.drinks;
 
+    for (let i=0; i<drinks.length; i++){
+      drinkList.push(<DrinkResult key={i} drink={drinks[i]} />);
+    }
+    console.log("drinkList", drinkList);
     return (
       <div>
         <NavPages title="Find a place" route="/companies"/>

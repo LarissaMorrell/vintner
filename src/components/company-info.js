@@ -6,7 +6,6 @@ export default class CompanyInfo extends React.Component {
 
   render(){
     let company = this.props.company;
-    console.log("info -> ", this.props);
 
     return (
       <div className="info-container">

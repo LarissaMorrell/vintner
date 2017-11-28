@@ -7,34 +7,35 @@ import {openModal} from '../actions/modal';
 export class DrinkResult extends React.Component {
 
   render() {
-      let drink = this.props.drink;
-      // let x = [...new Set(drink.reviews.map(review => review.flavors))];
-      // console.log(props);
-      return (
-        <div className="box result-container">
-          <div className="pure-g">
-              <div className="pure-u-1-5">
-                <img src={`/media/${drink.type}.png`} alt="drink type" />
-            </div>
-            <div className="pure-u-2-5">
-              <h3>{drink.name}</h3>
-            </div>
+    console.log("hello");
+    let drink = this.props.drink;
+    // let x = [...new Set(drink.reviews.map(review => review.flavors))];
+    console.log("drinkresult", this.props);
+    return (
+      <div className="box result-container">
+        <div className="pure-g">
             <div className="pure-u-1-5">
-              <Rating rating={drink.rating} />
-              <p>
-                {drink.reviews.length} reviews
-              </p>
-            </div>
-            <div className="pure-u-1-5">
-              <button onClick={() => this.props.dispatch(openModal(<CreateReviewForm drink={drink}/>))}>Write Review</button>
-              <button onClick={() => this.props.history.push(`/drink/11`)}>Read Reviews</button>
-            </div>
+              <img src={`/media/${drink.type}.png`} alt="drink type" />
+          </div>
+          <div className="pure-u-2-5">
+            <h3>{drink.name}</h3>
+          </div>
+          <div className="pure-u-1-5">
+            <Rating rating={drink.rating} />
+            <p>
+              {drink.reviews.length} reviews
+            </p>
+          </div>
+          <div className="pure-u-1-5">
+            <button onClick={() => this.props.dispatch(openModal(<CreateReviewForm drink={drink}/>))}>Write Review</button>
+            <button onClick={() => this.props.history.push(`/drink/11`)}>Read Reviews</button>
           </div>
         </div>
-      );
+      </div>
+    )
       //TODO add the overall winery rating under h1
       //TODO add the drink types
-    }
+  }
 }
 export default connect()(DrinkResult);
 

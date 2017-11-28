@@ -70,19 +70,19 @@ export function Homepage(props) {
               <h1>
                 Do even more with a Vintner account
               </h1>
-              <ul>
-              <li>
-                <i className="fa fa-check" aria-hidden="true"></i>
-                Keep track of your travels
-              </li>
-              <li>
-                <i className="fa fa-check" aria-hidden="true"></i>
-                Which have you already tried? Bought?
-              </li>
-              <li>
-                <i className="fa fa-check" aria-hidden="true"></i>
-                Leave reviews for yourself and others
-              </li>
+                <ul>
+                <li>
+                  <i className="fa fa-check" aria-hidden="true"></i>
+                  Keep track of your travels
+                </li>
+                <li>
+                  <i className="fa fa-check" aria-hidden="true"></i>
+                  Which have you already tried? Bought?
+                </li>
+                <li>
+                  <i className="fa fa-check" aria-hidden="true"></i>
+                  Leave reviews for yourself and others
+                </li>
               </ul>
             </section>
           </div>
