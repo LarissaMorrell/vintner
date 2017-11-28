@@ -33,15 +33,10 @@ h2 {
   font-size: 20px;
   font-weight: 600;
 }
-
 .pure-g {
   letter-spacing: normal; //override bug in pure
 }
-// h3 {
-//   font-size: 13pt;
-//   font-weight: 600;
-//   margin-bottom: 15px;
-// }
+
 #homepage-descriptions-container {
   text-align:center;
 
@@ -65,10 +60,26 @@ h2 {
       margin-right: 10px;
     }
   }
+  .overlay {
+    background-color: rgba(161,115,76,0.6); /* brown */
+    // top: 0;
+  }
 }
-#homepage-descriptions-container > section:first-child{
+#homepage-descriptions-container > section {
   padding-top: 75px;
   padding-bottom: 75px;
+}
+#homepage-descriptions-container > section:nth-child(even) {
+  background-color: rgba(161,115,76,0.6); /* brown */
+}
+#bottles-img {
+  background-image: url('/media/bottles.jpg');
+  position:absolute;
+  width: 100%;
+  // top:0;
+  left:0;
+  z-index:-1;
+  overflow:hidden;
 }
 
 .company-result-title {
@@ -134,19 +145,21 @@ a.page-title {
   max-width: 100%;
   margin-top:50px;
 
-  //TODO fix positioning
-  .overlay {
-    position: absolute;
-    width: 100%;
-    height:100%;
-    background:rgba(123, 39, 57, .5);
-  }
   video {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
   }
+  .overlay {
+    background:rgba(123, 39, 57, .5); /*dark burgundy*/
+  }
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height:100%;
 }
 
 div.rating {

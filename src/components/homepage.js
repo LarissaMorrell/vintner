@@ -9,11 +9,10 @@ export function Homepage(props) {
     }
 
     return (
-        <div className="home">
+        <div>
           <div className="video-container">
             <video src="/media/wine-pour.mp4" autoPlay="true" loop="true"></video>
-              <div className="overlay"></div>
-              <p>asd</p>
+            <div className="overlay"></div>
           </div>
           <div id="homepage-descriptions-container">
             <section>
@@ -41,16 +40,16 @@ export function Homepage(props) {
                 </li>
               </ul>
             </section>
+              <section>
+                <h1>
+                  Never waste time and money on trying that drink you forgot you hated
+                </h1>
+                <h1>
+                  Remember the drinks worth buying again
+                </h1>
+              </section>
             <section>
-              <h1>
-                Never waste time and money on trying that drink you forgot you hated
-              </h1>
-              <h1>
-                Remember the drinks worth buying again
-              </h1>
-            </section>
-            <section>
-              Before visiting the tasting room, find out
+              <h1>Before visiting the tasting room, find out</h1>
               <ul>
                 <li>
                   <i className="fa fa-check" aria-hidden="true"></i>

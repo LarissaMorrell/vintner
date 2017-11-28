@@ -42,10 +42,25 @@ h2 {
     #homepage-descriptions-container li i {
       display: inline-block;
       margin-right: 10px; }
+  #homepage-descriptions-container .overlay {
+    background-color: rgba(161, 115, 76, 0.6);
+    /* brown */ }
 
-#homepage-descriptions-container > section:first-child {
+#homepage-descriptions-container > section {
   padding-top: 75px;
   padding-bottom: 75px; }
+
+#homepage-descriptions-container > section:nth-child(even) {
+  background-color: rgba(161, 115, 76, 0.6);
+  /* brown */ }
+
+#bottles-img {
+  background-image: url("/media/bottles.jpg");
+  position: absolute;
+  width: 100%;
+  left: 0;
+  z-index: -1;
+  overflow: hidden; }
 
 .company-result-title {
   margin-bottom: 15px;
@@ -102,16 +117,19 @@ a.page-title {
   overflow: hidden;
   max-width: 100%;
   margin-top: 50px; }
-  .video-container .overlay {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: rgba(123, 39, 57, 0.5); }
   .video-container video {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%; }
+  .video-container .overlay {
+    background: rgba(123, 39, 57, 0.5);
+    /*dark burgundy*/ }
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%; }
 
 div.rating {
   min-width: 50px;
