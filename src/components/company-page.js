@@ -27,7 +27,7 @@ export class CompanyPage extends React.Component {
     }
     console.log("drinkList", drinkList);
     return (
-      <div>
+      <div className="content-container">
         <NavPages title="Find a place" route="/companies"/>
         <CompanyInfo company={this.props.company} />
         {drinkList}

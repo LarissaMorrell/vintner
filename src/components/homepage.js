@@ -17,22 +17,18 @@ export function Homepage(props) {
           <img className="img-background" src="/media/barrels.jpg" />
           <div id="homepage-descriptions-container">
             <section>
+              <div className="image-border">
+                <div className="main-image"></div>
+              </div>
               <div className="section-container">
-                <div className="image-border">
-                  <div className="main-image"></div>
-                </div>
-                <h1>We are here to help you navigate tasting menus.
-                  What you like may be different from someone else.
+                <h1>Are drink menus confusing? We are here to help.
                   Never again waste your time on a drink you hate.</h1>
               </div>
             </section>
             <section>
               <div className="section-container">
                 <h1>
-                  Never waste time and money on trying that drink you forgot you hated
-                </h1>
-                <h1>
-                  Remember the drinks worth buying again
+                  Learn more about the drinks places are offering... before you even get there.
                 </h1>
               </div>
             </section>

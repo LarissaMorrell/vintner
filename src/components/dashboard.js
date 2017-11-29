@@ -22,29 +22,26 @@ export class Dashboard extends React.Component {
       // );
 
 
-        // Only visible to logged in users
-        if (!this.props.loggedIn) {
-            return <Redirect to="/" />;
-        }
+      // Only visible to logged in users
+      if (!this.props.loggedIn) {
+          return <Redirect to="/" />;
+      }
 
-        return (
-            <div>
-              <NavPages title="" route="/"/>
-              <div className="user-info-container">
-                <img src="/media/avatars/boy1.png" alt="avatar" />
-                <h2>
-                    {this.props.name}
-                </h2>
-                <div>
-                    {this.props.username}
-                </div>
+      return (
+          <div className="content-container">
+            <NavPages title="" route="/"/>
+            <div className="user-info-container">
+              <img src="/media/avatars/boy1.png" alt="avatar" />
+              <h2>
+                  {this.props.name}
+              </h2>
+              <div>
+                  {this.props.username}
               </div>
-
             </div>
+
+          </div>
         );
-        // <div className="reviews-container">
-        //     {drinkReviews}
-        // </div>
     }
 }
 

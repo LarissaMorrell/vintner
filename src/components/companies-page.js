@@ -16,7 +16,7 @@ export class CompaniesPage extends React.Component {
           <CompanyResult key={i} company={company} />
       );
       return (
-        <div>
+        <div className="content-container">
           <NavPages title="Find a location" route="/"/>
           {companies}
         </div>

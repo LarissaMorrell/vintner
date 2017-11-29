@@ -18,7 +18,7 @@ export class DrinkReviewsPage extends React.Component {
       //TODO make Route varID dynamic for NavPages
       //TODO fix link route so /drink is not in endpoint
       return (
-        <div>
+        <div className="content-container">
           <NavPages title={`Read reviews of this ${this.props.drink.type}`} route="company/11"/>
           <DrinkInfo companyName={this.props.companyName}
               drink={drink} />

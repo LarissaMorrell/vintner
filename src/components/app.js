@@ -57,13 +57,11 @@ export class App extends React.Component {
             <div id="asd" className="app">
               <Navbar loggedIn={this.props.loggedIn} />
               <Route exact path="/" component={Homepage} />
-              <div className="content-container">
-                <Route exact path="/dashboard" component={Dashboard} />
-                <Route exact path="/register" component={RegistrationPage} />
-                <Route exact path="/companies" component={CompaniesPage} />
-                <Route exact path="/company/:companyId" component={CompanyPage} />
-                <Route exact path="/drink/:drinkId" component={DrinkReviewsPage} />
-              </div>
+              <Route exact path="/dashboard" component={Dashboard} />
+              <Route exact path="/register" component={RegistrationPage} />
+              <Route exact path="/companies" component={CompaniesPage} />
+              <Route exact path="/company/:companyId" component={CompanyPage} />
+              <Route exact path="/drink/:drinkId" component={DrinkReviewsPage} />
               <Footer />
               <Modal display={this.props.display} formComponent={this.props.formComponent} />
             </div>

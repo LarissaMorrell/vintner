@@ -11,7 +11,7 @@ export function RegistrationPage(props) {
         return <Redirect to="/dashboard" />;
     }
     return (
-        <div>
+        <div className="content-container">
             <NavPages title="Signup for an account with Vintner" route="/"/>
             <div className="box" id="registration-box">
                 <RegistrationForm />
