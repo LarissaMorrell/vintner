@@ -17,38 +17,17 @@ export function Homepage(props) {
           <img className="img-background" src="/media/barrels.jpg" />
           <div id="homepage-descriptions-container">
             <section>
-              <div>
-                <div className="homepage-img-container">
-                  <img className="beer-bottles" src="/media/beer-flight.jpg" alt="beer bottles"/>
-                  <img className="tasting-room" src="/media/brewery-tanks.jpg" alt="tasting room"/>
+              <div className="section-container">
+                <div className="image-border">
+                  <div className="main-image"></div>
                 </div>
-                <h1>Reviews for</h1>
-                <ul>
-                  <li>
-                    <i className="fa fa-check" aria-hidden="true"></i>
-                    Wine
-                  </li>
-                  <li>
-                    <i className="fa fa-check" aria-hidden="true"></i>
-                    Beer
-                  </li>
-                  <li>
-                    <i className="fa fa-check" aria-hidden="true"></i>
-                    Mead
-                  </li>
-                  <li>
-                    <i className="fa fa-check" aria-hidden="true"></i>
-                    Cider
-                  </li>
-                  <li>
-                    <i className="fa fa-check" aria-hidden="true"></i>
-                    Spirits
-                  </li>
-                </ul>
+                <h1>We are here to help you navigate tasting menus.
+                  What you like may be different from someone else.
+                  Never again waste your time on a drink you hate.</h1>
               </div>
             </section>
             <section>
-              <div>
+              <div className="section-container">
                 <h1>
                   Never waste time and money on trying that drink you forgot you hated
                 </h1>
@@ -58,7 +37,7 @@ export function Homepage(props) {
               </div>
             </section>
             <section>
-              <div>
+              <div className="section-container">
                 <h1>Before visiting the tasting room, find out</h1>
                 <ul>
                   <li>
@@ -77,7 +56,7 @@ export function Homepage(props) {
               </div>
             </section>
             <section>
-              <div>
+              <div className="section-container">
                 <h1>
                   Do even more with a Vintner account
                 </h1>
@@ -101,6 +80,7 @@ export function Homepage(props) {
         </div>
     );
 }
+// <img className="tasting-room" src="/media/beer-pour.jpg" alt="tasting room"/>
 
 const mapStateToProps = state => ({
     loggedIn: state.auth.currentUser !== null
