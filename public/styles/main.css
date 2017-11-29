@@ -353,8 +353,7 @@ footer {
     width: 100%; }
   #homepage-descriptions-container > section {
     text-align: center;
-    padding: 50px 3px;
-    min-height: 400px; }
+    padding: 75px 3px; }
     #homepage-descriptions-container > section h1 {
       font-size: 30px; }
     #homepage-descriptions-container > section li {
@@ -368,4 +367,6 @@ footer {
   .video-container {
     height: 190px; }
     .video-container video {
-      min-height: 200px; } }
+      min-height: 200px; }
+  #homepage-descriptions-container > section {
+    padding: 50px 3px; } }

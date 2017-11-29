@@ -419,9 +419,6 @@ footer {
     display:none;
   }
   div.mobile-img-container {
-    // position:absolute;
-    // left: 0;
-    // background: blue;
     width: 100%;
   }
   img.mobile-img {
@@ -430,8 +427,7 @@ footer {
   }
   #homepage-descriptions-container > section {
     text-align: center;
-    padding:50px 3px;
-    min-height: 400px;
+    padding:75px 3px;
     h1 {
       font-size: 30px;
     }
@@ -455,5 +451,8 @@ footer {
     video {
       min-height: 200px;
     }
+  }
+  #homepage-descriptions-container > section {
+    padding:50px 3px;
   }
 }

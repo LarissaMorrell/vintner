@@ -37,7 +37,7 @@ export function Homepage(props) {
             <section>
               <div className="section-container">
                 <h1>
-                  Learn more about the drinks places are offering... before you even get there.
+                  Learn more about drinks available...<br/>before you even get there.
                 </h1>
               </div>
             </section>
