@@ -14,15 +14,24 @@ export function Homepage(props) {
             <video src="/media/wine-pour.mp4" autoPlay="true" loop="true"></video>
             <div className="overlay"></div>
           </div>
-          <img className="img-background" src="/media/barrels.jpg" />
+          <div className="background-img"></div>
           <div id="homepage-descriptions-container">
             <section>
-              <div className="image-border">
-                <div className="main-image"></div>
-              </div>
-              <div className="section-container">
-                <h1>Are drink menus confusing? We are here to help.
-                  Never again waste your time on a drink you hate.</h1>
+              <div className="pure-g">
+                <div className="pure-u-1-1 pure-u-md-3-5">
+                  <div className="section-container">
+                        <h1>Are drink menus confusing? We are here to help.
+                          Never again waste your time on a drink you hate.</h1>
+                  </div>
+                </div>
+                <div className="pure-u-1-5">
+                  <div className="image-border">
+                    <div className="main-image"></div>
+                  </div>
+                </div>
+                <div className="mobile-img-container">
+                  <img className="mobile-img" src="/media/glasses.png" alt="beverage glasses"/>
+                </div>
               </div>
             </section>
             <section>

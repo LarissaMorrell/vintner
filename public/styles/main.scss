@@ -49,14 +49,20 @@ ul.horizontal-list {
 
     i {
       display: inline-block;
-      margin-right: 10px;
     }
   }
 }
 
 #homepage-descriptions-container {
   h1 {
-    font-size: 33pt;
+    font-size: 33px;
+    line-height: 45px;
+  }
+  li {
+    font-size: 28px;
+    i {
+      margin-right: 10px;
+    }
   }
   .overlay {
     background-color: rgba(161,115,76,0.6); /* brown */
@@ -74,14 +80,20 @@ ul.horizontal-list {
 #homepage-descriptions-container > section:nth-child(even) {
   text-align:center;
 }
-.img-background {
+.background-img {
   width:100%;
-  min-width: 400px;
+  min-height: 100%;
+  min-width: 320px;
   position: fixed;
   left: 0;
   bottom: 0px;
   z-index: -1;
   opacity: 0.5;
+  background: url("/media/barrels.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 .company-result-title {
@@ -120,7 +132,6 @@ a:hover {
   max-width:950px;
   min-height: 100%;
 }
-
 
 .biz-img-container {
   width: 175px;
@@ -228,12 +239,15 @@ img.drink-type {
   height:30px;
   margin: 5px;
 }
+img.mobile-img {
+  display:none;
+}
 div.image-border {
+  display:none;
   width: 350px;
 	height: 350px;
 	background-image: url('/media/beer-flight.jpg');
 	position: absolute;
-  right: 200px;
 	z-index: 1;
   border-radius: 8px;
 
@@ -400,15 +414,46 @@ footer {
   span.drink-type-imgs-container:first-child {
     padding-left: 20px;
   }
+
+  div.image-border {
+    display:none;
+  }
+  div.mobile-img-container {
+    // position:absolute;
+    // left: 0;
+    // background: blue;
+    width: 100%;
+  }
+  img.mobile-img {
+    display: block;
+    width: 100%;
+  }
+  #homepage-descriptions-container > section {
+    text-align: center;
+    padding:50px 3px;
+    min-height: 400px;
+    h1 {
+      font-size: 30px;
+    }
+    li {
+      font-size: 25px;
+    }
+  }
+  #homepage-descriptions-container > section:first-child {
+    padding-bottom: 0;
+  }
+  .section-container {
+    margin: 0;
+  }
 }
 
 // For screens with a EXTRA-SMALL screen size or smaller
 @media only screen and (max-width: 568px) {
   .video-container {
-    height: 200px;
+    height: 190px;
 
     video {
-      min-height: 190px;
+      min-height: 200px;
     }
   }
 }
