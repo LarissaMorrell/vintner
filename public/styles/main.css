@@ -206,7 +206,6 @@ img.mobile-img {
   display: none; }
 
 div.image-border {
-  display: none;
   width: 350px;
   height: 350px;
   background-image: url("/media/beer-flight.jpg");
@@ -369,4 +368,7 @@ footer {
     .video-container video {
       min-height: 200px; }
   #homepage-descriptions-container > section {
-    padding: 50px 3px; } }
+    padding: 50px 3px; }
+    #homepage-descriptions-container > section h1 {
+      font-size: 20px;
+      line-height: 28px; } }

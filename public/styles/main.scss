@@ -243,11 +243,10 @@ img.mobile-img {
   display:none;
 }
 div.image-border {
-  display:none;
   width: 350px;
 	height: 350px;
 	background-image: url('/media/beer-flight.jpg');
-	position: absolute;
+	position: relative;
 	z-index: 1;
   border-radius: 8px;
 
@@ -454,5 +453,9 @@ footer {
   }
   #homepage-descriptions-container > section {
     padding:50px 3px;
+    h1 {
+      font-size: 20px;
+      line-height: 28px;
+    }
   }
 }

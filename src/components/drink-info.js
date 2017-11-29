@@ -8,7 +8,7 @@ export class DrinkInfo extends React.Component {
 
   render() {
     let drink = this.props.drink;
-
+    console.log(drink);
     return (
       <div className="info-container drink-info-container">
         <div className="pure-g">

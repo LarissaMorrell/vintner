@@ -24,7 +24,7 @@ export class CompaniesPage extends React.Component {
     }
 }
 const mapStateToProps = state => ({
-  companies: state.APICompanies.companies
+  companies: state.APIData.companies
 });
 
 export default connect(mapStateToProps)(CompaniesPage);

@@ -6,7 +6,7 @@ export const saveDrinks = drinks => ({
 });
 
 export const SAVE_DRINK = 'SAVE_DRINK';
-export const saveCompany = drink => ({
+export const saveDrink = drink => ({
     type: SAVE_DRINK,
     drink
 });

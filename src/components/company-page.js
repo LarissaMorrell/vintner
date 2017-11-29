@@ -39,8 +39,7 @@ export class CompanyPage extends React.Component {
 
 
 const mapStateToProps = state => ({
-  //take var endpoint and find id: ??? in companies array
-  company: state.APICompanies.company,
+  company: state.APIData.company,
 });
 
 export default connect(mapStateToProps)(CompanyPage);
