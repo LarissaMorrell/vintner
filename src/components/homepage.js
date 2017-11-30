@@ -28,7 +28,7 @@ export function Homepage(props) {
             <section>
               <div className="section-container">
                 <h1>
-                  Learn which drinks are available...<br/>before you even get there.
+                  Read reviews of drinks from craft brewers and vintners
                 </h1>
               </div>
             </section>
@@ -36,27 +36,25 @@ export function Homepage(props) {
               <div className="pure-g">
                 <div className="pure-u-1-1 pure-u-md-3-5">
                   <div className="section-container">
-                    <h1>Before visiting the tasting room, find out</h1>
+                    <h1>Learn which drinks are available...
+                      <br/>before you even get there.
+                    </h1>
                     <ul>
-                      <li>
-                        <i className="fa fa-check" aria-hidden="true"></i>
-                        Which drinks are available?
-                      </li>
                       <li>
                         <i className="fa fa-check" aria-hidden="true"></i>
                         Did people love it... or hate it?
                       </li>
                       <li>
                         <i className="fa fa-check" aria-hidden="true"></i>
-                        Is the drink worth buying?
+                        Did they love it enough to buy it?
                       </li>
                     </ul>
                   </div>
                 </div>
-              </div>
-              <div className="pure-u-1-5">
-                <div className="image-border">
-                  <div className="main-image"></div>
+                <div className="pure-u-1-5">
+                  <div className="image-border">
+                    <div className="main-image"></div>
+                  </div>
                 </div>
               </div>
             </section>
