@@ -33,29 +33,23 @@ export function Homepage(props) {
               </div>
             </section>
             <section>
-              <div className="pure-g">
-                <div className="pure-u-1-1 pure-u-md-3-5">
-                  <div className="section-container">
-                    <h1>Learn which drinks are available...
-                      <br/>before you even get there.
-                    </h1>
-                    <ul>
-                      <li>
-                        <i className="fa fa-check" aria-hidden="true"></i>
-                        Did people love it... or hate it?
-                      </li>
-                      <li>
-                        <i className="fa fa-check" aria-hidden="true"></i>
-                        Did they love it enough to buy it?
-                      </li>
-                    </ul>
-                  </div>
+              <div className="section-container">
+                <h1>Learn which drinks are available...
+                  <br/>before you even get there.
+                </h1>
+                <div className="love-hate">
+                  <p>Did people</p>
+                  <b>
+                    <div className="inner-love-hate">
+                      hate it?<br/>
+                      love it?<br/>
+                      love it enough to buy it?
+                      </div>
+                  </b>
                 </div>
-                <div className="pure-u-1-5">
-                  <div className="image-border">
-                    <div className="main-image"></div>
-                  </div>
-                </div>
+              </div>
+              <div className="image-border">
+                <div className="main-image"></div>
               </div>
             </section>
             <section>
