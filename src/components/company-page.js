@@ -37,6 +37,10 @@ export class CompanyPage extends React.Component {
   }
 }
 
+function generateDrinkList(drinks){
+
+}
+
 
 const mapStateToProps = state => ({
   company: state.APIData.company,

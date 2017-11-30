@@ -14,9 +14,9 @@ export class DrinkReviewsPage extends React.Component {
 //then all of the reviews for THAT drink
     render() {
       let drink = this.props.drink;
-      var drinkReviews = drink.reviews.map((review, i) =>
-          <DrinkReview key={i} review={review} type={drink.type} />
-      );
+      // var drinkReviews = drink.reviews.map((review, i) =>
+      //     <DrinkReview key={i} review={review} type={drink.type} />
+      // );
       console.log("drink page", drink);
       return (
         <div className="content-container">
@@ -24,11 +24,12 @@ export class DrinkReviewsPage extends React.Component {
           {drink.name}
           <DrinkInfo companyName={drink.company.name}
               drink={drink} />
-          {drinkReviews}
+
         </div>
       );
     }
 }
+    // {drinkReviews}
 
 const mapStateToProps = state => ({
   drink: state.APIData.drink

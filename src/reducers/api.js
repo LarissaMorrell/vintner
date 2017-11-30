@@ -1,6 +1,6 @@
 import {SAVE_COMPANIES, SAVE_COMPANY} from '../actions/companies';
-import {SAVE_DRINKS, SAVE_DRINK} from '../actions/drinks';
-
+import {SAVE_DRINK} from '../actions/drinks';
+//SAVE_DRINKS, 
 const initialState = {
   companies: [],
   company: {
