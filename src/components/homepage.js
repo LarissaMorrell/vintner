@@ -18,8 +18,8 @@ export function Homepage(props) {
           <div id="homepage-descriptions-container">
             <section>
               <div className="section-container">
-                    <h1>Are drink menus confusing? We are here to help.
-                      Never again waste your time on a drink you hate.</h1>
+                <h1>Are drink menus confusing? We are here to help.
+                  Never again waste your time on a drink you hate.</h1>
               </div>
               <div className="glassware-container">
 
