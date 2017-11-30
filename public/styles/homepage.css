@@ -15,19 +15,6 @@
     background: rgba(123, 39, 57, 0.5);
     /*dark burgundy*/ }
 
-#homepage-descriptions-container h1 {
-  font-size: 33px;
-  line-height: 45px; }
-
-#homepage-descriptions-container li {
-  font-size: 28px; }
-  #homepage-descriptions-container li i {
-    margin-right: 10px; }
-
-#homepage-descriptions-container .overlay {
-  background-color: rgba(161, 115, 76, 0.6);
-  /* brown */ }
-
 .background-img {
   width: 100%;
   min-height: 100%;
@@ -43,29 +30,37 @@
   -o-background-size: cover;
   background-size: cover; }
 
-.section-container {
-  margin: 120px auto;
-  max-width: 950px;
-  min-height: 100%; }
-
 #homepage-descriptions-container > section {
   height: 100%;
   overflow: hidden;
   text-align: center; }
+  #homepage-descriptions-container > section h1 {
+    font-size: 33px;
+    line-height: 45px; }
+  #homepage-descriptions-container > section li {
+    font-size: 28px; }
+    #homepage-descriptions-container > section li i {
+      margin-right: 10px; }
+  #homepage-descriptions-container > section .overlay {
+    background-color: rgba(161, 115, 76, 0.6);
+    /* brown */ }
+  #homepage-descriptions-container > section .section-container {
+    margin: 120px auto;
+    max-width: 950px;
+    min-height: 100%; }
+  #homepage-descriptions-container > section div.glassware-container {
+    width: 100%;
+    height: 800px;
+    background: url("/media/glasses.png");
+    background-size: contain;
+    background-repeat: repeat-x;
+    background-position: center bottom; }
 
 #homepage-descriptions-container > section:nth-child(odd) {
   background-color: #f3f2e1; }
 
 #homepage-descriptions-container > section:last-child .section-container {
   padding-bottom: 50px; }
-
-div.glassware-container {
-  width: 100%;
-  height: 800px;
-  background: url("/media/glasses.png");
-  background-size: contain;
-  background-repeat: repeat-x;
-  background-position: center bottom; }
 
 /*
 *   RESPONSIVE DESIGN ADJUSTMENTS
@@ -79,10 +74,10 @@ div.glassware-container {
 @media only screen and (max-width: 1024px) {
   .video-container {
     height: 434px; }
-  div.glassware-container {
-    height: 500px; }
   #homepage-descriptions-container > section .section-container {
-    margin: 100px 8% 100px 8%; } }
+    margin: 100px 8% 100px 8%; }
+  #homepage-descriptions-container > section div.glassware-container {
+    height: 500px; } }
 
 @media only screen and (max-width: 768px) {
   .video-container {
@@ -105,7 +100,7 @@ div.glassware-container {
   #homepage-descriptions-container > section h1 {
     font-size: 20px;
     line-height: 28px; }
-  #homepage-descriptions-container > section:first-child div.glassware-container {
+  #homepage-descriptions-container > section div.glassware-container {
     height: 300px; } }
 
 @media only screen and (max-width: 400px) {
