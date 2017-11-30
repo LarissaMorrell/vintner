@@ -202,14 +202,11 @@ img.drink-type {
   height: 30px;
   margin: 5px; }
 
-img.mobile-img {
-  display: none; }
-
 div.image-border {
   width: 350px;
   height: 350px;
   background-image: url("/media/beer-flight.jpg");
-  position: absolute;
+  position: relative;
   z-index: 1;
   border-radius: 8px; }
   div.image-border:after {
@@ -345,10 +342,13 @@ footer {
     padding-left: 20px; }
   div.image-border {
     display: none; }
-  div.mobile-img-container {
-    width: 100%; }
-  img.mobile-img {
-    display: block;
+  div.glassware-container {
+    width: 100%;
+    background: url("/media/glasses.png");
+    background-size: contain;
+    background-repeat: no-repeat; }
+  img.glassware-img {
+    display: none;
     width: 100%; }
   #homepage-descriptions-container > section {
     text-align: center;

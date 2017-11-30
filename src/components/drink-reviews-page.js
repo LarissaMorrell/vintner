@@ -17,7 +17,7 @@ export class DrinkReviewsPage extends React.Component {
       var drinkReviews = drink.reviews.map((review, i) =>
           <DrinkReview key={i} review={review} type={drink.type} />
       );
-
+      console.log("drink page", drink);
       return (
         <div className="content-container">
           <NavPages title={`Read reviews of this ${this.props.drink.type}`} route="company/11"/>
@@ -30,7 +30,6 @@ export class DrinkReviewsPage extends React.Component {
     }
 }
 
-//TODO get the winery and drink from the endpoints
 const mapStateToProps = state => ({
   drink: state.APIData.drink
 });

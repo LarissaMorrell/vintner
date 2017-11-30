@@ -239,9 +239,6 @@ img.drink-type {
   height:30px;
   margin: 5px;
 }
-img.mobile-img {
-  display:none;
-}
 div.image-border {
   width: 350px;
 	height: 350px;
@@ -417,11 +414,15 @@ footer {
   div.image-border {
     display:none;
   }
-  div.mobile-img-container {
+  div.glassware-container {
     width: 100%;
+    background: url("/media/glasses.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+
   }
-  img.mobile-img {
-    display: block;
+  img.glassware-img {
+    display:none;
     width: 100%;
   }
   #homepage-descriptions-container > section {

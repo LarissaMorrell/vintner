@@ -7,7 +7,7 @@ export function Homepage(props) {
     if (props.loggedIn) {
         return <Redirect to="/dashboard" />;
     }
-
+//<img className="glassware-img" src="/media/glasses.png" alt="beverage glasses"/>
     return (
         <div>
           <div className="video-container">
@@ -17,21 +17,12 @@ export function Homepage(props) {
           <div className="background-img"></div>
           <div id="homepage-descriptions-container">
             <section>
-              <div className="pure-g">
-                <div className="pure-u-1-1 pure-u-md-3-5">
-                  <div className="section-container">
-                        <h1>Are drink menus confusing? We are here to help.
-                          Never again waste your time on a drink you hate.</h1>
-                  </div>
-                </div>
-                <div className="pure-u-1-5">
-                  <div className="image-border">
-                    <div className="main-image"></div>
-                  </div>
-                </div>
-                <div className="mobile-img-container">
-                  <img className="mobile-img" src="/media/glasses.png" alt="beverage glasses"/>
-                </div>
+              <div className="section-container">
+                    <h1>Are drink menus confusing? We are here to help.
+                      Never again waste your time on a drink you hate.</h1>
+              </div>
+              <div className="glassware-container">
+
               </div>
             </section>
             <section>
@@ -42,22 +33,31 @@ export function Homepage(props) {
               </div>
             </section>
             <section>
-              <div className="section-container">
-                <h1>Before visiting the tasting room, find out</h1>
-                <ul>
-                  <li>
-                    <i className="fa fa-check" aria-hidden="true"></i>
-                    Which drinks are available?
-                  </li>
-                  <li>
-                    <i className="fa fa-check" aria-hidden="true"></i>
-                    Did people love it... or hate it?
-                  </li>
-                  <li>
-                    <i className="fa fa-check" aria-hidden="true"></i>
-                    Is the drink worth buying?
-                  </li>
-                </ul>
+              <div className="pure-g">
+                <div className="pure-u-1-1 pure-u-md-3-5">
+                  <div className="section-container">
+                    <h1>Before visiting the tasting room, find out</h1>
+                    <ul>
+                      <li>
+                        <i className="fa fa-check" aria-hidden="true"></i>
+                        Which drinks are available?
+                      </li>
+                      <li>
+                        <i className="fa fa-check" aria-hidden="true"></i>
+                        Did people love it... or hate it?
+                      </li>
+                      <li>
+                        <i className="fa fa-check" aria-hidden="true"></i>
+                        Is the drink worth buying?
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div className="pure-u-1-5">
+                <div className="image-border">
+                  <div className="main-image"></div>
+                </div>
               </div>
             </section>
             <section>

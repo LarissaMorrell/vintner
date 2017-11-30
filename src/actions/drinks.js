@@ -19,7 +19,9 @@ export const getDrinks = () => dispatch => {
             'content-type': 'application/json'
         }
     })
-      .then(res => res.json())
+      .then(res => {
+        console.log("this is the res", res);
+        return res.json()})
       .then(drinks => dispatch(saveDrinks(drinks)))
       .catch(err => {
       });
