@@ -7,7 +7,9 @@ export default class CompanyInfo extends React.Component {
   render(){
     let company = this.props.company;
 
-      // console.log("in company info", company);
+      console.log("in company info", company);
+      console.log(`/media/companies/${company.imageUrl}`);
+
     return (
       <div className="info-container">
         <div className="pure-g">
@@ -34,7 +36,7 @@ export default class CompanyInfo extends React.Component {
               </table>
             </div>
             <div className="pure-u-5-12">
-              <img className="company" src={`/media/${company.image}`} alt="company"/>
+              <img className="company" src={`/media/companies/${company.imageUrl}`} alt="company"/>
             </div>
         </div>
       </div>
@@ -53,7 +55,7 @@ function genHours(hours){
           {dayOfWeek[i]}
         </th>
         <td className="biz-hours">
-          {hour}
+          {hour.open} - {hour.close}
         </td>
       </tr>
     )
