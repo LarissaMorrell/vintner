@@ -32,9 +32,9 @@ export class Dashboard extends React.Component {
             <NavPages title="" route="/"/>
             <div className="user-info-container">
               <img src="/media/avatars/boy1.png" alt="avatar" />
-              <h2>
+              <h1>
                   {this.props.name}
-              </h2>
+              </h1>
               <div>
                   {this.props.username}
               </div>
