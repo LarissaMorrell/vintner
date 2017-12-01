@@ -307,11 +307,13 @@ tr {
   display: table-row;
   padding-bottom: 10px;
 }
-
-.side-bar .biz-hours .hours-table {
+.hours-table-container {
+  max-height: 75px;
+}
+.day-of-the-week .biz-hours{
   margin-bottom: 10px;
 }
-.side-bar {
+.day-of-the-week {
   min-width: 36px;
   padding-right: 18px;
   text-align: left;

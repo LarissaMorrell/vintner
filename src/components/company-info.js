@@ -27,7 +27,7 @@ export default class CompanyInfo extends React.Component {
               </div>
 
               <h3>Hours of Operation:</h3>
-              <table className="table-simple hours-table">
+              <table className="table-simple">
                 <tbody>
                   {genHours(hours)}
                 </tbody>
@@ -49,7 +49,7 @@ function genHours(hours){
   return hours.map((hours, i) => {
     return (
       <tr key={i}>
-        <th className="side-bar">
+        <th className="day-of-the-week">
           {dayOfWeek[i]}
         </th>
         <td className="biz-hours">
