@@ -7,8 +7,8 @@ export default class CompanyInfo extends React.Component {
   render(){
     let company = this.props.company;
     let hours = this.props.company.hours;
-      console.log("in company info", company);
-      console.log(`/media/companies/${company.imageUrl}`);
+      // console.log("in company info", company);
+      // console.log(`/media/companies/${company.imageUrl}`);
 
     return (
       <div className="info-container">

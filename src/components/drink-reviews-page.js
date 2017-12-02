@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import DrinkInfo from './drink-info';
-import DrinkReview from './drink-review';
+// import DrinkReview from './drink-review';
 import NavPages from './nav-pages';
 import {getDrink} from '../actions/drinks';
 
