@@ -15,9 +15,13 @@ body {
   body #root, body div, body p, body h1, body h2, body h3, body h4, body tr {
     font-family: 'Montserrat', sans-serif, arial; }
 
+a, p {
+  word-wrap: break-word; }
+
 h1, h2, h3, h4 {
   margin-top: 0px;
-  margin-bottom: 10px; }
+  margin-bottom: 10px;
+  word-wrap: break-word; }
 
 h2 {
   font-size: 20px;

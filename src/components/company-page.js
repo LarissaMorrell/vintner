@@ -25,7 +25,6 @@ export class CompanyPage extends React.Component {
     for (let i=0; i<drinks.length; i++){
       drinkList.push(<DrinkResult key={i} drink={drinks[i]} />);
     }
-    console.log("drinkList", drinkList);
     return (
       <div className="content-container">
         <NavPages title="Find a place" route="/companies"/>
