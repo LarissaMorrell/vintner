@@ -58,17 +58,22 @@
 
 #homepage-descriptions-container > section:nth-child(odd) {
   background-color: #f3f2e1; }
+  #homepage-descriptions-container > section:nth-child(odd) .section-container {
+    margin-bottom: 75px; }
 
-#homepage-descriptions-container > section:last-child .section-container {
-  padding-bottom: 50px; }
+#homepage-descriptions-container > section:last-child {
+  /* To account for the footer */ }
+  #homepage-descriptions-container > section:last-child .section-container {
+    padding-bottom: 50px; }
 
 .love-hate {
-  padding: 2em 5em;
-  font: normal 40px/50px Montserrat, sans-serif; }
+  padding-top: 2em;
+  font: normal 33px/50px Montserrat, sans-serif;
+  text-align: left; }
 
 .love-hate p {
   height: 50px;
-  font-size: 30px;
+  font-size: 33px;
   float: left;
   margin-right: 0.3em; }
 
@@ -83,7 +88,7 @@
   font-size: 30px;
   display: inline-block;
   color: #7b2739;
-  opacity: 0.7;
+  opacity: 0.8;
   position: relative;
   white-space: nowrap;
   top: 0;

@@ -36,7 +36,6 @@ $lt-tan: #f3f2e1;
   -o-background-size: cover;
   background-size: cover;
 }
-
 #homepage-descriptions-container > section {
   height:100%;
   overflow: hidden;
@@ -70,8 +69,12 @@ $lt-tan: #f3f2e1;
 }
 #homepage-descriptions-container > section:nth-child(odd) {
   background-color: $lt-tan;
+  .section-container {
+    margin-bottom: 75px;
+  }
 }
 #homepage-descriptions-container > section:last-child {
+  /* To account for the footer */
   .section-container {
     padding-bottom: 50px;
   }
@@ -79,12 +82,13 @@ $lt-tan: #f3f2e1;
 
 
 .love-hate {
-  padding: 2em 5em;
-  font: normal 40px/50px Montserrat, sans-serif;
+  padding-top: 2em;
+  font: normal 33px/50px Montserrat, sans-serif;
+  text-align: left;
 }
 .love-hate p {
   height: 50px;
-  font-size: 30px;
+  font-size: 33px;
   float: left;
   margin-right: 0.3em;
 }
@@ -99,7 +103,7 @@ $lt-tan: #f3f2e1;
   font-size: 30px;
   display: inline-block;
   color: $burgundy;
-  opacity: 0.7;
+  opacity: 0.8;
   position: relative;
   white-space: nowrap;
   top: 0;

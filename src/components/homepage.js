@@ -28,28 +28,34 @@ export function Homepage(props) {
             <section>
               <div className="section-container">
                 <h1>
-                  Read reviews of drinks from craft brewers and vintners
+                  Read reviews of drinks made by craft brewers and vintners
                 </h1>
               </div>
             </section>
             <section>
-              <div className="section-container">
-                <h1>Learn which drinks are available...
-                  <br/>before you even get there.
-                </h1>
-                <div className="love-hate">
-                  <p>Did people</p>
-                  <b>
-                    <div className="inner-love-hate">
-                      hate it?<br/>
-                      love it?<br/>
-                      love it enough to buy it?
-                      </div>
-                  </b>
+              <div className="section-container left-align">
+                <div className="pure-g">
+                  <div className="pure-u-16-24">
+                    <h1 className="left-align">Learn which drinks are available...
+                      <br/>before you even get there.
+                    </h1>
+                    <div className="love-hate">
+                      <p>Did people</p>
+                      <b>
+                        <div className="inner-love-hate">
+                          hate it?<br/>
+                          love it?<br/>
+                          love it enough to buy it?
+                        </div>
+                      </b>
+                    </div>
+                  </div>
+                  <div className="pure-u-8-24">
+                    <div className="image-border">
+                      <div className="main-image"></div>
+                    </div>
+                  </div>
                 </div>
-              </div>
-              <div className="image-border">
-                <div className="main-image"></div>
               </div>
             </section>
             <section>
@@ -57,16 +63,16 @@ export function Homepage(props) {
                 <h1>
                   Do even more with a Vintner account
                 </h1>
-                  <ul>
-                  <li>
+                  <ul className="left-align">
+                  <li className="left-align">
                     <i className="fa fa-check" aria-hidden="true"></i>
                     Keep track of your travels
                   </li>
-                  <li>
+                  <li className="left-align">
                     <i className="fa fa-check" aria-hidden="true"></i>
                     Which have you already tried? Bought?
                   </li>
-                  <li>
+                  <li className="left-align">
                     <i className="fa fa-check" aria-hidden="true"></i>
                     Leave reviews for yourself and others
                   </li>
