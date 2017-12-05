@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import DrinkInfo from './drink-info';
-// import DrinkReview from './drink-review';
+import DrinkReview from './drink-review';
 import NavPages from './nav-pages';
 import {getDrink} from '../actions/drinks';
 
@@ -14,16 +14,15 @@ export class DrinkReviewsPage extends React.Component {
 //then all of the reviews for THAT drink
     render() {
       let drink = this.props.drink;
-      // var drinkReviews = drink.reviews.map((review, i) =>
-      //     <DrinkReview key={i} review={review} type={drink.type} />
-      // );
+      var drinkReviews = drink.reviews.map((review, i) =>
+          <DrinkReview key={i} review={review} type={drink.type} />
+      );
+      console.log("drink", drink);
       return (
         <div className="content-container">
           <NavPages title={`Read reviews of this ${this.props.drink.type}`} route="company/11"/>
-          {drink.name}
-          <DrinkInfo companyName={drink.company.name}
-              drink={drink} />
-
+          <DrinkInfo drink={drink} />
+          {drinkReviews}
         </div>
       );
     }
