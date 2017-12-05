@@ -35,7 +35,7 @@ export function Homepage(props) {
             <section>
               <div className="section-container left-align">
                 <div className="pure-g">
-                  <div className="pure-u-16-24">
+                  <div className="pure-u-15-24 content-container">
                     <h1 className="left-align">Learn which drinks are available...
                       <br/>before you even get there.
                     </h1>
@@ -50,7 +50,7 @@ export function Homepage(props) {
                       </b>
                     </div>
                   </div>
-                  <div className="pure-u-8-24">
+                  <div className="pure-u-9-24">
                     <div className="image-border">
                       <div className="main-image"></div>
                     </div>
