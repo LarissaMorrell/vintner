@@ -20,7 +20,8 @@ export class DrinkReviewsPage extends React.Component {
       console.log("drink", drink);
       return (
         <div className="content-container">
-          <NavPages title={`Read reviews of this ${this.props.drink.type}`} route="company/11"/>
+          <NavPages title={`Read reviews of this ${drink.type}`}
+                    route={`/company/${drink.company._id}`}/>
           <DrinkInfo drink={drink} />
           {drinkReviews}
         </div>
