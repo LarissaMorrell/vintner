@@ -10,7 +10,7 @@ export class DrinkReviewsPage extends React.Component {
     componentDidMount(){
       this.props.dispatch(getDrink(this.props.match.params.drinkId))
     }
-//this page displays one drink and it's description/satats,
+//this page displays one drink and it's description/stats,
 //then all of the reviews for THAT drink
     render() {
       let drink = this.props.drink;

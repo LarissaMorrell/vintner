@@ -1,5 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
+import {Link} from 'react-router-dom';
 import Rating from './rating';
 import CreateReviewForm from './create-review-form';
 import {openModal} from '../actions/modal';
@@ -8,6 +9,7 @@ export class DrinkResult extends React.Component {
 
   render() {
     let drink = this.props.drink;
+    console.log(drink);
     // let x = [...new Set(drink.reviews.map(review => review.flavors))];
     return (
       <div className="box result-container">
@@ -16,7 +18,8 @@ export class DrinkResult extends React.Component {
               <img src={`/media/${drink.type}.png`} alt="drink type" />
           </div>
           <div className="pure-u-2-5">
-            <h3>{drink.name}</h3>
+            <Link to={`/drink/${drink._id}`}>{drink.name}</Link>
+            {/* TODO Add company name and address here */}
           </div>
           <div className="pure-u-1-5">
             <Rating rating={drink.rating} />
