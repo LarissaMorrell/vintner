@@ -14,7 +14,7 @@ export default class CompanyInfo extends React.Component {
       <div className="info-container">
         <div className="pure-g">
             <div className="pure-u-7-12">
-              <h2>{company.name}</h2>
+              <h1>{company.name}</h1>
               <h3 className="biz-address">{company.streetAddress}, {company.city}, {company.state}
               </h3>
 
