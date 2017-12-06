@@ -22,6 +22,17 @@ button {
   -webkit-box-shadow: 0px 6px 0px #7b2739, 0px 3px 15px rgba(0, 0, 0, 0.4);
   -moz-box-shadow: 0px 6px 0px #7b2739, 0px 3px 15px rgba(0, 0, 0, 0.4);
   box-shadow: 0px 6px 0px #37131a, 0px 3px 15px rgba(0, 0, 0, 0.4); }
+  input[type=submit] a,
+  input[type=submit] a:hover,
+  input[type=submit] a:visited,
+  input[type=button] a,
+  input[type=button] a:hover,
+  input[type=button] a:visited,
+  button a,
+  button a:hover,
+  button a:visited {
+    color: white;
+    text-decoration: none; }
 
 input[type=submit]:hover,
 input[type=button]:hover,

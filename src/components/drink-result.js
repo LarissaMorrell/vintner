@@ -19,7 +19,7 @@ export class DrinkResult extends React.Component {
           </div>
           <div className="pure-u-2-5">
             <Link to={`/drink/${drink._id}`}>{drink.name}</Link>
-            {/* TODO Add company name and address here */}
+            {/* TODO Add flavors, price, etc here */}
           </div>
           <div className="pure-u-1-5">
             <Rating rating={drink.rating} />
@@ -31,7 +31,9 @@ export class DrinkResult extends React.Component {
             <button onClick={() => this.props.dispatch(openModal(
               <CreateReviewForm drink={drink}/>))}>Write Review
             </button>
-            <button onClick={() => this.props.history.push(`/drink/11`)}>Read Reviews</button>
+            <button>
+              <Link to={`/drink/${drink._id}`} >Read Reviews</Link>
+            </button>
           </div>
         </div>
       </div>
