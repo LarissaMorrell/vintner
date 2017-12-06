@@ -20,14 +20,14 @@ body {
   height: 100%;
   min-width: 320px;
 
-  #root, div, span, p, h1, h2, h3, h4, a, tr, button {
+  #root, div, span, p, h1, h2, h3, h4, a, tr, li, button {
     font-family: 'Montserrat', sans-serif, arial;
   }
 }
 a, p {
   word-wrap: break-word;
 }
-h1, h2, h3, h4 {
+h1, h2, h3, h4, p {
   margin-top: 0px;
   margin-bottom: 10px;
   word-wrap: break-word;
@@ -37,7 +37,7 @@ h2 {
   font-weight: 600;
 }
 h3 {
-  font-size: 14px;
+  font-size: 17px;
   font-weight: 500;
   margin-top: 10px;
 }
@@ -50,8 +50,11 @@ h3.biz-address {
 .pure-g {
   letter-spacing: normal; //override bug in pure
 }
-ul.horizontal-list {
+ul {
   list-style-type: none;
+  line-height: 18px;
+}
+ul.horizontal-list {
   overflow: hidden;
   li {
     font-size: 20px;
@@ -66,14 +69,19 @@ ul.horizontal-list {
     }
   }
 }
+li > span {
+  font-weight: 600;
+  padding-right: 10px;
+}
 .left-align {
   text-align: left;
 }
-.company-result-title {
+.result-title {
   margin-bottom: 15px;
   padding-right: 15px;
 }
-.company-result-title > a {
+.result-title > a,
+.result-title > h3 {
   text-decoration: none;
   font-size: 18px;
   font-weight: 500;
