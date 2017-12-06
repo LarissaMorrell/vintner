@@ -12,7 +12,7 @@ body {
   position: relative;
   height: 100%;
   min-width: 320px; }
-  body #root, body div, body p, body h1, body h2, body h3, body h4, body tr {
+  body #root, body div, body span, body p, body h1, body h2, body h3, body h4, body a, body tr, body button {
     font-family: 'Montserrat', sans-serif, arial; }
 
 a, p {

@@ -21,7 +21,7 @@ export default function DrinkReview(props) {
         </div>
         <div className="pure-u-4-5">
           <h3>{review.title}</h3>
-          <p>{review.comments}</p>
+          <p>{review.comment}</p>
 
           <p>Flavors:
             {review.flavors.join(', ')}
@@ -30,7 +30,8 @@ export default function DrinkReview(props) {
             {`Price: ${reviewPriceString(review.price)}`}
           </p>
           <p>
-            {`Did you purchase this ${props.type}? ${review.purchased}`}
+            {`Did you purchase this ${props.type}?`}
+            {review.purchased ? " yes" : " no"}
           </p>
         </div>
 
