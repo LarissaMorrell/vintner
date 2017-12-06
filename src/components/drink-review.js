@@ -20,19 +20,18 @@ export default function DrinkReview(props) {
           <img className="avatar-icon review-avatar" src="/media/avatars/boy1.png" alt="avatar" />
         </div>
         <div className="pure-u-4-5">
-          <h3>{review.title}</h3>
+          <div className="result-title">
+            <h3>{review.title}</h3>
+          </div>
           <p>{review.comment}</p>
-
-          <p>Flavors:
-            {review.flavors.join(', ')}
-          </p>
-          <p>
-            {`Price: ${reviewPriceString(review.price)}`}
-          </p>
-          <p>
-            {`Did you purchase this ${props.type}?`}
-            {review.purchased ? " yes" : " no"}
-          </p>
+          <ul>
+            <li><span>Flavors:</span> {review.flavors.join(', ')}</li>
+            <li><span>Price:</span> {reviewPriceString(review.price)}</li>
+            <li>
+              <span>{`Did you purchase this ${props.type}?`}</span>
+              {review.purchased ? " yes" : " no"}
+            </li>
+          </ul>
         </div>
 
       </div>
