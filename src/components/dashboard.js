@@ -26,7 +26,7 @@ export class Dashboard extends React.Component {
       if (!this.props.loggedIn) {
           return <Redirect to="/" />;
       }
-
+      console.log(this.props.user.reviews);
       return (
           <div className="content-container">
             <NavPages title="" route="/"/>
@@ -53,9 +53,7 @@ const mapStateToProps = state => {
         name: currentUser
             ? `${currentUser.firstName} ${currentUser.lastName}`
             : '',
-        protectedData: state.protectedData.data,
-
-        company: state.APICompanies.company
+        user: state.protectedData.data
     };
 };
 
