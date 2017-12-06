@@ -17,7 +17,7 @@ export class DrinkResult extends React.Component {
             <div className="pure-u-1-5">
               <img src={`/media/${drink.type}.png`} alt="drink type" />
           </div>
-          <div className="pure-u-2-5">
+          <div className="pure-u-2-5 result-title">
             <Link to={`/drink/${drink._id}`}>{drink.name}</Link>
             {/* TODO Add flavors, price, etc here */}
           </div>
