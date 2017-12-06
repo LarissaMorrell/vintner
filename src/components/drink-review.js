@@ -12,7 +12,6 @@ export default function DrinkReview(props) {
     }
     return priceStr;
   }
-
   return (
     <div className="box result-container">
       <div className="pure-g">
