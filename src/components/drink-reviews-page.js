@@ -17,7 +17,6 @@ export class DrinkReviewsPage extends React.Component {
       var drinkReviews = drink.reviews.map((review, i) =>
           <DrinkReview key={i} review={review} type={drink.type} />
       );
-      console.log("drink", drink);
       return (
         <div className="content-container">
           <NavPages title={`Read reviews of this ${drink.type}`}
