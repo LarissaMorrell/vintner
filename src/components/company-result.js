@@ -9,7 +9,7 @@ export function CompanyResult(props) {
       <div className="result-container box pure-g">
         <div className="pure-u-6-24 biz-img-container">
           <Link to={`/company/${company.id}`}>
-            <img className="company-result pure-img" src={`/media/companies/${company.imageUrl}`} alt="company" />
+            <img className="company-result pure-img" src={company.imageUrl} alt="company" />
           </Link>
         </div>
         <div className="pure-u-lg-14-24 pure-u-md-12-24 pure-u-sm-16-24">

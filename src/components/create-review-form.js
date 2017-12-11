@@ -4,10 +4,12 @@ import DropDownSelect from './drop-down-select';
 import Input from './input';
 import CheckboxGroup from './checkbox-group';
 import {required, length, isTrimmed} from '../validators'; //matches
+import {postReview} from '../actions/reviews';
 
 export class CreateReviewForm extends React.Component {
-    onSubmit(values) {
-      console.log(values);
+    onSubmit(review) {
+      review.drink = this.props.drink.id;
+      this.props.dispatch(postReview(review));
     }
 
 
@@ -34,23 +36,32 @@ export class CreateReviewForm extends React.Component {
                 <label htmlFor="comments">{`What did you think of this ${drinkType}?`}</label>
                 <Field
                   component="textarea"
-                  name="comments"
+                  name="comment"
                   placeholder="Your review helps others make happy hour even better."
                   validate={[required, length({min: 0, max: 800}), isTrimmed]} />
                 <label htmlFor="priceDropDown">{`Rate the price of this ${drinkType}.`}</label>
                 <Field
-                  name="priceDropDown"
-                  label="priceDropDown"
+                  name="rating"
+                  label="rating"
+                  component={DropDownSelect}
+                  options={["*", "**", "***", "****", "*****"]}
+                  values={[1,2,3,4,5]}
+                  className="form-control"
+                >
+                </Field>
+                <Field
+                  name="price"
+                  label="price"
                   component={DropDownSelect}
                   options={["$", "$$", "$$$", "$$$$"]}
                   values={[1,2,3,4]}
                   className="form-control"
                 >
                 </Field>
-                <label htmlFor="purchaseDropDown">{`Did you purchase this ${drinkType}?`}</label>
+                <label htmlFor="purchased">{`Did you purchase this ${drinkType}?`}</label>
                 <Field
-                  name="purchaseDropDown"
-                  label="purchaseDropDown"
+                  name="purchased"
+                  label="purchased"
                   component={DropDownSelect}
                   options={["Yes", "No"]}
                   values={[true, false]}

@@ -18,7 +18,7 @@ export class DrinkResult extends React.Component {
               <img src={`/media/${drink.type}.png`} alt="drink type" />
           </div>
           <div className="pure-u-2-5 result-title">
-            <Link to={`/drink/${drink._id}`}>{drink.name}</Link>
+            <Link to={`/drink/${drink.id}`}>{drink.name}</Link>
             {/* TODO Add flavors, price, etc here */}
           </div>
           <div className="pure-u-1-5">
@@ -32,7 +32,7 @@ export class DrinkResult extends React.Component {
               <CreateReviewForm drink={drink}/>))}>Write Review
             </button>
             <button>
-              <Link to={`/drink/${drink._id}`} >Read Reviews</Link>
+              <Link to={`/drink/${drink.id}`} >Read Reviews</Link>
             </button>
           </div>
         </div>

@@ -34,7 +34,7 @@ export default class CompanyInfo extends React.Component {
               </table>
             </div>
             <div className="pure-u-5-12">
-              <img className="company" src={`/media/companies/${company.imageUrl}`} alt="company"/>
+              <img className="company" src={company.imageUrl} alt="company"/>
             </div>
         </div>
       </div>
