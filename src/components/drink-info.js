@@ -9,7 +9,7 @@ export class DrinkInfo extends React.Component {
   render() {
     let drink = this.props.drink;
     let company = drink.company;
-    console.log("in the drink info",drink);
+    
     return (
       <div className="info-container drink-info-container">
         <div className="pure-g">
@@ -26,7 +26,9 @@ export class DrinkInfo extends React.Component {
             <span className="review-count">
               {`${company.totalReviewCount ? company.totalReviewCount : '0'} reviews`}
             </span>
-            <button onClick={() => this.props.dispatch(openModal(<CreateReviewForm drink={this.props.drink} />))}>
+            <button onClick={() => this.props.dispatch(openModal(
+                <CreateReviewForm drink={this.props.drink} loggedIn={this.props.loggedIn}/>
+            ))}>
               Write Review
             </button>
           </div>
