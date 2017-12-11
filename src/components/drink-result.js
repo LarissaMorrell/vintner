@@ -9,7 +9,6 @@ export class DrinkResult extends React.Component {
 
   render() {
     let drink = this.props.drink;
-    console.log(drink);
     // let x = [...new Set(drink.reviews.map(review => review.flavors))];
     return (
       <div className="box result-container">
