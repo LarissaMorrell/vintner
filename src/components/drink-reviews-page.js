@@ -15,13 +15,15 @@ export class DrinkReviewsPage extends React.Component {
     render() {
       let drink = this.props.drink;
       var drinkReviews = drink.reviews.map((review, i) =>
+        <div className="box">
           <DrinkReview key={i} review={review} type={drink.type} />
+        </div>
       );
       return (
         <div className="content-container">
           <NavPages title={`Read reviews of this ${drink.type}`}
                     route={`/company/${drink.company._id}`}/>
-          <DrinkInfo drink={drink} />
+          <DrinkInfo drink={drink} loggedIn={this.props.loggedIn} />
           {drinkReviews}
         </div>
       );
@@ -30,7 +32,8 @@ export class DrinkReviewsPage extends React.Component {
     // {drinkReviews}
 
 const mapStateToProps = state => ({
-  drink: state.APIData.drink
+  drink: state.APIData.drink,
+  loggedIn: state.auth.currentUser !== null
 });
 
 export default connect(mapStateToProps)(DrinkReviewsPage);
