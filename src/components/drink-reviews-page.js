@@ -15,8 +15,8 @@ export class DrinkReviewsPage extends React.Component {
     render() {
       let drink = this.props.drink;
       var drinkReviews = drink.reviews.map((review, i) =>
-        <div className="box">
-          <DrinkReview key={i} review={review} type={drink.type} />
+        <div className="box" key={i}>
+          <DrinkReview review={review} type={drink.type} />
         </div>
       );
       return (
