@@ -31,7 +31,6 @@ class CheckboxGroup extends React.Component {
     }
 
     render() {
-      console.log(this.props);
         return (
             <div className="checkbox-group pure-g">
                 {this.checkboxGroup()}
