@@ -141,8 +141,9 @@ span.unchecked {
   border-radius: 10px; }
 
 .info-container {
-  padding: 30px 3%;
-  margin: 0 auto; }
+  padding-left: 3%;
+  padding-right: 3%;
+  margin: 45px auto; }
 
 .user-info-container * {
   display: block;
@@ -203,10 +204,6 @@ div.image-border {
     left: -15px;
     z-index: 2;
     transition: .2s ease-in-out; }
-
-#drink-info-img {
-  float: right;
-  margin-right: 40px; }
 
 img.company-result {
   max-width: 100%;
