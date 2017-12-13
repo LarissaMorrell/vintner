@@ -4,7 +4,7 @@ import thunk from 'redux-thunk';
 import {loadAuthToken} from './local-storage';
 import authReducer from './reducers/auth';
 import modalReducer from './reducers/modal';
-import protectedDataReducer from './reducers/protected-data';
+import protectedDataReducer from './reducers/users';
 import APIReducer from './reducers/api';
 import {setAuthToken} from './actions/auth';
 

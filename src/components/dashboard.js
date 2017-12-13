@@ -1,8 +1,8 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import {Redirect} from 'react-router-dom';
-import {fetchProtectedData} from '../actions/protected-data';
-//import DrinkReview from './drink-review';
+import {fetchUser} from '../actions/users';
+import DrinkReview from './drink-review';
 import NavPages from './nav-pages';
 
 export class Dashboard extends React.Component {
@@ -10,22 +10,26 @@ export class Dashboard extends React.Component {
         if (!this.props.loggedIn) {
             return;
         }
-        this.props.dispatch(fetchProtectedData());
+        this.props.dispatch(fetchUser());
     }
 
     render() {
-      //TODO make this so it is ONLY the reviews for that user
-      //generate the drinks the user has written
-      // let drink = this.props.company.drink;
-      // var drinkReviews = drink.reviews.map((review, i) =>
-      //     <DrinkReview key={i} review={review} type={drink.type} />
-      // );
-
-
       // Only visible to logged in users
       if (!this.props.loggedIn) {
           return <Redirect to="/" />;
       }
+      let reviews = this.props.user.reviews;
+      console.log("reviews", reviews);
+      var drinkReviews;
+
+      if(reviews.length > 1){
+        drinkReviews = reviews.map((review, i) =>
+          <div className="box" key={i}>
+            <DrinkReview review={review} type="wine" />
+          </div>
+        );
+      }
+
       console.log(this.props.user.reviews);
       return (
           <div className="content-container">
@@ -39,7 +43,7 @@ export class Dashboard extends React.Component {
                   {this.props.username}
               </div>
             </div>
-
+            {drinkReviews}
           </div>
         );
     }

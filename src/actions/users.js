@@ -25,3 +25,32 @@ export const registerUser = user => dispatch => {
             }
         });
 };
+
+export const FETCH_USER_SUCCESS = 'FETCH_USER_SUCCESS';
+export const fetchUserSuccess = user => ({
+    type: FETCH_USER_SUCCESS,
+    user
+});
+
+export const FETCH_USER_ERROR = 'FETCH_USER_ERROR';
+export const fetchUserError = error => ({
+    type: FETCH_USER_ERROR,
+    error
+});
+
+export const fetchUser = () => (dispatch, getState) => {
+    const authToken = getState().auth.authToken;
+    return fetch(`${API_BASE_URL}/users/me`, {
+        method: 'GET',
+        headers: {
+            // Provide our auth token as credentials
+            Authorization: `Bearer ${authToken}`
+        }
+    })
+        .then(res => normalizeResponseErrors(res))
+        .then(res => res.json())
+        .then(user => dispatch(fetchUserSuccess(user)))
+        .catch(err => {
+            dispatch(fetchUserError(err));
+        });
+};

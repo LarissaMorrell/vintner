@@ -32,7 +32,6 @@ export class DrinkReviewsPage extends React.Component {
       );
     }
 }
-    // {drinkReviews}
 
 const mapStateToProps = state => ({
   drink: state.APIData.drink,

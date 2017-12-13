@@ -5,7 +5,6 @@ import DrinkTypes from './drink-types';
 
 export function CompanyResult(props) {
     const company = props.company;
-    console.log(company);
     return (
       <div className="result-container box pure-g">
         <div className="pure-u-6-24 biz-img-container">
