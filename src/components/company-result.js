@@ -23,11 +23,11 @@ export function CompanyResult(props) {
           </p>
 
         </div>
-        <div className="pure-u-lg-5-24 pure-u-md-6-24 pure-u-sm-1-1 rating-type-container">
+        <div className="pure-u-lg-5-24 pure-u-md-6-24 pure-u-sm-1-1">
           <Rating rating={company.rating} />
-          <span className="review-count">
+          <div className="review-count">
             {`${company.totalReviewCount ? company.totalReviewCount : '0'} reviews`}
-          </span>
+          </div>
           <DrinkTypes types={company.types} />
         </div>
       </div>

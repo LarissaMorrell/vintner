@@ -21,7 +21,9 @@ export default class CompanyInfo extends React.Component {
               <div className="company-info-reviews-container">
                 <div className="reviews-container">
                   <Rating rating={company.rating} />
-                  {company.totalReviewCount} reviews
+                  <div className="review-count">
+                    {company.totalReviewCount} reviews
+                  </div>
                 </div>
                 <DrinkTypes types={company.types} />
               </div>

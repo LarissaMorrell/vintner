@@ -112,7 +112,6 @@ a:hover {
   max-width:950px;
   min-height: 100%;
 }
-
 .biz-img-container {
   width: 175px;
   padding-right: 20px;
@@ -139,11 +138,12 @@ a.page-title {
 
 div.rating {
   min-width: 50px;
-  margin:15px 15px 15px 0px;
+  margin:15px 0 15px 0px;
   display: inline-block;
 }
 div.review-count {
   display: inline-block;
+  margin-left: 12px;
 }
 
 //gold star rating
@@ -263,6 +263,10 @@ span > img.drink-type {
 }
 span.drink-type-imgs-container {
   display:block;
+}
+div.drink-info-container > div.drink-type-imgs-container{
+  float: left;
+  margin-right: 25px;
 }
 
 .black-screen {

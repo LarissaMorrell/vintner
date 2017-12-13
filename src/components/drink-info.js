@@ -12,20 +12,20 @@ export class DrinkInfo extends React.Component {
 
     return (
       <div className="info-container drink-info-container">
-        <span className="drink-type-imgs-container">
+        <div className="drink-type-imgs-container">
           <img src={`/media/${drink.type}.png`} alt={`${drink.type} glass`}/>
-        </span>
+        </div>
         <div className="pure-g">
-          <div className="pure-u-18-24">
+          <div className="pure-u-17-24">
             <h1 id="drink-info-title">{drink.name}</h1>
             <h3>{company.name}</h3>
             <p>{company.streetAddress}, {company.city}, {company.state}</p>
           </div>
-          <div className="pure-u-lg-5-24 pure-u-md-6-24 pure-u-1-1 rating-type-container">
+          <div className="pure-u-lg-5-24 pure-u-md-7-24 pure-u-1-1">
             <Rating rating={company.rating} />
-            <span className="review-count">
+            <div className="review-count">
               {`${company.totalReviewCount ? company.totalReviewCount : '0'} reviews`}
-            </span>
+            </div>
             <button className="inline" onClick={() => this.props.dispatch(openModal(
                 <CreateReviewForm drink={this.props.drink} loggedIn={this.props.loggedIn}/>
             ))}>

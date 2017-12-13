@@ -22,9 +22,9 @@ export class DrinkResult extends React.Component {
           </div>
           <div className="pure-u-1-5">
             <Rating rating={drink.rating} />
-            <p>
+            <div className="review-count">
               {drink.reviews.length} reviews
-            </p>
+            </div>
           </div>
           <div className="pure-u-1-5">
             <button onClick={() => this.props.dispatch(openModal(
