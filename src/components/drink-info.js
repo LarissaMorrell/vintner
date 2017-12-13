@@ -9,24 +9,24 @@ export class DrinkInfo extends React.Component {
   render() {
     let drink = this.props.drink;
     let company = drink.company;
-    
+
     return (
       <div className="info-container drink-info-container">
+        <span className="drink-type-imgs-container">
+          <img src={`/media/${drink.type}.png`} alt={`${drink.type} glass`}/>
+        </span>
         <div className="pure-g">
-          <div className="pure-u-2-24">
-            <img src={`/media/${drink.type}.png`} id="drink-info-img" alt={`${drink.type} glass`}/>
-          </div>
-          <div className="pure-u-16-24">
+          <div className="pure-u-18-24">
             <h1 id="drink-info-title">{drink.name}</h1>
             <h3>{company.name}</h3>
             <p>{company.streetAddress}, {company.city}, {company.state}</p>
           </div>
-          <div className="pure-u-lg-5-24 pure-u-md-6-24 pure-u-sm-1-1 rating-type-container">
+          <div className="pure-u-lg-5-24 pure-u-md-6-24 pure-u-1-1 rating-type-container">
             <Rating rating={company.rating} />
             <span className="review-count">
               {`${company.totalReviewCount ? company.totalReviewCount : '0'} reviews`}
             </span>
-            <button onClick={() => this.props.dispatch(openModal(
+            <button className="inline" onClick={() => this.props.dispatch(openModal(
                 <CreateReviewForm drink={this.props.drink} loggedIn={this.props.loggedIn}/>
             ))}>
               Write Review

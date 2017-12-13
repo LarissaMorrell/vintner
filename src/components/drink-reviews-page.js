@@ -24,7 +24,10 @@ export class DrinkReviewsPage extends React.Component {
           <NavPages title={`Read reviews of this ${drink.type}`}
                     route={`/company/${drink.company._id}`}/>
           <DrinkInfo drink={drink} loggedIn={this.props.loggedIn} />
-          {drinkReviews}
+          {drink.reviews.length > 0 ?
+             drinkReviews :
+             "Sorry, this drink doesn't have any reviews yet. Be the first to write one!"
+          }
         </div>
       );
     }

@@ -3,6 +3,7 @@ input[type=button],
 button {
   display: block;
   text-decoration: none;
+  min-width: 148px;
   color: #fff;
   font-weight: 500;
   background-color: #ad3852;
@@ -29,6 +30,9 @@ button {
     color: white;
     text-decoration: none;
   }
+}
+button.inline {
+  display: inline-block;
 }
 
 input[type=submit]:hover,
