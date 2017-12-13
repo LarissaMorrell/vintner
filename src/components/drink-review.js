@@ -1,6 +1,6 @@
 import React from 'react';
 import Rating from './rating';
-
+import {Link} from 'react-router-dom';
 export default function DrinkReview(props) {
   let review = props.review;
 
@@ -14,6 +14,7 @@ export default function DrinkReview(props) {
   }
   return (
     <div className="result-container">
+      {props.drinkId ? <Link to={`/drink/${props.drinkId}`} >Visit Drink</Link> : null}
       <div className="pure-g">
         <div className="pure-u-1-5 col-user-rating">
           <Rating rating={review.rating} />

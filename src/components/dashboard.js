@@ -25,7 +25,7 @@ export class Dashboard extends React.Component {
       if(reviews.length > 1){
         drinkReviews = reviews.map((review, i) =>
           <div className="box" key={i}>
-            <DrinkReview review={review} type="wine" />
+            <DrinkReview review={review} type={review.drink.type} drinkId={review.drink._id}/>
           </div>
         );
       }
