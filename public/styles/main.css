@@ -64,6 +64,9 @@ li > span {
 .left-align {
   text-align: left; }
 
+.inline {
+  display: inline-block; }
+
 .result-title {
   margin-bottom: 15px;
   padding-right: 15px; }
@@ -215,12 +218,9 @@ img.company {
   min-width: 275px;
   border-radius: 5px; }
 
-.company-info-reviews-container {
+.company-reviews-container {
   max-width: 300px; }
-  .company-info-reviews-container .reviews-container {
-    width: 175px;
-    display: inline-block; }
-  .company-info-reviews-container span.drink-type-imgs-container {
+  .company-reviews-container span.drink-type-imgs-container {
     display: inline-block; }
 
 span > img.drink-type {

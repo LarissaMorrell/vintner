@@ -21,7 +21,7 @@ export class DrinkInfo extends React.Component {
             <h3>{company.name}</h3>
             <p>{company.streetAddress}, {company.city}, {company.state}</p>
           </div>
-          <div className="pure-u-lg-5-24 pure-u-md-7-24 pure-u-1-1">
+          <div className="pure-u-lg-7-24 pure-u-md-7-24 pure-u-1-1">
             <Rating rating={Math.round(drink.rating)} />
             <div className="review-count">
               {`${drink.reviews.length ? drink.reviews.length : '0'} reviews`}

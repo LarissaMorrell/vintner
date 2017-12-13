@@ -16,11 +16,11 @@ export default class CompanyInfo extends React.Component {
               <h3 className="biz-address">{company.streetAddress}, {company.city}, {company.state}
               </h3>
 
-              <div className="company-info-reviews-container">
-                <div className="reviews-container">
+              <div className="company-reviews-container">
+                <div className="inline">
                   <Rating rating={company.rating} />
                   <div className="review-count">
-                    {genReviewCount(company.totalReviewCount)}
+                    {genDrinksAvailableString(company.drinks.length)}
                   </div>
                 </div>
                 <DrinkTypes types={company.types} />
@@ -42,11 +42,11 @@ export default class CompanyInfo extends React.Component {
   }
 }
 
-function genReviewCount(count){
+function genDrinksAvailableString(count){
   if(count === 1){
-    return `${count} review`;
+    return `${count} drink available`;
   }
-  return `${count} reviews`;
+  return `${count} drinks available`;
 }
 
 
