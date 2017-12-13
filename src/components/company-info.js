@@ -7,8 +7,6 @@ export default class CompanyInfo extends React.Component {
   render(){
     let company = this.props.company;
     let hours = this.props.company.hours;
-      // console.log("in company info", company);
-      // console.log(`/media/companies/${company.imageUrl}`);
 
     return (
       <div className="info-container">
@@ -22,7 +20,7 @@ export default class CompanyInfo extends React.Component {
                 <div className="reviews-container">
                   <Rating rating={company.rating} />
                   <div className="review-count">
-                    {company.totalReviewCount} reviews
+                    {genReviewCount(company.totalReviewCount)}
                   </div>
                 </div>
                 <DrinkTypes types={company.types} />
@@ -42,6 +40,13 @@ export default class CompanyInfo extends React.Component {
       </div>
     );
   }
+}
+
+function genReviewCount(count){
+  if(count === 1){
+    return `${count} review`;
+  }
+  return `${count} reviews`;
 }
 
 

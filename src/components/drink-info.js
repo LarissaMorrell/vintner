@@ -22,12 +22,12 @@ export class DrinkInfo extends React.Component {
             <p>{company.streetAddress}, {company.city}, {company.state}</p>
           </div>
           <div className="pure-u-lg-5-24 pure-u-md-7-24 pure-u-1-1">
-            <Rating rating={company.rating} />
+            <Rating rating={Math.round(drink.rating)} />
             <div className="review-count">
-              {`${company.totalReviewCount ? company.totalReviewCount : '0'} reviews`}
+              {`${drink.reviews.length ? drink.reviews.length : '0'} reviews`}
             </div>
             <button className="inline" onClick={() => this.props.dispatch(openModal(
-                <CreateReviewForm drink={this.props.drink} loggedIn={this.props.loggedIn}/>
+                <CreateReviewForm drink={drink} loggedIn={this.props.loggedIn}/>
             ))}>
               Write Review
             </button>
