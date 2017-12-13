@@ -5,6 +5,7 @@ import DrinkTypes from './drink-types';
 
 export function CompanyResult(props) {
     const company = props.company;
+    console.log(company);
     return (
       <div className="result-container box pure-g">
         <div className="pure-u-6-24 biz-img-container">
@@ -12,7 +13,7 @@ export function CompanyResult(props) {
             <img className="company-result pure-img" src={company.imageUrl} alt="company" />
           </Link>
         </div>
-        <div className="pure-u-lg-14-24 pure-u-md-12-24 pure-u-sm-16-24">
+        <div className="pure-u-md-12-24 pure-u-sm-16-24">
           {/* TODO fix this */}
           <div className="result-title">
             <Link to={`/company/${company.id}`}>{company.name}</Link>
@@ -23,13 +24,20 @@ export function CompanyResult(props) {
           </p>
 
         </div>
-        <div className="pure-u-lg-5-24 pure-u-md-6-24 pure-u-sm-1-1">
+        <div className="pure-u-md-6-24 pure-u-sm-1-1">
           <Rating rating={company.rating} />
           <div className="review-count">
-            {`${company.totalReviewCount ? company.totalReviewCount : '0'} reviews`}
+            {genDrinksAvailableString(company.drinks.length)}
           </div>
           <DrinkTypes types={company.types} />
         </div>
       </div>
     );
+}
+
+function genDrinksAvailableString(count){
+  if(count === 1){
+    return `${count} drink available`;
+  }
+  return `${count} drinks available`;
 }
