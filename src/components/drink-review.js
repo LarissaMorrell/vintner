@@ -1,6 +1,5 @@
 import React from 'react';
 import Rating from './rating';
-import {Link} from 'react-router-dom';
 export default function DrinkReview(props) {
   let review = props.review;
 
@@ -12,7 +11,7 @@ export default function DrinkReview(props) {
     }
     return priceStr;
   }
-  console.log("props", props);
+  
   return (
     <div className="result-container">
       <div className="pure-g">
@@ -23,7 +22,7 @@ export default function DrinkReview(props) {
             {props.user.username}
           </div>
         </div>
-        <div className="pure-u-4-5">
+        <div className="pure-u-4-5 padding-left">
           <div className="result-title">
             <h3>{review.title}</h3>
           </div>

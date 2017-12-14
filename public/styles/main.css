@@ -85,6 +85,9 @@ li > span {
     margin-right: auto;
     text-align: center; }
 
+.padding-left {
+  padding-left: 20px; }
+
 .result-title {
   margin-bottom: 15px;
   padding-right: 15px;
@@ -166,6 +169,15 @@ span.unchecked {
 
 .user-info-container img {
   width: 150px; }
+
+.dashboard-drink-header h1 {
+  margin: 15px 15px 0 15px;
+  display: inline-block; }
+
+.dashboard-drink-header button {
+  display: inline-block;
+  float: right;
+  top: 0; }
 
 .drink-info-container {
   padding-bottom: 0px; }

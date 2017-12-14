@@ -32,6 +32,7 @@ export class Dashboard extends React.Component {
                 <Link to={`/drink/${review.drink._id}`}>Visit Drink</Link>
               </button>
             </div>
+
             <DrinkReview review={review} type={review.drink.type} drinkId={review.drink._id} user={this.props.user}/>
           </div>
         );

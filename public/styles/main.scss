@@ -99,6 +99,9 @@ li > span {
     text-align: center;
   }
 }
+.padding-left{
+  padding-left: 20px;
+}
 .result-title {
   margin-bottom: 15px;
   padding-right: 15px;
@@ -191,6 +194,17 @@ span.unchecked {
   }
   img {
     width: 150px;
+  }
+}
+.dashboard-drink-header {
+  h1 {
+    margin:15px 15px 0 15px;
+    display: inline-block;
+  }
+  button {
+    display:inline-block;
+    float:right;
+    top:0;
   }
 }
 .drink-info-container {
