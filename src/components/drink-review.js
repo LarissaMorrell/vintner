@@ -12,7 +12,6 @@ export default function DrinkReview(props) {
     }
     return priceStr;
   }
-  console.log(props);
   return (
     <div className="result-container">
       {props.drinkId ? <Link to={`/drink/${props.drinkId}`} >Visit Drink</Link> : null}
@@ -21,7 +20,7 @@ export default function DrinkReview(props) {
           <Rating rating={review.rating} />
           <img className="avatar-icon review-avatar" src="/media/avatars/boy1.png" alt="avatar" />
           <div>
-            {props.review.user.username}
+            {props.user.username}
           </div>
         </div>
         <div className="pure-u-4-5">

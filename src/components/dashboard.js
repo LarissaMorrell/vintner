@@ -19,18 +19,16 @@ export class Dashboard extends React.Component {
           return <Redirect to="/" />;
       }
       let reviews = this.props.user.reviews;
-      console.log("reviews", reviews);
-      var drinkReviews;
+      let drinkReviews;
 
       if(reviews.length > 1){
         drinkReviews = reviews.map((review, i) =>
           <div className="box" key={i}>
-            <DrinkReview review={review} type={review.drink.type} drinkId={review.drink._id}/>
+            <DrinkReview review={review} type={review.drink.type} drinkId={review.drink._id} user={this.props.user}/>
           </div>
         );
       }
 
-      console.log(this.props.user.reviews);
       return (
           <div className="content-container">
             <NavPages title="" route="/"/>
