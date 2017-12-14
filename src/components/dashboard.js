@@ -25,11 +25,13 @@ export class Dashboard extends React.Component {
 
       if(reviews.length > 1){
         drinkReviews = reviews.map((review, i) =>
-          <div className="box" key={i}>
-            <h1>{review.drink.name}</h1>
-            <button>
-              <Link to={`/drink/${review.drink._id}`}>Visit Drink</Link>
-            </button>
+          <div className="box result-container" key={i}>
+            <div className="dashboard-drink-header">
+              <h1>{review.drink.name}</h1>
+              <button>
+                <Link to={`/drink/${review.drink._id}`}>Visit Drink</Link>
+              </button>
+            </div>
             <DrinkReview review={review} type={review.drink.type} drinkId={review.drink._id} user={this.props.user}/>
           </div>
         );

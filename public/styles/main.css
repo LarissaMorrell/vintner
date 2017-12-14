@@ -32,6 +32,15 @@ h3 {
   font-weight: 500;
   margin-top: 10px; }
 
+a {
+  color: #a3334c; }
+
+a:visited {
+  color: #8e6022; }
+
+a:hover {
+  color: #d8a35d; }
+
 tr {
   line-height: 18px; }
 
@@ -67,6 +76,15 @@ li > span {
 .inline {
   display: inline-block; }
 
+.center-horizontal {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center; }
+  .center-horizontal * {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center; }
+
 .result-title {
   margin-bottom: 15px;
   padding-right: 15px;
@@ -82,15 +100,6 @@ li > span {
 p.company-address {
   line-height: 1.5;
   word-wrap: break-word; }
-
-a {
-  color: #a3334c; }
-
-a:visited {
-  color: #8e6022; }
-
-a:hover {
-  color: #d8a35d; }
 
 #drink-info-title {
   display: inline;
@@ -169,10 +178,8 @@ span.unchecked {
   max-width: 115px; }
 
 img.avatar-icon {
-  max-height: 70px; }
-
-img.review-avatar {
-  margin-left: 15px; }
+  max-height: 80px;
+  display: block; }
 
 img.drink-type {
   height: 30px;
