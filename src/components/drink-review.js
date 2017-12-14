@@ -11,9 +11,9 @@ export default function DrinkReview(props) {
     }
     return priceStr;
   }
-  
+
   return (
-    <div className="result-container">
+    <div >
       <div className="pure-g">
         <div className="pure-u-1-5 col-user-rating center-horizontal">
           <Rating rating={review.rating} />
