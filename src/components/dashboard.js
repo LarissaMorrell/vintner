@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import {connect} from 'react-redux';
 import {Redirect} from 'react-router-dom';
 import {fetchUser} from '../actions/users';
@@ -14,6 +15,7 @@ export class Dashboard extends React.Component {
     }
 
     render() {
+      console.log("props for dashboard", this.props);
       // Only visible to logged in users
       if (!this.props.loggedIn) {
           return <Redirect to="/" />;
@@ -24,6 +26,10 @@ export class Dashboard extends React.Component {
       if(reviews.length > 1){
         drinkReviews = reviews.map((review, i) =>
           <div className="box" key={i}>
+            <h1>{review.drink.name}</h1>
+            <button>
+              <Link to={`/drink/${review.drink._id}`}>Visit Drink</Link>
+            </button>
             <DrinkReview review={review} type={review.drink.type} drinkId={review.drink._id} user={this.props.user}/>
           </div>
         );

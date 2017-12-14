@@ -12,9 +12,9 @@ export default function DrinkReview(props) {
     }
     return priceStr;
   }
+  console.log("props", props);
   return (
     <div className="result-container">
-      {props.drinkId ? <Link to={`/drink/${props.drinkId}`} >Visit Drink</Link> : null}
       <div className="pure-g">
         <div className="pure-u-1-5 col-user-rating">
           <Rating rating={review.rating} />
