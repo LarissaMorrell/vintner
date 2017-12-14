@@ -12,7 +12,7 @@ class RadioGroup extends React.Component {
               <input type="checkbox"
                  name={file}
                  value={file}
-                 checked={true}
+                 checked={false}
                  onChange={(event) => {
                    console.log("hello");
                    return file;
