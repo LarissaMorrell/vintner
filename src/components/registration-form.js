@@ -6,6 +6,7 @@ import {login} from '../actions/auth';
 import Input from './input';
 import RadioGroup from './radio-group';
 import {required, nonEmpty, matches, length, isTrimmed} from '../validators';
+// const  { DOM: { input, select, textarea } } = React;
 
 //for the link to the login page. Open login modal on redirect to dashboard
 import LoginForm from './login-form';
@@ -16,6 +17,7 @@ export class RegistrationForm extends React.Component {
         console.log(values)
         const {username, password, firstName, lastName} = values;
         const user = {username, password, firstName, lastName};
+
         return this.props
             .dispatch(registerUser(user))
             .then(() => this.props.dispatch(login(username, password)));
@@ -84,6 +86,18 @@ export class RegistrationForm extends React.Component {
         );
     }
 }
+
+
+// <div>
+//   <label>
+//     <Field name="sex" component="input" type="radio" value="male"/>
+//       Male
+//   </label>
+//   <label>
+//     <Field name="sex" component="input" type="radio" value="female"/>
+//     Female
+//   </label>
+// </div>
 
 // <Field name="avatar"
 //     component={RadioGroup}
