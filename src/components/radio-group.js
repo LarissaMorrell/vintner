@@ -9,11 +9,11 @@ class RadioGroup extends React.Component {
         return imgFileNames.map((file, index) => {
             return (
             <div className="radio-avatar pure-u-1-4" key={index}>
-              <input type="checkbox"
+              <input type="radio"
                  name={file}
                  value={file}
                  checked={false}
-                 onChange={(event) => {
+                 onChange={event => {
                    console.log("hello");
                    return file;
                    }
