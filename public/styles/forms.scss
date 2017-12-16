@@ -103,11 +103,17 @@ select {
 input[type=button]
 input[type=submit],
 button {
-  margin: 15px;}
+  margin: 15px;
+}
 
 .required {
   color: red;
   font-weight: normal; }
+
+//the radio in the top corner
+input[type=radio] {
+  position: absolute;
+}
 
 //hide the box and radio
 input[type=checkbox]:not(old),
@@ -116,14 +122,12 @@ input[type=radio   ]:not(old){
   margin    : 0;
   padding   : 0;
   font-size : 1em;
-  opacity   : 0;
 }
 
 //position the label
 input[type=checkbox]:not(old) + label,
 input[type=radio   ]:not(old) + label{
   display      : inline-block;
-  margin-left  : -2em;
   line-height  : 1.5em;
 }
 
