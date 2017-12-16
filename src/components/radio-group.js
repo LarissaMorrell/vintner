@@ -5,14 +5,22 @@ class RadioGroup extends React.Component {
     radioGroup() {
         let imgFileNames = this.props.imgFileNames;
         let {label, input} = this.props;
-        console.log("in radioGroup");
+
         return imgFileNames.map((file, index) => {
             return (
             <div className="radio-avatar pure-u-1-4" key={index}>
               <input type="radio"
+                name="avatar"
+                value={file}
+
                 onChange={event => {
-                  console.log("hello");
-                  return file;
+                  let newValue;
+                  if(event.target.checked) {
+                    newValue = file;
+                    return newValue;
+                  }
+                  console.log("work!!!!");
+                  return;
                   }
                 }
               />
@@ -22,14 +30,9 @@ class RadioGroup extends React.Component {
             </div>)
         });
     }
-    //
-    // name={file}
-    // value={file}
-    // checked={false}
 
 
     render() {
-        console.log(this.props.input);
         return (
             <div className="avatar-form pure-g">
                 {this.radioGroup()}
