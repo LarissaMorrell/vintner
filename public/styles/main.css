@@ -264,13 +264,16 @@ div.drink-info-container > div.drink-type-imgs-container {
   z-index: 10; }
 
 .modal {
-  margin: 150px auto;
+  margin: 50px auto;
   padding: 30 auto;
-  width: 55%;
   max-width: 500px;
   background-color: #F9F9F1;
   color: #7b2739;
-  padding: 50px; }
+  padding: 50px;
+  max-height: 95vh; }
+  .modal .scroll {
+    overflow-y: scroll;
+    max-height: 70vh; }
   .modal div.boxclose {
     float: right;
     margin-top: -60px;

@@ -301,13 +301,20 @@ div.drink-info-container > div.drink-type-imgs-container{
   z-index: 10;
 }
 .modal {
-  margin:150px auto;
+  margin:50px auto;
   padding:30 auto;
-  width:55%;
   max-width: 500px;
   background-color:#F9F9F1;//off-white
   color:$burgundy;
   padding:50px;
+
+  //TODO fix look of this
+  max-height: 95vh;
+
+  .scroll {
+    overflow-y: scroll;
+    max-height: 70vh;
+  }
 
   div.boxclose{
     float:right;
@@ -397,7 +404,7 @@ footer {
 
 // For screens with a EXTRA-SMALL screen size or smaller
 @media only screen and (max-width: 568px) {
-
+  
 }
 @media only screen and (max-width: 400px) {
 

@@ -18,68 +18,70 @@ export class CreateReviewForm extends React.Component {
       let drinkType = this.props.drink.type;
 
         return (
-            <div>
-              <h2 className="form-title">
-                {`Write a review for this ${drinkType}`}
-              </h2>
-            <form
-                className="review-form box-form"
-                onSubmit={this.props.handleSubmit(values =>
-                  this.onSubmit(values))}>
-                <label htmlFor="title">What would you like to call your review?</label>
-                <Field
-                  component={Input}
-                  type="text"
-                  name="title"
-                  placeholder={`This ${drinkType} tickles my fancy...`}
-                  validate={[required, length({min: 0, max: 150}), isTrimmed]}/>
-                <label htmlFor="comments">{`What did you think of this ${drinkType}?`}</label>
-                <Field
-                  component="textarea"
-                  name="comment"
-                  placeholder="Your review helps others make happy hour even better."
-                  validate={[required, length({min: 0, max: 800}), isTrimmed]} />
-                <label htmlFor="priceDropDown">{`Rate the price of this ${drinkType}.`}</label>
-                <Field
-                  name="rating"
-                  label="rating"
-                  component={DropDownSelect}
-                  options={["*", "**", "***", "****", "*****"]}
-                  values={[1,2,3,4,5]}
-                  className="form-control"
-                >
-                </Field>
-                <Field
-                  name="price"
-                  label="price"
-                  component={DropDownSelect}
-                  options={["$", "$$", "$$$", "$$$$"]}
-                  values={[1,2,3,4]}
-                  className="form-control"
-                >
-                </Field>
-                <label htmlFor="purchased">{`Did you purchase this ${drinkType}?`}</label>
-                <Field
-                  name="purchased"
-                  label="purchased"
-                  component={DropDownSelect}
-                  options={["Yes", "No"]}
-                  values={[true, false]}
-                  className="form-control"
-                >
-                </Field>
-                <Field
-                  name="flavors"
-                  component={CheckboxGroup}
-                  options={flavorList(drinkType)}
-                />
-                <div className="button-container">
-                  <button
-                      type="submit">
-                      Add your Review
-                  </button>
-                </div>
-            </form>
+            <div className="box-form">
+              <div className="scroll">
+                <h2 className="form-title">
+                  {`Write a review for this ${drinkType}`}
+                </h2>
+                <form
+                    className="review-form"
+                    onSubmit={this.props.handleSubmit(values =>
+                      this.onSubmit(values))}>
+                    <label htmlFor="title">What would you like to call your review?</label>
+                    <Field
+                      component={Input}
+                      type="text"
+                      name="title"
+                      placeholder={`This ${drinkType} tickles my fancy...`}
+                      validate={[required, length({min: 0, max: 150}), isTrimmed]}/>
+                    <label htmlFor="comments">{`What did you think of this ${drinkType}?`}</label>
+                    <Field
+                      component="textarea"
+                      name="comment"
+                      placeholder="Your review helps others make happy hour even better."
+                      validate={[required, length({min: 0, max: 800}), isTrimmed]} />
+                    <label htmlFor="priceDropDown">{`Rate the price of this ${drinkType}.`}</label>
+                    <Field
+                      name="rating"
+                      label="rating"
+                      component={DropDownSelect}
+                      options={["*", "**", "***", "****", "*****"]}
+                      values={[1,2,3,4,5]}
+                      className="form-control"
+                    >
+                    </Field>
+                    <Field
+                      name="price"
+                      label="price"
+                      component={DropDownSelect}
+                      options={["$", "$$", "$$$", "$$$$"]}
+                      values={[1,2,3,4]}
+                      className="form-control"
+                    >
+                    </Field>
+                    <label htmlFor="purchased">{`Did you purchase this ${drinkType}?`}</label>
+                    <Field
+                      name="purchased"
+                      label="purchased"
+                      component={DropDownSelect}
+                      options={["Yes", "No"]}
+                      values={[true, false]}
+                      className="form-control"
+                    >
+                    </Field>
+                    <Field
+                      name="flavors"
+                      component={CheckboxGroup}
+                      options={flavorList(drinkType)}
+                    />
+                    <div className="button-container">
+                      <button
+                          type="submit">
+                          Add your Review
+                      </button>
+                    </div>
+                </form>
+            </div>
           </div>
         );
     }
