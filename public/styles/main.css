@@ -228,6 +228,16 @@ div.image-border {
     z-index: 2;
     transition: .2s ease-in-out; }
 
+img.drink-result {
+  float: left; }
+
+div.drink-result {
+  margin-left: 120px; }
+
+button.drink-result {
+  display: inline-block;
+  margin-left: 0px; }
+
 img.company-result {
   max-width: 100%;
   border-radius: 5px; }

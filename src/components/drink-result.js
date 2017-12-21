@@ -12,25 +12,23 @@ export class DrinkResult extends React.Component {
     // let x = [...new Set(drink.reviews.map(review => review.flavors))];
     return (
       <div className="box result-container">
-        <div className="pure-g">
-            <div className="pure-u-1-5">
-              <img src={`/media/${drink.type}.png`} alt="drink type" />
-          </div>
-          <div className="pure-u-2-5 result-title">
+          <img className="drink-result" src={`/media/${drink.type}.png`} alt="drink type"/>
+          <div className="pure-g drink-result">
+          <div className="pure-u-1-1 pure-u-md-3-5 result-title">
             <Link to={`/drink/${drink.id}`}>{drink.name}</Link>
             {/* TODO Add flavors, price, etc here */}
           </div>
-          <div className="pure-u-1-5">
+          <div className="pure-u-1-1 pure-u-md-1-5">
             <Rating rating={drink.rating} />
             <div className="review-count">
               {drink.reviews.length} reviews
             </div>
           </div>
-          <div className="pure-u-1-5">
-            <button onClick={() => this.props.dispatch(openModal(
+          <div className="pure-u-1-1 pure-u-md-1-5">
+            <button className="drink-result" onClick={() => this.props.dispatch(openModal(
               <CreateReviewForm drink={drink}/>))}>Write Review
             </button>
-            <button>
+            <button className="drink-result">
               <Link to={`/drink/${drink.id}`} >Read Reviews</Link>
             </button>
           </div>
