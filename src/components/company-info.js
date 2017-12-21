@@ -11,7 +11,7 @@ export default class CompanyInfo extends React.Component {
     return (
       <div className="info-container">
         <div className="pure-g">
-            <div className="pure-u-7-12">
+            <div className="pure-u-1-1 pure-u-sm-7-12" id="company-info">
               <h1>{company.name}</h1>
               <h3 className="biz-address">{company.streetAddress}, {company.city}, {company.state}
               </h3>
@@ -33,7 +33,7 @@ export default class CompanyInfo extends React.Component {
                 </tbody>
               </table>
             </div>
-            <div className="pure-u-5-12">
+            <div className="pure-u-1-1 pure-u-sm-5-12" id="company-info-img">
               <img className="company" src={company.imageUrl} alt="company"/>
             </div>
         </div>

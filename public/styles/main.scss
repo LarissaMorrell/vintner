@@ -414,7 +414,13 @@ footer {
 
 // For screens with a EXTRA-SMALL screen size or smaller
 @media only screen and (max-width: 568px) {
-
+  #company-info {
+    order: 2;
+  }
+  #company-info-img {
+    order: 1;
+    padding-bottom: 15px;
+  }
 }
 @media only screen and (max-width: 400px) {
 
