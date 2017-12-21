@@ -23,7 +23,7 @@ class CheckboxGroup extends React.Component {
                      return input.onChange(newValue);
                  }}/>
                  <label htmlFor={option[index]}>
-                     <span></span>
+                     {/*<span></span>*/}
                      {option.name}
                 </label>
             </div>)
