@@ -191,6 +191,7 @@
 
 @media only screen and (max-width: 400px) {
   #homepage-descriptions-container > section:first-child .section-container {
+    margin-top: 50px;
     margin-bottom: 40px; }
   #homepage-descriptions-container > section:first-child div.glassware-container {
     height: 240px; } }

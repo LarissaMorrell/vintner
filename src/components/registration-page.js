@@ -12,7 +12,7 @@ export function RegistrationPage(props) {
     }
     return (
         <div className="content-container">
-            <NavPages title="Signup for an account with Vintner" route="/"/>
+            <NavPages title="Signup for an account" route="/"/>
             <div className="box" id="registration-box">
                 <RegistrationForm />
             </div>
