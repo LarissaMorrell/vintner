@@ -26,11 +26,13 @@ body {
 }
 a, p {
   word-wrap: break-word;
+  word-break: break-word;
 }
 h1, h2, h3, h4, p {
   margin-top: 0px;
   margin-bottom: 10px;
   word-wrap: break-word;
+  word-break: break-word;
 }
 h2 {
   font-size: 20px;
@@ -105,7 +107,6 @@ li > span {
 .result-title {
   margin-bottom: 15px;
   padding-right: 15px;
-  // padding-top: 7px;
 }
 .result-title > a,
 .result-title > h3 {
@@ -113,10 +114,12 @@ li > span {
   font-size: 18px;
   font-weight: 500;
   word-wrap: break-word;
+  word-break: break-word;
 }
 p.company-address {
   line-height: 1.5;
   word-wrap: break-word;
+  word-break: break-word;
 }
 
 #drink-info-title {
@@ -205,6 +208,7 @@ span.unchecked {
     display:inline-block;
     float:right;
     top:0;
+    margin: 0;
   }
 }
 .drink-info-container {
