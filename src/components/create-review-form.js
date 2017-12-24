@@ -40,7 +40,7 @@ export class CreateReviewForm extends React.Component {
                       name="comment"
                       placeholder="Your review helps others make happy hour even better."
                       validate={[required, length({min: 0, max: 800}), isTrimmed]} />
-                    <label htmlFor="priceDropDown">{`Rate the price of this ${drinkType}.`}</label>
+                    <label htmlFor="rating">{`How many stars would you rate this ${drinkType}?`}</label>
                     <Field
                       name="rating"
                       label="rating"
@@ -50,6 +50,7 @@ export class CreateReviewForm extends React.Component {
                       className="form-control"
                     >
                     </Field>
+                    <label htmlFor="price">{`How reasonable is the price of this ${drinkType}?`}</label>
                     <Field
                       name="price"
                       label="price"
