@@ -68,7 +68,7 @@ export class RegistrationForm extends React.Component {
                 <Field
                     component={RadioGroup}
                     name="avatar"
-                    imgFileNames={["boy1", "boy2", "boy3", "boy4", "girl1", "girl2", "girl3", "girl4"]}
+                    imgFileNames={["boy1", "boy2", "boy3", "boy4", "boy5", "boy6", "girl1", "girl2", "girl3", "girl4", "girl5", "girl6"]}
 
                 />
                 <div className="button-container">
