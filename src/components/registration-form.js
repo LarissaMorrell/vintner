@@ -14,9 +14,9 @@ import {openModal} from '../actions/modal';
 
 export class RegistrationForm extends React.Component {
     onSubmit(values) {
-        const {username, password, firstName, lastName} = values;
-        const user = {username, password, firstName, lastName};
-
+        const {username, password, firstName, lastName, avatar} = values;
+        const user = {username, password, firstName, lastName, avatar};
+        console.log(values);
         return this.props
             .dispatch(registerUser(user))
             .then(() => this.props.dispatch(login(username, password)));
@@ -86,28 +86,6 @@ export class RegistrationForm extends React.Component {
         );
     }
 }
-
-// function radios(){
-//   let imgFileNames=["boy1", "boy2", "boy3", "boy4", "girl1", "girl2", "girl3", "girl4"];
-//   let radioElements = [];
-//
-//   return (
-//     <label>
-//       <Field name="sex" component="input" type="radio" value="girl1" />
-//       <img src={`/media/avatars/girl1.png`} alt="avatar" />
-//     </label>
-//   );
-// }
-// <div>
-//   <label>
-//     <Field name="sex" component={Input} type="radio" value="male"/>
-//       Male
-//   </label>
-//   <label>
-//     <Field name="sex" component={Input} type="radio" value="female"/>
-//     Female
-//   </label>
-// </div>
 
 
 export default reduxForm({
