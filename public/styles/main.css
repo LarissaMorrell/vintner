@@ -230,7 +230,8 @@ div.image-border {
     transition: .2s ease-in-out; }
 
 img.drink-result {
-  float: left; }
+  float: left;
+  max-height: 95px; }
 
 div.drink-result {
   margin-left: 120px; }
