@@ -7,21 +7,14 @@ import {getCompany} from '../actions/companies';
 
 
 export class CompanyPage extends React.Component {
-
   componentDidMount(){
     this.props.dispatch(getCompany(this.props.match.params.companyId))
   }
 
   render() {
-    // console.log(this.props.company.drinks);
-    // let drinkList = this.props.company.drinks.map((drink, i) =>
-    //    <DrinkResult key={i} drink={drink} />
-    // );
-    // let drinkList = <DrinkResult drink={this.props.company.drinks[0]} />;
-
     let drinkList = [];
     let drinks = this.props.company.drinks;
-    // console.log("drinks", drinks);
+
     for (let i=0; i<drinks.length; i++){
       drinkList.push(<DrinkResult key={i} drink={drinks[i]} />);
     }
@@ -32,8 +25,6 @@ export class CompanyPage extends React.Component {
         {drinkList}
       </div>
     );
-
-    //TODO add the drink types
   }
 }
 
