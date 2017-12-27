@@ -189,10 +189,6 @@ span.unchecked {
 .result-container {
   padding: 15px 25px; }
 
-.col-user-rating {
-  min-width: 110px;
-  max-width: 115px; }
-
 img.avatar-icon {
   max-height: 80px;
   display: block; }

@@ -23,14 +23,14 @@ export default function DrinkReview(props) {
   return (
     <div >
       <div className="pure-g">
-        <div className="pure-u-1-5 col-user-rating center-horizontal">
+        <div className="pure-u-sm-5-24 pure-u-1-1 center-horizontal">
           <Rating rating={review.rating} />
           <img className="avatar-icon" src={`/media/avatars/${props.review.user.avatar || props.user.avatar}.png`} alt="avatar" />
           <div>
             {props.user.username}
           </div>
         </div>
-        <div className="pure-u-4-5 padding-left">
+        <div className="pure-u-sm-19-24 pure-u-1-1 padding-left">
           <div className="result-title">
             <h3>{review.title}</h3>
           </div>
