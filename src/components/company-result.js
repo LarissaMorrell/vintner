@@ -17,7 +17,7 @@ export function CompanyResult(props) {
           <div className="result-title">
             <Link to={`/company/${company.id}`}>{company.name}</Link>
           </div>
-          <p className="company-address">
+          <p className="result-details">
             {company.streetAddress}<br/>
             {company.city}, {company.state}
           </p>
