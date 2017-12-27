@@ -4,10 +4,20 @@ import {Link} from 'react-router-dom';
 import Rating from './rating';
 import CreateReviewForm from './create-review-form';
 import {openModal} from '../actions/modal';
+import LoginForm from './login-form';
 
 export class DrinkResult extends React.Component {
 
+  writeReview(drink){
+    if(this.props.loggedIn){
+      this.props.dispatch(openModal(<CreateReviewForm drink={drink}/>))
+    } else {
+      this.props.dispatch(openModal(<LoginForm />))
+    }
+  }
+
   render() {
+    console.log(this.props);
     let drink = this.props.drink;
     return (
       <div className="box result-container">
@@ -26,8 +36,7 @@ export class DrinkResult extends React.Component {
             </div>
           </div>
           <div className="pure-u-1-1 pure-u-md-1-5">
-            <button className="drink-result" onClick={() => this.props.dispatch(openModal(
-              <CreateReviewForm drink={drink}/>))}>Write Review
+            <button className="drink-result" onClick={() => this.writeReview(drink)}>Write Review
             </button>
             <button className="drink-result">
               <Link to={`/drink/${drink.id}`} >Read Reviews</Link>
@@ -38,4 +47,9 @@ export class DrinkResult extends React.Component {
     )
   }
 }
-export default connect()(DrinkResult);
+
+const mapStateToProps = state => ({
+    loggedIn: state.auth.currentUser !== null
+});
+
+export default connect(mapStateToProps)(DrinkResult);
