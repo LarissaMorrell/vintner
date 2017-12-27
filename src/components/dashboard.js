@@ -15,7 +15,7 @@ export class Dashboard extends React.Component {
     }
 
     render() {
-      // Only visible to logged in users
+      // Dashboard is only visible to logged in users
       if (!this.props.loggedIn) {
           return <Redirect to="/" />;
       }
@@ -36,6 +36,8 @@ export class Dashboard extends React.Component {
             <DrinkReview review={review} type={review.drink.type} drinkId={review.drink._id} user={this.props.user}/>
           </div>
         );
+      } else {
+        drinkReviews = <div className="result-container">You have not written any reviews yet.</div>
       }
       return (
           <div className="content-container">
