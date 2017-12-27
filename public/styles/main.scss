@@ -272,7 +272,6 @@ div.drink-result {
   margin-left: 120px;
 }
 button.drink-result {
-  display: inline-block;
   margin-left: 0px;
 }
 
@@ -413,6 +412,9 @@ footer {
   }
   span.drink-type-imgs-container:first-child {
     padding-left: 20px;
+  }
+  button.drink-result {
+    display: inline-block;
   }
 }
 

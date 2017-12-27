@@ -11,13 +11,21 @@ export default function DrinkReview(props) {
     }
     return priceStr;
   }
-  console.log(props);
+
+  function avatarSrc(props){
+    if(props.review.user.avatar){
+      return `/media/avatars/${props.review.user.avatar}.png`
+    } else {
+      return `/media/avatars/${props.user.avatar}.png`
+    }
+  }
+
   return (
     <div >
       <div className="pure-g">
         <div className="pure-u-1-5 col-user-rating center-horizontal">
           <Rating rating={review.rating} />
-          <img className="avatar-icon" src={`/media/avatars/${props.review.user.avatar}.png`} alt="avatar" />
+          <img className="avatar-icon" src={`/media/avatars/${props.review.user.avatar || props.user.avatar}.png`} alt="avatar" />
           <div>
             {props.user.username}
           </div>
