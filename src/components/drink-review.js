@@ -12,14 +12,6 @@ export default function DrinkReview(props) {
     return priceStr;
   }
 
-  function avatarSrc(props){
-    if(props.review.user.avatar){
-      return `/media/avatars/${props.review.user.avatar}.png`
-    } else {
-      return `/media/avatars/${props.user.avatar}.png`
-    }
-  }
-
   return (
     <div >
       <div className="pure-g">
