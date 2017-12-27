@@ -4,7 +4,10 @@ class CheckboxGroup extends React.Component {
 
     checkboxGroup() {
         let {label, options, input} = this.props;
-
+        //there aren't any options
+        if(!options){
+          return;
+        }
         return options.map((option, index) => {
             return (
             <div className="checkbox pure-u-1-4" key={index}>
@@ -23,7 +26,6 @@ class CheckboxGroup extends React.Component {
                      return input.onChange(newValue);
                  }}/>
                  <label htmlFor={option[index]}>
-                     {/*<span></span>*/}
                      {option.name}
                 </label>
             </div>)
