@@ -15,11 +15,11 @@ export class Dashboard extends React.Component {
     }
 
     render() {
-      console.log("props for dashboard", this.props);
       // Only visible to logged in users
       if (!this.props.loggedIn) {
           return <Redirect to="/" />;
       }
+      let user = this.props.user;
       let reviews = this.props.user.reviews;
       let drinkReviews;
 
@@ -37,17 +37,16 @@ export class Dashboard extends React.Component {
           </div>
         );
       }
-
       return (
           <div className="content-container">
             <NavPages title="" route="/"/>
             <div className="user-info-container">
-              <img src="/media/avatars/boy1.png" alt="avatar" />
+              <img src={`/media/avatars/${user.avatar}.png`} alt="avatar" />
               <h1>
-                  {this.props.name}
+                  {`${user.firstName} ${user.lastName}`}
               </h1>
               <div>
-                  {this.props.username}
+                  {user.username}
               </div>
             </div>
             {drinkReviews}
@@ -60,10 +59,6 @@ const mapStateToProps = state => {
     const {currentUser} = state.auth;
     return {
         loggedIn: currentUser !== null,
-        username: currentUser ? state.auth.currentUser.username : '',
-        name: currentUser
-            ? `${currentUser.firstName} ${currentUser.lastName}`
-            : '',
         user: state.protectedData.data
     };
 };
