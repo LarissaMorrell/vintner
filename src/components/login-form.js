@@ -52,7 +52,7 @@ export class LoginForm extends React.Component {
                   <button disabled={this.props.pristine || this.props.submitting}>
                       Log in
                   </button>
-                  <Link to="/register">Register</Link>
+                  <Link to="/register" onClick={() => this.props.dispatch(closeModal())}>Register</Link>
                 </div>
             </form>
           </div>
