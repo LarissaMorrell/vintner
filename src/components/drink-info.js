@@ -16,7 +16,7 @@ export class DrinkInfo extends React.Component {
           <img src={`/media/${drink.type}.png`} alt={`${drink.type} glass`}/>
         </div>
         <div className="pure-g">
-          <div className="pure-u-17-24">
+          <div className="pure-u-md-17-24 pure-u-1-1">
             <h1 id="drink-info-title">{drink.name}</h1>
             <h3>{company.name}</h3>
             <p>{company.streetAddress}, {company.city}, {company.state}</p>
