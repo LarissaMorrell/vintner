@@ -11,13 +11,13 @@ export default function DrinkReview(props) {
     }
     return priceStr;
   }
-
+  console.log(props);
   return (
     <div >
       <div className="pure-g">
         <div className="pure-u-1-5 col-user-rating center-horizontal">
           <Rating rating={review.rating} />
-          <img className="avatar-icon" src="/media/avatars/boy1.png" alt="avatar" />
+          <img className="avatar-icon" src={`/media/avatars/${props.review.user.avatar}.png`} alt="avatar" />
           <div>
             {props.user.username}
           </div>
