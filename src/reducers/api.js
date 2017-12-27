@@ -1,6 +1,6 @@
 import {SAVE_COMPANIES, SAVE_COMPANY} from '../actions/companies';
 import {SAVE_DRINK} from '../actions/drinks';
-//SAVE_DRINKS, 
+//SAVE_DRINKS,
 const initialState = {
   companies: [],
   company: {
@@ -25,9 +25,6 @@ export default function reducer(state = initialState, action) {
     if(action.type === SAVE_COMPANY){
       return Object.assign({}, state, {company: action.company});
     }
-    // if(action.type === SAVE_DRINKS){
-    //   return Object.assign({}, state, {drinks: action.drinks});
-    // }
     if(action.type === SAVE_DRINK){
       return Object.assign({}, state, {drink: action.drink});
     }
