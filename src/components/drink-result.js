@@ -17,7 +17,6 @@ export class DrinkResult extends React.Component {
   }
 
   render() {
-    console.log(this.props);
     let drink = this.props.drink;
     return (
       <div className="box result-container">
