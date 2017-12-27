@@ -27,7 +27,7 @@ export class Navbar extends React.Component {
             </li>,
             //TODO turn on button functionality for modal
             <li key="3">
-              <Link to="" onClick={() => this.logOut()}>Log out</Link>
+              <div onClick={() => this.logOut()}>Log out</div>
             </li>
           ];
         }
@@ -40,7 +40,7 @@ export class Navbar extends React.Component {
               <Link to="/register">Sign Up</Link>
             </li>,
             <li key="3">
-              <Link to="" onClick={e => this.props.dispatch(openModal(<LoginForm />))}>Login</Link>
+              <div onClick={e => this.props.dispatch(openModal(<LoginForm />))}>Login</div>
             </li>
           ]
         }
@@ -59,12 +59,6 @@ export class Navbar extends React.Component {
         );
     }
 }
-// <div className="navbar pure-menu pure-menu-horizontal">
-//   <div className="pure-menu-heading" id="nav-brand">Vintner</div>
-//   <ul className="pure-menu-list">
-//     {listItems}
-//   </ul>
-// </div>
 
 const mapStateToProps = state => ({
     loggedIn: state.auth.currentUser !== null
