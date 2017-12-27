@@ -12,8 +12,6 @@ export class CreateReviewForm extends React.Component {
       this.props.dispatch(postReview(review));
     }
 
-
-    //TODO pass in type of alcohol using props
     render() {
       let drinkType = this.props.drink.type;
 
