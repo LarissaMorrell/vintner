@@ -5,7 +5,7 @@ import DrinkResult from '../components/drink-result';
 
 describe('<DrinkResult />', () => {
     it('Renders without crashing', () => {
-        shallow(<DrinkResult />);
+        shallow(<DrinkResult key=1 drink= />);
     });
 
 });

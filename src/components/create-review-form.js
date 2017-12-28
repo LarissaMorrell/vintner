@@ -1,5 +1,5 @@
 import React from 'react';
-import {Field, reduxForm} from 'redux-form'; //focus
+import {Field, reduxForm, focus} from 'redux-form'; //focus
 import DropDownSelect from './drop-down-select';
 import Input from './input';
 import CheckboxGroup from './checkbox-group';
