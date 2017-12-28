@@ -227,41 +227,7 @@ img.drink-type {
   height:30px;
   margin: 5px;
 }
-div.image-border {
-  width: 350px;
-	height: 350px;
-	background-image: url('/media/beer-flight.jpg');
-	position: relative;
-	z-index: 1;
-  border-radius: 8px;
-  margin: 20px;
 
-  &:after {
-		content: '';
-		position: absolute;
-		width: 338px;
-		height:338px;
-		left: 6px;
-		top: 6px;
-		background-color: $lt-tan;
-    border-radius: 8px;
-	}
-  .main-image {
-		position: absolute;
-		width: 345px;
-		height:345px;
-		left: 10px;
-		top: 10px;
-		background-image: url('/media/beer-flight.jpg');
-		background-size: 350px 350px;
-		background-position: center center;
-    border-radius: 8px;
-    top: -15px;
-    left: -15px;
-		z-index: 2;
-		transition: .2s ease-in-out;
-	}
-}
 img.drink-result {
   float: left;
   max-height: 95px;
