@@ -20,8 +20,8 @@ export class DrinkResult extends React.Component {
     let drink = this.props.drink;
     return (
       <div className="box result-container">
-          <img className="drink-result" src={`/media/${drink.type}.png`} alt="drink type"/>
-          <div className="pure-g drink-result">
+        <img className="drink-result" src={`/media/${drink.type}.png`} alt="drink type"/>
+        <div className="pure-g drink-result">
           <div className="pure-u-1-1 pure-u-md-3-5">
             <div className="result-title">
               <Link to={`/drink/${drink.id}`}>{drink.name}</Link>
