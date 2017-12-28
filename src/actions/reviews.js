@@ -24,6 +24,8 @@ export const postReview = (review) => (dispatch, getState) => {
       .then(review => {
         dispatch(closeModal());
         dispatch(getDrink(review.drink));
+        //review.drink.company ????
+        // dispatch(getCompany(this.props.match.params.companyId))
       })
       .catch(err => {
       });

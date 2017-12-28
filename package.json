@@ -6,6 +6,7 @@
     "react-scripts": "0.9.5"
   },
   "dependencies": {
+    "enzyme": "^3.2.0",
     "jwt-decode": "^2.2.0",
     "node-sass-chokidar": "0.0.3",
     "react": "^15.6.2",

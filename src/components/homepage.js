@@ -33,28 +33,19 @@ export function Homepage(props) {
               </div>
             </section>
             <section>
-              <div className="section-container left-align">
-                <div className="pure-g">
-                  <div className="pure-u-15-24 content-container">
-                    <h1 className="left-align">Learn which drinks are available...
-                      <br/>before you even get there.
-                    </h1>
-                    <div className="love-hate">
-                      <p>Did people</p>
-                      <b>
-                        <div className="inner-love-hate">
-                          hate it?<br/>
-                          love it?<br/>
-                          love it enough to buy it?
-                        </div>
-                      </b>
+              <div className="section-container">
+                <h1>Learn which drinks are available...
+                  <br/>before you even get there.
+                </h1>
+                <div className="love-hate">
+                  <h1>Did people</h1>
+                  <b>
+                    <div className="inner-love-hate">
+                      hate it?<br/>
+                      love it?<br/>
+                      love it enough to buy it?
                     </div>
-                  </div>
-                  <div className="pure-u-9-24">
-                    <div className="image-border">
-                      <div className="main-image"></div>
-                    </div>
-                  </div>
+                  </b>
                 </div>
               </div>
             </section>
