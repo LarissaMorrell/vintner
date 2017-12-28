@@ -76,7 +76,7 @@ export class CreateReviewForm extends React.Component {
                     <div className="button-container">
                       <button
                           type="submit">
-                          Add your Review
+                          Create Review
                       </button>
                     </div>
                 </form>
