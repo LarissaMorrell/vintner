@@ -300,6 +300,10 @@ span.drink-type-imgs-container {
 div.drink-info-container > div.drink-type-imgs-container{
   float: left;
   margin-right: 25px;
+
+  img {
+    max-width: 75px;
+  }
 }
 
 .black-screen {
