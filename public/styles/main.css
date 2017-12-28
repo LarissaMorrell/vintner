@@ -308,6 +308,10 @@ footer {
   padding: 1rem;
   z-index: 10; }
 
+.drink-result-responsive {
+  display: none;
+  max-height: 95px; }
+
 /*
 *   RESPONSIVE DESIGN ADJUSTMENTS
 */
@@ -325,4 +329,12 @@ footer {
     order: 2; }
   #company-info-img {
     order: 1;
-    padding-bottom: 15px; } }
+    padding-bottom: 15px; }
+  img.drink-result {
+    display: none; }
+  .drink-result-responsive {
+    display: block; }
+  div.drink-result {
+    margin-left: 0; }
+  button.drink-result {
+    margin: 8px; } }

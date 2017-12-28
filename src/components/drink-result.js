@@ -34,12 +34,22 @@ export class DrinkResult extends React.Component {
               {drink.reviews.length} reviews
             </div>
           </div>
+
+          
           <div className="pure-u-1-1 pure-u-md-1-5">
-            <button className="drink-result" onClick={() => this.writeReview(drink)}>Write Review
-            </button>
-            <button className="drink-result">
-              <Link to={`/drink/${drink.id}`} >Read Reviews</Link>
-            </button>
+            <div className="pure-g">
+              <div className="pure-u-2-5">
+                <img className="drink-result-responsive" src={`/media/${drink.type}.png`} alt="drink type"/>
+              </div>
+
+              <div className="pure-u-3-5 pure-u-sm-1-1">
+                <button className="drink-result" onClick={() => this.writeReview(drink)}>Write Review
+                </button>
+                <button className="drink-result">
+                  <Link to={`/drink/${drink.id}`} >Read Reviews</Link>
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
