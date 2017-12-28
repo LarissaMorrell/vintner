@@ -27,7 +27,7 @@ export class DrinkInfo extends React.Component {
               {`${drink.reviews.length ? drink.reviews.length : '0'} reviews`}
             </div>
             <button className="inline" onClick={() => this.props.dispatch(openModal(
-                <CreateReviewForm drink={drink} loggedIn={this.props.loggedIn}/>
+                <CreateReviewForm drink={drink}/>
             ))}>
               Write Review
             </button>
@@ -37,15 +37,5 @@ export class DrinkInfo extends React.Component {
     );
   }
 }
-
-
-
-
-// function drinkRating(reviews){
-//   let avgRating = 0;
-//   reviews.rating.forEach(rating => {
-//
-//   })
-// }
 
 export default connect()(DrinkInfo);
