@@ -7,6 +7,7 @@
   width: 100%;
   z-index: 3; }
 
+.header div,
 .header a,
 .header a:visited {
   color: #f3f2e1; }
@@ -21,13 +22,15 @@
   overflow: hidden;
   background-color: #491722; }
 
-.header li a {
+.header li a,
+.header li div {
   display: block;
   padding: 20px 20px;
   border-right: 1px solid #331017;
   text-decoration: none; }
 
 .header li a:hover,
+.header li div:hover,
 .header .menu-btn:hover {
   background-color: #331017;
   color: #dddaaa; }
@@ -103,7 +106,8 @@
 @media (min-width: 48em) {
   .header li {
     float: left; }
-  .header li a {
+  .header li a,
+  .header li div {
     padding: 20px 30px; }
   .header .menu {
     clear: none;
