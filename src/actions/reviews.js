@@ -19,7 +19,6 @@ export const postReview = (review) => (dispatch, getState) => {
         body: JSON.stringify(review)
     })
       .then(res => {
-        console.log("this is the res", res);
         return res.json()})
       .then(review => {
         dispatch(closeModal());

@@ -35,7 +35,7 @@ export class DrinkResult extends React.Component {
             </div>
           </div>
 
-          
+
           <div className="pure-u-1-1 pure-u-md-1-5">
             <div className="pure-g">
               <div className="pure-u-2-5">

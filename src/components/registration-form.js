@@ -6,7 +6,6 @@ import {login} from '../actions/auth';
 import Input from './input';
 import RadioGroup from './radio-group';
 import {required, nonEmpty, matches, length, isTrimmed} from '../validators';
-// const  { DOM: { input, select, textarea } } = React;
 
 //for the link to the login page. Open login modal on redirect to dashboard
 import LoginForm from './login-form';
@@ -16,7 +15,6 @@ export class RegistrationForm extends React.Component {
     onSubmit(values) {
         const {username, password, firstName, lastName, avatar} = values;
         const user = {username, password, firstName, lastName, avatar};
-        console.log(values);
         return this.props
             .dispatch(registerUser(user))
             .then(() => this.props.dispatch(login(username, password)));
