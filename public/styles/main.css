@@ -246,8 +246,8 @@ div.drink-info-container > div.drink-type-imgs-container {
 
 .modal {
   margin: 50px auto;
-  padding: 30 auto;
-  max-width: 500px;
+  max-width: 800px;
+  min-width: 320px;
   background-color: #F9F9F1;
   color: #7b2739;
   padding: 50px;
@@ -337,4 +337,10 @@ footer {
   div.drink-result {
     margin-left: 0; }
   button.drink-result {
-    margin: 8px; } }
+    margin: 8px; }
+  div.modal {
+    padding: 30px 30px 30px 30px; }
+    div.modal div.boxclose {
+      float: initial;
+      margin-top: -45px;
+      margin-left: -15px; } }
