@@ -19,7 +19,9 @@ export class CreateReviewForm extends React.Component {
             <div className="box-form">
               <div className="scroll">
                 <h2 className="form-title">
-                  {`Write a review for this ${drinkType}`}
+                  Write a review for
+                  <br/>
+                  {this.props.drink.name}
                 </h2>
                 <form
                     className="review-form"
