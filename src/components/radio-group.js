@@ -5,10 +5,10 @@ class RadioGroup extends React.Component {
     radioGroup() {
         let imgFileNames = this.props.imgFileNames;
         let {label, input} = this.props;
-        
+
         return imgFileNames.map((file, index) => {
             return (
-            <div className="pure-u-1-3 pure-u-md-1-4" key={index}>
+            <div className="pure-u-1-2 pure-u-sm-1-3 pure-u-md-1-4" key={index}>
               <div className="center-horizontal">
                 <input type="radio"
                   name="avatar"

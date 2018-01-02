@@ -33,13 +33,13 @@ export class CreateReviewForm extends React.Component {
                       type="text"
                       name="title"
                       placeholder={`This ${drinkType} tickles my fancy...`}
-                      validate={[required, length({min: 0, max: 150}), isTrimmed]}/>
+                      validate={[required, length({min: 0, max: 75})]}/>
                     <label htmlFor="comments">{`What did you think of this ${drinkType}?`}</label>
                     <Field
                       component="textarea"
                       name="comment"
                       placeholder="Your review helps others make happy hour even better."
-                      validate={[required, length({min: 0, max: 800}), isTrimmed]} />
+                      validate={[required, length({min: 0, max: 800})]} />
                     <label htmlFor="rating">{`How many stars would you rate this ${drinkType}?`}</label>
                     <Field
                       name="rating"
