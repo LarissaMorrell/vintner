@@ -18,7 +18,6 @@ body {
   background-color: $lt-tan;
   position: relative;
   height: 100%;
-  min-width: 320px;
 
   #root, div, span, p, h1, h2, h3, h4, a, tr, li, button {
     font-family: 'Montserrat', sans-serif, arial;
@@ -422,7 +421,18 @@ footer {
       margin-left: -15px;
     }
   }
+  div.biz-img-container {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 8px 0 20px 0;
+    width: 240px;
+  }
 }
 @media only screen and (max-width: 400px) {
-
+  .padding-left {
+    padding-left: 0;
+  }
+  .result-container {
+    padding: 15px;
+  }
 }

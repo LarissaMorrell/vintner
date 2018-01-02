@@ -10,8 +10,7 @@ body {
   font-size: 14px;
   background-color: #f3f2e1;
   position: relative;
-  height: 100%;
-  min-width: 320px; }
+  height: 100%; }
   body #root, body div, body span, body p, body h1, body h2, body h3, body h4, body a, body tr, body li, body button {
     font-family: 'Montserrat', sans-serif, arial; }
 
@@ -343,4 +342,15 @@ footer {
     div.modal div.boxclose {
       float: initial;
       margin-top: -45px;
-      margin-left: -15px; } }
+      margin-left: -15px; }
+  div.biz-img-container {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 8px 0 20px 0;
+    width: 240px; } }
+
+@media only screen and (max-width: 400px) {
+  .padding-left {
+    padding-left: 0; }
+  .result-container {
+    padding: 15px; } }

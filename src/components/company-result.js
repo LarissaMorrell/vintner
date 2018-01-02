@@ -7,15 +7,12 @@ export function CompanyResult(props) {
     const company = props.company;
     return (
       <div className="result-container box pure-g">
-        <div className="pure-u-sm-6-24 pure-u-1-1 center-horizontal">
-          <div className="biz-img-container">
-            <Link to={`/company/${company.id}`}>
-              <img className="company-result pure-img" src={company.imageUrl} alt="company" />
-            </Link>
-          </div>
+        <div className="pure-u-md-6-24 pure-u-sm-8-24 pure-u-1-1 biz-img-container">
+          <Link to={`/company/${company.id}`}>
+            <img className="company-result pure-img" src={company.imageUrl} alt="company" />
+          </Link>
         </div>
-        <div className="pure-u-md-12-24 pure-u-sm-16-24">
-          {/* TODO fix this */}
+        <div className="pure-u-md-12-24 pure-u-sm-16-24 pure-u-1-1">
           <div className="result-title">
             <Link to={`/company/${company.id}`}>{company.name}</Link>
           </div>
