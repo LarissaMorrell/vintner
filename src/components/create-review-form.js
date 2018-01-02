@@ -93,7 +93,7 @@ function flavorList(drinkType){
     {id: 1, name: 'Dry'},
     {id: 2, name: 'Semi-Dry'},
     {id: 3, name: 'Sweet'},
-    {id: 4, name: 'Dessert Wine'},
+    {id: 4, name: 'Dessert'},
     {id: 5, name: 'Fruity'},
     {id: 6, name: 'Buttery'},
     {id: 7, name: 'Full-Bodied'},
@@ -108,6 +108,16 @@ function flavorList(drinkType){
     {id: 6, name: 'Fruity'},
     {id: 7, name: 'Sweet'},
     {id: 8, name: 'Earthy'}
+  ];
+  let ciderFlavorList = [
+    {id: 1, name: 'Dry'},
+    {id: 2, name: 'Bittersweet'},
+    {id: 3, name: 'Sweet'},
+    {id: 4, name: 'Sour'},
+    {id: 5, name: 'Floral'},
+    {id: 6, name: 'Citrus'},
+    {id: 7, name: 'Berry'},
+    {id: 8, name: 'Hopped'}
   ];
   let spiritFlavorList = [
     {id: 1, name: 'Bold'},
@@ -124,6 +134,9 @@ function flavorList(drinkType){
   }
   else if(drinkType === 'beer'){
     return beerFlavorList;
+  }
+  else if(drinkType === 'cider'){
+    return ciderFlavorList;
   }
   else if(drinkType === 'spirit'){
     return spiritFlavorList;
