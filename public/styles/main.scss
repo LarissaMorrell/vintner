@@ -18,7 +18,7 @@ body {
   background-color: $lt-tan;
   position: relative;
   height: 100%;
-
+  min-width: 320px;
   #root, div, span, p, h1, h2, h3, h4, a, tr, li, button {
     font-family: 'Montserrat', sans-serif, arial;
   }
@@ -434,5 +434,15 @@ footer {
   }
   .result-container {
     padding: 15px;
+  }
+  div.drink-info-container {
+    text-align: center;
+    
+    div.drink-type-imgs-container{
+      float: initial;
+      img {
+        margin: 0 auto 25px auto;
+      }
+    }
   }
 }

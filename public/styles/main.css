@@ -10,7 +10,8 @@ body {
   font-size: 14px;
   background-color: #f3f2e1;
   position: relative;
-  height: 100%; }
+  height: 100%;
+  min-width: 320px; }
   body #root, body div, body span, body p, body h1, body h2, body h3, body h4, body a, body tr, body li, body button {
     font-family: 'Montserrat', sans-serif, arial; }
 
@@ -353,4 +354,10 @@ footer {
   .padding-left {
     padding-left: 0; }
   .result-container {
-    padding: 15px; } }
+    padding: 15px; }
+  div.drink-info-container {
+    text-align: center; }
+    div.drink-info-container div.drink-type-imgs-container {
+      float: initial; }
+      div.drink-info-container div.drink-type-imgs-container img {
+        margin: 0 auto 25px auto; } }

@@ -20,13 +20,14 @@ label {
   margin-bottom: 8px; }
 
 .button-container {
-  /*TODO fix auto to center form buttons*/
   margin: 0px auto;
   width: 205px; }
   .button-container button,
   .button-container a {
-    display: inline-block;
-    margin-left: 20px; }
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center; }
 
 label > span {
   float: left;
@@ -176,10 +177,9 @@ input[type=radio]:not(old):checked + label > span > span {
     padding-left: 20px; }
   span.drink-type-imgs-container:first-child {
     padding-left: 20px; }
-  img.radio-avatar {
-    width: 75px; } }
+  #registration-box {
+    padding: 45px 30px; } }
 
 @media only screen and (max-width: 568px) {
   img.radio-avatar {
-    width: 50px;
     margin-left: 20px; } }
