@@ -10,7 +10,7 @@ class CheckboxGroup extends React.Component {
         }
         return options.map((option, index) => {
             return (
-            <div className="checkbox pure-u-1-4" key={index}>
+            <div className="checkbox pure-u-sm-1-4 pure-u-1-2" key={index}>
 
                 <input type="checkbox"
                      name={option[index]}
