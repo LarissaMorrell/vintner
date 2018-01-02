@@ -47,7 +47,7 @@ export class Navbar extends React.Component {
 
         return (
           <header className="header">
-            <a href="" className="logo">Vintner</a>
+            <a href="/" className="logo">Vintner</a>
             <input className="menu-btn" type="checkbox" id="menu-btn" />
             <label className="menu-icon" htmlFor="menu-btn">
               <i className="fa fa-bars navicon" aria-hidden="true"></i>
