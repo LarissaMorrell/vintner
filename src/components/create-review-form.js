@@ -3,7 +3,7 @@ import {Field, reduxForm, focus} from 'redux-form'; //focus
 import DropDownSelect from './drop-down-select';
 import Input from './input';
 import CheckboxGroup from './checkbox-group';
-import {required, length, isTrimmed} from '../validators'; //matches
+import {required, length} from '../validators'; //matches
 import {postReview} from '../actions/reviews';
 
 export class CreateReviewForm extends React.Component {

@@ -10,6 +10,9 @@ import {getDrink} from '../actions/drinks';
 
 export const postReview = (review) => (dispatch, getState) => {
     const authToken = getState().auth.authToken;
+    review.title = review.title.trim();
+    review.comment = review.comment.trim();
+
     return fetch(`${API_BASE_URL}/reviews`, {
         method: 'POST',
         headers: {
@@ -23,8 +26,6 @@ export const postReview = (review) => (dispatch, getState) => {
       .then(review => {
         dispatch(closeModal());
         dispatch(getDrink(review.drink));
-        //review.drink.company ????
-        // dispatch(getCompany(this.props.match.params.companyId))
       })
       .catch(err => {
       });
