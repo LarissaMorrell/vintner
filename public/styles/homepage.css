@@ -5,9 +5,11 @@
   overflow: hidden;
   max-width: 100%;
   margin-top: 50px;
+  background-color: #f3f2e1;
   /* overlay position and dimensions in main.scss */ }
   .video-container video {
     position: absolute;
+    bottom: 0;
     top: 0;
     left: 0;
     width: 100%; }
@@ -30,25 +32,21 @@
   -o-background-size: cover;
   background-size: cover; }
 
-#homepage-descriptions-container > section {
+.homepage-descriptions-container > section {
   height: 100%;
   overflow: hidden;
   text-align: center; }
-  #homepage-descriptions-container > section h1 {
-    font-size: 33px;
+  .homepage-descriptions-container > section h1 {
+    font-size: 30px;
     line-height: 45px; }
-  #homepage-descriptions-container > section li {
-    font-size: 28px; }
-    #homepage-descriptions-container > section li i {
-      margin-right: 10px; }
-  #homepage-descriptions-container > section .overlay {
+  .homepage-descriptions-container > section .overlay {
     background-color: rgba(161, 115, 76, 0.6);
     /* brown */ }
-  #homepage-descriptions-container > section .section-container {
+  .homepage-descriptions-container > section .section-container {
     margin: 120px auto;
     max-width: 950px;
     min-height: 100%; }
-  #homepage-descriptions-container > section div.glassware-container {
+  .homepage-descriptions-container > section div.glassware-container {
     width: 100%;
     height: 800px;
     background: url("/media/glasses.png");
@@ -56,24 +54,40 @@
     background-repeat: repeat-x;
     background-position: center bottom; }
 
-#homepage-descriptions-container > section:nth-child(odd) {
+.homepage-descriptions-container > section:nth-child(odd) {
   background-color: #f3f2e1; }
-  #homepage-descriptions-container > section:nth-child(odd) .section-container {
+  .homepage-descriptions-container > section:nth-child(odd) .section-container {
     margin-bottom: 75px; }
 
-#homepage-descriptions-container > section:last-child {
+#do-even-more-container {
   /* To account for the footer */ }
-  #homepage-descriptions-container > section:last-child .section-container {
-    padding-bottom: 50px; }
+  #do-even-more-container .section-container {
+    padding-bottom: 75px; }
+  #do-even-more-container h1 {
+    font-size: 30px;
+    font-weight: 600; }
+  #do-even-more-container li {
+    font-size: 23px;
+    padding-left: 20px;
+    text-indent: -25px; }
+    #do-even-more-container li i {
+      margin-right: 10px; }
+
+#bottles-banner {
+  background: linear-gradient(to bottom, rgba(255, 0, 0, 0), #f3f2e1);
+  width: 100%;
+  height: 15px;
+  position: absolute;
+  bottom: 0; }
 
 .love-hate {
   padding-top: 2em;
-  font: normal 33px/50px Montserrat, sans-serif;
+  font: normal 30px/50px Montserrat, sans-serif;
   text-align: left; }
 
 .love-hate p {
   height: 50px;
-  font-size: 33px;
+  font-size: 30px;
   float: left;
   margin-right: 0.3em; }
 
@@ -153,45 +167,97 @@
 */
 @media only screen and (max-width: 1280px) {
   .video-container {
-    height: 580px; }
+    height: 620px; }
   div.glassware-container {
     height: 700px; } }
 
 @media only screen and (max-width: 1024px) {
   .video-container {
-    height: 434px; }
-  #homepage-descriptions-container > section .section-container {
+    height: 500px; }
+  .homepage-descriptions-container > section .section-container {
     margin: 100px 8% 100px 8%; }
-  #homepage-descriptions-container > section div.glassware-container {
+  .homepage-descriptions-container > section div.glassware-container {
     height: 500px; } }
 
 @media only screen and (max-width: 768px) {
-  .video-container {
-    height: 300px; }
-  #homepage-descriptions-container > section h1 {
+  #do-even-more-container ul {
+    margin-left: 5%; }
+  #do-even-more-container li {
+    font-size: 25px;
+    margin-left: 3%;
+    padding-bottom: 10px; }
+  .homepage-descriptions-container > section h1 {
     font-size: 30px;
     margin-bottom: 25px; }
-  #homepage-descriptions-container > section li {
-    font-size: 25px; }
-  #homepage-descriptions-container > section:first-child .section-container {
+  .homepage-descriptions-container > section:first-child .section-container {
     margin-bottom: 75px; }
-  #homepage-descriptions-container > section:first-child div.glassware-container {
+  .homepage-descriptions-container > section:first-child div.glassware-container {
     height: 420px; } }
 
 @media only screen and (max-width: 568px) {
-  .video-container {
-    height: 190px; }
-    .video-container video {
-      min-height: 200px; }
-  #homepage-descriptions-container > section h1 {
+  .homepage-descriptions-container > section h1 {
     font-size: 20px;
     line-height: 28px; }
-  #homepage-descriptions-container > section div.glassware-container {
-    height: 300px; } }
+  .homepage-descriptions-container > section div.glassware-container {
+    height: 300px; }
+  #do-even-more-container h1 {
+    font-size: 25px; }
+  #do-even-more-container li {
+    font-size: 20px; } }
 
 @media only screen and (max-width: 400px) {
-  #homepage-descriptions-container > section:first-child .section-container {
+  .homepage-descriptions-container > section:first-child .section-container {
     margin-top: 50px;
-    margin-bottom: 40px; }
-  #homepage-descriptions-container > section:first-child div.glassware-container {
+    margin-bottom: 0px; }
+    .homepage-descriptions-container > section:first-child .section-container h1 {
+      margin-bottom: 0; }
+  .homepage-descriptions-container > section:first-child div.glassware-container {
     height: 240px; } }
+
+/*The following are @media JUST for sizing of video*/
+@media only screen and (max-width: 1100px) {
+  .video-container {
+    height: 560px; } }
+
+@media only screen and (max-width: 1000px) {
+  .video-container {
+    height: 515px; } }
+
+@media only screen and (max-width: 900px) {
+  .video-container {
+    height: 450px; } }
+
+@media only screen and (max-width: 800px) {
+  .video-container {
+    height: 400px; } }
+
+@media only screen and (max-width: 700px) {
+  .video-container {
+    height: 370px; } }
+
+@media only screen and (max-width: 650px) {
+  .video-container {
+    height: 340px; } }
+
+@media only screen and (max-width: 600px) {
+  .video-container {
+    height: 300px; } }
+
+@media only screen and (max-width: 550px) {
+  .video-container {
+    height: 270px; } }
+
+@media only screen and (max-width: 475px) {
+  .video-container {
+    height: 260px; } }
+
+@media only screen and (max-width: 425px) {
+  .video-container {
+    height: 230px; } }
+
+@media only screen and (max-width: 375px) {
+  .video-container {
+    margin-top: 44px;
+    height: 190px; }
+    .video-container video {
+      min-height: 200px; } }

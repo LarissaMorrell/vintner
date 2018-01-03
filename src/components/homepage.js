@@ -13,9 +13,10 @@ export function Homepage(props) {
           <div className="video-container">
             <video src="/media/wine-pour.mp4" autoPlay="true" loop="true"></video>
             <div className="overlay"></div>
+            <div id="bottles-banner"></div>
           </div>
           <div className="background-img"></div>
-          <div id="homepage-descriptions-container">
+          <div className="homepage-descriptions-container">
             <section>
               <div className="section-container">
                 <h1>Are drink menus confusing? We are here to help.
@@ -50,7 +51,7 @@ export function Homepage(props) {
               </div>
             </section>
             <section>
-              <div className="section-container">
+              <div className="section-container" id="do-even-more-container">
                 <h1>
                   Do even more with a Vintner account
                 </h1>
