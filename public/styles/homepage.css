@@ -83,7 +83,8 @@
 .love-hate {
   padding-top: 2em;
   font: normal 30px/50px Montserrat, sans-serif;
-  text-align: left; }
+  text-align: left;
+  display: inline-block; }
 
 .love-hate p {
   height: 50px;
@@ -193,6 +194,14 @@
     margin-bottom: 75px; }
   .homepage-descriptions-container > section:first-child div.glassware-container {
     height: 420px; } }
+
+@media only screen and (max-width: 670px) {
+  .love-hate p,
+  .love-hate b {
+    width: 100%; }
+  .love-hate .inner-love-hate {
+    text-align: center;
+    width: 100%; } }
 
 @media only screen and (max-width: 568px) {
   .homepage-descriptions-container > section h1 {

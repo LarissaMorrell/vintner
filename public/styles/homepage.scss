@@ -97,6 +97,7 @@ $lt-tan: #f3f2e1;
   padding-top: 2em;
   font: normal 30px/50px Montserrat, sans-serif;
   text-align: left;
+  display:inline-block;
 }
 .love-hate p {
   height: 50px;
@@ -237,7 +238,17 @@ $lt-tan: #f3f2e1;
   }
 }
 
-
+//For the scrolling animation in section 3
+@media only screen and (max-width: 670px) {
+  .love-hate p,
+  .love-hate b {
+    width: 100%;
+  }
+  .love-hate .inner-love-hate {
+    text-align: center;
+    width: 100%;
+  }
+}
 
 
 // For screens with a EXTRA-SMALL screen size or smaller

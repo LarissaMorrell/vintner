@@ -38,8 +38,8 @@ export function Homepage(props) {
                 <h1>Learn which drinks are available...
                   <br/>before you even get there.
                 </h1>
-                <div className="love-hate">
-                  <h1>Did people</h1>
+                <div className="love-hate center-horizontal">
+                  <p>Did people</p>
                   <b>
                     <div className="inner-love-hate">
                       hate it?<br/>
@@ -75,7 +75,6 @@ export function Homepage(props) {
         </div>
     );
 }
-// <img className="tasting-room" src="/media/beer-pour.jpg" alt="tasting room"/>
 
 const mapStateToProps = state => ({
     loggedIn: state.auth.currentUser !== null
