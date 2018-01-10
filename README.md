@@ -19,6 +19,12 @@ This app was built with HTML5, SCSS, JavaScript, React.js, Redux, Node.js, Mongo
 #### Functionality ####
 * New users sign up for a username and password, and select an avatar for their account.
 ![screenshot of signup page](./screenshots/signup.png)
+* Users search local companies for ratings and drink types available.
+![screenshot of signup page](./screenshots/find-companies.png)
+* Users view a company to see an overview and a listing of drinks with descriptions and users' ratings.
+![screenshot of signup page](./screenshots/company.png)
+* Users write reviews for drinks they have tasted.
+![screenshot of signup page](./screenshots/write-review.png)
 
 #### Development Roadmap ####
 
