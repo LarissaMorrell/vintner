@@ -18,7 +18,7 @@ This app was built with HTML5, SCSS, JavaScript, React.js, Redux, Node.js, Mongo
 
 #### Functionality ####
 * New users sign up for a username and password, and select an avatar for their account.
-![screenshot of signup page](./screenshots/signup.png =400x)
+![screenshot of signup page](./screenshots/signup.png | width=400)
 
 #### Development Roadmap ####
 
