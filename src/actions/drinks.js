@@ -36,6 +36,5 @@ export const getDrink = (drinkId) => dispatch => {
       .then(res => res.json())
       .then(drink => dispatch(saveDrink(drink)))
       .catch(err => {
-
       });
 };
