@@ -11,22 +11,22 @@ export class CompaniesPage extends React.Component {
     this.props.dispatch(getCompanies())
   }
 
-    render() {
-      var companies = this.props.companies.map((company, i) =>
-          <CompanyResult key={i} company={company} />
-      );
-      if(companies.length === 0){
-        return(
-          <ReactLoading id="loading" className="center-horizontal" type="spin" color="#491722"/>
-        );
-      }
-      return (
-        <div className="content-container">
-          <NavPages title="Find a location" route="/"/>
-          {companies}
-        </div>
+  render() {
+    var companies = this.props.companies.map((company, i) =>
+        <CompanyResult key={i} company={company} />
+    );
+    if(companies.length === 0){
+      return(
+        <ReactLoading id="loading" className="center-horizontal" type="spin" color="#491722"/>
       );
     }
+    return (
+      <div className="content-container">
+        <NavPages title="Find a location" route="/"/>
+        {companies}
+      </div>
+    );
+  }
 }
 const mapStateToProps = state => ({
   companies: state.APIData.companies
