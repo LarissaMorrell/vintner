@@ -9,15 +9,16 @@
   },
   "dependencies": {
     "enzyme-adapter-react-16": "^1.0.4",
-    "react": "^16.1.1",
-    "react-dom": "^16.1.1",
-    "react-redux": "^5.0.2",
-    "redux": "^3.6.0",
-    "redux-thunk": "^2.2.0",
     "jwt-decode": "^2.2.0",
     "node-sass-chokidar": "0.0.3",
+    "react": "^16.1.1",
+    "react-dom": "^16.1.1",
+    "react-loading": "^1.0.3",
+    "react-redux": "^5.0.2",
     "react-router-dom": "^4.1.1",
+    "redux": "^3.6.0",
     "redux-form": "^6.6.3",
+    "redux-thunk": "^2.2.0",
     "validator": "^7.0.0"
   },
   "scripts": {

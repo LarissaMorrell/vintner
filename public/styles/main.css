@@ -87,6 +87,9 @@ li > span {
     margin-right: auto;
     text-align: center; }
 
+#loading {
+  margin-top: 45vh; }
+
 .padding-left {
   padding-left: 20px; }
 
