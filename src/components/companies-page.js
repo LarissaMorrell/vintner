@@ -16,6 +16,7 @@ export class CompaniesPage extends React.Component {
         <CompanyResult key={i} company={company} />
     );
     if(companies.length === 0){
+      console.log("loading...");
       return(
         <ReactLoading id="loading" className="center-horizontal" type="spin" color="#491722"/>
       );

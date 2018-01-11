@@ -8,8 +8,15 @@ import {required, nonEmpty} from '../validators';
 
 export class LoginForm extends React.Component {
     onSubmit(values) {
-        // this.props.dispatch(closeModal());
-        return this.props.dispatch(login(values.username, values.password));
+        // this.props.dispatch(login(values.username, values.password));
+        //
+          console.log(this.props);
+        // if(this.props.submitSucceeded){
+        //   this.props.dispatch(closeModal());
+        // }
+
+          // this.props.dispatch(closeModal());
+          return this.props.dispatch(login(values.username, values.password));
     }
 
     render() {
@@ -28,9 +35,7 @@ export class LoginForm extends React.Component {
             </h2>
             <form
                 className="login-form"
-                onSubmit={this.props.handleSubmit(values =>
-                    this.onSubmit(values)
-                )}>
+                onSubmit={this.props.handleSubmit(values => this.onSubmit(values))}>
                 {error}
                 <Field
                     component={Input}
