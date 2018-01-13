@@ -28,9 +28,11 @@ export class Dashboard extends React.Component {
           <div className="box result-container" key={i}>
             <div className="dashboard-drink-header">
               <h1>{review.drink.name}</h1>
-              <button>
-                <Link to={`/drink/${review.drink._id}`}>Visit Drink</Link>
-              </button>
+                <Link to={`/drink/${review.drink._id}`}>
+                  <button>
+                    Visit Drink
+                  </button>
+                </Link>
             </div>
 
             <DrinkReview review={review} type={review.drink.type} drinkId={review.drink._id} user={this.props.user}/>

@@ -15,8 +15,12 @@ Don't waste time on rating menus that just end up lost or forgotten. Users are a
 
 ### Technical ###
 This app was built with HTML5, CSS3, JavaScript, React.js, and Redux. The repository for the front end of this app is available [here](https://github.com/LarissaMorrell/vintner).
-* Passport - Managing form state in Redux (https://redux-form.com)
-
+* Redux - State management (https://redux.js.org/)
+* Redux Form - Managing form state in Redux (https://redux-form.com)
+* Pure CSS - Response Grids (https://purecss.io/)
+* SCSS - Frontend styles (http://sass-lang.com)
+* Enzyme - Testing components (https://github.com/airbnb/enzyme)
+* Jest - Testing components (https://facebook.github.io/jest/)
 
 ### Functionality ###
 * Users search local companies for ratings and drink types available.
