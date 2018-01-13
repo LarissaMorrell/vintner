@@ -8,12 +8,12 @@ import {getDrink} from '../actions/drinks';
 export class DrinkReviewsPage extends React.Component {
 
     componentDidMount(){
+      console.log(this.props);
       this.props.dispatch(getDrink(this.props.match.params.drinkId))
     }
 //this page displays one drink and it's description/stats,
 //then all of the reviews for THAT drink
     render() {
-    //console.log("propsPage", this.props);
       let drink = this.props.drink;
       var drinkReviews = drink.reviews.map((review, i) =>
         <div className="box result-container" key={i}>
