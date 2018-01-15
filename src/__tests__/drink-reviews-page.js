@@ -42,6 +42,13 @@ describe('<DrinkReviewsPage />', () => {
   }
 
   it('Renders without crashing', () => {
-    shallow(<DrinkReviewsPage drink={drink} loggedIn={true} match={match} />);
+    shallow(
+      <DrinkReviewsPage
+        drink={drink}
+        loggedIn={true}
+        match={match} 
+        dispatch={()=>{}}
+      />
+    );
   });
 });

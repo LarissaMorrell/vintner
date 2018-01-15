@@ -15,8 +15,19 @@ describe('<CompanyPage />', () => {
     types: ["wine", "beer", "mead", "cider", "spirits"],
     drinks: []
   }
+  const match = {
+    params: {
+      drinkId: "5a43df85e5662405fc2cf553"
+    }
+  }
 
   it('Renders without crashing', () => {
-    shallow(<CompanyPage company={company} dispatch={() => {}}/>);
+    shallow(
+      <CompanyPage
+        company={company}
+        match={match}
+        dispatch={() => {}}
+      />
+    );
   });
 });
