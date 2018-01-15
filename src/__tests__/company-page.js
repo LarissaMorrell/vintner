@@ -4,7 +4,7 @@ import {shallow, mount} from 'enzyme';
 import {CompanyPage} from '../components/company-page';
 
 describe('<CompanyPage />', () => {
-  const company = {
+  let company = {
     id: "5a43df85e5662405fc2cf553",
     name: "Brewery to Rock Your Socks",
     streetAddress: "1 Hops Way",
@@ -17,11 +17,17 @@ describe('<CompanyPage />', () => {
   }
   const match = {
     params: {
-      companyId: "5a43df85e5662405fc2cf553"
+      drinkId: "5a43df85e5662405fc2cf553"
     }
   }
 
   it('Renders without crashing', () => {
-    shallow(<CompanyPage company={company} dispatch={() => {}} match={match} />);
+    shallow(
+      <CompanyPage
+        company={company}
+        match={match}
+        dispatch={() => {}}
+      />
+    );
   });
 });
