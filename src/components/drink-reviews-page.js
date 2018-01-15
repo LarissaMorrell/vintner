@@ -8,7 +8,6 @@ import {getDrink} from '../actions/drinks';
 export class DrinkReviewsPage extends React.Component {
 
     componentDidMount(){
-      console.log(this.props);
       this.props.dispatch(getDrink(this.props.match.params.drinkId))
     }
 //this page displays one drink and it's description/stats,
