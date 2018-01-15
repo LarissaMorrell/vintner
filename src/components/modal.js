@@ -21,12 +21,4 @@ export class Modal extends React.Component {
       return null;
     }
 }
-
-// <div className="close-win"
-//   onClick={e => this.props.dispatch(closeModal())}>
-//   <i className="fa fa-window-close-o" aria-hidden="true"></i>
-// </div>
-
-// <i className="fa fa-window-close-o" aria-hidden="true"></i>
-
 export default connect()(Modal);

@@ -4,19 +4,12 @@ import {Link} from 'react-router-dom';
 import Input from './input';
 import {login} from '../actions/auth';
 import {closeModal} from '../actions/modal';
+import DemoButton from './demo-button';
 import {required, nonEmpty} from '../validators';
 
 export class LoginForm extends React.Component {
     onSubmit(values) {
-        // this.props.dispatch(login(values.username, values.password));
-        //
-          console.log(this.props);
-        // if(this.props.submitSucceeded){
-        //   this.props.dispatch(closeModal());
-        // }
-
-          // this.props.dispatch(closeModal());
-          return this.props.dispatch(login(values.username, values.password));
+        return this.props.dispatch(login(values.username, values.password));
     }
 
     render() {
@@ -54,9 +47,10 @@ export class LoginForm extends React.Component {
                     validate={[required, nonEmpty]}
                 />
                 <div className="button-container">
-                  <button disabled={this.props.pristine || this.props.submitting}>
+                  <button className="login-form" disabled={this.props.pristine || this.props.submitting}>
                       Log in
                   </button>
+                  <DemoButton classes="login-form" />
                   <Link to="/register" onClick={() => this.props.dispatch(closeModal())}>Register</Link>
                 </div>
             </form>

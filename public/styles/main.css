@@ -275,6 +275,9 @@ div.drink-info-container > div.drink-type-imgs-container {
   .modal .boxclose:before {
     content: "×"; }
 
+.login-modal {
+  max-width: 400px; }
+
 .table-simple {
   width: auto;
   display: table;

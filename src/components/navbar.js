@@ -40,7 +40,9 @@ export class Navbar extends React.Component {
               <Link to="/register">Sign Up</Link>
             </li>,
             <li key="3">
-              <div onClick={e => this.props.dispatch(openModal(<LoginForm />))}>Login</div>
+              <div onClick={e => this.props.dispatch(openModal(<LoginForm />))}>
+                Login
+              </div>
             </li>
           ]
         }
