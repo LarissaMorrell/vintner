@@ -28,8 +28,16 @@ button {
   a:hover,
   a:visited {
     color: white;
-    text-decoration: none;
   }
+}
+a > button{
+  text-decoration: none;
+  margin: 0;
+  float:right;
+}
+
+.visit-drink-button {
+  min-width: 100px;
 }
 
 input[type=submit]:hover,
@@ -40,4 +48,15 @@ button:hover {
   background-image: -moz-linear-gradient(bottom, #893d4d 0%, #b54b63 100%);
   background-image: -webkit-linear-gradient(bottom, #893d4d 0%, #b54b63 100%);
   background-image: -ms-linear-gradient(bottom, #893d4d 0%, #b54b63 100%);
-  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #893d4d), color-stop(1, #b54b63)); }
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #893d4d), color-stop(1, #b54b63));
+}
+
+@media only screen and (max-width: 568px) {
+  .sm-screen-center-horizontal {
+    text-align: center;
+  }
+  a > button {
+    float: inherit;
+    margin: 0 auto;
+  }
+}

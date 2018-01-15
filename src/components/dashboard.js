@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 import {Redirect} from 'react-router-dom';
 import {fetchUser} from '../actions/users';
 import DrinkReview from './drink-review';
-import NavPages from './nav-pages';
+// import ReactLoading from 'react-loading';
 
 export class Dashboard extends React.Component {
     componentDidMount() {
@@ -20,22 +20,39 @@ export class Dashboard extends React.Component {
           return <Redirect to="/" />;
       }
       let user = this.props.user;
+
+      //TODO add spinner so undefined user does not display
+      // console.log(Object.getOwnPropertyDescriptor(user, 'username'));
+      // if(!(Object.getOwnPropertyDescriptor(user, 'username'))){
+      // if(!(user.username === undefined)){
+      //   console.log(user.username);
+      //   return(
+      //     <ReactLoading id="loading" className="center-horizontal" type="spin" color="#491722"/>
+      //   );
+      // }
+
+
       let reviews = this.props.user.reviews;
       let drinkReviews;
 
       if(reviews.length > 1){
         drinkReviews = reviews.map((review, i) =>
           <div className="box result-container" key={i}>
-            <div className="dashboard-drink-header">
-              <h1>{review.drink.name}</h1>
+            <div className="pure-g">
+              <div className="pure-u-sm-18-24  pure-u-1-1 sm-screen-center-horizontal">
+                <h1>{review.drink.name}</h1>
+              </div>
+              <div className="pure-u-sm-6-24 pure-u-1-1">
                 <Link to={`/drink/${review.drink._id}`}>
-                  <button>
+                  <button className="visit-drink-button">
                     Visit Drink
                   </button>
                 </Link>
+              </div>
+              <div className="pure-u-1-1">
+                <DrinkReview review={review} type={review.drink.type} drinkId={review.drink._id} user={this.props.user}/>
+              </div>
             </div>
-
-            <DrinkReview review={review} type={review.drink.type} drinkId={review.drink._id} user={this.props.user}/>
           </div>
         );
       } else {
@@ -43,7 +60,6 @@ export class Dashboard extends React.Component {
       }
       return (
           <div className="content-container">
-            <NavPages title="" route="/"/>
             <div className="user-info-container">
               <img src={`/media/avatars/${user.avatar}.png`} alt="avatar" />
               <h1>
