@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import Input from "./input";
 import { login } from "../actions/auth";
 import { closeModal } from "../actions/modal";
-import DemoButton from "./demo-button";
+// import DemoButton from "./demo-button";
 import { required, nonEmpty } from "../validators";
 
 export class LoginForm extends React.Component {
