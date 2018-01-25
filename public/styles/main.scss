@@ -14,20 +14,36 @@ html {
 
 body {
   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-  font-size: 14px;
+  font-size: 15px;
   background-color: $lt-tan;
   position: relative;
   height: 100%;
   min-width: 320px;
-  #root, div, span, p, h1, h2, h3, h4, a, tr, li, button {
-    font-family: 'Montserrat', sans-serif, arial;
+  #root,
+  div,
+  span,
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  a,
+  tr,
+  li,
+  button {
+    font-family: "Montserrat", sans-serif, arial;
   }
 }
-a, p {
+a,
+p {
   word-wrap: break-word;
   word-break: break-word;
 }
-h1, h2, h3, h4, p {
+h1,
+h2,
+h3,
+h4,
+p {
   margin-top: 0px;
   margin-bottom: 10px;
   word-wrap: break-word;
@@ -43,13 +59,13 @@ h3 {
   margin-top: 10px;
 }
 a {
-  color:#a3334c;
+  color: #a3334c;
 }
 a:visited {
-  color:#8e6022;
+  color: #8e6022;
 }
 a:hover {
-  color:#d8a35d;
+  color: #d8a35d;
 }
 tr {
   line-height: 18px;
@@ -103,7 +119,7 @@ li > span {
 #loading {
   margin-top: 45vh;
 }
-.padding-left{
+.padding-left {
   padding-left: 20px;
 }
 .result-title {
@@ -129,9 +145,9 @@ p.result-details {
   margin-right: 30px;
 }
 
-.content-container{
+.content-container {
   margin: 75px auto;
-  max-width:950px;
+  max-width: 950px;
   min-height: 100%;
 }
 .biz-img-container {
@@ -155,22 +171,30 @@ a.page-title {
 .overlay {
   position: absolute;
   width: 100%;
-  height:100%;
+  height: 100%;
 }
 
 div.rating {
   min-width: 50px;
-  margin:15px 0 15px 0px;
+  margin: 15px 0 15px 0px;
   display: inline-block;
 }
 div.review-count {
   display: inline-block;
+  min-width: 135px;
   margin-left: 12px;
 }
-
+div.companies-review-count-container {
+  div.rating {
+    margin-right: 12px;
+  }
+  div.review-count {
+    margin-left: 0px;
+  }
+}
 //gold star rating
 span.checked {
-  color: #FFD700; //gold
+  color: #ffd700; //gold
 }
 span.unchecked {
   color: #a9a9a9; //dark gray
@@ -180,8 +204,8 @@ span.unchecked {
   margin: 30px auto;
   max-width: 950px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  background-color: rgba(#FFFFFF, 0.7);//off-white
-  color:$burgundy;
+  background-color: rgba(#ffffff, 0.7); //off-white
+  color: $burgundy;
   border-radius: 10px;
 }
 
@@ -203,13 +227,13 @@ span.unchecked {
 }
 .dashboard-drink-header {
   h1 {
-    margin:15px 15px 0 15px;
+    margin: 15px 15px 0 15px;
     display: inline-block;
   }
   button {
-    display:inline-block;
-    float:right;
-    top:0;
+    display: inline-block;
+    float: right;
+    top: 0;
     margin: 0;
   }
 }
@@ -226,7 +250,7 @@ img.avatar-icon {
 }
 
 img.drink-type {
-  height:30px;
+  height: 30px;
   margin: 5px;
 }
 
@@ -251,7 +275,7 @@ img.company {
   border-radius: 5px;
 }
 .company-reviews-container {
-  max-width:300px;
+  max-width: 300px;
 
   span.drink-type-imgs-container {
     display: inline-block;
@@ -263,9 +287,9 @@ span > img.drink-type {
   left: 0;
 }
 span.drink-type-imgs-container {
-  display:block;
+  display: block;
 }
-div.drink-info-container > div.drink-type-imgs-container{
+div.drink-info-container > div.drink-type-imgs-container {
   float: left;
   margin-right: 25px;
 
@@ -275,21 +299,21 @@ div.drink-info-container > div.drink-type-imgs-container{
 }
 
 .black-screen {
-  position:fixed;
-  top:0px;
-  right:0px;
-  bottom:0px;
-  left:0px;
-  background-color:rgba(0,0,0,0.7);
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background-color: rgba(0, 0, 0, 0.7);
   z-index: 10;
 }
 .modal {
-  margin:50px auto;
+  margin: 50px auto;
   max-width: 800px;
   min-width: 320px;
-  background-color:#F9F9F1;//off-white
-  color:$burgundy;
-  padding:50px;
+  background-color: #f9f9f1; //off-white
+  color: $burgundy;
+  padding: 50px;
 
   //TODO fix look of this
   max-height: 95vh;
@@ -299,11 +323,11 @@ div.drink-info-container > div.drink-type-imgs-container{
     max-height: 70vh;
   }
 
-  div.boxclose{
-    float:right;
-    margin-top:-60px;
-    margin-right:-60px;
-    cursor:pointer;
+  div.boxclose {
+    float: right;
+    margin-top: -60px;
+    margin-right: -60px;
+    cursor: pointer;
     color: #fff;
     border: 2px solid #a46975;
     border-radius: 30px;
@@ -316,7 +340,7 @@ div.drink-info-container > div.drink-type-imgs-container{
   }
 
   .boxclose:before {
-      content: "×";
+    content: "×";
   }
 }
 .login-modal {
@@ -324,13 +348,13 @@ div.drink-info-container > div.drink-type-imgs-container{
 }
 
 .table-simple {
-    width: auto;
-    display: table;
-    border-collapse: collapse;
-    border-spacing: 0;
+  width: auto;
+  display: table;
+  border-collapse: collapse;
+  border-spacing: 0;
 
-    padding: 0 1em 0 0;
-    border: none;
+  padding: 0 1em 0 0;
+  border: none;
 }
 
 tr {
@@ -340,7 +364,7 @@ tr {
 .hours-table-container {
   max-height: 75px;
 }
-.day-of-the-week .biz-hours{
+.day-of-the-week .biz-hours {
   margin-bottom: 10px;
 }
 .day-of-the-week {
@@ -351,14 +375,14 @@ tr {
 }
 
 footer {
-	background: $dk-burgundy;
+  background: $dk-burgundy;
   color: white;
-	width:100%;
-  position:fixed;
+  width: 100%;
+  position: fixed;
   right: 0;
   bottom: 0;
-	left:0;
-  bottom:0px;
+  left: 0;
+  bottom: 0px;
   padding: 1rem;
   z-index: 10;
 }
@@ -372,18 +396,19 @@ footer {
 
 // For screens with a EXTRA-LARGE screen size or smaller
 @media only screen and (max-width: 1280px) {
-
 }
 
 // For screens with a LARGE screen size or smaller
-@media only screen and (max-width: 1024px) {
-
+@media only screen and (min-width: 890px) {
+  .companies-review-count-container {
+    width: 28%;
+  }
 }
 
 // For screens with a MEDIUM screen size or smaller
 @media only screen and (max-width: 768px) {
   span.drink-type-imgs-container {
-    display:inline-block;
+    display: inline-block;
     padding-left: 20px;
   }
   span.drink-type-imgs-container:first-child {
@@ -421,7 +446,7 @@ footer {
   div.modal {
     padding: 30px 30px 30px 30px;
 
-    div.boxclose{
+    div.boxclose {
       float: initial;
       margin-top: -45px;
       margin-left: -15px;
@@ -444,7 +469,7 @@ footer {
   div.drink-info-container {
     text-align: center;
 
-    div.drink-type-imgs-container{
+    div.drink-type-imgs-container {
       float: initial;
       img {
         margin: 0 auto 25px auto;

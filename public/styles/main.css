@@ -7,19 +7,35 @@ html {
 
 body {
   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-  font-size: 14px;
+  font-size: 15px;
   background-color: #f3f2e1;
   position: relative;
   height: 100%;
   min-width: 320px; }
-  body #root, body div, body span, body p, body h1, body h2, body h3, body h4, body a, body tr, body li, body button {
-    font-family: 'Montserrat', sans-serif, arial; }
+  body #root,
+  body div,
+  body span,
+  body p,
+  body h1,
+  body h2,
+  body h3,
+  body h4,
+  body a,
+  body tr,
+  body li,
+  body button {
+    font-family: "Montserrat", sans-serif, arial; }
 
-a, p {
+a,
+p {
   word-wrap: break-word;
   word-break: break-word; }
 
-h1, h2, h3, h4, p {
+h1,
+h2,
+h3,
+h4,
+p {
   margin-top: 0px;
   margin-bottom: 10px;
   word-wrap: break-word;
@@ -147,10 +163,17 @@ div.rating {
 
 div.review-count {
   display: inline-block;
+  min-width: 135px;
   margin-left: 12px; }
 
+div.companies-review-count-container div.rating {
+  margin-right: 12px; }
+
+div.companies-review-count-container div.review-count {
+  margin-left: 0px; }
+
 span.checked {
-  color: #FFD700; }
+  color: #ffd700; }
 
 span.unchecked {
   color: #a9a9a9; }
@@ -251,7 +274,7 @@ div.drink-info-container > div.drink-type-imgs-container {
   margin: 50px auto;
   max-width: 800px;
   min-width: 320px;
-  background-color: #F9F9F1;
+  background-color: #f9f9f1;
   color: #7b2739;
   padding: 50px;
   max-height: 95vh; }
@@ -321,6 +344,10 @@ footer {
 /*
 *   RESPONSIVE DESIGN ADJUSTMENTS
 */
+@media only screen and (min-width: 890px) {
+  .companies-review-count-container {
+    width: 28%; } }
+
 @media only screen and (max-width: 768px) {
   span.drink-type-imgs-container {
     display: inline-block;
