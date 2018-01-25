@@ -2,9 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { Redirect } from "react-router-dom";
+import ReactLoading from "react-loading";
 import { fetchUser } from "../actions/users";
 import DrinkReview from "./drink-review";
-// import ReactLoading from 'react-loading';
 
 export class Dashboard extends React.Component {
   componentDidMount() {
@@ -22,14 +22,20 @@ export class Dashboard extends React.Component {
     let user = this.props.user;
     console.log(user);
     //TODO add spinner so undefined user does not display
-    // console.log(Object.getOwnPropertyDescriptor(user, 'username'));
-    // if(!(Object.getOwnPropertyDescriptor(user, 'username'))){
-    // if(!(user.username === undefined)){
-    //   console.log(user.username);
-    //   return(
-    //     <ReactLoading id="loading" className="center-horizontal" type="spin" color="#491722"/>
-    //   );
-    // }
+    console.log(Object.getOwnPropertyDescriptor(user, "username"));
+    if (!Object.getOwnPropertyDescriptor(user, "username")) {
+      if (!(user.username === undefined)) {
+        console.log(user.username);
+        return (
+          <ReactLoading
+            id="loading"
+            className="center-horizontal"
+            type="spin"
+            color="#491722"
+          />
+        );
+      }
+    }
 
     let reviews = user.reviews;
     let drinkReviews;
