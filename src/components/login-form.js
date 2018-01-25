@@ -55,11 +55,10 @@ export class LoginForm extends React.Component {
             <DemoButton classes="login-form" />
           </div>
           <p className="center-horizontal">
-            Already have an account?
+            Already have an account?&nbsp;&nbsp;
             <Link
               to="/register"
               onClick={() => this.props.dispatch(closeModal())}
-              className="padding-left"
             >
               Signup
             </Link>
