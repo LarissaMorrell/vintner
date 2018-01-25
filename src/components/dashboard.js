@@ -20,12 +20,9 @@ export class Dashboard extends React.Component {
       return <Redirect to="/" />;
     }
     let user = this.props.user;
-    console.log(user);
     //TODO add spinner so undefined user does not display
-    console.log(Object.getOwnPropertyDescriptor(user, "username"));
     if (!Object.getOwnPropertyDescriptor(user, "username")) {
       if (!(user.username === undefined)) {
-        console.log(user.username);
         return (
           <ReactLoading
             id="loading"
