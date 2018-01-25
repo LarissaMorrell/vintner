@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import Input from "./input";
 import { login } from "../actions/auth";
 import { closeModal } from "../actions/modal";
-// import DemoButton from "./demo-button";
+import DemoButton from "./demo-button";
 import { required, nonEmpty } from "../validators";
 
 export class LoginForm extends React.Component {
@@ -52,7 +52,7 @@ export class LoginForm extends React.Component {
             >
               Log in
             </button>
-            {/*<DemoButton classes="login-form" />*/}
+            <DemoButton classes="login-form" />
             <Link
               to="/register"
               onClick={() => this.props.dispatch(closeModal())}
