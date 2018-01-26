@@ -150,7 +150,8 @@ p.result-details {
 }
 
 .content-container {
-  margin: 75px auto;
+  margin: auto;
+  padding-top: 75px;
   max-width: 950px;
   min-height: 100%;
 }
@@ -382,14 +383,17 @@ footer {
   background: $dk-burgundy;
   color: white;
   width: 100%;
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  bottom: 0px;
   padding: 1rem;
-  z-index: 10;
+  font-size: 13px;
 }
+.footer-wrapper {
+  min-height: 100vh;
+  margin: 0 auto -45px;
+}
+.footer-push {
+  height: 45px;
+}
+
 .drink-result-responsive {
   display: none;
   max-height: 95px;
