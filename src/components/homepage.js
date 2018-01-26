@@ -8,9 +8,9 @@ export function Homepage(props) {
   if (props.loggedIn) {
     return <Redirect to="/dashboard" />;
   }
-  //<img className="glassware-img" src="/media/glasses.png" alt="beverage glasses"/>
+
   return (
-    <div>
+    <div className="landing">
       <div className="video-container">
         <img
           className="wine-pour-mobile"
@@ -24,6 +24,7 @@ export function Homepage(props) {
           loop="true"
         />
         <div className="overlay" />
+        <i className="fa fa-angle-down fa-5x bounce" />
         <div id="edging" />
       </div>
       <div className="background-img" />

@@ -1,0 +1,404 @@
+@charset "UTF-8";
+html {
+  height: 100%; }
+
+* {
+  box-sizing: border-box; }
+
+body {
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  font-size: 15px;
+  background-color: #f3f2e1;
+  position: relative;
+  height: 100%;
+  min-width: 320px; }
+  body #root,
+  body div,
+  body span,
+  body p,
+  body h1,
+  body h2,
+  body h3,
+  body h4,
+  body a,
+  body tr,
+  body li,
+  body button {
+    font-family: "Montserrat", sans-serif, arial; }
+
+a,
+p {
+  word-wrap: break-word;
+  word-break: break-word; }
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin-top: 0px;
+  margin-bottom: 10px;
+  word-wrap: break-word;
+  word-break: break-word; }
+
+h2 {
+  font-size: 20px;
+  font-weight: 600; }
+
+h3 {
+  font-size: 17px;
+  font-weight: 500;
+  margin-top: 10px; }
+
+a {
+  color: #a3334c; }
+
+a:visited {
+  color: #8e6022; }
+
+a:hover {
+  color: #d8a35d; }
+
+tr {
+  line-height: 18px; }
+
+h3.biz-address {
+  margin-bottom: 0; }
+
+.pure-g {
+  letter-spacing: normal; }
+
+ul {
+  list-style-type: none;
+  line-height: 18px; }
+
+ul.horizontal-list {
+  overflow: hidden; }
+  ul.horizontal-list li {
+    font-size: 20px;
+    float: left;
+    display: block;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none; }
+    ul.horizontal-list li i {
+      display: inline-block; }
+
+li > span {
+  font-weight: 600;
+  padding-right: 10px; }
+
+.left-align {
+  text-align: left; }
+
+.inline {
+  display: inline-block; }
+
+.center-column {
+  margin-left: auto;
+  margin-right: auto; }
+
+.center-horizontal {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center; }
+  .center-horizontal * {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center; }
+
+#loading {
+  margin-top: 45vh; }
+
+.padding-left {
+  padding-left: 20px; }
+
+.result-title {
+  margin-bottom: 15px;
+  padding-right: 15px; }
+
+.result-title > a,
+.result-title > h3 {
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  word-wrap: break-word;
+  word-break: break-word; }
+
+p.result-details {
+  line-height: 1.5;
+  word-wrap: break-word;
+  word-break: break-word; }
+
+#drink-info-title {
+  display: inline;
+  margin-right: 30px; }
+
+.content-container {
+  margin: auto;
+  padding-top: 75px;
+  max-width: 950px;
+  min-height: 100%; }
+
+.biz-img-container {
+  width: 175px;
+  padding-right: 20px; }
+
+h2.page-title {
+  display: inline-block;
+  position: relative;
+  top: 5px;
+  left: 30px;
+  font-weight: 300; }
+
+a.page-title {
+  color: black;
+  background: #d7bec3;
+  border-radius: 3px; }
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%; }
+
+div.rating {
+  min-width: 50px;
+  margin: 15px 0 15px 0px;
+  display: inline-block; }
+
+div.review-count {
+  display: inline-block;
+  min-width: 135px;
+  margin-left: 12px; }
+
+div.companies-review-count-container div.rating {
+  margin-right: 12px; }
+
+div.companies-review-count-container div.review-count {
+  margin-left: 0px; }
+
+span.checked {
+  color: #ffd700; }
+
+span.unchecked {
+  color: #a9a9a9; }
+
+.box {
+  margin: 30px auto;
+  max-width: 950px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: rgba(255, 255, 255, 0.7);
+  color: #7b2739;
+  border-radius: 10px; }
+
+.info-container {
+  padding-left: 3%;
+  padding-right: 3%;
+  margin: 45px auto; }
+
+.user-info-container * {
+  display: block;
+  margin: 10px auto;
+  text-align: center; }
+
+.user-info-container img {
+  width: 150px; }
+
+.dashboard-drink-header h1 {
+  margin: 15px 15px 0 15px;
+  display: inline-block; }
+
+.dashboard-drink-header button {
+  display: inline-block;
+  float: right;
+  top: 0;
+  margin: 0; }
+
+.drink-info-container {
+  padding-bottom: 0px; }
+
+.result-container {
+  padding: 15px 25px; }
+
+img.avatar-icon {
+  max-height: 80px;
+  display: block; }
+
+img.drink-type {
+  height: 30px;
+  margin: 5px; }
+
+img.drink-result {
+  float: left;
+  max-height: 95px; }
+
+div.drink-result {
+  margin-left: 120px; }
+
+button.drink-result {
+  margin: 8px 0 18px 0; }
+
+img.company-result {
+  max-width: 100%;
+  border-radius: 5px; }
+
+img.company {
+  width: 100%;
+  min-width: 275px;
+  border-radius: 5px; }
+
+.company-reviews-container {
+  max-width: 300px; }
+  .company-reviews-container span.drink-type-imgs-container {
+    display: inline-block; }
+
+span > img.drink-type {
+  position: relative;
+  top: 15px;
+  left: 0; }
+
+span.drink-type-imgs-container {
+  display: block; }
+
+div.drink-info-container > div.drink-type-imgs-container {
+  float: left;
+  margin-right: 25px; }
+  div.drink-info-container > div.drink-type-imgs-container img {
+    max-width: 75px; }
+
+.black-screen {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 10; }
+
+.modal {
+  margin: 50px auto;
+  max-width: 800px;
+  min-width: 320px;
+  background-color: #f9f9f1;
+  color: #7b2739;
+  padding: 50px;
+  max-height: 95vh; }
+  .modal .scroll {
+    overflow-y: scroll;
+    max-height: 70vh; }
+  .modal div.boxclose {
+    float: right;
+    margin-top: -60px;
+    margin-right: -60px;
+    cursor: pointer;
+    color: #fff;
+    border: 2px solid #a46975;
+    border-radius: 30px;
+    background: #7b2739;
+    font-size: 31px;
+    font-weight: bold;
+    display: inline-block;
+    line-height: 0px;
+    padding: 13px 7px 18px 7px; }
+  .modal .boxclose:before {
+    content: "×"; }
+
+.login-modal {
+  max-width: 400px; }
+
+.table-simple {
+  width: auto;
+  display: table;
+  border-collapse: collapse;
+  border-spacing: 0;
+  padding: 0 1em 0 0;
+  border: none; }
+
+tr {
+  display: table-row;
+  padding-bottom: 10px; }
+
+.hours-table-container {
+  max-height: 75px; }
+
+.day-of-the-week .biz-hours {
+  margin-bottom: 10px; }
+
+.day-of-the-week {
+  min-width: 36px;
+  padding-right: 18px;
+  text-align: left;
+  font-weight: bold; }
+
+footer {
+  background: #491722;
+  color: white;
+  width: 100%;
+  padding: 1rem;
+  font-size: 13px; }
+
+.footer-wrapper {
+  min-height: 100vh;
+  margin: 0 auto -45px; }
+
+.footer-push {
+  height: 45px; }
+
+.drink-result-responsive {
+  display: none;
+  max-height: 95px; }
+
+/*
+*   RESPONSIVE DESIGN ADJUSTMENTS
+*/
+@media only screen and (min-width: 890px) {
+  .companies-review-count-container {
+    width: 28%; } }
+
+@media only screen and (max-width: 768px) {
+  span.drink-type-imgs-container {
+    display: inline-block;
+    padding-left: 20px; }
+  span.drink-type-imgs-container:first-child {
+    padding-left: 20px; }
+  button.drink-result {
+    display: inline-block;
+    margin-right: 20px; } }
+
+@media only screen and (max-width: 568px) {
+  #company-info {
+    order: 2; }
+  #company-info-img {
+    order: 1;
+    padding-bottom: 15px; }
+  img.drink-result {
+    display: none; }
+  .drink-result-responsive {
+    display: block; }
+  div.drink-result {
+    margin-left: 0; }
+  button.drink-result {
+    margin: 8px; }
+  div.modal {
+    padding: 30px 30px 30px 30px; }
+    div.modal div.boxclose {
+      float: initial;
+      margin-top: -45px;
+      margin-left: -15px; }
+  div.biz-img-container {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 8px 0 20px 0;
+    width: 240px; } }
+
+@media only screen and (max-width: 400px) {
+  .padding-left {
+    padding-left: 0; }
+  .result-container {
+    padding: 15px; }
+  div.drink-info-container {
+    text-align: center; }
+    div.drink-info-container div.drink-type-imgs-container {
+      float: initial; }
+      div.drink-info-container div.drink-type-imgs-container img {
+        margin: 0 auto 25px auto; } }
