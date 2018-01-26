@@ -15,12 +15,17 @@ form {
 .form-error {
   color: red; }
 
+.radio-avatar-container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 105px; }
+
 label {
   display: block;
   margin-bottom: 8px; }
 
 .button-container {
-  margin: 0px auto;
+  margin: 12px auto;
   width: 340px; }
   .button-container button,
   .button-container a {
@@ -28,7 +33,7 @@ label {
     margin-left: auto;
     margin-right: auto;
     text-align: center; }
-  .button-container button.login-form {
+  .button-container button.form {
     display: inline-block;
     margin: 8px 8px 20px 8px; }
 
@@ -45,38 +50,38 @@ fieldset {
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   margin: 0px 0px 10px 0px;
-  border: 1px solid #FFD2D2;
+  border: 1px solid #ffd2d2;
   padding: 20px;
-  background: #FFF4F4;
-  box-shadow: inset 0px 0px 15px #FFE5E5;
-  -moz-box-shadow: inset 0px 0px 15px #FFE5E5;
-  -webkit-box-shadow: inset 0px 0px 15px #FFE5E5; }
+  background: #fff4f4;
+  box-shadow: inset 0px 0px 15px #ffe5e5;
+  -moz-box-shadow: inset 0px 0px 15px #ffe5e5;
+  -webkit-box-shadow: inset 0px 0px 15px #ffe5e5; }
 
 fieldset legend {
-  color: #FFA0C9;
-  border-top: 1px solid #FFD2D2;
-  border-left: 1px solid #FFD2D2;
-  border-right: 1px solid #FFD2D2;
+  color: #ffa0c9;
+  border-top: 1px solid #ffd2d2;
+  border-left: 1px solid #ffd2d2;
+  border-right: 1px solid #ffd2d2;
   border-radius: 5px 5px 0px 0px;
   -webkit-border-radius: 5px 5px 0px 0px;
   -moz-border-radius: 5px 5px 0px 0px;
-  background: #FFF4F4;
+  background: #fff4f4;
   padding: 0px 8px 3px 8px;
-  box-shadow: -0px -1px 2px #F1F1F1;
-  -moz-box-shadow: -0px -1px 2px #F1F1F1;
-  -webkit-box-shadow: -0px -1px 2px #F1F1F1;
+  box-shadow: -0px -1px 2px #f1f1f1;
+  -moz-box-shadow: -0px -1px 2px #f1f1f1;
+  -webkit-box-shadow: -0px -1px 2px #f1f1f1;
   font-weight: normal;
   font-size: 12px; }
 
-input[type=text],
-input[type=password],
-input[type=date],
-input[type=datetime],
-input[type=number],
-input[type=search],
-input[type=time],
-input[type=url],
-input[type=email],
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="datetime"],
+input[type="number"],
+input[type="search"],
+input[type="time"],
+input[type="url"],
+input[type="email"],
 select,
 textarea {
   border-radius: 3px;
@@ -101,8 +106,7 @@ textarea {
 select {
   width: 50%; }
 
-input[type=button]
-input[type=submit],
+input[type="button"] input[type="submit"],
 button {
   margin: 15px; }
 
@@ -110,23 +114,23 @@ button {
   color: red;
   font-weight: normal; }
 
-input[type=radio] {
+input[type="radio"] {
   position: absolute; }
 
-input[type=checkbox]:not(old),
-input[type=radio]:not(old) {
+input[type="checkbox"]:not(old),
+input[type="radio   "]:not(old) {
   width: 2em;
   margin: 0;
   padding: 0;
   font-size: 1em; }
 
-input[type=checkbox]:not(old) + label,
-input[type=radio]:not(old) + label {
+input[type="checkbox"]:not(old) + label,
+input[type="radio   "]:not(old) + label {
   display: inline-block;
   line-height: 1.5em; }
 
-input[type=checkbox]:not(old) + label > span,
-input[type=radio]:not(old) + label > span {
+input[type="checkbox"]:not(old) + label > span,
+input[type="radio   "]:not(old) + label > span {
   display: inline-block;
   width: 0.875em;
   height: 0.875em;
@@ -141,16 +145,16 @@ input[type=radio]:not(old) + label > span {
   background-image: linear-gradient(#f0f0f0, #e0e0e0);
   vertical-align: bottom; }
 
-input[type=checkbox]:not(old):checked + label > span,
-input[type=radio]:not(old):checked + label > span {
+input[type="checkbox"]:not(old):checked + label > span,
+input[type="radio   "]:not(old):checked + label > span {
   background-image: -moz-linear-gradient(#e0e0e0, #f0f0f0);
   background-image: -ms-linear-gradient(#e0e0e0, #f0f0f0);
   background-image: -o-linear-gradient(#e0e0e0, #f0f0f0);
   background-image: -webkit-linear-gradient(#e0e0e0, #f0f0f0);
   background-image: linear-gradient(#e0e0e0, #f0f0f0); }
 
-input[type=checkbox]:not(old):checked + label > span:before {
-  content: '✓';
+input[type="checkbox"]:not(old):checked + label > span:before {
+  content: "✓";
   display: block;
   width: 1em;
   color: #99cc66;
@@ -160,7 +164,7 @@ input[type=checkbox]:not(old):checked + label > span:before {
   text-shadow: 0 0 0.0714em #73994d;
   font-weight: bold; }
 
-input[type=radio]:not(old):checked + label > span > span {
+input[type="radio"]:not(old):checked + label > span > span {
   display: block;
   width: 0.5em;
   height: 0.5em;
@@ -186,3 +190,7 @@ input[type=radio]:not(old):checked + label > span > span {
 @media only screen and (max-width: 568px) {
   img.radio-avatar {
     margin-left: 20px; } }
+
+@media only screen and (max-width: 400px) {
+  .radio-avatar-container {
+    width: 100%; } }

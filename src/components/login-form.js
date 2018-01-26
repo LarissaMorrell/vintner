@@ -47,12 +47,12 @@ export class LoginForm extends React.Component {
           />
           <div className="button-container">
             <button
-              className="login-form"
+              className="form"
               disabled={this.props.pristine || this.props.submitting}
             >
               Log in
             </button>
-            <DemoButton classes="login-form" />
+            <DemoButton classes="form" />
           </div>
           <p className="center-horizontal">
             Already have an account?&nbsp;&nbsp;

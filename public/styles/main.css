@@ -94,6 +94,10 @@ li > span {
 .inline {
   display: inline-block; }
 
+.center-column {
+  margin-left: auto;
+  margin-right: auto; }
+
 .center-horizontal {
   margin-left: auto;
   margin-right: auto;

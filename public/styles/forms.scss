@@ -1,6 +1,7 @@
 form {
   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-  margin: 0 auto; }
+  margin: 0 auto;
+}
 
 #registration-box {
   max-width: 900px;
@@ -15,23 +16,29 @@ form {
 .form-error {
   color: red;
 }
+.radio-avatar-container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 105px;
+}
 
 label {
   display: block;
-  margin-bottom: 8px;}
+  margin-bottom: 8px;
+}
 
 .button-container {
-  margin: 0px auto;
+  margin: 12px auto;
   width: 340px;
   button,
   a {
-    display:block;
+    display: block;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
   }
-  button.login-form {
-    display:inline-block;
+  button.form {
+    display: inline-block;
     margin: 8px 8px 20px 8px;
   }
 }
@@ -42,45 +49,48 @@ label > span {
   color: #a3334c;
   font-weight: bold;
   font-size: 13px;
-  text-shadow: 1px 1px 1px #fff; }
+  text-shadow: 1px 1px 1px #fff;
+}
 
 fieldset {
   border-radius: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   margin: 0px 0px 10px 0px;
-  border: 1px solid #FFD2D2;
+  border: 1px solid #ffd2d2;
   padding: 20px;
-  background: #FFF4F4;
-  box-shadow: inset 0px 0px 15px #FFE5E5;
-  -moz-box-shadow: inset 0px 0px 15px #FFE5E5;
-  -webkit-box-shadow: inset 0px 0px 15px #FFE5E5; }
+  background: #fff4f4;
+  box-shadow: inset 0px 0px 15px #ffe5e5;
+  -moz-box-shadow: inset 0px 0px 15px #ffe5e5;
+  -webkit-box-shadow: inset 0px 0px 15px #ffe5e5;
+}
 
 fieldset legend {
-  color: #FFA0C9;
-  border-top: 1px solid #FFD2D2;
-  border-left: 1px solid #FFD2D2;
-  border-right: 1px solid #FFD2D2;
+  color: #ffa0c9;
+  border-top: 1px solid #ffd2d2;
+  border-left: 1px solid #ffd2d2;
+  border-right: 1px solid #ffd2d2;
   border-radius: 5px 5px 0px 0px;
   -webkit-border-radius: 5px 5px 0px 0px;
   -moz-border-radius: 5px 5px 0px 0px;
-  background: #FFF4F4;
+  background: #fff4f4;
   padding: 0px 8px 3px 8px;
-  box-shadow: -0px -1px 2px #F1F1F1;
-  -moz-box-shadow: -0px -1px 2px #F1F1F1;
-  -webkit-box-shadow: -0px -1px 2px #F1F1F1;
+  box-shadow: -0px -1px 2px #f1f1f1;
+  -moz-box-shadow: -0px -1px 2px #f1f1f1;
+  -webkit-box-shadow: -0px -1px 2px #f1f1f1;
   font-weight: normal;
-  font-size: 12px; }
+  font-size: 12px;
+}
 
-input[type=text],
-input[type=password],
-input[type=date],
-input[type=datetime],
-input[type=number],
-input[type=search],
-input[type=time],
-input[type=url],
-input[type=email],
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="datetime"],
+input[type="number"],
+input[type="search"],
+input[type="time"],
+input[type="url"],
+input[type="email"],
 select,
 textarea {
   border-radius: 3px;
@@ -97,115 +107,134 @@ textarea {
   width: 100%;
   height: 35px;
   font-size: 14px;
-  margin-bottom: 15px; }
+  margin-bottom: 15px;
+}
 
 textarea {
-  height: 150px; }
+  height: 150px;
+}
 
 select {
-  width: 50%}
+  width: 50%;
+}
 
-input[type=button]
-input[type=submit],
+input[type="button"] input[type="submit"],
 button {
   margin: 15px;
 }
 
 .required {
   color: red;
-  font-weight: normal; }
+  font-weight: normal;
+}
 
 //the radio in the top corner
-input[type=radio] {
+input[type="radio"] {
   position: absolute;
 }
 
 //hide the box and radio
-input[type=checkbox]:not(old),
-input[type=radio   ]:not(old){
-  width     : 2em;
-  margin    : 0;
-  padding   : 0;
-  font-size : 1em;
+input[type="checkbox"]:not(old),
+input[type="radio   "]:not(old) {
+  width: 2em;
+  margin: 0;
+  padding: 0;
+  font-size: 1em;
 }
 
 //position the label
-input[type=checkbox]:not(old) + label,
-input[type=radio   ]:not(old) + label{
-  display      : inline-block;
-  line-height  : 1.5em;
+input[type="checkbox"]:not(old) + label,
+input[type="radio   "]:not(old) + label {
+  display: inline-block;
+  line-height: 1.5em;
 }
 
 //style the first span
-input[type=checkbox]:not(old) + label > span,
-input[type=radio   ]:not(old) + label > span{
-  display          : inline-block;
-  width            : 0.875em;
-  height           : 0.875em;
-  margin           : 0.25em 0.5em 0.25em 0.25em;
-  border           : 0.0625em solid rgb(192,192,192);
-  border-radius    : 0.25em;
-  background       : rgb(224,224,224);
-  background-image :    -moz-linear-gradient(rgb(240,240,240),rgb(224,224,224));
-  background-image :     -ms-linear-gradient(rgb(240,240,240),rgb(224,224,224));
-  background-image :      -o-linear-gradient(rgb(240,240,240),rgb(224,224,224));
-  background-image : -webkit-linear-gradient(rgb(240,240,240),rgb(224,224,224));
-  background-image :         linear-gradient(rgb(240,240,240),rgb(224,224,224));
-  vertical-align   : bottom;
+input[type="checkbox"]:not(old) + label > span,
+input[type="radio   "]:not(old) + label > span {
+  display: inline-block;
+  width: 0.875em;
+  height: 0.875em;
+  margin: 0.25em 0.5em 0.25em 0.25em;
+  border: 0.0625em solid rgb(192, 192, 192);
+  border-radius: 0.25em;
+  background: rgb(224, 224, 224);
+  background-image: -moz-linear-gradient(
+    rgb(240, 240, 240),
+    rgb(224, 224, 224)
+  );
+  background-image: -ms-linear-gradient(rgb(240, 240, 240), rgb(224, 224, 224));
+  background-image: -o-linear-gradient(rgb(240, 240, 240), rgb(224, 224, 224));
+  background-image: -webkit-linear-gradient(
+    rgb(240, 240, 240),
+    rgb(224, 224, 224)
+  );
+  background-image: linear-gradient(rgb(240, 240, 240), rgb(224, 224, 224));
+  vertical-align: bottom;
 }
 
-input[type=checkbox]:not(old):checked + label > span,
-input[type=radio   ]:not(old):checked + label > span{
-  background-image :    -moz-linear-gradient(rgb(224,224,224),rgb(240,240,240));
-  background-image :     -ms-linear-gradient(rgb(224,224,224),rgb(240,240,240));
-  background-image :      -o-linear-gradient(rgb(224,224,224),rgb(240,240,240));
-  background-image : -webkit-linear-gradient(rgb(224,224,224),rgb(240,240,240));
-  background-image :         linear-gradient(rgb(224,224,224),rgb(240,240,240));
+input[type="checkbox"]:not(old):checked + label > span,
+input[type="radio   "]:not(old):checked + label > span {
+  background-image: -moz-linear-gradient(
+    rgb(224, 224, 224),
+    rgb(240, 240, 240)
+  );
+  background-image: -ms-linear-gradient(rgb(224, 224, 224), rgb(240, 240, 240));
+  background-image: -o-linear-gradient(rgb(224, 224, 224), rgb(240, 240, 240));
+  background-image: -webkit-linear-gradient(
+    rgb(224, 224, 224),
+    rgb(240, 240, 240)
+  );
+  background-image: linear-gradient(rgb(224, 224, 224), rgb(240, 240, 240));
 }
 
 //tick inside checkboxes
-input[type=checkbox]:not(old):checked + label > span:before{
-  content     : '✓';
-  display     : block;
-  width       : 1em;
-  color       : rgb(153,204,102);
-  font-size   : 0.875em;
-  line-height : 1em;
-  text-align  : center;
-  text-shadow : 0 0 0.0714em rgb(115,153,77);
-  font-weight : bold;
+input[type="checkbox"]:not(old):checked + label > span:before {
+  content: "✓";
+  display: block;
+  width: 1em;
+  color: rgb(153, 204, 102);
+  font-size: 0.875em;
+  line-height: 1em;
+  text-align: center;
+  text-shadow: 0 0 0.0714em rgb(115, 153, 77);
+  font-weight: bold;
 }
 
 //display bullet inside radio
-input[type=radio]:not(old):checked + label > span > span{
-  display          : block;
-  width            : 0.5em;
-  height           : 0.5em;
-  margin           : 0.125em;
-  border           : 0.0625em solid rgb(115,153,77);
-  border-radius    : 0.125em;
-  background       : rgb(153,204,102);
-  background-image :    -moz-linear-gradient(rgb(179,217,140),rgb(153,204,102));
-  background-image :     -ms-linear-gradient(rgb(179,217,140),rgb(153,204,102));
-  background-image :      -o-linear-gradient(rgb(179,217,140),rgb(153,204,102));
-  background-image : -webkit-linear-gradient(rgb(179,217,140),rgb(153,204,102));
-  background-image :         linear-gradient(rgb(179,217,140),rgb(153,204,102));
+input[type="radio"]:not(old):checked + label > span > span {
+  display: block;
+  width: 0.5em;
+  height: 0.5em;
+  margin: 0.125em;
+  border: 0.0625em solid rgb(115, 153, 77);
+  border-radius: 0.125em;
+  background: rgb(153, 204, 102);
+  background-image: -moz-linear-gradient(
+    rgb(179, 217, 140),
+    rgb(153, 204, 102)
+  );
+  background-image: -ms-linear-gradient(rgb(179, 217, 140), rgb(153, 204, 102));
+  background-image: -o-linear-gradient(rgb(179, 217, 140), rgb(153, 204, 102));
+  background-image: -webkit-linear-gradient(
+    rgb(179, 217, 140),
+    rgb(153, 204, 102)
+  );
+  background-image: linear-gradient(rgb(179, 217, 140), rgb(153, 204, 102));
 }
 
 // For screens with a EXTRA-LARGE screen size or smaller
 @media only screen and (max-width: 1280px) {
-
 }
 
 // For screens with a LARGE screen size or smaller
 @media only screen and (max-width: 1024px) {
-
 }
 
 // For screens with a MEDIUM screen size or smaller
 @media only screen and (max-width: 768px) {
   span.drink-type-imgs-container {
-    display:inline-block;
+    display: inline-block;
     padding-left: 20px;
   }
   span.drink-type-imgs-container:first-child {
@@ -223,5 +252,7 @@ input[type=radio]:not(old):checked + label > span > span{
   }
 }
 @media only screen and (max-width: 400px) {
-
+  .radio-avatar-container {
+    width: 100%;
+  }
 }
