@@ -10,12 +10,16 @@ $lt-tan: #f3f2e1;
   max-width: 100%;
   margin-top: 50px;
   background-color: $lt-tan;
-  video {
+  video.wine-pour-desktop,
+  img.wine-pour-mobile {
     position: absolute;
     bottom: 0;
     top: 0;
     left: 0;
     width: 100%;
+  }
+  img.wine-pour-mobile {
+    display: none;
   }
   /* overlay position and dimensions in main.scss */
   .overlay {
@@ -416,6 +420,13 @@ $lt-tan: #f3f2e1;
 @media only screen and (max-width: 425px) {
   .video-container {
     height: 230px;
+
+    img.wine-pour-mobile {
+      display: initial;
+    }
+    .wine-pour-desktop {
+      display: none;
+    }
   }
 }
 @media only screen and (max-width: 375px) {

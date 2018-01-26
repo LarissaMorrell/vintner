@@ -12,7 +12,17 @@ export function Homepage(props) {
   return (
     <div>
       <div className="video-container">
-        <video src="/media/wine-pour.mp4" autoPlay="true" loop="true" />
+        <img
+          className="wine-pour-mobile"
+          src="https://img.vancouverclub.ca/images/Wine-Pour-2.jpg"
+          alt="wine pour image"
+        />
+        <video
+          className="wine-pour-desktop"
+          src="/media/wine-pour.mp4"
+          autoPlay="true"
+          loop="true"
+        />
         <div className="overlay" />
         <div id="bottles-banner" />
       </div>
