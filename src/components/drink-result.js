@@ -54,9 +54,9 @@ export class DrinkResult extends React.Component {
                 >
                   Write Review
                 </button>
-                <button className="drink-result">
-                  <Link to={`/drink/${drink.id}`}>Read Reviews</Link>
-                </button>
+                <Link to={`/drink/${drink.id}`}>
+                  <button className="drink-result">Read Reviews</button>
+                </Link>
               </div>
             </div>
           </div>
