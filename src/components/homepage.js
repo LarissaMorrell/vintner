@@ -15,7 +15,7 @@ export function Homepage(props) {
         <img
           className="wine-pour-mobile"
           src="https://img.vancouverclub.ca/images/Wine-Pour-2.jpg"
-          alt="wine pour image"
+          alt="wine pour"
         />
         <video
           className="wine-pour-desktop"
