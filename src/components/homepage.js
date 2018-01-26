@@ -24,7 +24,7 @@ export function Homepage(props) {
           loop="true"
         />
         <div className="overlay" />
-        <div id="bottles-banner" />
+        <div id="edging" />
       </div>
       <div className="background-img" />
       <div className="homepage-descriptions-container">
