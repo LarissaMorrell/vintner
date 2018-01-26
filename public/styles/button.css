@@ -1,5 +1,5 @@
-input[type=submit],
-input[type=button],
+input[type="submit"],
+input[type="button"],
 button {
   display: block;
   text-decoration: none;
@@ -23,21 +23,21 @@ button {
   -webkit-box-shadow: 0px 6px 0px #7b2739, 0px 3px 15px rgba(0, 0, 0, 0.4);
   -moz-box-shadow: 0px 6px 0px #7b2739, 0px 3px 15px rgba(0, 0, 0, 0.4);
   box-shadow: 0px 6px 0px #37131a, 0px 3px 15px rgba(0, 0, 0, 0.4); }
-  input[type=submit] a,
-  input[type=submit] a:hover,
-  input[type=submit] a:visited,
-  input[type=button] a,
-  input[type=button] a:hover,
-  input[type=button] a:visited,
+  input[type="submit"] a,
+  input[type="submit"] a:hover,
+  input[type="submit"] a:visited,
+  input[type="button"] a,
+  input[type="button"] a:hover,
+  input[type="button"] a:visited,
   button a,
   button a:hover,
   button a:visited {
     color: white; }
 
-a > button {
+a > button,
+a.drink-result-button {
   text-decoration: none;
-  margin: 0;
-  float: right; }
+  margin: 0; }
 
 button > a {
   text-decoration: none; }
@@ -45,8 +45,8 @@ button > a {
 .visit-drink-button {
   min-width: 100px; }
 
-input[type=submit]:hover,
-input[type=button]:hover,
+input[type="submit"]:hover,
+input[type="button"]:hover,
 button:hover {
   background-image: linear-gradient(bottom, #893d4d 0%, #b54b63 100%);
   background-image: -o-linear-gradient(bottom, #893d4d 0%, #b54b63 100%);

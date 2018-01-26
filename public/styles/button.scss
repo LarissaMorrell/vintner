@@ -1,5 +1,5 @@
-input[type=submit],
-input[type=button],
+input[type="submit"],
+input[type="button"],
 button {
   display: block;
   text-decoration: none;
@@ -15,7 +15,13 @@ button {
   background-image: -moz-linear-gradient(bottom, #7b2739 0%, #ad3852 100%);
   background-image: -webkit-linear-gradient(bottom, #7b2739 0%, #ad3852 100%);
   background-image: -ms-linear-gradient(bottom, #7b2739 0%, #ad3852 100%);
-  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #772e3e), color-stop(1, #952f45));
+  background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    color-stop(0, #772e3e),
+    color-stop(1, #952f45)
+  );
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
   border-radius: 8px;
@@ -30,10 +36,10 @@ button {
     color: white;
   }
 }
-a > button{
+a > button,
+a.drink-result-button {
   text-decoration: none;
   margin: 0;
-  float:right;
 }
 button > a {
   text-decoration: none;
@@ -43,15 +49,21 @@ button > a {
   min-width: 100px;
 }
 
-input[type=submit]:hover,
-input[type=button]:hover,
+input[type="submit"]:hover,
+input[type="button"]:hover,
 button:hover {
   background-image: linear-gradient(bottom, #893d4d 0%, #b54b63 100%);
   background-image: -o-linear-gradient(bottom, #893d4d 0%, #b54b63 100%);
   background-image: -moz-linear-gradient(bottom, #893d4d 0%, #b54b63 100%);
   background-image: -webkit-linear-gradient(bottom, #893d4d 0%, #b54b63 100%);
   background-image: -ms-linear-gradient(bottom, #893d4d 0%, #b54b63 100%);
-  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #893d4d), color-stop(1, #b54b63));
+  background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    color-stop(0, #893d4d),
+    color-stop(1, #b54b63)
+  );
 }
 
 @media only screen and (max-width: 568px) {

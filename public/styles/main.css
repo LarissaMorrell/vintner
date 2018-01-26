@@ -235,7 +235,7 @@ div.drink-result {
   margin-left: 120px; }
 
 button.drink-result {
-  margin-left: 0px; }
+  margin: 8px 0 18px 0; }
 
 img.company-result {
   max-width: 100%;
@@ -359,7 +359,8 @@ footer {
   span.drink-type-imgs-container:first-child {
     padding-left: 20px; }
   button.drink-result {
-    display: inline-block; } }
+    display: inline-block;
+    margin-right: 20px; } }
 
 @media only screen and (max-width: 568px) {
   #company-info {
