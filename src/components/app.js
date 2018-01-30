@@ -12,6 +12,7 @@ import DrinkReviewsPage from "./drink-reviews-page";
 import Footer from "./footer";
 import Modal from "./modal";
 import { refreshAuthToken } from "../actions/auth";
+import { wakeupServer } from "../actions/wake";
 
 export class App extends React.Component {
   componentDidMount() {
@@ -20,6 +21,7 @@ export class App extends React.Component {
       // localStorage
       this.props.dispatch(refreshAuthToken());
     }
+    this.props.dispatch(wakeupServer());
   }
 
   componentWillReceiveProps(nextProps) {
