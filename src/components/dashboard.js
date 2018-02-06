@@ -20,7 +20,6 @@ export class Dashboard extends React.Component {
       return <Redirect to="/" />;
     }
     let user = this.props.user;
-    //TODO add spinner so undefined user does not display
     if (!Object.getOwnPropertyDescriptor(user, "username")) {
       if (!(user.username === undefined)) {
         return (

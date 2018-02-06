@@ -1,9 +1,8 @@
-import React from 'react';
-import {shallow, mount} from 'enzyme';
+import React from "react";
+import { shallow, mount } from "enzyme";
+import { Dashboard } from "../components/dashboard";
 
-import {Dashboard} from '../components/dashboard';
-
-describe('<Dashboard />', () => {
+describe("<Dashboard />", () => {
   let user = {
     id: "5a43df85e5662405fc2cf553",
     firstName: "John",
@@ -22,9 +21,9 @@ describe('<Dashboard />', () => {
         drink: {}
       }
     ]
-  }
+  };
 
-  it('Renders without crashing', () => {
-    shallow(<Dashboard user={user} loggedIn="true" dispatch={() => {}}/>);
+  it("Renders without crashing", () => {
+    shallow(<Dashboard user={user} loggedIn="true" dispatch={() => {}} />);
   });
 });

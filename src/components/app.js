@@ -17,8 +17,6 @@ import { wakeupServer } from "../actions/wake";
 export class App extends React.Component {
   componentDidMount() {
     if (this.props.hasAuthToken) {
-      // Try to get a fresh auth token if we had an existing one in
-      // localStorage
       this.props.dispatch(refreshAuthToken());
     }
     this.props.dispatch(wakeupServer());
@@ -85,5 +83,4 @@ const mapStateToProps = state => ({
   formComponent: state.modal.formComponent
 });
 
-// Deal with update blocking - https://reacttraining.com/react-router/web/guides/dealing-with-update-blocking
 export default withRouter(connect(mapStateToProps)(App));
