@@ -5,7 +5,7 @@ import DrinkResult from "./drink-result";
 import NavPages from "./nav-pages";
 import { getCompany } from "../actions/companies";
 
-import CreateReviewForm from "./create-review-form";
+import CreateDrinkForm from "./create-drink-form";
 import { openModal } from "../actions/modal";
 import LoginForm from "./login-form";
 
@@ -13,9 +13,9 @@ export class CompanyPage extends React.Component {
   componentDidMount() {
     this.props.dispatch(getCompany(this.props.match.params.companyId));
   }
-  createDrink(drink) {
+  createDrink(company) {
     if (this.props.loggedIn) {
-      this.props.dispatch(openModal(<CreateReviewForm drink={drink} />));
+      this.props.dispatch(openModal(<CreateDrinkForm company={company} />));
     } else {
       this.props.dispatch(openModal(<LoginForm />));
     }
@@ -36,7 +36,7 @@ export class CompanyPage extends React.Component {
           id="write-review"
           onClick={() => this.createDrink(this.props.company)}
         >
-          Write Review
+          Add Drink
         </button>
         <CompanyInfo company={this.props.company} />
         {drinkList}

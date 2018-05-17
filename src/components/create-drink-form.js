@@ -2,43 +2,45 @@ import React from "react";
 import { Field, reduxForm, focus } from "redux-form"; //focus
 // import DropDownSelect from './drop-down-select';
 import Input from "./input";
-// import CheckboxGroup from './checkbox-group';
-// import {required, length} from '../validators'; //matches
+import RadioGroup from "./radio-group";
+import { required, length } from "../validators"; //matches
 import { postDrink } from "../actions/drinks";
 
-export class CreateReviewForm extends React.Component {
-  onSubmit(review) {
-    review.drink = this.props.drink.id;
-    this.props.dispatch(postReview(review));
+export class CreateDrinkForm extends React.Component {
+  onSubmit(Drink) {
+    Drink.company = this.props.company.id;
+    this.props.dispatch(postDrink(Drink));
   }
 
   render() {
-    let drinkType = this.props.drink.type;
+    let company = this.props.company;
 
     return (
       <div className="box-form">
         <div className="scroll">
           <h2 className="form-title">
-            Create a drink for
-            <br />
-            {this.props.company.name}
+            {`Create a drink for ${this.props.company.name}`}
           </h2>
           <form
             className="drink-form"
             onSubmit={this.props.handleSubmit(values => this.onSubmit(values))}
           >
-            <label htmlFor="title">
-              What would you like to call your review?
-            </label>
+            <label htmlFor="name">Name</label>
             <Field
               component={Input}
               type="text"
-              name="title"
-              placeholder={`This ${drinkType} tickles my fancy...`}
-              validate={[required, length({ min: 0, max: 75 })]}
+              name="name"
+              placeholder={`This tickles my fancy...`}
+              validate={[required, length({ min: 0, max: 50 })]}
+            />
+            <label htmlFor="type">Type</label>
+            <Field
+              component={RadioGroup}
+              name="type"
+              imgFileNames={["beer", "wine", "mead", "cider", "spirit"]}
             />
             <div className="button-container">
-              <button type="submit">Create Review</button>
+              <button type="submit">Add Drink</button>
             </div>
           </form>
         </div>

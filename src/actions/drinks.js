@@ -31,7 +31,6 @@ export const postDrink = drink => (dispatch, getState) => {
     })
     .then(review => {
       dispatch(closeModal());
-      // dispatch(getDrink(review.drink));
     })
     .catch(err => {});
 };
