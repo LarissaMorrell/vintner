@@ -4,7 +4,7 @@ import { Field, reduxForm, focus } from "redux-form";
 import { registerUser } from "../actions/users";
 import { login } from "../actions/auth";
 import Input from "./input";
-import RadioImgGroup from "./radio-img-group";
+import RadioGroup from "./radio-group";
 import { required, nonEmpty, matches, length, isTrimmed } from "../validators";
 
 //for the link to the login page. Open login modal on redirect to dashboard
@@ -64,22 +64,9 @@ export class RegistrationForm extends React.Component {
             validate={[required, nonEmpty, matches("password")]}
           />
           <Field
-            component={RadioImgGroup}
+            component={RadioGroup}
             name="avatar"
-            imgFileNames={[
-              "boy1",
-              "boy2",
-              "boy3",
-              "boy4",
-              "boy5",
-              "boy6",
-              "girl1",
-              "girl2",
-              "girl3",
-              "girl4",
-              "girl5",
-              "girl6"
-            ]}
+            labels={generateRadioLabels()}
           />
           <div className="button-container">
             <button
@@ -104,6 +91,34 @@ export class RegistrationForm extends React.Component {
       </div>
     );
   }
+}
+function generateRadioLabels() {
+  let imgFileNames = [
+    "boy1",
+    "boy2",
+    "boy3",
+    "boy4",
+    "boy5",
+    "boy6",
+    "girl1",
+    "girl2",
+    "girl3",
+    "girl4",
+    "girl5",
+    "girl6"
+  ];
+  return imgFileNames.map(file => {
+    return {
+      value: file,
+      labelContent: (
+        <img
+          className="radio-avatar"
+          src={`/media/avatars/${file}.png`}
+          alt="avatar"
+        />
+      )
+    };
+  });
 }
 
 export default reduxForm({
