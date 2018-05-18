@@ -2,27 +2,19 @@ import React from "react";
 
 class RadioGroup extends React.Component {
   radioGroup() {
-    let imgFileNames = this.props.imgFileNames;
-    let { label, input } = this.props;
-
-    return imgFileNames.map((file, index) => {
+    console.log(this.props);
+    return this.props.labels.map((label, index) => {
       return (
         <div className="pure-u-1-2 pure-u-sm-1-3 pure-u-md-1-4" key={index}>
-          <div className="radio-avatar-container">
+          <div className="radio-container">
             <input
               type="radio"
-              name="avatar"
-              value={file}
-              id={file}
-              onChange={event => input.onChange(file)}
+              name={this.props.input.name}
+              value={label.value}
+              id={label.value}
+              onChange={event => this.props.input.onChange(label.value)}
             />
-            <label htmlFor={file}>
-              <img
-                className="radio-avatar"
-                src={`/media/avatars/${file}.png`}
-                alt="avatar"
-              />
-            </label>
+            <label htmlFor={label.value}>{label.labelContent}</label>
           </div>
         </div>
       );
@@ -30,7 +22,7 @@ class RadioGroup extends React.Component {
   }
 
   render() {
-    return <div className="avatar-form pure-g">{this.radioGroup()}</div>;
+    return <div className="pure-g">{this.radioGroup()}</div>;
   }
 }
 

@@ -13,8 +13,6 @@ export class CreateDrinkForm extends React.Component {
   }
 
   render() {
-    let company = this.props.company;
-
     return (
       <div className="box-form">
         <div className="scroll">
@@ -37,7 +35,10 @@ export class CreateDrinkForm extends React.Component {
             <Field
               component={RadioGroup}
               name="type"
-              imgFileNames={["beer", "wine", "mead", "cider", "spirit"]}
+              labels={[
+                { value: "wine", labelContent: "Wine" },
+                { value: "beer", labelContent: "Beer" }
+              ]}
             />
             <div className="button-container">
               <button type="submit">Add Drink</button>

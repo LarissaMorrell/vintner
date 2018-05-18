@@ -4,7 +4,7 @@ import { Field, reduxForm, focus } from "redux-form";
 import { registerUser } from "../actions/users";
 import { login } from "../actions/auth";
 import Input from "./input";
-import RadioGroup from "./radio-group";
+import RadioImgGroup from "./radio-img-group";
 import { required, nonEmpty, matches, length, isTrimmed } from "../validators";
 
 //for the link to the login page. Open login modal on redirect to dashboard
@@ -64,7 +64,7 @@ export class RegistrationForm extends React.Component {
             validate={[required, nonEmpty, matches("password")]}
           />
           <Field
-            component={RadioGroup}
+            component={RadioImgGroup}
             name="avatar"
             imgFileNames={[
               "boy1",
