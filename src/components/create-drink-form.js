@@ -17,7 +17,7 @@ export class CreateDrinkForm extends React.Component {
       <div className="box-form">
         <div className="scroll">
           <h2 className="form-title">
-            {`Create a drink for ${this.props.company.name}`}
+            {`Add a drink to ${this.props.company.name}'s menu'`}
           </h2>
           <form
             className="drink-form"
@@ -28,8 +28,8 @@ export class CreateDrinkForm extends React.Component {
               component={Input}
               type="text"
               name="name"
-              placeholder={`This tickles my fancy...`}
-              validate={[required, length({ min: 0, max: 50 })]}
+              placeholder={`Yee Old Brewer's Ale`}
+              validate={[required, length({ min: 0, max: 45 })]}
             />
             <label htmlFor="type">Type</label>
             <Field
@@ -37,8 +37,18 @@ export class CreateDrinkForm extends React.Component {
               name="type"
               labels={[
                 { value: "wine", labelContent: "Wine" },
-                { value: "beer", labelContent: "Beer" }
+                { value: "beer", labelContent: "Beer" },
+                { value: "cider", labelContent: "Cider" },
+                { value: "mead", labelContent: "Mead" },
+                { value: "spirit", labelContent: "Spirit" }
               ]}
+            />
+            <label htmlFor="description">{`Description provided by establishment:`}</label>
+            <Field
+              component="textarea"
+              name="description"
+              placeholder="How does the place describe this beverage?"
+              validate={[required, length({ min: 0, max: 800 })]}
             />
             <div className="button-container">
               <button type="submit">Add Drink</button>

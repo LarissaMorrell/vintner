@@ -15,8 +15,8 @@ export const saveDrink = drink => ({
 
 export const postDrink = drink => (dispatch, getState) => {
   const authToken = getState().auth.authToken;
-  // review.title = review.title.trim();
-  // review.comment = review.comment.trim();
+  drink.name = drink.name.trim();
+  drink.description = drink.description.trim();
 
   return fetch(`${API_BASE_URL}/drinks`, {
     method: "POST",
