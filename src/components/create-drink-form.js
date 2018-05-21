@@ -17,7 +17,7 @@ export class CreateDrinkForm extends React.Component {
       <div className="box-form">
         <div className="scroll">
           <h2 className="form-title">
-            {`Add a drink to ${this.props.company.name}'s menu'`}
+            {`Add a drink to ${this.props.company.name}'s menu`}
           </h2>
           <form
             className="drink-form"
