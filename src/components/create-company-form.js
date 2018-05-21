@@ -57,7 +57,13 @@ export class CreateCompanyForm extends React.Component {
             <Field
               name="type"
               component={CheckboxGroups}
-              options={["wine", "beer", "cider", "mead", "spirit"]}
+              options={[
+                { value: "wine", label: "Wine" },
+                { value: "beer", label: "Beer" },
+                { value: "cider", label: "Cider" },
+                { value: "mead", label: "Mead" },
+                { value: "spirit", label: "Spirits" }
+              ]}
             />
             <div className="button-container">
               <button type="submit">Create Company</button>
