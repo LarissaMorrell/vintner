@@ -2,7 +2,7 @@ import React from "react";
 import { Field, reduxForm, focus } from "redux-form"; //focus
 import DropDownSelect from "./drop-down-select";
 import Input from "./input";
-import CheckboxGroup from "./checkbox-group";
+import CheckboxGroups from "./checkbox-groups";
 import { required, length } from "../validators"; //matches
 import { postReview } from "../actions/reviews";
 
@@ -56,7 +56,7 @@ export class CreateCompanyForm extends React.Component {
             />
             <Field
               name="type"
-              component={CheckboxGroup}
+              component={CheckboxGroups}
               options={["wine", "beer", "cider", "mead", "spirit"]}
             />
             <div className="button-container">
